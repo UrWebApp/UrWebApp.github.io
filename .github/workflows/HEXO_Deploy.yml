@@ -3,7 +3,8 @@ name: HEXO_Deploy
 on:
   push:
     branches:
-      - develop  # default branch
+      - main  # default branch
+      - develop
 
 jobs:
   pages:
@@ -14,10 +15,10 @@ jobs:
           token: ${{ secrets.HEXO_KEY }}
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
-      - name: Use Node.js 16.x
+      - name: Use Node.js v14.17.5
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '14.17.5'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
