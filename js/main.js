@@ -12,3 +12,8 @@ $("#tagsBtn").click(()=>{
 
 $(".input-group-input").addClass("form-control");
 $(".input-group-submit").addClass("btn btn-secondary");
+
+
+$('#barBtn').click(()=>{
+    $("nav").slideToggle();
+})
