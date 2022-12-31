@@ -3,7 +3,6 @@ name: HEXO_Deploy
 on:
   push:
     branches:
-      - main  # default branch
       - develop
 
 jobs:
