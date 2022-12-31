@@ -3,7 +3,7 @@ name: HEXO_Deploy
 on:
   push:
     branches:
-      - develop
+    - develop
 
 jobs:
   build:
