@@ -1,0 +1,68 @@
+<% function generateExcerpt(post) {
+    var maxExcerptWords=theme.max_excerpt_words; 
+    if(!post.content){
+        return;
+    }
+    var str = post.content.substring(0,maxExcerptWords);
+    var imgStartIndex = str.indexOf(`<img`, 0);
+    if(imgStartIndex != -1){
+        var regExp =  new RegExp(`<img.*?>`);
+        var matches = post.content.match(regExp);
+        if (matches){
+            var imgEndIndex = imgStartIndex + matches[0].length;
+            str = str.substring(0, imgStartIndex-1)
+            str = strip_html(str); 
+            str += matches[0];
+            str += strip_html(post.content.substring(imgEndIndex,imgEndIndex+50));
+            return str+"...";
+        }
+    }
+    str=strip_html(str); 
+    str+=`...`;
+    return str; } 
+    %>
+
+    <section class="waterfall">
+        <% page.posts.each(post=>{ %>
+            <article class="card item">
+                <div class="card-body">
+                    <h2 class="card-title"><a href="<%=url_for(post.path)%>">
+                            <%= post.title %>
+                        </a></h2>
+                    <div class="infoBox">
+                        <%  if (post.author) {%>
+                            <p>By <%= post.author %>
+                            </p><span>|</span>
+                            <% } %>  
+                        <p>
+                            <% post.categories.each(category=>{ %>
+                                <a href="<%=url_for(category.path)  %> "><%- category.name %> </a>
+                                <% }) %>
+                        </p><span>|</span><p><%- date( post.date , 'YYYY/MM/DD' ) %></p>
+                
+                    </div>
+                    <p class="card-text">
+                        <a href="<%- post.path %>"><% if (post.excerpt) { %>
+                            <%- post.excerpt %>
+                                <% } else { %>
+                                    <%- generateExcerpt(post) %>
+                                        <% } %></a>
+                    </p>
+                
+                </div>
+                <div class="card-footer"> 
+                    <div class="footerInfo"> <a href="<%=url_for(post.path)%>" class="readBtn">Read More</a>
+                    </div>
+               
+                    <ul class="tagBox">
+                        <% post.tags.each(tag=>{ %>
+                            <li>
+                                <a href="<%- url_for(tag.path) %>"><i class="fa-solid fa-tag"></i> <%- tag.name %>
+                                </a>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </div>
+            </article>
+            <% }) %>
+    </section>

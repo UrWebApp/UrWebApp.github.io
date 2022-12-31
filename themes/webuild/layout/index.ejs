@@ -1,0 +1,19 @@
+<!-- 主页 -->
+    <div class="outter-wrap container-fluid">
+        <div class="col-md-2 col-0"></div>
+        <main class="container main">
+            <%- partial('_partial/articleList.ejs')  %> 
+            <!-- <ul>
+                index
+                <% page.posts.each(post=>{ %>
+                    <li>
+                        <a href="<%=url_for(post.path)%>">
+                            <%= post.title %>
+                        </a>
+                        | <%- date( post.date , 'YYYY/MM/DD HH:mm' ) %>
+                    </li>
+                    <% }) %>
+            </ul> -->
+            <!-- <%- paginator({ prev_text: '<' , next_text: '>' }) %> -->
+        </main>
+    </div>

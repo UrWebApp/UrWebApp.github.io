@@ -1,0 +1,49 @@
+<!-- 博客详情 -->
+<main class="container postWrap">
+  <article class="postArticle">
+    <h1 class="pt-5"><%- page.title %></h1>
+
+    <div class="infoBox">
+      <p><%- date( page.date , 'YYYY/MM/DD HH:mm' ) %></p>
+      <span>|</span>
+      <p>By <%= page.author %>
+      </p>
+      <span>|</span>
+      <p>
+        <% page.categories.each(category=>{ %>
+          <a href="<%=url_for(category.path)  %> "><%- category.name %> </a>
+          <% }) %>
+      </p>
+      <span>|</span>
+      <ul class="tagBox">
+        <% page.tags.each(tag=>{ %>
+          <li>
+            <a href="<%- url_for(tag.path) %>"><i class="fa-solid fa-tag"></i> <%- tag.name %>
+            </a>
+          </li>
+          <% }) %>
+      </ul>
+    </div>
+    <side class="desktopRightSide">
+      <h4 class="text-center">文章大綱</h4>
+      <%- toc(page.content,{list_number:false}) %>
+    </side>
+      <%- page.content %>
+      <div class="d-flex justify-content-between mt-5">
+        <% if (page.prev) { %>
+          <h4>
+            <a href="<%- url_for(page.prev.path) %>">
+              <i class="fa-solid fa-angles-left"></i><%- page.prev.title %>
+            </a>
+          </h4>
+          <% } %>
+            <% if (page.next) { %>
+              <h4>
+                <a href="<%- url_for(page.next.path) %>">
+                 <%- page.next.title %><i class="fa-solid fa-angles-right"></i>
+                </a>
+              </h4>
+              <% } %>
+      </div>
+  </article>
+</main>

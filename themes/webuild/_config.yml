@@ -1,0 +1,7 @@
+theme_style:
+  background: '#F2F2F2'
+  light: '#BFBFBF'
+  dark: '#0D0D0D'
+  primary: '#DCF2E6'
+  secondary: '#36403A'
+max_excerpt_words: 150
