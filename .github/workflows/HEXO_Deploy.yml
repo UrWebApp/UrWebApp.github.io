@@ -3,6 +3,7 @@ name: HEXO_Deploy
 on:
   push:
     branches:
+      - main
       - develop
     paths:
       - ".github/workflows/HEXO_Deploy.yml"
