@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    />
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  
 <link rel="stylesheet" href="/Portal/css/main.css">
 
-    
+  
 <link rel="stylesheet" href="/Portal/Portal/css/main.css">
 
-  <meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  <body>
-    <!-- 网站名 -->
-    <header class="col-md-2">
-      <div class="mobileBox">
-        <div class="brandBox">
-           <h1>
-        <a href="/"> 您的 </a>
-      </h1>
-      <h2>
-        共 同 筆 記
-      </h2>
-        </div>
-        <a href="#" id="barBtn"><i class="fa-solid fa-bars"></i></a>
+<body>
+  <!-- 网站名 -->
+  <header>
+    <div class="mobileBox">
+      <div class="brandBox">
+        <a href="/" class="d-flex align-items-center">
+          <h1 class="m-0">
+            UrWeb
+          </h1>
+        </a>
+
       </div>
-     
+      <a href="#" id="barBtn"><i class="fa-solid fa-bars"></i></a>
+    </div>
+
+
+  </header>
+  <!-- <h1>
+      <a href="/">Home</a> |
+      <a href="/Portal/archives">Archive</a> |
+      tags
+      <a href="/about/">About</a>
+    </h1> -->
+  <div class="outter-wrap container-fluid">
+    <aside class="leftAside">
       <nav>
         <ul>
           <li>
@@ -51,7 +57,7 @@
               <a href="#" id="categoriesBtn">文章分類 <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
             <div id="categories">
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/test2/">test2</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/%E7%B6%B2%E8%B7%AF%E8%A1%8C%E9%8A%B7/">網路行銷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/">網頁開發</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/%E8%A1%8C%E9%8A%B7/">行銷</a><span class="category-list-count">1</span></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/test2/">test2</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/%E7%B6%B2%E8%B7%AF%E8%A1%8C%E9%8A%B7/">網路行銷</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC/">網頁開發</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/Portal/categories/%E8%A1%8C%E9%8A%B7/">行銷</a><span class="category-list-count">1</span></li></ul>
             </div>
           </li>
           <li>
@@ -63,13 +69,8 @@
         </ul>
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io/Portal"></form>
       </nav>
-    </header>
-    <!-- <h1>
-      <a href="/">Home</a> |
-      <a href="/Portal/archives">Archive</a> |
-      tags
-      <a href="/about/">About</a>
-    </h1> -->
+    </aside>
+
     <!-- 博客详情 -->
 <main class="container postWrap">
   <article class="postArticle">
@@ -89,34 +90,42 @@
         
       </ul>
     </div>
-    <side class="desktopRightSide">
-      <h4 class="text-center">文章大綱</h4>
-      
-    </side>
       <p>隨著網路技術的不斷發展，網路行銷已經成為一種不可或缺的行銷手段。網路行銷是指通過網路和電子媒體來<br>傳遞訊息和吸引客戶的行銷策略。它可以包括廣告、電子商務、社交媒體、電子郵件營銷等不同的方式。</p>
 <p>網路行銷具有許多優勢，使它成為企業宣傳和銷售產品的理想選擇。首先，它可以讓企業快速、有效地傳遞訊息給大眾。通過社交媒體、電子商務網站和廣告，企業可以吸引潛在客戶的注意，並向他們展示產品或服務的優點。其次，網路行銷也可以讓企業更好地了解客戶的需求和喜好。通過分析網站流量數據和客戶反饋，企業可以更加精確地了解客戶的需求，並針對性地制定行銷策略。</p>
 <p>總的來說，網路行銷是一種非常有效的行銷手段，可以讓企業快速、有效地傳遞訊息，並更好地了解客戶的需求。它已經成為当今商業世界不可或缺的一部分，是企業宣傳和銷售產品的理想選擇。</p>
 
-      <div class="d-flex justify-content-between mt-5">
+      
+  </article>
+  <div class="d-flex justify-content-between mt-5">
         
           <h4>
-            <a href="/Portal/2022/12/31/TEST/">
-              <i class="fa-solid fa-angles-left"></i>HEXO
+            <a href="/Portal/2022/12/31/TEST/"><i class="fa-solid fa-angles-left"></i> HEXO
             </a>
           </h4>
           
             
               <h4>
-                <a href="/Portal/2022/12/31/README/">
-                 <i class="fa-solid fa-angles-right"></i>
+                <a href="/Portal/2022/12/29/%E5%81%A5%E5%BA%B7%E5%9B%9B%E4%BA%94%E5%85%AD%E4%B8%83%E5%85%AB%E4%B9%9D%E5%8D%81/">
+                 健康四五六七八九十 <i class="fa-solid fa-angles-right"></i>
                 </a>
               </h4>
               
       </div>
-  </article>
 </main>
+      
+        <aside class="rightAside">
+          <section>
+            <h4>文章大綱</h4>
+            
+          </div>
+        </section>
+        
 
-    <!-- <h3>categories</h3>
+  </div>
+
+
+
+  <!-- <h3>categories</h3>
     <ul>
       
       <li>
@@ -201,9 +210,12 @@
       </li>
       
     </ul> -->
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="/Portal/js/main.js"></script>
+
 
 </html>
