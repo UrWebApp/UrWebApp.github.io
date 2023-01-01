@@ -15,5 +15,5 @@ $(".input-group-submit").addClass("btn btn-secondary");
 
 
 $('#barBtn').click(()=>{
-    $("nav").slideToggle();
+    $(".leftAside").slideToggle();
 })
