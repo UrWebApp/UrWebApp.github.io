@@ -35,8 +35,8 @@ header {
   width: 100%;
   padding: 10px 20px;
   background-color: #dcf2e6;
-  position: sticky;
-  z-index: 1;
+  position: fixed;
+  z-index: 1000;
   box-shadow: 1px 2px 8px rgba(0,0,0,0.5);
 }
 .brandBox h1 {
@@ -47,17 +47,19 @@ header {
   margin-top: 110px;
 }
 .leftAside {
+  position: fixed;
   background: #fff;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
-  max-width: 300px;
+  max-width: 100%;
   display: none;
   padding-top: 60px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
+  z-index: 1;
 }
 nav {
-  position: sticky;
+  background: #fff;
   top: 60px;
 }
 nav>ul {
@@ -145,6 +147,9 @@ nav>ul>li>h4>a:hover {
   padding: 0;
   display: flex;
   flex-direction: column;
+}
+.rightAside {
+  display: none;
 }
 .item {
   padding: 5px 10px 10px 10px;
@@ -247,7 +252,11 @@ nav>ul>li>h4>a:hover {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (min-width: 768px) {
+  nav {
+    position: sticky;
+  }
   .rightAside {
+    display: block;
     padding-top: 60px;
   }
   .rightAside>section {
@@ -266,6 +275,8 @@ nav>ul>li>h4>a:hover {
     margin-top: 110px;
   }
   .leftAside {
+    max-width: 300px;
+    position: relative;
     display: block;
   }
   .waterfall {
