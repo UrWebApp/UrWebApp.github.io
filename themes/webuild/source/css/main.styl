@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
 $font-size = 4px
 $theme-background-color = convert(hexo-config('theme_style.background'));
 $theme-light = convert(hexo-config('theme_style.light'));
 $theme-dark = convert(hexo-config('theme_style.dark'));
 $theme-primary = convert(hexo-config('theme_style.primary'));
 $theme-secondary = convert(hexo-config('theme_style.secondary'));
+$header-max-height = 60px
 
 img{
     max-width: 100%;
@@ -12,7 +15,9 @@ img{
 a{
     color:$theme-secondary;
     text-decoration: none;
+    transition: all 0.5s;
     &:hover{
+        transition: all 0.5s;
         color:red ;
         }
 }
@@ -41,27 +46,55 @@ body{
 
 
 header {
+    height: $header-max-height;
     width 100%;
-    padding: 10px 10px 0 10px;
+    padding: 10px 20px;
     background-color: #dcf2e6;
-    position: fixed;
+    position: sticky;
     z-index: 1;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.5)
+}
+.brandBox h1{
+    font-family: 'Nabla', cursive;
+    text-shadow: 1px 3px 4px rgba(0,0,0,1)    
 }
 .main{
-    margin-top: 150px;
+    margin-top: ($header-max-height+50)px;
 }
 header>h2{
 }
-nav{
+.leftAside{
+    background: white;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.2)
+    max-width: 300px;
     display: none;
-    margin-top: 50px;
+    padding-top: $header-max-height;
+    padding-left: 15px;
+    padding-right:15px;
     padding-bottom:15px;
-} 
+}
+nav{
+    position:sticky;
+    top:$header-max-height;
+}
+nav>ul{
+    padding: 50px 0px;
+}
 nav>ul>li{
     list-style: none;
 }
-nav>ul>li a{
+nav>ul>li>h4{
+    list-style: none;
+    margin:0px;
+}
+nav>ul>li>h4>a{
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
+  &:hover{
+    background: $theme-background-color;  
+  }
 }
 .mobileBox{
     display: flex;
@@ -127,7 +160,7 @@ nav>ul>li a{
     list-style:none;
 }
 
-nav>ul{
+.leftAside>ul{
     padding: 0
     display: flex;
     flex-direction: column;
@@ -148,14 +181,22 @@ nav>ul{
   counter-reset: item-counter;
 }
 .outter-wrap{
+    min-height: 100vh;
     padding: 0;
     display: flex;
 }
 .category-list{
-    list-style-type: "- "
+    padding-left: 0px
+    list-style-type: ""
     padding-bottom: 10px;
     li{
-        font-size: 14px;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        a{
+            display:block;
+            width:100%;
+        }
         span{
             font-size: 5px;
             margin-left: 5px;
@@ -167,11 +208,14 @@ nav>ul{
     }
 
 }
-
-.postWrap{
+.postArticle{
+    padding: 15px;
     background: white;
-    min-height: 100vh;
-    max-width: 720px !important;
+    border-radius:10px;
+}
+.postWrap{
+    margin-top:($header-max-height+50)px;
+    max-width: 980px !important;
 }
 .footerInfo{
     display: flex;
@@ -227,16 +271,25 @@ nav>ul{
     }
 
 @media (min-width:768px) {
-.desktopRightSide{
-    padding: 50px;
-    position:fixed;
-    top: 0;
-    right: 0;
+.rightAside{
+    padding-top: $header-max-height;
 }
+.rightAside>section{
+    border-left:1px dashed rgba(0,0,0,0.3);
+    min-width 285px;
+    position: sticky;
+    top: $header-max-height+50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    >ol{
+        padding:0px;
+        list-style:none;
+    }
+    }
 .main{
-    margin-top: 50px;
+    margin-top: $header-max-height+50px;
 }
-nav{
+.leftAside{
     display: block;
 }
 .waterfall{
@@ -249,9 +302,8 @@ nav{
     display:none;
     }
 header{
-        padding: 50px 10px 0 10px;
+    padding: 10px 10px 10px 10px;
     background-color: $theme-primary;
-    min-height: 100vh;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -266,7 +318,7 @@ header{
   counter-reset: item-counter;
 }
 header{
-    padding: 50px 20px 0 20px;
+    padding: 15px;
 }
 }
 @media (min-width:2400px){

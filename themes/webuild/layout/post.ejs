@@ -24,26 +24,22 @@
           <% }) %>
       </ul>
     </div>
-    <side class="desktopRightSide">
-      <h4 class="text-center">文章大綱</h4>
-      <%- toc(page.content,{list_number:false}) %>
-    </side>
       <%- page.content %>
-      <div class="d-flex justify-content-between mt-5">
+      
+  </article>
+  <div class="d-flex justify-content-between mt-5">
         <% if (page.prev) { %>
           <h4>
-            <a href="<%- url_for(page.prev.path) %>">
-              <i class="fa-solid fa-angles-left"></i><%- page.prev.title %>
+            <a href="<%- url_for(page.prev.path) %>"><i class="fa-solid fa-angles-left"></i> <%- page.prev.title %>
             </a>
           </h4>
           <% } %>
             <% if (page.next) { %>
               <h4>
                 <a href="<%- url_for(page.next.path) %>">
-                 <%- page.next.title %><i class="fa-solid fa-angles-right"></i>
+                 <%- page.next.title %> <i class="fa-solid fa-angles-right"></i>
                 </a>
               </h4>
               <% } %>
       </div>
-  </article>
 </main>

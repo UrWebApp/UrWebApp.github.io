@@ -21,9 +21,16 @@
     str+=`...`;
     return str; } 
     %>
-
+    <% 
+    var currentPage;
+    if(is_home()){
+     currentPage = site;
+    }else{
+        currentPage = page;
+    }%>
     <section class="waterfall">
-        <% page.posts.each(post=>{ %>
+        
+        <% currentPage.posts.each(post=>{ %>
             <article class="card item">
                 <div class="card-body">
                     <h2 class="card-title"><a href="<%=url_for(post.path)%>">
