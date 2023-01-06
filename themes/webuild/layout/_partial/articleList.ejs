@@ -3,9 +3,11 @@
     if(!post.content){
         return;
     }
-    var str = post.content.substring(0,maxExcerptWords);
+    var str = post.content.substring(0,maxExcerptWords+200);
     var imgStartIndex = str.indexOf(`<img`, 0);
+    console.log(str);
     if(imgStartIndex != -1){
+        console.log("img true");
         var regExp =  new RegExp(`<img.*?>`);
         var matches = post.content.match(regExp);
         if (matches){
@@ -16,6 +18,8 @@
             str += strip_html(post.content.substring(imgEndIndex,imgEndIndex+50));
             return str+"...";
         }
+    }else{
+        str= str.substring(0, maxExcerptWords);
     }
     str=strip_html(str); 
     str+=`...`;
@@ -38,14 +42,14 @@
                         </a></h2>
                     <div class="infoBox">
                         <%  if (post.author) {%>
-                            <p>By <%= post.author %>
-                            </p><span>|</span>
+                           <span>作者:</span><p><%= post.author %>
+                            </p>
                             <% } %>  
-                        <p>
+                            <span>|</span><p>
                             <% post.categories.each(category=>{ %>
                                 <a href="<%=url_for(category.path)  %> "><%- category.name %> </a>
                                 <% }) %>
-                        </p><span>|</span><p><%- date( post.date , 'YYYY/MM/DD' ) %></p>
+                        </p><span>|</span><p><%- date( post.date , 'YYYY-MM-DD' ) %></p>
                 
                     </div>
                     <p class="card-text">
