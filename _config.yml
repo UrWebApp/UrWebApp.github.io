@@ -9,7 +9,7 @@ description: '由多位筆者一起經營的網路事業'
 keywords:
 author: Kai Liu
 language: tw
-timezone: 'UTF-8'
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
