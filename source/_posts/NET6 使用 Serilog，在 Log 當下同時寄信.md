@@ -14,12 +14,12 @@ tags:
 
 ## 安裝步驟
 可以在 Nuget 介面安裝或是下指令
-```console=
+```PowerShell
 dotnet add package Serilog.AspNetCore // 套件包
 dotnet add package Serilog.Sinks.Email //輸出至Email
 ```
 因為主要是需要在事件發生時紀錄並寄信，所以只安裝相關 Email 套件，如有其他需求時，可以在 Nuget 介面查詢相關字眼
-```console=
+```PowerShell
 dotnet add package Serilog.Sinks.Debug
 dotnet add package Serilog.Sinks.File
 dotnet add package Serilog.Sinks.Seq
@@ -31,7 +31,7 @@ dotnet add package Serilog.Enrichers.Environment
 dotnet add package Serilog.Enrichers.Thread
 ```
 ## 在 Program.cs 初始化 Serilog 設定
-```c#=
+```csharp
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Email;
@@ -74,7 +74,7 @@ Log.Logger = new LoggerConfiguration()
 透過官方[Github wiki](https://github.com/serilog/serilog/wiki/Writing-Log-Events)可以知道 Serilog 有提供靜態類別 Log 可用在專案的任何地方，在使用之前要先設定好 Log.Logger。
 
 ### 靜態類別 Log 使用方式
-```c#
+```csharp
 Log.Verbose("紀錄"); // 詳細資訊
 Log.Debug("紀錄");
 Log.Information("紀錄"); // 使用者層級
@@ -90,7 +90,7 @@ Log.Fatal("紀錄");
 
 ## 測試
 可以用剛剛的靜態類別 Log 來幫助測試，或者也可以故意在程式碼中來埋下錯誤實驗。
-```c#=
+```csharp
 try
   {
     Log.Fatal("Host terminated unexpectedly");
@@ -108,11 +108,11 @@ catch (Exception ex)
 
 ## 進階用法
 因為需要動態填入收信者，所以需在 Nuget 或下指令多安裝
-``` console=
+``` PowerShell
 dotnet add package Serilog.Sinks.Map // 在 Config 中使用變數
 ```
 安裝完後，剛剛在 Program.cs 的設定需要調整一下
-``` c#=
+``` csharp
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
     .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
@@ -132,17 +132,17 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 ```
 主要差異在於下面這段
-```c# !
+```csharp
 .WriteTo.Map("Address", "default@gmail.com", (address, wt) => wt.Email(new EmailConnectionInfo(){...})
 ```
 以下皆可自行取名
-`Address`: 可以在靜態方法 Log 中使用。
-`default@gmail.com`: 此參數為預設值，會帶進右方括弧中第一個參數。
-`address`: 可在箭頭函式使用的變數，由靜態方法 Log 的地個參數傳回。
-`wt`: 為 `WriteTo`。
+* `Address`: 可以在靜態方法 Log 中使用。
+* `default@gmail.com`: 此參數為預設值，會帶進右方括弧中第一個參數。
+* `address`: 可在箭頭函式使用的變數，由靜態方法 Log 的地個參數傳回。
+* `wt`: 為 `WriteTo`。
 
 接著使用靜態方法 Log 時，就可以寄給不同對象。
-``` c#=
+``` csharp
 try
             {
 
@@ -158,8 +158,10 @@ try
                 throw ex;
             }
 ```
-## 參考資料:
-[Serilog](https://github.com/serilog/serilog/wiki)
-[.NET 6.0 如何使用 Serilog 對應用程式事件進行結構化紀錄](https://blog.miniasp.com/post/2021/11/29/How-to-use-Serilog-with-NET-6)
-[ASP.NET Core 30 天旅程](https://ithelp.ithome.com.tw/articles/10295821)
+
+## 參考資料
+
+* [Serilog](https://github.com/serilog/serilog/wiki)
+* [.NET 6.0 如何使用 Serilog 對應用程式事件進行結構化紀錄](https://blog.miniasp.com/post/2021/11/29/How-to-use-Serilog-with-NET-6)
+* [ASP.NET Core 30 天旅程](https://ithelp.ithome.com.tw/articles/10295821)
 
