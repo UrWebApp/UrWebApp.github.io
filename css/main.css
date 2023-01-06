@@ -343,6 +343,9 @@ nav>ul>li>h4>a:hover {
   }
 }
 @media (min-width: 1400px) {
+  .postWrap {
+    max-width: 980px;
+  }
   .waterfall {
     margin: 0 auto;
     column-count: 3;
