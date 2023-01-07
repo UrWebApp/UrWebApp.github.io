@@ -5,3 +5,24 @@ theme_style:
   primary: '#DCF2E6'
   secondary: '#36403A'
 max_excerpt_words: 200
+
+# Waline
+# For more information: https://waline.js.org, https://github.com/walinejs/waline
+waline:
+  el: '#waline'
+  enable: true #是否開啟
+  serverURL: https://waline-urweb.vercel.app/
+  placeholder: 歡迎隨時提出您的建議，並不吝指教
+  avatar: mm # 頭像風格
+  meta: [nick, mail, link] #自訂評論框三個輸入框的內容
+  pageSize: 10
+  lang: en
+  # Warning : 不要同時啟用 waline.visitor / leancloud_visitors
+  visitor: true
+  comment_count: true # 如為 flase 評論數量只會在當前頁面顯示，主頁則不顯示
+  requiredFields: [nick, mail] # 設置評論時必填的訊息 [nick,mail] : [nick] | [nick,mail]
+  libUrl: https://cdnjs.cloudflare.com/ajax/libs/waline/2.14.5/waline.js # Set custon library cdn url
+  # dark: auto
+  pageview: true
+  # emoji: [ "link","link" ]
+  reaction: true

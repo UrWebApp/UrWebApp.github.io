@@ -1,7 +1,7 @@
 <!-- 主页 -->
-        <main class="container main">
-            <%- partial('_partial/articleList.ejs')  %>
-            <!-- <ul>
+<main class="container main">
+    <%- partial('_partial/articleList.ejs') %>
+        <!-- <ul>
                 index
                 <% page.posts.each(post=>{ %>
                     <li>
@@ -12,5 +12,21 @@
                     </li>
                     <% }) %>
             </ul> -->
-            <!-- <%- paginator({ prev_text: '<' , next_text: '>' }) %> -->
-        </main>
+        <!-- <%- paginator({ prev_text: '<' , next_text: '>' }) %> -->
+</main>
+
+<script type="module">
+    import { pageviewCount } from 'https://unpkg.com/@waline/client/dist/pageview.mjs';
+
+    const abort = pageviewCount({
+        serverURL: '<%= theme.waline.serverURL%>',
+        path: window.location.pathname,
+        // 可选的，用于自定选择器，默认为 `'.waline-pageview-count'`
+        // selector: 'waline-pageview-count',
+        // 可选的，是否在获取时增加访问量，默认为 `true`
+        // update: true,
+    });
+
+    // 在 500ms 后，如果网络请求仍未完成，取消本次操作
+    setTimeout(() => abort(), 500);
+</script>

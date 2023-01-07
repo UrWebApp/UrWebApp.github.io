@@ -1,12 +1,12 @@
 <!-- 博客详情 -->
 <main class="container postWrap">
   <article class="postArticle">
-    <h1 class="pt-5"><%- page.title %></h1>
-
+    <h1 class="pt-1"><%- page.title %></h1>
+ <span class="waline-pageview-count" data-path="<%= encodeURIComponent(page.path) %>" /></span>
     <div class="infoBox">
-      <p><%- date( page.date , 'YYYY/MM/DD HH:mm' ) %></p>
+      <p><%- date( page.date , 'YYYY/MM/DD' ) %></p>
       <span>|</span>
-      <p>By <%= page.author %>
+      <p><%= page.author %>
       </p>
       <span>|</span>
       <p>
@@ -24,22 +24,23 @@
           <% }) %>
       </ul>
     </div>
-      <%- page.content %>
-      
+    <%- page.content %>
+
   </article>
-  <div class="d-flex justify-content-between mt-5">
-        <% if (page.prev) { %>
+  <div class="postNext d-flex justify-content-between mt-3 mb-3">
+    <% if (page.prev) { %>
+      <h4>
+        <a href="<%- url_for(page.prev.path) %>"><i class="fa-solid fa-angles-left"></i> <%- page.prev.title %>
+        </a>
+      </h4>
+      <% } %>
+        <% if (page.next) { %>
           <h4>
-            <a href="<%- url_for(page.prev.path) %>"><i class="fa-solid fa-angles-left"></i> <%- page.prev.title %>
+            <a href="<%- url_for(page.next.path) %>">
+              <%- page.next.title %> <i class="fa-solid fa-angles-right"></i>
             </a>
           </h4>
           <% } %>
-            <% if (page.next) { %>
-              <h4>
-                <a href="<%- url_for(page.next.path) %>">
-                 <%- page.next.title %> <i class="fa-solid fa-angles-right"></i>
-                </a>
-              </h4>
-              <% } %>
-      </div>
+  </div>
+  <%- partial('_partial/comments.ejs')  %>
 </main>

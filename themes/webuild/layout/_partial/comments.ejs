@@ -1,0 +1,9 @@
+<% if (theme.waline.serverURL) { %>
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    let option = '<%- JSON.stringify(theme.waline) %>';
+    init(JSON.parse(option));
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+  <% } %>
