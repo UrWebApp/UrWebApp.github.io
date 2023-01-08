@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
 
-
-
 $font-size = 4px;
 $theme-background-color = convert(hexo-config('theme_style.background'));
 $theme-light = convert(hexo-config('theme_style.light'));
@@ -15,8 +13,9 @@ html {
 }
 
 :root {
-  scroll-padding-top: ($header-max-height)+10px;
+    scroll-padding-top: $header-max-height + 10px;
 }
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -522,8 +521,8 @@ nav>ul>li>h4>a {
     margin-bottom: 0;
 }
 
-.fa-solid {
-        color: rgba(0, 0, 0, 0.1);
+.fa-solid, .fa-eye {
+    color: rgba(0, 0, 0, 0.1) !important;
 }
 
 #tagsBtn, #categoriesBtn {
