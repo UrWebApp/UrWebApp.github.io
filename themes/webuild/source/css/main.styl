@@ -12,6 +12,10 @@ html {
     animation: fadein 2s;
 }
 
+:root {
+    scroll-padding-top: $header-max-height + 10px;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -517,8 +521,8 @@ nav>ul>li>h4>a {
     margin-bottom: 0;
 }
 
-.fa-solid {
-        color: rgba(0, 0, 0, 0.1);
+.fa-solid, .fa-eye {
+    color: rgba(0, 0, 0, 0.1) !important;
 }
 
 #tagsBtn, #categoriesBtn {
