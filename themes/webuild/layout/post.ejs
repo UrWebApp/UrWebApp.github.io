@@ -1,8 +1,4 @@
-<%- include('../functions/mixin.ejs'); %>
-<% function cnToEncode(path){ let patternCn=new RegExp("[\u4E00-\u9FA5]+"); if(patternCn.test(path)){ let temp=[];
-  path.split('/').forEach(element=> {
-  temp.push(encodeURIComponent(element));
-  });
+
   // sample /後端開發/NET6 使用 Serilog，在 Log 當下同時寄信/
   path = `/${temp[1]}/${temp[2]}/`;
   }
@@ -14,7 +10,7 @@
 
     <div class="infoBox">
       <i class="fa fa-eye" aria-hidden="true"></i>
-      <p class="waline-pageview-count" data-path="<%= cnToEncode(page.path) %>" /></p>
+      <p class="waline-pageview-count" data-path="<%- cnToEncode(page.path) %>" /></p>
       <span>|</span>
       <p><%- date( page.date , 'YYYY/MM/DD' ) %></p>
       <span>|</span>
