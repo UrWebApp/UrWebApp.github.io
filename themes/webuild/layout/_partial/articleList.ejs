@@ -3,15 +3,15 @@
     if(!post.content){
         return;
     }
-    var str = post.content.substring(0,maxExcerptWords+200);
-    var imgStartIndex = str.indexOf(`<img`, 0);
+    let str = post.content.substring(0,maxExcerptWords+200);
+    let imgStartIndex = str.indexOf(`<img`, 0);
     console.log(str);
     if(imgStartIndex != -1){
         console.log("img true");
-        var regExp =  new RegExp(`<img.*?>`);
-        var matches = post.content.match(regExp);
+        let regExp =  new RegExp(`<img.*?>`);
+        let matches = post.content.match(regExp);
         if (matches){
-            var imgEndIndex = imgStartIndex + matches[0].length;
+            let imgEndIndex = imgStartIndex + matches[0].length;
             str = str.substring(0, imgStartIndex-1)
             str = strip_html(str);
             str += matches[0];
@@ -26,7 +26,7 @@
     return str; }
     %>
     <%
-    var currentPage;
+    let currentPage;
     if(is_home()){
      currentPage = site;
     }else{
@@ -34,7 +34,7 @@
     }%>
     <section class="waterfall">
 
-        <% currentPage.posts.each(post=>{ %> 
+        <% currentPage.posts.each(post=>{ %>
             <article class="card item">
                 <div class="card-body">
                     <h2 class="card-title"><a href="<%=url_for(post.path)%>">
