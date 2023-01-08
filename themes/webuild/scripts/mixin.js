@@ -1,6 +1,5 @@
-function cnToEncode(path){ 
-  }
-  hexo.extend.helper.register('cnToEncode', function(path){
+
+  hexo.extend.helper.register('cnToEncode', (path)=>{
     let patternCn=new RegExp("[\u4E00-\u9FA5]+"); if(patternCn.test(path)){ let temp=[];
       path.split('/').forEach(element=> {
       temp.push(encodeURIComponent(element));
