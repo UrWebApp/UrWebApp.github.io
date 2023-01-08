@@ -31,4 +31,10 @@ let DateDiff = function (sDate1, sDate2) {
     return iDays;
 };
 
-$("#milestone").html(`<span>Copyright © 2023-${DateNow.getFullYear()} UrWeb. All rights reserved.</span><br><span>This site is in orbit around internet ${DateDiff("2023/1/1",Date.now())} days.</span>`);
+$("#milestone").html(`
+<span>Copyright © 2023-${DateNow.getFullYear()} UrWeb. All rights reserved.</span><br>
+<span>This site is in orbit around internet ${DateDiff("2023/1/1",Date.now())} days.</span>
+<span class="material-symbols-outlined">sprint</span><br>
+<span class="material-symbols-outlined">transfer_within_a_station</span>
+<span class="waline-pageview-count" data-path="/" />
+people witnessed it all.`);
