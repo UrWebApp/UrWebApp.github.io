@@ -2,6 +2,9 @@
 html {
   animation: fadein 2s;
 }
+:root {
+  scroll-padding-top: 70px;
+}
 h2,
 p {
   margin-top: 1rem;
@@ -431,8 +434,9 @@ nav>ul>li>h4>a:hover {
 .card-title {
   margin-bottom: 0;
 }
-.fa-solid {
-  color: rgba(0,0,0,0.1);
+.fa-solid,
+.fa-eye {
+  color: rgba(0,0,0,0.1) !important;
 }
 #tagsBtn:hover .fa-solid,
 #categoriesBtn:hover .fa-solid {
