@@ -4,11 +4,13 @@
 
     <div class="infoBox">
       <i class="fa fa-eye" aria-hidden="true"></i>
-      <p class="waline-pageview-count" data-path="<%- cnToEncode(page.path) %>" /></p>
+      <p class="waline-pageview-count" data-path="<%- cnToEncode(page.path) %>" />
+      </p>
       <span>|</span>
       <p><%- date( page.date , 'YYYY/MM/DD' ) %></p>
       <span>|</span>
-      <p><%= page.author %>
+      <p>
+        <%= page.author %>
       </p>
       <span>|</span>
       <p>
@@ -44,5 +46,6 @@
           </h4>
           <% } %>
   </div>
-  <%- partial('_partial/comments.ejs')  %>
+  <%- partial('_partial/comments.ejs') %>
+    <input style="display:none" onload="addTotalViews()">
 </main>

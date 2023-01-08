@@ -31,7 +31,7 @@ let DateDiff = function (sDate1, sDate2) {
     return iDays;
 };
 
-    $("#milestone").html(`
+$("#milestone").html(`
 <span>Copyright © 2023-${DateNow.getFullYear()} UrWeb. All rights reserved.</span><br>
 <span>This site is in orbit around internet ${DateDiff("2023/1/1",Date.now())} days.</span>
 <span class="material-symbols-outlined">sprint</span><br>
@@ -39,3 +39,24 @@ let DateDiff = function (sDate1, sDate2) {
 <span class="waline-pageview-count" data-path="/"></span>
 people have witnessed it all. `);
 
+let addTotalViews = fetch("https://waline-urweb.vercel.app/article?lang=zh-TW", {
+    "headers": {
+      "accept": "*/*",
+      "accept-language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+      "cache-control": "no-cache",
+      "content-type": "application/json",
+      "pragma": "no-cache",
+      "sec-ch-ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "cross-site"
+    },
+    "referrer": "https://urwebapp.github.io/",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": "{\"path\":\"/\",\"type\":\"time\",\"action\":\"inc\"}",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "omit"
+  });
