@@ -69,14 +69,14 @@
               <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
             <div id="categories">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/">後端開發</a><span class="category-list-count">1</span></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Internet/">Internet</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/">後端開發</a><span class="category-list-count">2</span></li></ul>
             </div>
           </li>
           <li>
             <h4>
               <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
-            <div id="tags"><a href="/tags/NET/" style="font-size: 10px;">.NET</a> <a href="/tags/Log/" style="font-size: 10px;">Log</a></div>
+            <div id="tags"><a href="/tags/NET/" style="font-size: 10px;">.NET</a> <a href="/tags/Net/" style="font-size: 10px;">.Net</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Internet/" style="font-size: 10px;">Internet</a> <a href="/tags/Log/" style="font-size: 20px;">Log</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a></div>
           </li>
         </ul>
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
@@ -123,6 +123,7 @@
 <h2 id="安裝步驟"><a href="#安裝步驟" class="headerlink" title="安裝步驟"></a>安裝步驟</h2><p>可以在 Nuget 介面安裝或是下指令</p>
 <pre class="line-numbers language-PowerShell" data-language="PowerShell"><code class="language-PowerShell">dotnet add package Serilog.AspNetCore &#x2F;&#x2F; 套件包
 dotnet add package Serilog.Sinks.Email &#x2F;&#x2F;輸出至Email<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>因為主要是需要在事件發生時紀錄並寄信，所以只安裝相關 Email 套件，如有其他需求時，可以在 Nuget 介面查詢相關字眼</p>
 <pre class="line-numbers language-PowerShell" data-language="PowerShell"><code class="language-PowerShell">dotnet add package Serilog.Sinks.Debug
 dotnet add package Serilog.Sinks.File
@@ -133,6 +134,7 @@ dotnet add package Serilog.Extensions.Hosting
 dotnet add package Serilog.Formatting.Compact
 dotnet add package Serilog.Enrichers.Environment
 dotnet add package Serilog.Enrichers.Thread<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="在-Program-cs-初始化-Serilog-設定"><a href="#在-Program-cs-初始化-Serilog-設定" class="headerlink" title="在 Program.cs 初始化 Serilog 設定"></a>在 Program.cs 初始化 Serilog 設定</h2><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">Serilog</span><span class="token punctuation">;</span>
 <span class="token keyword">using</span> <span class="token namespace">Serilog<span class="token punctuation">.</span>Events</span><span class="token punctuation">;</span>
 <span class="token keyword">using</span> <span class="token namespace">Serilog<span class="token punctuation">.</span>Sinks<span class="token punctuation">.</span>Email</span><span class="token punctuation">;</span>
@@ -154,7 +156,7 @@ Log<span class="token punctuation">.</span>Logger <span class="token operator">=
         ToEmail <span class="token operator">=</span> <span class="token string">"xxxx@gmail.com"</span> <span class="token comment">// 收件者</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
     <span class="token punctuation">.</span><span class="token function">CreateLogger</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
+
     <span class="token keyword">try</span><span class="token punctuation">&#123;</span>
     <span class="token comment">// 其他程式碼</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -167,6 +169,7 @@ Log<span class="token punctuation">.</span>Logger <span class="token operator">=
     <span class="token punctuation">&#123;</span>
     Log<span class="token punctuation">.</span><span class="token function">CloseAndFlush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>在 <code>finally</code> 中的 <code>Log.CloseAndFlush();</code>，可以讓程式在意外結束中確實寫入 log。</p>
 <p>在範例程式碼可看到，可以自行決定要將 Log 寫在本地的 Txt 檔，或是透過郵件來發送，也可以存在 SQL 中(無實作)等等。</p>
 <p>透過官方<a target="_blank" rel="noopener" href="https://github.com/serilog/serilog/wiki/Writing-Log-Events">Github wiki</a>可以知道 Serilog 有提供靜態類別 Log 可用在專案的任何地方，在使用之前要先設定好 Log.Logger。</p>
@@ -175,7 +178,7 @@ Log<span class="token punctuation">.</span><span class="token function">Debug</s
 Log<span class="token punctuation">.</span><span class="token function">Information</span><span class="token punctuation">(</span><span class="token string">"紀錄"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 使用者層級</span>
 Log<span class="token punctuation">.</span><span class="token function">Warning</span><span class="token punctuation">(</span><span class="token string">"紀錄"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 Log<span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token string">"紀錄"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-Log<span class="token punctuation">.</span><span class="token function">Fatal</span><span class="token punctuation">(</span><span class="token string">"紀錄"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Log<span class="token punctuation">.</span><span class="token function">Fatal</span><span class="token punctuation">(</span><span class="token string">"紀錄"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="Log-Event-Level"><a href="#Log-Event-Level" class="headerlink" title="Log Event Level"></a>Log Event Level</h3><p>另外，Serilog <a target="_blank" rel="noopener" href="https://github.com/serilog/serilog/blob/dev/src/Serilog/Events/LogEventLevel.cs">事件層級</a>有6個，分別是 <code>Verbose = 0</code>，<code> Debug = 1</code>， <code>Information = 2</code>， <code>Warning = 3</code>，<code>Error = 4</code>，<code>Fatal = 5</code>。</p>
 <p>在上面的範例程式碼中的，<code>MinimumLevel</code> 是顯示的最低事件層級，預設是<code>Information</code>，可設定為<code>MinimumLevel.Debug()</code>、<code>MinimumLevel.Verbose()</code>等等，log事件會從該層級開始依序顯示。</p>
@@ -191,9 +194,11 @@ Log<span class="token punctuation">.</span><span class="token function">Fatal</s
     <span class="token keyword">throw</span> ex<span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>過不久就可以收到郵件了，也可以在專案中看見 Log 資料夾。<br><img src="https://i.imgur.com/su8O8Jy.png" alt="log"></p>
+<p>過不久就可以收到郵件了，也可以在專案中看見 Log 資料夾。</p>
+<p><img src="https://i.imgur.com/su8O8Jy.png" alt="log"></p>
 <h2 id="進階用法"><a href="#進階用法" class="headerlink" title="進階用法"></a>進階用法</h2><p>因為需要動態填入收信者，所以需在 Nuget 或下指令多安裝</p>
 <pre class="line-numbers language-PowerShell" data-language="PowerShell"><code class="language-PowerShell">dotnet add package Serilog.Sinks.Map &#x2F;&#x2F; 在 Config 中使用變數<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>安裝完後，剛剛在 Program.cs 的設定需要調整一下</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">Log<span class="token punctuation">.</span>Logger <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">LoggerConfiguration</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token punctuation">.</span>MinimumLevel<span class="token punctuation">.</span><span class="token function">Information</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -212,8 +217,10 @@ Log<span class="token punctuation">.</span><span class="token function">Fatal</s
         ToEmail <span class="token operator">=</span> address<span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token punctuation">.</span><span class="token function">CreateLogger</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>主要差異在於下面這段</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token punctuation">.</span>WriteTo<span class="token punctuation">.</span><span class="token function">Map</span><span class="token punctuation">(</span><span class="token string">"Address"</span><span class="token punctuation">,</span> <span class="token string">"default@gmail.com"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>address<span class="token punctuation">,</span> wt<span class="token punctuation">)</span> <span class="token operator">=></span> wt<span class="token punctuation">.</span><span class="token function">Email</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">EmailConnectionInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token range operator">..</span><span class="token punctuation">.</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>以下皆可自行取名</p>
 <ul>
 <li><code>Address</code>: 可以在靜態方法 Log 中使用。</li>
@@ -247,6 +254,11 @@ Log<span class="token punctuation">.</span><span class="token function">Fatal</s
   </article>
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
     
+      <h4>
+        <a href="/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/"><i class="fa-solid fa-angles-left"></i> .NET 6 輕量視覺化 Log 工具 WatchDog
+        </a>
+      </h4>
+      
         
   </div>
   
@@ -285,6 +297,10 @@ Log<span class="token punctuation">.</span><span class="token function">Fatal</s
         <a href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/"> 後端開發  </a>
       </li>
       
+      <li>
+        <a href="/categories/Internet/"> Internet  </a>
+      </li>
+      
     </ul>
 
     <h3>tags</h3>
@@ -295,7 +311,27 @@ Log<span class="token punctuation">.</span><span class="token function">Fatal</s
       </li>
       
       <li>
+        <a href="/tags/Net/"> .Net </a>
+      </li>
+      
+      <li>
         <a href="/tags/NET/"> .NET </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Internet/"> Internet </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Response/"> Response </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Request/"> Request </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Angular/"> Angular </a>
       </li>
       
     </ul> -->
