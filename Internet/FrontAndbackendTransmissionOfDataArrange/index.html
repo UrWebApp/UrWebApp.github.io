@@ -401,11 +401,238 @@ ngOnDestroy()
     this.subscribe.unsubscribe();
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="Angular-Model-Driven-Forms"><a href="#Angular-Model-Driven-Forms" class="headerlink" title="Angular Model-Driven Forms"></a>Angular Model-Driven Forms</h3><pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">AA<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Angular-Template-Driven-Forms"><a href="#Angular-Template-Driven-Forms" class="headerlink" title="Angular Template-Driven Forms"></a>Angular Template-Driven Forms</h3><p>這部分在網路上有找到詳細的大神系列文章 <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/m/users/20090728/ironman/3881">Angular 深入淺出三十天：表單與測試</a> 而且還有前端的測試範例，直接找到下個研究方向！Template-Driven 相較於 Reactive Forms 較為簡易，透過 Html 原生的驗證或是 AG Validator Directive 可以快速的實作驗證，之前專案上有撇除兩者自製的驗證模組，對於這兩者比較沒有使用到，多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態，這個也有遇到過需求，確實是蠻麻煩的，但這就需要透過 Reactive Forms。</p>
+<p>這裡比較少用到的地方是 <code>範本語法</code> 感覺蠻像原生 js 的 getElement，但在 AG 這取得的會是 NgModel、NgForm 或 HTMLFormElement 包裝好的物件，以往都是搭配 ViewChild 操作 DOM，這裡直接使用 NgModel 所提供的參數 value、error，並抓取 NgForm invalid 參數卡控欄位，後面的就是基本 AG 操作了，相較於先前專案自製驗證確實快速且簡單。</p>
+<blockquote>
+<p>Html</p>
+</blockquote>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">#form</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ngForm<span class="token punctuation">"</span></span> <span class="token attr-name">(ngSubmit)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>login()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>帳號：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+      <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span>
+      <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span>
+      <span class="token attr-name">required</span>
+      <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>\b[\w\.-]+@[\w\.-]+\.\w&#123;2,4&#125;\b<span class="token punctuation">"</span></span>
+      <span class="token attr-name">#accountNgModel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ngModel<span class="token punctuation">"</span></span>
+      <span class="token attr-name">[ngModel]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span>
+      <span class="token attr-name">(ngModelChange)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accountValueChange(accountNgModel.value, accountNgModel.errors)<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>error-message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&#123;&#123; accountErrorMessage &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>密碼：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+      <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
+      <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
+      <span class="token attr-name">required</span>
+      <span class="token attr-name">#passwordNgModel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ngModel<span class="token punctuation">"</span></span>
+      <span class="token attr-name">[minlength]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span>
+      <span class="token attr-name">[maxlength]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>16<span class="token punctuation">"</span></span>
+      <span class="token attr-name">[ngModel]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
+      <span class="token attr-name">(ngModelChange)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>passwordValueChange(passwordNgModel.value, passwordNgModel.errors)<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>error-message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&#123;&#123; passwordErrorMessage &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">[disabled]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form.invalid<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>登入<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="Angular-Reactive-Forms"><a href="#Angular-Reactive-Forms" class="headerlink" title="Angular Reactive Forms"></a>Angular Reactive Forms</h3><pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">AA<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>Typescript</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">&#123;</span>
 
-<h3 id="Angular-Template-Driven-Forms"><a href="#Angular-Template-Driven-Forms" class="headerlink" title="Angular Template-Driven Forms"></a>Angular Template-Driven Forms</h3><pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">AA<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  <span class="token comment">// 綁定在帳號欄位上</span>
+  account <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 綁定在密碼欄位上</span>
+  password <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 帳號欄位的錯誤訊息</span>
+  accountErrorMessage <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 密碼欄位的錯誤訊息</span>
+  passwordErrorMessage <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 綁定在帳號欄位上，當使用者改變登入帳號時，會觸發此函式，並取得對應的錯誤訊息
+   *
+   * @param &#123;string&#125; account
+   * @param &#123;ValidationErrors&#125; errors
+   */</span>
+  <span class="token function">accountValueChange</span><span class="token punctuation">(</span>account<span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">errors</span><span class="token operator">:</span> ValidationErrors<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>account <span class="token operator">=</span> account<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">validationCheck</span><span class="token punctuation">(</span>errors<span class="token punctuation">,</span> <span class="token string">'account'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+
+  <span class="token comment">/**
+   * 綁定在密碼欄位上，當使用者改變密碼時會觸發此函式
+   *
+   * @param &#123;string&#125; password
+   * @param &#123;ValidationErrors&#125; errors
+   */</span>
+  <span class="token function">passwordValueChange</span><span class="token punctuation">(</span>password<span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">errors</span><span class="token operator">:</span> ValidationErrors<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>password <span class="token operator">=</span> password<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">validationCheck</span><span class="token punctuation">(</span>errors<span class="token punctuation">,</span> <span class="token string">'password'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">// 綁定在表單上，當使用者按下登入按鈕時會觸發此函式</span>
+  <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// do login...</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/**
+   * 透過欄位裡的 ValidationErrors 來設定該欄位的錯誤訊息
+   *
+   * @param &#123;ValidationErrors&#125; errors 欲驗證的欄位的錯誤 (by Angular)
+   * @param &#123;'account' | 'password'&#125; fieldName 欄位名稱
+   */</span>
+  <span class="token keyword">private</span> <span class="token function">validationCheck</span><span class="token punctuation">(</span>
+    <span class="token literal-property property">errors</span><span class="token operator">:</span> ValidationErrors<span class="token punctuation">,</span>
+    <span class="token literal-property property">fieldName</span><span class="token operator">:</span> <span class="token string">'account'</span> <span class="token operator">|</span> <span class="token string">'password'</span>
+  <span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> <span class="token literal-property property">errorMessage</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>errors<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>errors<span class="token punctuation">.</span>required<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'此欄位必填'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>errors<span class="token punctuation">.</span>pattern<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'格式有誤，請重新輸入'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>errors<span class="token punctuation">.</span>minlength<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'密碼長度最短不得低於8碼'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setErrorMessage</span><span class="token punctuation">(</span>fieldName<span class="token punctuation">,</span> errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/**
+   * 設定指定欄位的錯誤訊息
+   *
+   * @param &#123;'account' | 'password'&#125; fieldName 欲設定錯誤訊息的欄位名稱
+   * @param &#123;string&#125; errorMessage 欲設定的錯誤訊息
+   */</span>
+  <span class="token keyword">private</span> <span class="token function">setErrorMessage</span><span class="token punctuation">(</span>
+    <span class="token literal-property property">fieldName</span><span class="token operator">:</span> <span class="token string">'account'</span> <span class="token operator">|</span> <span class="token string">'password'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">errorMessage</span><span class="token operator">:</span> string
+  <span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>fieldName <span class="token operator">===</span> <span class="token string">'account'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>accountErrorMessage <span class="token operator">=</span> errorMessage<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>passwordErrorMessage <span class="token operator">=</span> errorMessage<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Angular-Model-Driven-Forms-Reactive-Forms"><a href="#Angular-Model-Driven-Forms-Reactive-Forms" class="headerlink" title="Angular Model-Driven Forms ( Reactive Forms )"></a>Angular Model-Driven Forms ( Reactive Forms )</h3><p>對於 Reactive Forms，我其實比較好奇進階使用 ( 多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態 )，但這部分在原文章好像放在比較後面，就先學會怎麼使用吧，如果有需要再自行到原文觀看，Model-Driven Form 是將表單用程式的方式產生，主要 Directive 成員有最外層的 formGroup 與內層的 formControl ( formControlName, formGroupName, formArrayName )，很類似之前開發過 .Net 的 Webform 控制項或是 Razor 的表單驗證，在 Reactive Forms 需要透過這些 Directive 與 Template 的 Form Element 做資料綁定透過 formBuilder.group 將 AG 所提供的 Directive 與 Validators 與表單綁定，這跟之前專案自製過的驗證模組原理相通，但多了更多 AG 所提供的物件，相對的也比較複雜，感覺可以斟酌使用。</p>
+<blockquote>
+<p>Html</p>
+</blockquote>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">[formGroup]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>formGroup<span class="token punctuation">"</span></span> <span class="token attr-name">(ngSubmit)</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>login()<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>帳號：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+      <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span>
+      <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span>
+      <span class="token attr-name">[formControl]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accountControl<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>error-message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&#123;&#123; getErrorMessage(accountControl) &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>密碼：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+      <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
+      <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span>
+      <span class="token attr-name">[formControl]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>passwordControl<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>error-message<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&#123;&#123; getErrorMessage(passwordControl) &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">[disabled]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>formGroup.invalid<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>登入<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>Typescript</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">LoginComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">&#123;</span>
+
+  <span class="token comment">// 綁定在表單上</span>
+  <span class="token literal-property property">formGroup</span><span class="token operator">:</span> FormGroup<span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 用以取得帳號欄位的表單控制項
+   */</span>
+  <span class="token keyword">get</span> <span class="token function">accountControl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> FormControl <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formGroup<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'account'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> FormControl<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/**
+   * 用以取得密碼欄位的表單控制項
+   */</span>
+  <span class="token keyword">get</span> <span class="token function">passwordControl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> FormControl <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formGroup<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'password'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> FormControl<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/**
+   * 透過 DI 取得 FromBuilder 物件，用以建立表單
+   */</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> <span class="token literal-property property">formBuilder</span><span class="token operator">:</span> FormBuilder</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/**
+   * 當 Component 初始化的時候初始化表單
+   */</span>
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>formGroup <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>formBuilder<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">account</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">''</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span>
+          Validators<span class="token punctuation">.</span>required<span class="token punctuation">,</span>
+          Validators<span class="token punctuation">.</span><span class="token function">pattern</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\b[\w\.-]+@[\w\.-]+\.\w&#123;2,4&#125;\b$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gi</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">password</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">''</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span>
+          Validators<span class="token punctuation">.</span>required<span class="token punctuation">,</span>
+          Validators<span class="token punctuation">.</span><span class="token function">minLength</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          Validators<span class="token punctuation">.</span><span class="token function">maxLength</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">// 綁定在表單上，當使用者按下登入按鈕時會觸發此函式</span>
+  <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// do login...</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">/**
+   * 透過該欄位的表單控制項來取得該欄位的錯誤訊息
+   *
+   * @param &#123;FormControl&#125; formControl 欲取得錯誤訊息的欄位的表單控制項 (by Angular)
+   */</span>
+  <span class="token function">getErrorMessage</span><span class="token punctuation">(</span>formControl<span class="token operator">:</span> FormControl<span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> <span class="token literal-property property">errorMessage</span><span class="token operator">:</span> string<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>formControl<span class="token punctuation">.</span>errors <span class="token operator">||</span> formControl<span class="token punctuation">.</span>pristine<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>formControl<span class="token punctuation">.</span>errors<span class="token punctuation">.</span>required<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'此欄位必填'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>formControl<span class="token punctuation">.</span>errors<span class="token punctuation">.</span>pattern<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'格式有誤，請重新輸入'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>formControl<span class="token punctuation">.</span>errors<span class="token punctuation">.</span>minlength<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'密碼長度最短不得低於8碼'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>formControl<span class="token punctuation">.</span>errors<span class="token punctuation">.</span>maxlength<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      errorMessage <span class="token operator">=</span> <span class="token string">'密碼長度最長不得超過16碼'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> errorMessage<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/TCP/IP%E5%8D%8F%E8%AE%AE%E6%97%8F">網際網路協議套組 Wiki</a></li>
@@ -423,6 +650,8 @@ ngOnDestroy()
 <li><a target="_blank" rel="noopener" href="https://blog.kalan.dev/2021-03-13-form-and-form-data">form 標籤與 FormData 的應用</a></li>
 <li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10293658">拾捌。淺談幾種 POST request 的格式</a></li>
 <li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10195280">[功能介紹-10] Reactive Forms (Model-Driven Forms)</a></li>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/m/users/20090728/ironman/3881">Angular 深入淺出三十天：表單與測試</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.crazyalu.com/2016/10/26/angular-model-driven/">Angular 2 Forms 介紹：Model-Driven Forms</a></li>
 </ul>
 
 
@@ -452,7 +681,7 @@ ngOnDestroy()
         <aside class="rightAside">
           <section>
             <h4>Table of contents</h4>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BA%9D%E9%80%9A%E5%AF%A6%E4%BE%8B"><span class="toc-text">溝通實例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XMLHttpRequest"><span class="toc-text">XMLHttpRequest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch"><span class="toc-text">Fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JQuery"><span class="toc-text">JQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Axios"><span class="toc-text">Axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form"><span class="toc-text">Form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FormData"><span class="toc-text">FormData</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular"><span class="toc-text">Angular</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-HttpClient"><span class="toc-text">Angular HttpClient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Model-Driven-Forms"><span class="toc-text">Angular Model-Driven Forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Reactive-Forms"><span class="toc-text">Angular Reactive Forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Template-Driven-Forms"><span class="toc-text">Angular Template-Driven Forms</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BA%9D%E9%80%9A%E5%AF%A6%E4%BE%8B"><span class="toc-text">溝通實例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XMLHttpRequest"><span class="toc-text">XMLHttpRequest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch"><span class="toc-text">Fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JQuery"><span class="toc-text">JQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Axios"><span class="toc-text">Axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form"><span class="toc-text">Form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FormData"><span class="toc-text">FormData</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular"><span class="toc-text">Angular</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-HttpClient"><span class="toc-text">Angular HttpClient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Template-Driven-Forms"><span class="toc-text">Angular Template-Driven Forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Model-Driven-Forms-Reactive-Forms"><span class="toc-text">Angular Model-Driven Forms ( Reactive Forms )</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
   </div>
   </section>
   
