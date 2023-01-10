@@ -326,22 +326,248 @@ ngOnDestroy()
 }
 ```
 
-### Angular Model-Driven Forms
-
-```Js
-AA
-```
-
-### Angular Reactive Forms
-
-```Js
-AA
-```
-
 ### Angular Template-Driven Forms
 
-```Js
-AA
+這部分在網路上有找到詳細的大神系列文章 [Angular 深入淺出三十天：表單與測試](https://ithelp.ithome.com.tw/m/users/20090728/ironman/3881) 而且還有前端的測試範例，直接找到下個研究方向！Template-Driven 相較於 Reactive Forms 較為簡易，透過 Html 原生的驗證或是 AG Validator Directive 可以快速的實作驗證，之前專案上有撇除兩者自製的驗證模組，對於這兩者比較沒有使用到，多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態，這個也有遇到過需求，確實是蠻麻煩的，但這就需要透過 Reactive Forms。
+
+這裡比較少用到的地方是 `範本語法` 感覺蠻像原生 js 的 getElement，但在 AG 這取得的會是 NgModel、NgForm 或 HTMLFormElement 包裝好的物件，以往都是搭配 ViewChild 操作 DOM，這裡直接使用 NgModel 所提供的參數 value、error，並抓取 NgForm invalid 參數卡控欄位，後面的就是基本 AG 操作了，相較於先前專案自製驗證確實快速且簡單。
+
+> Html
+
+```html
+<form #form="ngForm" (ngSubmit)="login()">
+  <p>
+    <label for="account">帳號：</label>
+    <input
+      type="email"
+      name="account"
+      id="account"
+      required
+      pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b"
+      #accountNgModel="ngModel"
+      [ngModel]="account"
+      (ngModelChange)="accountValueChange(accountNgModel.value, accountNgModel.errors)"
+    />
+    <span class="error-message">{{ accountErrorMessage }}</span>
+  </p>
+  <p>
+    <label for="password">密碼：</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      required
+      #passwordNgModel="ngModel"
+      [minlength]="8"
+      [maxlength]="16"
+      [ngModel]="password"
+      (ngModelChange)="passwordValueChange(passwordNgModel.value, passwordNgModel.errors)"
+    />
+    <span class="error-message">{{ passwordErrorMessage }}</span>
+  </p>
+  <p>
+    <button type="submit" [disabled]="form.invalid">登入</button>
+  </p>
+</form>
+```
+
+> Typescript
+
+```js
+export class AppComponent {
+
+  // 綁定在帳號欄位上
+  account = '';
+
+  // 綁定在密碼欄位上
+  password = '';
+
+  // 帳號欄位的錯誤訊息
+  accountErrorMessage = '';
+
+  // 密碼欄位的錯誤訊息
+  passwordErrorMessage = '';
+
+  /**
+   * 綁定在帳號欄位上，當使用者改變登入帳號時，會觸發此函式，並取得對應的錯誤訊息
+   *
+   * @param {string} account
+   * @param {ValidationErrors} errors
+   */
+  accountValueChange(account: string, errors: ValidationErrors): void {
+    this.account = account;
+    this.validationCheck(errors, 'account');
+  }
+
+
+  /**
+   * 綁定在密碼欄位上，當使用者改變密碼時會觸發此函式
+   *
+   * @param {string} password
+   * @param {ValidationErrors} errors
+   */
+  passwordValueChange(password: string, errors: ValidationErrors): void {
+    this.password = password;
+    this.validationCheck(errors, 'password');
+  }
+
+  // 綁定在表單上，當使用者按下登入按鈕時會觸發此函式
+  login(): void {
+    // do login...
+  }
+
+  /**
+   * 透過欄位裡的 ValidationErrors 來設定該欄位的錯誤訊息
+   *
+   * @param {ValidationErrors} errors 欲驗證的欄位的錯誤 (by Angular)
+   * @param {'account' | 'password'} fieldName 欄位名稱
+   */
+  private validationCheck(
+    errors: ValidationErrors,
+    fieldName: 'account' | 'password'
+  ): void {
+    let errorMessage: string;
+    if (!errors) {
+      errorMessage = '';
+    } else if (errors.required) {
+      errorMessage = '此欄位必填';
+    } else if (errors.pattern) {
+      errorMessage = '格式有誤，請重新輸入';
+    } else if (errors.minlength) {
+      errorMessage = '密碼長度最短不得低於8碼';
+    }
+    this.setErrorMessage(fieldName, errorMessage);
+  }
+
+  /**
+   * 設定指定欄位的錯誤訊息
+   *
+   * @param {'account' | 'password'} fieldName 欲設定錯誤訊息的欄位名稱
+   * @param {string} errorMessage 欲設定的錯誤訊息
+   */
+  private setErrorMessage(
+    fieldName: 'account' | 'password',
+    errorMessage: string
+  ): void {
+    if (fieldName === 'account') {
+      this.accountErrorMessage = errorMessage;
+    } else {
+      this.passwordErrorMessage = errorMessage;
+    }
+  }
+
+}
+```
+
+### Angular Model-Driven Forms ( Reactive Forms )
+
+對於 Reactive Forms，我其實比較好奇進階使用 ( 多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態 )，但這部分在原文章好像放在比較後面，就先學會怎麼使用吧，如果有需要再自行到原文觀看，Model-Driven Form 是將表單用程式的方式產生，主要 Directive 成員有最外層的 formGroup 與內層的 formControl ( formControlName, formGroupName, formArrayName )，很類似之前開發過 .Net 的 Webform 控制項或是 Razor 的表單驗證，在 Reactive Forms 需要透過這些 Directive 與 Template 的 Form Element 做資料綁定透過 formBuilder.group 將 AG 所提供的 Directive 與 Validators 與表單綁定，這跟之前專案自製過的驗證模組原理相通，但多了更多 AG 所提供的物件，相對的也比較複雜，感覺可以斟酌使用。
+
+> Html
+
+```html
+<form [formGroup]="formGroup" (ngSubmit)="login()">
+  <p>
+    <label for="account">帳號：</label>
+    <input
+      type="email"
+      id="account"
+      [formControl]="accountControl"
+    />
+    <span class="error-message">{{ getErrorMessage(accountControl) }}</span>
+  </p>
+  <p>
+    <label for="password">密碼：</label>
+    <input
+      type="password"
+      id="password"
+      [formControl]="passwordControl"
+    />
+    <span class="error-message">{{ getErrorMessage(passwordControl) }}</span>
+  </p>
+  <p>
+    <button type="submit" [disabled]="formGroup.invalid">登入</button>
+  </p>
+</form>
+```
+
+> Typescript
+
+```js
+export class LoginComponent implements OnInit {
+
+  // 綁定在表單上
+  formGroup: FormGroup;
+
+  /**
+   * 用以取得帳號欄位的表單控制項
+   */
+  get accountControl(): FormControl {
+    return this.formGroup.get('account') as FormControl;
+  }
+
+  /**
+   * 用以取得密碼欄位的表單控制項
+   */
+  get passwordControl(): FormControl {
+    return this.formGroup.get('password') as FormControl;
+  }
+
+  /**
+   * 透過 DI 取得 FromBuilder 物件，用以建立表單
+   */
+  constructor(private formBuilder: FormBuilder) {}
+
+  /**
+   * 當 Component 初始化的時候初始化表單
+   */
+  ngOnInit(): void {
+    this.formGroup = this.formBuilder.group({
+      account: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(/^\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b$/gi)
+        ]
+      ],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.maxLength(16)
+        ]
+      ]
+    });
+  }
+
+  // 綁定在表單上，當使用者按下登入按鈕時會觸發此函式
+  login(): void {
+    // do login...
+  }
+
+  /**
+   * 透過該欄位的表單控制項來取得該欄位的錯誤訊息
+   *
+   * @param {FormControl} formControl 欲取得錯誤訊息的欄位的表單控制項 (by Angular)
+   */
+  getErrorMessage(formControl: FormControl): string {
+    let errorMessage: string;
+    if (!formControl.errors || formControl.pristine) {
+      errorMessage = '';
+    } else if (formControl.errors.required) {
+      errorMessage = '此欄位必填';
+    } else if (formControl.errors.pattern) {
+      errorMessage = '格式有誤，請重新輸入';
+    } else if (formControl.errors.minlength) {
+      errorMessage = '密碼長度最短不得低於8碼';
+    } else if (formControl.errors.maxlength) {
+      errorMessage = '密碼長度最長不得超過16碼';
+    }
+    return errorMessage;
+  }
+
+}
 ```
 
 ## 參考
@@ -361,3 +587,5 @@ AA
 * [form 標籤與 FormData 的應用](https://blog.kalan.dev/2021-03-13-form-and-form-data)
 * [拾捌。淺談幾種 POST request 的格式](https://ithelp.ithome.com.tw/articles/10293658)
 * [[功能介紹-10] Reactive Forms (Model-Driven Forms)](https://ithelp.ithome.com.tw/articles/10195280)
+* [Angular 深入淺出三十天：表單與測試](https://ithelp.ithome.com.tw/m/users/20090728/ironman/3881)
+* [Angular 2 Forms 介紹：Model-Driven Forms](https://blog.crazyalu.com/2016/10/26/angular-model-driven/)
