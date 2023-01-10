@@ -32,7 +32,7 @@ tags:
 
 在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。
 
-`What Is HttpClient? HttpClient is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on XMLHttpRequest interface exposed by browsers.`
+> What Is HttpClient? HttpClient is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on XMLHttpRequest interface exposed by browsers.
 
 ### XMLHttpRequest
 
