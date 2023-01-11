@@ -85,40 +85,42 @@
 
     <main class="container postWrap">
   <article class="postArticle">
-    <h1 class="pt-1">.NET 6 輕量視覺化 Log 工具 WatchDog</h1>
-
-    <div class="infoBox">
-      <i class="fa fa-eye" aria-hidden="true"></i>
-      <p class="waline-pageview-count" data-path="/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/" />
-      </p>
-      <span>|</span>
-      <p>2023/01/08</p>
-      <span>|</span>
-      <p>
-        Kai98k
-      </p>
-      <span>|</span>
-      <p>
-        
-          <a href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/ ">後端開發 </a>
+    <div class="postArticleHeader">
+      <h1 class="pt-1">.NET 6 輕量視覺化 Log 工具 WatchDog</h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/" />
+        </p>
+        <span>|</span>
+        <p>2023/01/08</p>
+        <span>|</span>
+        <p>
+          Kai98k
+        </p>
+        <span>|</span>
+        <p>
           
-      </p>
-      <span>|</span>
-      <ul class="tagBox">
-        
-          <li>
-            <a href="/tags/Log/"><i class="fa-solid fa-tag"></i> Log
-            </a>
-          </li>
+            <a href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/ ">後端開發 </a>
+            
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
           
-          <li>
-            <a href="/tags/Net/"><i class="fa-solid fa-tag"></i> .Net
-            </a>
-          </li>
-          
-      </ul>
+            <li>
+              <a href="/tags/Log/"><i class="fa-solid fa-tag"></i> Log
+              </a>
+            </li>
+            
+            <li>
+              <a href="/tags/Net/"><i class="fa-solid fa-tag"></i> .Net
+              </a>
+            </li>
+            
+        </ul>
+      </div>
     </div>
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。如專案中的 Log 衍生需求不多，建議可使用這套 WatchDog 工具。</p>
+    <div class="postArticleContent">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。如專案中的 Log 衍生需求不多，建議可使用這套 WatchDog 工具。</p>
 <h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>WatchDog 利用 SignalR 與預設 LiteDb 來實現 Web UI 即時監控 Http&#x2F;Error Log 等事件 ，可依需求替換不同的資料庫，像是MSSQL、MySQl、Postgres。</p>
 <h3 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h3><ul>
 <li>即時捕獲 Http 請求&#x2F;回應</li>
@@ -185,7 +187,7 @@ WatchLogger.LogError(res.Content);<span aria-hidden="true" class="line-numbers-r
 <p>撇除這三點，其實還算是不錯的，且原始 source code 也算明瞭，可以 clone&#x2F;fork 下來魔改。<br>例如: <a target="_blank" rel="noopener" href="https://github.com/IzyPro/WatchDog/pull/91/files">結合 Mailkit 在 Log 時，寄信給相關人士</a></p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://github.com/IzyPro/WatchDog/pull/91/files">WatchDog</a></p>
 
-
+    </div>
   </article>
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
     

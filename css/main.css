@@ -34,6 +34,12 @@ h3 {
 h4 {
   font-size: 16px;
 }
+h5 {
+  font-size: 12px;
+}
+p {
+  font-size: 8px;
+}
 body {
   background-color: #f2f2f2;
 }
@@ -539,6 +545,84 @@ nav>ul>li>h4>a:hover {
   border-radius: 10px;
   border-top-left-radius: unset !important;
   border-top-right-radius: unset !important;
+}
+.postArticle h1,
+.postArticle h2,
+.postArticle h3,
+.postArticle h4,
+.postArticle h5 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.postArticle h1:hover >.headerlink::after,
+.postArticle h2:hover >.headerlink::after,
+.postArticle h3:hover >.headerlink::after,
+.postArticle h4:hover >.headerlink::after,
+.postArticle h5:hover >.headerlink::after {
+  content: '#';
+  color: #82aaff;
+  padding: 0 0.3rem;
+}
+.postArticle h1 {
+  font-size: 40px;
+}
+.postArticle h2 {
+  font-size: 36px;
+  padding-bottom: 0.5rem;
+  margin-top: 4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.postArticle h3 {
+  font-size: 32px;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.postArticle h4 {
+  font-size: 28px;
+}
+.postArticle h5 {
+  font-size: 24px;
+}
+.postArticle p {
+  font-size: 20px;
+}
+.postArticle .postArticleContent details {
+  border-bottom: 1px dashed #000;
+  margin-bottom: 2rem;
+}
+.postArticle .postArticleContent details >summary {
+  padding: 0.8rem;
+  font-weight: 500;
+}
+.postArticle .postArticleContent details >* {
+  font-size: 0.8rem;
+}
+.postArticle .postArticleContent ol,
+.postArticle .postArticleContent ul {
+  border-top: 1px dashed #000;
+  padding: 1rem 2rem;
+  margin-bottom: unset;
+}
+.postArticle .postArticleContent ol li,
+.postArticle .postArticleContent ul li {
+  margin-bottom: 1rem;
+}
+.postArticle .postArticleContent p >a,
+.postArticle .postArticleContent li >a {
+  color: #82aaff;
+}
+.postArticle .postArticleContent p >a:hover,
+.postArticle .postArticleContent li >a:hover {
+  color: #82aaff;
+  text-decoration: underline;
+}
+.postArticle .postArticleContent blockquote {
+  border-left: solid #ccc;
+  font-size: 0.8rem;
+  padding: 0px 0.8rem;
+  font-weight: 500;
 }
 @-moz-keyframes fadein {
   from {
