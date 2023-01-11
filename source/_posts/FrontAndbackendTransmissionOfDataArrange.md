@@ -12,19 +12,21 @@ tags:
 
 > 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！
 
-因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異，所以想針對這塊去做一些總整理，話不多說直接開幹；網路通訊協議 (Internet Protocol) 是由網際網路協會底下的工作小組制定而成，主要是用來定義在兩個系統中傳播資訊的規格，以下列出一些我比較有興趣的，主要還是會以資料溝通的實例去比較，詳細的也可以直接參考 [網路傳輸協定 Wiki](https://zh.wikipedia.org/zh-tw/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE)。
+因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異，所以想針對這塊去做一些總整理，話不多說直接開幹；
+
+網路通訊協議 (Internet Protocol) 是由網際網路協會底下的工作小組制定而成，主要是用來定義在兩個系統中傳播資訊的規格，以下列出一些我比較有興趣的，主要還是會以資料溝通的實例去比較，詳細的也可以直接參考 [網路傳輸協定 Wiki](https://zh.wikipedia.org/zh-tw/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE)。
 
 <details>
 <summary>應用層：DNS、POP、FTP、HTTP、HTTPS、ONC/RPC、SSL、SSH、WebSocket</summary>
 
-1. DNS (Domain Name System/Service/Server)：是網際網路的電話簿、地址冊，我覺得這蠻簡單的但就是最後面的 S 對我來說超容易混亂的，簡單來講就是有 N 台 Server 他主要做的 Service 事情就是 Domain Name 對應 IP 這件事情。
-2. POP (Post Office Protocol)：支援使用客戶端遠端管理在伺服器上的電子郵件，套用了 SSL 後又被稱為 POP3S (POP - Version 3)，而與 IMAP (Internet Message Access Protocol) 差異在於能否用不同台電腦存取郵件，但這在實務上目前也沒碰到這麼深，多使用套件解決掉。
-3. FTP (File Transfer Protocol)：用於在電腦網路上在客戶端和伺服器之間進行檔案傳輸，套上 SSL 則為 SFTP，實務上以 C# 來講也像是 POP 一樣，通常會有 FTPExtensions 或是郵件的 package 庫，可以直接套用比較有印象的只有 IIS 上設置 FTP 進行上版。
-4. HTTP、HTTPS (HyperText Transfer Protocol Secure)：HTTPS 其實就是 HTTP 套用 SSL，最初提供一種發布和接收HTML頁面的方法，衍生也能請求 URI (Uniform Resource Identifiers) 統一資源標識符 包含像是 HTML檔案、程式碼、影片、圖片等等，而衍生的還有 URN (Uniform Resource Name) 資源名稱、URL (Uniform Resource Locator) 資源位址地址。
-5. ONC/RPC (Open Network Computing Remote Procedure Call)：一種被廣泛應用的遠端程序呼叫系統，第一次見到這個詞是在 2019 的 .net conf 上，但對當時還是小菜雞的我來說用不到就沒詳細去理解了，相較於而此 RPC 較多看到的是 gRPC 是不限於語言的高效能遠端程序呼叫架構，gRPC 就像 Web 常用的 Restful API 一樣，都是在處理請求和回應，並且進行資料交換 (分為 Unary、Server streaming、Client streaming、Bidirectional streaming)，但 gRPC 還多了其他的功能和特色 ( 其實就像是 Restful 結合 Websocket )，主要的交換資料可以由 JSON 改為 (Protocol Buffer) 協議緩衝區，因為沒有需求這就不深入去研究了，差異比較可以看看這篇 [RPC vs Restful](https://blog.csdn.net/sun007700/article/details/99672063)。
-6. SSL (Secure Sockets Layer)：是一種安全協議，讓客戶端與主機之間建立一個密碼連結，現被 TLS (Transport Layer Security) 取代，主要就是瀏覽器與伺服器 Handshake 的方式會有所不同，並且使用 CA (Certificate Authority) 所頒發的憑證交換來進行身分確認，但在這開發上來講如同前列一樣只要知道原理，並安心使用套件或架構設定就好...
-7. SSH (Secure Shell)：有加密過的遠程連線，主要透過公私鑰加解密，公鑰用來讓別人確認你的簽名的正確性，並將東西加密為只有你私鑰能夠解密，私鑰責用來製作簽名與解密。
-8. WebSocket：可在單個 TCP (Transmission Control Protocol) 傳輸層協議，連接上進行全雙工通訊，瀏覽器和伺服器只需要完成一次交握，兩者之間就可以建立永續性的連接，並進行雙向資料傳輸，自己玩的時候碰過 SignalR (微軟的 WebSocket 架構，提供伺服器端與客戶端的 Library 讓開發簡易化很多)，還有 Firebase RxJS，還看過 PHP 類似 WebSocket 的架構會在 Network 看到瘋狂 Request/Response，但真的開發上好像比較少這方面的需求。
+1. DNS (Domain Name System/Service/Server)：是網際網路的電話簿、地址冊，我覺得這蠻簡單的但就是`最後面的 S 對我來說超容易混亂的，簡單來講就是有 N 台 Server 他主要做的 Service 事情就是 Domain Name 對應 IP 這件事情`。
+2. POP (Post Office Protocol)：支援使用客戶端遠端管理在伺服器上的電子郵件，套用了 SSL 後又被稱為 POP3S (POP - Version 3)，而與 IMAP (Internet Message Access Protocol) 差異在於能否用不同台電腦存取郵件，`但這在實務上目前也沒碰到這麼深，多使用套件解決掉`。
+3. FTP (File Transfer Protocol)：用於在電腦網路上在客戶端和伺服器之間進行檔案傳輸，套上 SSL 則為 SFTP，實務上以 C# 來講也像是 POP 一樣，通常會有 FTPExtensions 或是郵件的 package 庫，可以直接套用，`比較有印象的只有 IIS 上設置 FTP 進行上版`。
+4. HTTP、HTTPS (HyperText Transfer Protocol Secure)：HTTPS 其實就是 HTTP 套用 SSL，最初提供一種發布和接收HTML頁面的方法，`衍生也能請求 URI (Uniform Resource Identifiers) 統一資源標識符 包含像是 HTML檔案、程式碼、影片、圖片等等，而衍生的還有 URN (Uniform Resource Name) 資源名稱、URL (Uniform Resource Locator) 資源位址地址`。
+5. ONC/RPC (Open Network Computing Remote Procedure Call)：一種被廣泛應用的遠端程序呼叫系統，第一次見到這個詞是在 2019 的 .net conf 上，但對當時還是小菜雞的我來說用不到就沒詳細去理解了，相較於而此 RPC 較多看到的是 gRPC 是不限於語言的高效能遠端程序呼叫架構，gRPC 就像 Web 常用的 Restful API 一樣，都是在處理請求和回應，並且進行資料交換 (分為 Unary、Server streaming、Client streaming、Bidirectional streaming)，但 gRPC 還多了其他的功能和特色 ( 其實就像是 Restful 結合 Websocket )，主要的交換資料可以由 JSON 改為 (Protocol Buffer) 協議緩衝區，`因為沒有需求這就不深入去研究了，差異比較可以看看這篇` [RPC vs Restful](https://blog.csdn.net/sun007700/article/details/99672063)。
+6. SSL (Secure Sockets Layer)：是一種安全協議，讓客戶端與主機之間建立一個密碼連結，現被 TLS (Transport Layer Security) 取代，`主要就是瀏覽器與伺服器 Handshake 的方式會有所不同，並且使用 CA (Certificate Authority) 所頒發的憑證交換來進行身分確認，`在這開發上來講如同前列一樣只要知道原理，使用套件或架構設定就好。
+7. SSH (Secure Shell)：有加密過的遠程連線，主要透過`公私鑰加解密`，公鑰用來讓別人確認你的簽名的正確性，並將東西加密為只有你私鑰能夠解密，私鑰責用來製作簽名與解密。
+8. WebSocket：可在單個 TCP (Transmission Control Protocol) 傳輸層協議，連接上進行全雙工通訊，瀏覽器和伺服器只需要完成一次交握，兩者之間就可以建立永續性的連接，並進行雙向資料傳輸。`自己玩的時候碰過 SignalR (微軟的 WebSocket 架構，提供伺服器端與客戶端的 Library 讓開發簡易化很多)，還有 Firebase RxJS，還看過 PHP 類似 WebSocket 的架構會在 Network 看到瘋狂 Request/Response，但真的開發一般的網站系統上好像比較少這方面的需求`。
 
 </details>
 
@@ -264,13 +266,13 @@ console.log('url.href',url.href); // http://127.0.0.1:8080/index.html?username=n
 
 ### FormData
 
-FormData API 可以將表單資料建立相對應的的（key/value）集合，特點是可以傳送二進制檔案（File、Blob)，並且可以將上傳檔案、圖片、影片與複數個資料格式合併 (一般的 Content-Type 往往只能傳送一種形式的資料)，並用 XMLHttpRequest.send() 一次傳送出去。它在編碼類型設定為 multipart/form-data 時會採用與表單相同的格式送出，也可以利用它的 API 快速的去針對資料做轉格式、加密、驗證、錯誤處理、狀態轉換、Accessibility等其餘處理 [MDN FormData](https://developer.mozilla.org/zh-TW/docs/Web/API/FormData)。
+FormData API 可以將表單資料建立相對應的的（key/string）集合，特點是可以傳送二進制檔案（File、Blob)，並且可以將上傳檔案、圖片、影片與複數個資料合併 (`一般的 Content-Type 往往只能傳送一種形式的資料`)，並用 XMLHttpRequest.send() 一次傳送出去。它在編碼類型設定為 multipart/form-data 時會採用與表單相同的格式送出，也可以利用它的 API 快速的去針對資料做轉格式、加密、驗證、錯誤處理、狀態轉換、Accessibility等其餘處理 [MDN FormData](https://developer.mozilla.org/zh-TW/docs/Web/API/FormData)。
 
 > 以下三種 ContentType 應該是最常使用到的了
 
-* multipart/form-data: 表單支援的格式，可以將不同格式的內容包在一起，可以夾帶檔案，但似乎無法像 JSON 有基礎資料型別
-* application/json: API 常用的檔案交換格式，純文字，不支援二進位內容，SAP 通常用 JSON 與後端 Restful 交換資料
-* text/plain: 純文字內容，實際應用中不常出現
+* multipart/form-data：表單支援的格式，可以將不同格式的內容包在一起，可以夾帶檔案，但似乎是 key/string 無法像 JSON 有基礎資料型別
+* application/json：API 常用的檔案交換格式，純文字，不支援二進位內容，SAP 通常用 JSON 與後端 Restful 交換資料
+* text/plain：純文字內容，實際應用中不常出現
 
 > 延伸閱讀 [why-is-using-onclick-in-html-a-bad-practice](https://stackoverflow.com/questions/5871640/why-is-using-onclick-in-html-a-bad-practice) ( TL;DR 關注點分離 > 資安 )
 
@@ -328,7 +330,9 @@ ngOnDestroy()
 
 ### Angular Template-Driven Forms
 
-這部分在網路上有找到詳細的大神系列文章 [Angular 深入淺出三十天：表單與測試](https://ithelp.ithome.com.tw/m/users/20090728/ironman/3881) 而且還有前端的測試範例，直接找到下個研究方向！Template-Driven 相較於 Reactive Forms 較為簡易，透過 Html 原生的驗證或是 AG Validator Directive 可以快速的實作驗證，之前專案上有撇除兩者自製的驗證模組，對於這兩者比較沒有使用到，多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態，這個也有遇到過需求，確實是蠻麻煩的，但這就需要透過 Reactive Forms。
+這部分在網路上有找到詳細的大神系列文章 [Angular 深入淺出三十天：表單與測試](https://ithelp.ithome.com.tw/m/users/20090728/ironman/3881) 而且還有前端的測試範例，直接找到下個研究方向！
+
+Template-Driven 相較於 Reactive Forms 較為簡易，透過 Html 原生的驗證或是 AG Validator Directive 可以快速的實作驗證，之前專案上有撇除兩者自製的驗證模組，對於這兩者比較沒有使用到，但像是多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態，這種需求也有遇到過，確實是蠻麻煩的，似乎可以透過 Reactive Forms 處理。
 
 這裡比較少用到的地方是 `範本語法` 感覺蠻像原生 js 的 getElement，但在 AG 這取得的會是 NgModel、NgForm 或 HTMLFormElement 包裝好的物件，以往都是搭配 ViewChild 操作 DOM，這裡直接使用 NgModel 所提供的參數 value、error，並抓取 NgForm invalid 參數卡控欄位，後面的就是基本 AG 操作了，相較於先前專案自製驗證確實快速且簡單。
 
@@ -461,7 +465,9 @@ export class AppComponent {
 
 ### Angular Model-Driven Forms ( Reactive Forms )
 
-對於 Reactive Forms，我其實比較好奇進階使用 ( 多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態 )，但這部分在原文章好像放在比較後面，就先學會怎麼使用吧，如果有需要再自行到原文觀看，Model-Driven Form 是將表單用程式的方式產生，主要 Directive 成員有最外層的 formGroup 與內層的 formControl ( formControlName, formGroupName, formArrayName )，很類似之前開發過 .Net 的 Webform 控制項或是 Razor 的表單驗證，在 Reactive Forms 需要透過這些 Directive 與 Template 的 Form Element 做資料綁定透過 formBuilder.group 將 AG 所提供的 Directive 與 Validators 與表單綁定，這跟之前專案自製過的驗證模組原理相通，但多了更多 AG 所提供的物件，相對的也比較複雜，感覺可以斟酌使用。
+對於 Reactive Forms，我其實比較好奇進階使用 ( `多個欄位之間會有複雜的驗證，抑或是動態的驗證，甚至連表單的欄位是動態` )，但這部分在原文章好像放在比較後面，那就先學會怎麼使用吧，如果有需要再自行到原文觀看；
+
+Model-Driven Form 是將表單用程式的方式產生，主要 Directive 成員有最外層的 formGroup 與內層的 formControl ( formControlName, formGroupName, formArrayName )，很類似之前開發過 .Net 的 Webform 控制項或是 Razor 的表單驗證，在 Reactive Forms 需要透過這些 Directive 與 Template 的 Form Element 做資料綁定透過 formBuilder.group 將 AG 所提供的 Directive 與 Validators 與表單綁定，這跟之前專案自製過的驗證模組原理相通，但多了更多 AG 所提供的物件，相對的也比較複雜，感覺可以斟酌使用。
 
 > Html
 

@@ -48,44 +48,28 @@ a {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-
-    &:hover {
-        >.headerlink {
-            &::after {
-                content: '#';
-                color: rgb(130, 170, 255);
-                padding: 0 0.3rem;
-            }
-        }
-    }
-}
-
 h1 {
-    font-size: $font-size * 10;
-}
-
-h2 {
-    font-size: $font-size * 8;
-}
-
-h3 {
     font-size: $font-size * 7;
 }
 
-h4 {
+h2 {
     font-size: $font-size * 6;
 }
 
-h5 {
+h3 {
     font-size: $font-size * 5;
 }
 
+h4 {
+    font-size: $font-size * 4;
+}
+
+h5 {
+    font-size: $font-size * 3;
+}
+
 p {
-    font-size: $font-size * 4.5;
+    font-size: $font-size * 2;
 }
 
 body {
@@ -665,21 +649,69 @@ nav>ul>li>h4>a {
 }
 
 .postArticle {
-    details {
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 2rem;
+    h1, h2, h3, h4, h5 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
 
-        >summary {
-            padding: 0.8rem;
-            font-weight: 500;
+        &:hover {
+            >.headerlink {
+                &::after {
+                    content: '#';
+                    color: rgb(130, 170, 255);
+                    padding: 0 0.3rem;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-size: $font-size * 10;
+    }
+
+    h2 {
+        font-size: $font-size * 9;
+        padding-bottom: 0.5rem;
+        margin-top: 4rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        font-size: $font-size * 8;
+        padding-bottom: 0.5rem;
+        margin-top: 3rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    h4 {
+        font-size: $font-size * 7;
+    }
+
+    h5 {
+        font-size: $font-size * 6;
+    }
+
+    p {
+        font-size: $font-size * 5;
+    }
+
+    .postArticleContent {
+        details {
+            border-bottom: 1px dashed black;
+            margin-bottom: 2rem;
+
+            >summary {
+                padding: 0.8rem;
+                font-weight: 500;
+            }
+
+            >* {
+                font-size: 0.8rem;
+            }
         }
 
-        >* {
-            font-size: 0.8rem;
-        }
-
-        ol {
-            border-top: 1px solid #ccc;
+        ol,ul {
+            border-top: 1px dashed black;
             padding: 1rem 2rem;
             margin-bottom: unset;
 
@@ -687,23 +719,23 @@ nav>ul>li>h4>a {
                 margin-bottom: 1rem;
             }
         }
-    }
 
-    p, li {
-        >a {
-            color: rgb(130, 170, 255);
-
-            &:hover {
+        p, li {
+            >a {
                 color: rgb(130, 170, 255);
-                text-decoration: underline;
+
+                &:hover {
+                    color: rgb(130, 170, 255);
+                    text-decoration: underline;
+                }
             }
         }
-    }
 
-    blockquote {
-        border-left: solid #ccc;
-        font-size: 0.8rem;
-        padding: 0px 0.8rem;
-        font-weight: 500;
+        blockquote {
+            border-left: solid #ccc;
+            font-size: 0.8rem;
+            padding: 0px 0.8rem;
+            font-weight: 500;
+        }
     }
 }
