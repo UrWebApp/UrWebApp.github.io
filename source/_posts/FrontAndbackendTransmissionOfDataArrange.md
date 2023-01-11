@@ -11,6 +11,8 @@ tags:
 ---
 
 > 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！
+>
+> `TL;DR` 直接使用擅長的或是最新的，因為都是在 Http 協議下的交換資料方式，差異不會大到哪
 
 因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異，所以想針對這塊去做一些總整理，話不多說直接開幹；
 
@@ -34,7 +36,7 @@ tags:
 
 在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。
 
-> What Is HttpClient? HttpClient is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on XMLHttpRequest interface exposed by browsers.
+> What Is HttpClient? `HttpClient` is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the `RxJS` observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on `XMLHttpRequest` interface exposed by browsers.
 
 ### XMLHttpRequest
 
