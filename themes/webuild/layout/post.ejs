@@ -1,35 +1,37 @@
 <main class="container postWrap">
   <article class="postArticle">
-    <h1 class="pt-1"><%- page.title %></h1>
-
-    <div class="infoBox">
-      <i class="fa fa-eye" aria-hidden="true"></i>
-      <p class="waline-pageview-count" data-path="<%- cnToEncode(page.path) %>" />
-      </p>
-      <span>|</span>
-      <p><%- date( page.date , 'YYYY/MM/DD' ) %></p>
-      <span>|</span>
-      <p>
-        <%= page.author %>
-      </p>
-      <span>|</span>
-      <p>
-        <% page.categories.each(category=>{ %>
-          <a href="<%=url_for(category.path)  %> "><%- category.name %> </a>
-          <% }) %>
-      </p>
-      <span>|</span>
-      <ul class="tagBox">
-        <% page.tags.each(tag=>{ %>
-          <li>
-            <a href="<%- url_for(tag.path) %>"><i class="fa-solid fa-tag"></i> <%- tag.name %>
-            </a>
-          </li>
-          <% }) %>
-      </ul>
+    <div class="postArticleHeader">
+      <h1 class="pt-1"><%- page.title %></h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="<%- cnToEncode(page.path) %>" />
+        </p>
+        <span>|</span>
+        <p><%- date( page.date , 'YYYY/MM/DD' ) %></p>
+        <span>|</span>
+        <p>
+          <%= page.author %>
+        </p>
+        <span>|</span>
+        <p>
+          <% page.categories.each(category=>{ %>
+            <a href="<%=url_for(category.path)  %> "><%- category.name %> </a>
+            <% }) %>
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
+          <% page.tags.each(tag=>{ %>
+            <li>
+              <a href="<%- url_for(tag.path) %>"><i class="fa-solid fa-tag"></i> <%- tag.name %>
+              </a>
+            </li>
+            <% }) %>
+        </ul>
+      </div>
     </div>
-    <%- page.content %>
-
+    <div class="postArticleContent">
+      <%- page.content %>
+    </div>
   </article>
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
     <% if (page.prev) { %>
