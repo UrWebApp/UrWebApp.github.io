@@ -330,10 +330,10 @@ console.log('url.href',url.href); // http://127.0.0.1:8080/index.html?username=n
 FormData API 可以將表單資料建立相對應的的（key/string）集合，特點是可以傳送二進制檔案（File、Blob)，並且可以將上傳檔案、圖片、影片與複數個資料合併 (`一般的 Content-Type 往往只能傳送一種形式的資料`)，並用 XMLHttpRequest.send() 一次傳送出去。它在編碼類型設定為 multipart/form-data 時會採用與表單相同的格式送出，也可以利用它的 API 快速的去針對資料做轉格式、加密、驗證、錯誤處理、狀態轉換、Accessibility等其餘處理 [MDN FormData](https://developer.mozilla.org/zh-TW/docs/Web/API/FormData)。
 
 > 以下三種 ContentType 應該是最常使用到的了
-
-* multipart/form-data：表單支援的格式，可以將不同格式的內容包在一起，可以夾帶檔案，但似乎是 key/string 無法像 JSON 有基礎資料型別
-* application/json：API 常用的檔案交換格式，純文字，不支援二進位內容，SAP 通常用 JSON 與後端 Restful 交換資料
-* text/plain：純文字內容，實際應用中不常出現
+>
+> * multipart/form-data：表單支援的格式，可以將不同格式的內容包在一起，可以夾帶檔案，但似乎是 key/string 無法像 JSON 有基礎資料型別
+> * application/json：API 常用的檔案交換格式，純文字，不支援二進位內容，SAP 通常用 JSON 與後端 Restful 交換資料
+> * text/plain：純文字內容，實際應用中不常出現
 
 > 延伸閱讀 [why-is-using-onclick-in-html-a-bad-practice](https://stackoverflow.com/questions/5871640/why-is-using-onclick-in-html-a-bad-practice) ( TL;DR 關注點分離 > 資安 )
 
