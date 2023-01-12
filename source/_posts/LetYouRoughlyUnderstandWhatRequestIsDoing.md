@@ -45,6 +45,14 @@ tags:
 
 ### API (Application Programming Interface)
 
+> 應用程式 `介面：兩種不同物質或狀態之間的接觸面`。
+
+所以不限於人對物 e.g. 麥當勞點餐機、手機、汽車面板 etc...
+
+還包括機器對機器 e.g. 點餐機對中控點餐系統、手機 APP 對 APP 伺服器、汽車系統對汽車音響 etc ...
+
+所以以下 Request 多半是瀏覽器大廠根據 RFC Http 傳輸協議，去提供的函式庫 API 讓你可以操控瀏覽器去對後端伺服器發送 Request 或以之為基底所封裝的高階一點的函式庫。
+
 ## Request 溝通實例
 
 在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。
