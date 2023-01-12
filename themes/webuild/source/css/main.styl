@@ -330,7 +330,7 @@ nav>ul>li>h4>a {
 }
 
 .postArticle {
-    padding: 15px 40px;
+    padding: 15px 15px;
     background: white;
     border-radius: 10px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
@@ -435,101 +435,6 @@ nav>ul>li>h4>a {
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
 }
-
-@media (min-width: 1080px) {
-    .postArticle {
-        padding: 15px;
-    }
-
-    nav {
-        position: sticky;
-    }
-
-    .rightAside {
-        display: block;
-        padding-top: $header-max-height;
-    }
-
-    .rightAside>section {
-        border-left: 1px dashed rgba(0, 0, 0, 0.3);
-        min-width: 285px;
-        position: sticky;
-        top: $header-max-height + 50px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        >ol {
-            padding: 0px;
-            list-style: none;
-        }
-    }
-
-    .main {
-        margin-top: $header-max-height + 50px;
-    }
-
-    .leftAside {
-        max-width: 275px;
-        position: relative;
-        display: block;
-        animation: leftopen 2s;
-    }
-
-    @keyframes leftopen {
-        from {
-            max-width: 0;
-        }
-
-        to {
-            max-width: 275px;
-        }
-    }
-
-    .waterfall {
-        margin: 0 auto;
-        column-count: 3;
-        column-gap: 0px;
-        counter-reset: item-counter;
-    }
-
-    #barBtn {
-        display: none;
-    }
-
-    header {
-        padding: 10px 10px 10px 10px;
-        background-color: $theme-primary;
-        position: fixed;
-    }
-}
-
-@media (min-width: 1400px) {
-    .postWrap {
-        max-width: 980px;
-    }
-
-    .waterfall {
-        margin: 0 auto;
-        column-count: 3;
-        column-gap: 0px;
-        counter-reset: item-counter;
-
-        .main {
-            max-width: 1080px;
-        }
-    }
-
-    header {
-        padding: 15px;
-    }
-}
-
-@media (min-width: 2200px) {
-    .main {
-        max-width: 1980px;
-    }
-}
-
 .card-title {
     margin-bottom: 0;
 }
@@ -766,4 +671,97 @@ nav>ul>li>h4>a {
 
 .hamburger {
     color: #979797 !important;
+}
+@media (min-width: 1080px) {
+    .postArticle {
+        padding: 15px;
+    }
+
+    nav {
+        position: sticky;
+    }
+
+    .rightAside {
+        display: block;
+        padding-top: $header-max-height;
+    }
+
+    .rightAside>section {
+        border-left: 1px dashed rgba(0, 0, 0, 0.3);
+        min-width: 285px;
+        position: sticky;
+        top: $header-max-height + 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        >ol {
+            padding: 0px;
+            list-style: none;
+        }
+    }
+
+    .main {
+        margin-top: $header-max-height + 50px;
+    }
+
+    .leftAside {
+        max-width: 275px;
+        position: relative;
+        display: block;
+        animation: leftopen 2s;
+    }
+
+    @keyframes leftopen {
+        from {
+            max-width: 0;
+        }
+
+        to {
+            max-width: 275px;
+        }
+    }
+
+    .waterfall {
+        margin: 0 auto;
+        column-count: 3;
+        column-gap: 0px;
+        counter-reset: item-counter;
+    }
+
+    #barBtn {
+        display: none;
+    }
+
+    header {
+        padding: 10px 10px 10px 10px;
+        background-color: $theme-primary;
+        position: fixed;
+    }
+}
+
+@media (min-width: 1400px) {
+    .postWrap {
+        max-width: 980px;
+    }
+
+    .waterfall {
+        margin: 0 auto;
+        column-count: 3;
+        column-gap: 0px;
+        counter-reset: item-counter;
+
+        .main {
+            max-width: 1080px;
+        }
+    }
+
+    header {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .main {
+        max-width: 1980px;
+    }
 }
