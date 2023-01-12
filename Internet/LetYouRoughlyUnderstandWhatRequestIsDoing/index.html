@@ -86,10 +86,10 @@
     <main class="container postWrap">
   <article class="postArticle">
     <div class="postArticleHeader">
-      <h1 class="pt-1">資料前後端傳遞大全</h1>
+      <h1 class="pt-1">讓你大概搞懂 Request 在幹什麼！</h1>
       <div class="infoBox">
         <i class="fa fa-eye" aria-hidden="true"></i>
-        <p class="waline-pageview-count" data-path="/Internet/FrontAndbackendTransmissionOfDataArrange/" />
+        <p class="waline-pageview-count" data-path="/Internet/LetYouRoughlyUnderstandWhatRequestIsDoing/" />
         </p>
         <span>|</span>
         <p>2023/01/09</p>
@@ -132,6 +132,7 @@
     <div class="postArticleContent">
       <blockquote>
 <p>此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！</p>
+<p><code>TL;DR</code> 直接使用擅長的或是最新的，因為都是在 Http 協議下的交換資料方式，差異不會大到哪</p>
 </blockquote>
 <p>因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異，所以想針對這塊去做一些總整理，話不多說直接開幹；</p>
 <p>網路通訊協議 (Internet Protocol) 是由網際網路協會底下的工作小組制定而成，主要是用來定義在兩個系統中傳播資訊的規格，以下列出一些我比較有興趣的，主要還是會以資料溝通的實例去比較，詳細的也可以直接參考 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE">網路傳輸協定 Wiki</a>。</p>
@@ -150,11 +151,24 @@
 </ol>
 </details>
 
-<h2 id="溝通實例"><a href="#溝通實例" class="headerlink" title="溝通實例"></a>溝通實例</h2><p>在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。</p>
-<blockquote>
-<p>What Is HttpClient? HttpClient is a built-in service class available in the @angular&#x2F;common&#x2F;http package. It has multiple signature and return types for each request. It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on XMLHttpRequest interface exposed by browsers.</p>
+<h2 id="AJAX-amp-API"><a href="#AJAX-amp-API" class="headerlink" title="AJAX &amp; API"></a>AJAX &amp; API</h2><h3 id="AJAX-Asynchronous-JavaScript-and-XML"><a href="#AJAX-Asynchronous-JavaScript-and-XML" class="headerlink" title="AJAX (Asynchronous JavaScript and XML)"></a>AJAX (Asynchronous JavaScript and XML)</h3><blockquote>
+<p>Asynchronous &#x3D; 非同步 &#x3D; 異步</p>
 </blockquote>
-<h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><p>記得一開始接觸程式，除了 JQ 以外第一個學習與後端溝通的方式，就是透過 XMLHttpRequest 與 Element form、fetch、JQ AJAX、Element form，xhr 詳細的方法可以參考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest">MDN XMLHttpRequest</a>。</p>
+<p>以往<code>同步請求</code>，前端透過 URL 或 Form 發出 Synchronous Request 與後端溝通，必須要接收到後端的 Synchronous Response 才能繼續下一步動作。<br><code>非同步請求</code>則是類似抽號碼牌的概念，抽完號碼牌發出 Asynchronous Request 則就可以去做其他事情等叫號再來執行領取資料。</p>
+<p>而 JavaScript and XML 則是指這是一套透過 JavaScript 執行上述動作的網頁開發技術，溝通的資料格式為 XML (Extensible Markup Language)，但現在資料格式不局限於 XML 但 AJAX 還是延續下來。</p>
+<h3 id="API-Application-Programming-Interface"><a href="#API-Application-Programming-Interface" class="headerlink" title="API (Application Programming Interface)"></a>API (Application Programming Interface)</h3><h2 id="Request-溝通實例"><a href="#Request-溝通實例" class="headerlink" title="Request 溝通實例"></a>Request 溝通實例</h2><p>在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。</p>
+<blockquote>
+<p>What Is HttpClient? <code>HttpClient</code> is a built-in service class available in the @angular&#x2F;common&#x2F;http package. It has multiple signature and return types for each request. It uses the <code>RxJS</code> observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on <code>XMLHttpRequest</code> interface exposed by browsers.</p>
+</blockquote>
+<h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><blockquote>
+<p><code>優點：</code></p>
+<p>不重新載入頁面的情況下更新網頁。<br>在頁面已載入後向伺服器請求&#x2F;接收資料。<br>在背景程式向伺服器發送資料。</p>
+</blockquote>
+<blockquote>
+<p><code>缺點：</code></p>
+<p>使用起來也比較繁瑣，需要設置很多值。<br>早期的IE瀏覽器有自己的實現，這樣需要寫兼容代碼。</p>
+</blockquote>
+<p>記得一開始接觸程式，除了 JQ 以外第一個學習與後端溝通的方式，就是透過 XMLHttpRequest 與 Element form、fetch、JQ AJAX、Element form，xhr 詳細的方法可以參考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest">MDN XMLHttpRequest</a>。</p>
 <pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">&#x2F;&#x2F; let promise &#x3D; new Promise((resolve, reject) &#x3D;&gt; &#123;
     let xhr &#x3D; new XMLHttpRequest ();
     &#x2F;&#x2F; open (method, url, async, user, password)
@@ -203,7 +217,15 @@
  <span class="token literal-property property">withCredentials</span><span class="token operator">:</span> <span class="token boolean">false</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="Fetch"><a href="#Fetch" class="headerlink" title="Fetch"></a>Fetch</h3><p>與上述來看感覺最大差異是在反傳 Promise 與內部是回傳 Response 物件，相較於 XMLHttpRequest 應用較為方便，多了許多處理資料的方法，提供的方法與參數詳細可以參考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch">MDN Fetch</a></p>
+<h3 id="Fetch"><a href="#Fetch" class="headerlink" title="Fetch"></a>Fetch</h3><blockquote>
+<p><code>優點：</code></p>
+<p>簡單的跨域的處理。<br>底層 API 相較於 XHR 可以輕鬆處理格式，也可以容易地被其他技術使用 e.g. Service Workers。<br>支持 Promise API</p>
+</blockquote>
+<blockquote>
+<p><code>缺點：</code></p>
+<p>報錯的部分封裝的並不好，需要額外去處理。<br>cookie 需要額外的設定並沒有 default。<br>不支援超時、拒絕 timeout 控制。<br>無法像 XHR 監測 Request 進度。</p>
+</blockquote>
+<p>與上述來看感覺最大差異是在反傳 Promise 與內部是回傳 Response 物件，相較於 XMLHttpRequest 應用較為方便，多了許多處理資料的方法，提供的方法與參數詳細可以參考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch">MDN Fetch</a></p>
 <blockquote>
 <p>Promise 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。</p>
 </blockquote>
@@ -249,7 +271,15 @@ fetch(&#39;server.txt&#39;) &#x2F;&#x2F; return Promise&lt;Response&gt;
     <span class="token literal-property property">referrer</span><span class="token operator">:</span> <span class="token string">'no-referrer'</span><span class="token punctuation">,</span> <span class="token comment">// *client, no-referrer</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h3><p>JQ 說實在的也比較在個人專案有使用，後續接觸到框架不管是 Vue 或 AG 通常就是使用 fetch 或 Axios，並且搭配框架的 Render，使用上跟上述兩種方式其實也差不多，從官網 <a target="_blank" rel="noopener" href="https://api.jquery.com/jquery.ajax/">jquery.ajax</a> 也可以知道基底是 XMLHttpRequest 只是說有在封裝得更好用一些，且可以利用 JQ 特性鍊式做一些使用上的變化。</p>
+<h3 id="JQuery-ajax"><a href="#JQuery-ajax" class="headerlink" title="JQuery ajax"></a>JQuery ajax</h3><blockquote>
+<p><code>優點：</code></p>
+<p>對原生 XHR 的封裝，做了兼容處理，簡化了使用。<br>增加了對 JSONP 的支持，可以簡單處理部分跨域。</p>
+</blockquote>
+<blockquote>
+<p><code>缺點：</code></p>
+<p>如果有多個請求，並且有依賴關係的話，容易形成回調地獄。<br>本身是針對 MVC 的架構，不符合現在前端 MVVM 。<br>ajax 是 jQuery中的一個方法。如果只是要使用 ajax 卻要引入整個 jQuery 會很大包。</p>
+</blockquote>
+<p>JQ 說實在的也比較在個人專案有使用，後續接觸到框架不管是 Vue 或 AG 通常就是使用 fetch 或 Axios，並且搭配框架的 Render，使用上跟上述兩種方式其實也差不多，從官網 <a target="_blank" rel="noopener" href="https://api.jquery.com/jquery.ajax/">jquery.ajax</a> 也可以知道基底是 XMLHttpRequest 只是說有在封裝得更好用一些，且可以利用 JQ 特性鍊式做一些使用上的變化。</p>
 <pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">$.ajax(&#123;
     beforeSend:(xhr)&#x3D;&gt;&#123;xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;x-www-form-urlencoded&quot;)&#125;,
     url: &#39;server.txt&#39;,
@@ -276,7 +306,15 @@ fetch(&#39;server.txt&#39;) &#x2F;&#x2F; return Promise&lt;Response&gt;
      return $.ajax(&#123;...&#125;);
 &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h3><p>這個套件說實在也沒用過幾次，比較多搭配 Vue 使用，但我主要是開發 AG 的，所以這裡就只列出基本使用方式，感覺跟 JQ 也沒有太大差異，主要是其輕量化、與 fetch 一樣反傳 promise 物件，不限於瀏覽器在node.js中也能使用，提供 axios.create 類似於 Router 管理 API 的介面，詳細請直接參考 <a target="_blank" rel="noopener" href="https://axios-http.com/zh/docs/intro">Axios 官方文件</a>。</p>
+<h3 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h3><blockquote>
+<p><code>優點：</code></p>
+<p>可在 node.js 中使用<br>支持 Promise API<br>攔截處理 &#x2F; 錯誤處理 &#x2F; 超時處理 &#x2F; 格式處理<br>支援防禦 XSRF</p>
+</blockquote>
+<blockquote>
+<p><code>缺點：</code></p>
+<p>較新的瀏覽器才能使用。</p>
+</blockquote>
+<p>這個套件說實在也沒用過幾次，比較多搭配 Vue 使用，但我主要是開發 AG 的，所以這裡就只列出基本使用方式，感覺跟 JQ 也沒有太大差異，主要是其輕量化、與 fetch 一樣反傳 promise 物件，不限於瀏覽器在node.js中也能使用，提供 axios.create 類似於 Router 管理 API 的介面，詳細請直接參考 <a target="_blank" rel="noopener" href="https://axios-http.com/zh/docs/intro">Axios 官方文件</a>。</p>
 <pre class="line-numbers language-Javascript" data-language="Javascript"><code class="language-Javascript">axios.get(&#39;server.txt&#39;)
 .then(function (response) &#123;
         console.log(typeof(response),response);
@@ -390,7 +428,12 @@ function customSubmit (event)&#123; &#x2F;&#x2F; event 可帶可不帶
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h2><p>終於到重點了，此篇文章主要整理使用上的差異，AG 就不提一些基本的部分了，接著上！</p>
-<h3 id="Angular-HttpClient"><a href="#Angular-HttpClient" class="headerlink" title="Angular HttpClient"></a>Angular HttpClient</h3><p>HttpClient 應該沒什麼好講的如前文<a href="#%E6%BA%9D%E9%80%9A%E5%AF%A6%E4%BE%8B">所述</a>，主要的注意事項可以參考保哥的<a target="_blank" rel="noopener" href="https://blog.miniasp.com/post/2019/01/20/Angular-HttpClient-Pitfall-and-Tricks">在 Angular 使用 HttpClient 的各種 TypeScript 地雷與陷阱</a>，主要應該是要熟悉對於 RxJS 的應用，先前專案都沒有進階應用比較少實作反應式的程式，在近期專案看到類似 <a target="_blank" rel="noopener" href="https://rxjs-cn.github.io/learn-rxjs-operators/operators/combination/combinelatest.html">combineLatest</a> 這種使用方式，結合兩個 Observables 去做應用，但 <code>OS 較長開發後端私心來說感覺前端不應該把資料組合搞得這麼複雜，感覺後端處理掉就好...</code>。</p>
+<h3 id="Angular-HttpClient"><a href="#Angular-HttpClient" class="headerlink" title="Angular HttpClient"></a>Angular HttpClient</h3><ul>
+<li>延伸閱讀 RxJS</li>
+<li><a target="_blank" rel="noopener" href="https://fullstackladder.dev/blog/2020/09/25/mastering-rxjs-10-functional-programming-basic-patterns/">Functional Programming</a></li>
+<li><a target="_blank" rel="noopener" href="https://codewithstyle.info/functional-javascript-part-8-functional-reactive-programming-rxjs/">Reactive Programming</a></li>
+</ul>
+<p>HttpClient 應該沒什麼好講的如前文<a href="#%E6%BA%9D%E9%80%9A%E5%AF%A6%E4%BE%8B">所述</a>，主要的注意事項可以參考保哥的<a target="_blank" rel="noopener" href="https://blog.miniasp.com/post/2019/01/20/Angular-HttpClient-Pitfall-and-Tricks">在 Angular 使用 HttpClient 的各種 TypeScript 地雷與陷阱</a>，主要應該是要熟悉對於 RxJS 的應用，先前專案都沒有進階應用比較少實作反應式的程式，在近期專案看到類似 <a target="_blank" rel="noopener" href="https://rxjs-cn.github.io/learn-rxjs-operators/operators/combination/combinelatest.html">combineLatest</a> 這種使用方式，結合兩個 Observables 去做應用，但 <code>OS 較長開發後端私心來說感覺前端不應該把資料組合搞得這麼複雜，感覺後端處理掉就好...</code>。</p>
 <pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">constructor(private httpClient: HttpClient) &#123;
     this.subscribe &#x3D; this.httpClient
     .get&lt;any&gt;(this.url)
@@ -688,7 +731,7 @@ ngOnDestroy()
         <aside class="rightAside">
           <section>
             <h4>Table of contents</h4>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BA%9D%E9%80%9A%E5%AF%A6%E4%BE%8B"><span class="toc-text">溝通實例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XMLHttpRequest"><span class="toc-text">XMLHttpRequest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch"><span class="toc-text">Fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JQuery"><span class="toc-text">JQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Axios"><span class="toc-text">Axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form"><span class="toc-text">Form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FormData"><span class="toc-text">FormData</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular"><span class="toc-text">Angular</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-HttpClient"><span class="toc-text">Angular HttpClient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Template-Driven-Forms"><span class="toc-text">Angular Template-Driven Forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Model-Driven-Forms-Reactive-Forms"><span class="toc-text">Angular Model-Driven Forms ( Reactive Forms )</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX-amp-API"><span class="toc-text">AJAX &amp; API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AJAX-Asynchronous-JavaScript-and-XML"><span class="toc-text">AJAX (Asynchronous JavaScript and XML)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API-Application-Programming-Interface"><span class="toc-text">API (Application Programming Interface)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Request-%E6%BA%9D%E9%80%9A%E5%AF%A6%E4%BE%8B"><span class="toc-text">Request 溝通實例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XMLHttpRequest"><span class="toc-text">XMLHttpRequest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch"><span class="toc-text">Fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JQuery-ajax"><span class="toc-text">JQuery ajax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Axios"><span class="toc-text">Axios</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Form"><span class="toc-text">Form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FormData"><span class="toc-text">FormData</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular"><span class="toc-text">Angular</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-HttpClient"><span class="toc-text">Angular HttpClient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Template-Driven-Forms"><span class="toc-text">Angular Template-Driven Forms</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular-Model-Driven-Forms-Reactive-Forms"><span class="toc-text">Angular Model-Driven Forms ( Reactive Forms )</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
   </div>
   </section>
   
