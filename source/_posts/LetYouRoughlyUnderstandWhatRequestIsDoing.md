@@ -1,5 +1,5 @@
 ---
-title: 資料前後端傳遞大全
+title: 讓你大概搞懂 Request 在幹什麼！
 date: 2023-01-09
 categories: Internet
 author: johch3n611u
@@ -11,6 +11,8 @@ tags:
 ---
 
 > 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！
+>
+> `TL;DR` 直接使用擅長的或是最新的，因為都是在 Http 協議下的交換資料方式，差異不會大到哪
 
 因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異，所以想針對這塊去做一些總整理，話不多說直接開幹；
 
@@ -30,13 +32,37 @@ tags:
 
 </details>
 
-## 溝通實例
+## AJAX & API
+
+### AJAX (Asynchronous JavaScript and XML)
+
+> Asynchronous = 非同步 = 異步
+
+以往`同步請求`，前端透過 URL 或 Form 發出 Synchronous Request 與後端溝通，必須要接收到後端的 Synchronous Response 才能繼續下一步動作。
+`非同步請求`則是類似抽號碼牌的概念，抽完號碼牌發出 Asynchronous Request 則就可以去做其他事情等叫號再來執行領取資料。
+
+而 JavaScript and XML 則是指這是一套透過 JavaScript 執行上述動作的網頁開發技術，溝通的資料格式為 XML (Extensible Markup Language)，但現在資料格式不局限於 XML 但 AJAX 還是延續下來。
+
+### API (Application Programming Interface)
+
+## Request 溝通實例
 
 在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。
 
-> What Is HttpClient? HttpClient is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the RxJS observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on XMLHttpRequest interface exposed by browsers.
+> What Is HttpClient? `HttpClient` is a built-in service class available in the @angular/common/http package. It has multiple signature and return types for each request. It uses the `RxJS` observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on `XMLHttpRequest` interface exposed by browsers.
 
 ### XMLHttpRequest
+
+> `優點：`
+>
+> 不重新載入頁面的情況下更新網頁。
+> 在頁面已載入後向伺服器請求/接收資料。
+> 在背景程式向伺服器發送資料。
+
+> `缺點：`
+>
+> 使用起來也比較繁瑣，需要設置很多值。
+> 早期的IE瀏覽器有自己的實現，這樣需要寫兼容代碼。
 
 記得一開始接觸程式，除了 JQ 以外第一個學習與後端溝通的方式，就是透過 XMLHttpRequest 與 Element form、fetch、JQ AJAX、Element form，xhr 詳細的方法可以參考 [MDN XMLHttpRequest](https://developer.mozilla.org/zh-TW/docs/Web/API/XMLHttpRequest)。
 
@@ -93,6 +119,19 @@ XMLHttpRequest : {
 
 ### Fetch
 
+> `優點：`
+>
+> 簡單的跨域的處理。
+> 底層 API 相較於 XHR 可以輕鬆處理格式，也可以容易地被其他技術使用 e.g. Service Workers。
+> 支持 Promise API
+
+> `缺點：`
+>
+> 報錯的部分封裝的並不好，需要額外去處理。
+> cookie 需要額外的設定並沒有 default。
+> 不支援超時、拒絕 timeout 控制。
+> 無法像 XHR 監測 Request 進度。
+
 與上述來看感覺最大差異是在反傳 Promise 與內部是回傳 Response 物件，相較於 XMLHttpRequest 應用較為方便，多了許多處理資料的方法，提供的方法與參數詳細可以參考 [MDN Fetch](https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)
 
 > Promise 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
@@ -143,7 +182,18 @@ Response : {
 }
 ```
 
-### JQuery
+### JQuery ajax
+
+> `優點：`
+>
+> 對原生 XHR 的封裝，做了兼容處理，簡化了使用。
+> 增加了對 JSONP 的支持，可以簡單處理部分跨域。
+
+> `缺點：`
+>
+> 如果有多個請求，並且有依賴關係的話，容易形成回調地獄。
+> 本身是針對 MVC 的架構，不符合現在前端 MVVM 。
+> ajax 是 jQuery中的一個方法。如果只是要使用 ajax 卻要引入整個 jQuery 會很大包。
 
 JQ 說實在的也比較在個人專案有使用，後續接觸到框架不管是 Vue 或 AG 通常就是使用 fetch 或 Axios，並且搭配框架的 Render，使用上跟上述兩種方式其實也差不多，從官網 [jquery.ajax](https://api.jquery.com/jquery.ajax/) 也可以知道基底是 XMLHttpRequest 只是說有在封裝得更好用一些，且可以利用 JQ 特性鍊式做一些使用上的變化。
 
@@ -178,6 +228,17 @@ $.ajax({...}).then(function(){
 ```
 
 ### Axios
+
+> `優點：`
+>
+> 可在 node.js 中使用
+> 支持 Promise API
+> 攔截處理 / 錯誤處理 / 超時處理 / 格式處理
+> 支援防禦 XSRF
+
+> `缺點：`
+>
+> 較新的瀏覽器才能使用。
 
 這個套件說實在也沒用過幾次，比較多搭配 Vue 使用，但我主要是開發 AG 的，所以這裡就只列出基本使用方式，感覺跟 JQ 也沒有太大差異，主要是其輕量化、與 fetch 一樣反傳 promise 物件，不限於瀏覽器在node.js中也能使用，提供 axios.create 類似於 Router 管理 API 的介面，詳細請直接參考 [Axios 官方文件](https://axios-http.com/zh/docs/intro)。
 
@@ -308,6 +369,10 @@ function customSubmit (event){ // event 可帶可不帶
 終於到重點了，此篇文章主要整理使用上的差異，AG 就不提一些基本的部分了，接著上！
 
 ### Angular HttpClient
+
+* 延伸閱讀 RxJS
+* [Functional Programming](https://fullstackladder.dev/blog/2020/09/25/mastering-rxjs-10-functional-programming-basic-patterns/)
+* [Reactive Programming](https://codewithstyle.info/functional-javascript-part-8-functional-reactive-programming-rxjs/)
 
 HttpClient 應該沒什麼好講的如前文[所述](#溝通實例)，主要的注意事項可以參考保哥的[在 Angular 使用 HttpClient 的各種 TypeScript 地雷與陷阱](https://blog.miniasp.com/post/2019/01/20/Angular-HttpClient-Pitfall-and-Tricks)，主要應該是要熟悉對於 RxJS 的應用，先前專案都沒有進階應用比較少實作反應式的程式，在近期專案看到類似 [combineLatest](https://rxjs-cn.github.io/learn-rxjs-operators/operators/combination/combinelatest.html) 這種使用方式，結合兩個 Observables 去做應用，但 `OS 較長開發後端私心來說感覺前端不應該把資料組合搞得這麼複雜，感覺後端處理掉就好...`。
 
