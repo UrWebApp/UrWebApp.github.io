@@ -240,11 +240,6 @@ $.ajax({...}).then(function(){
 >
 > 較新的瀏覽器才能使用。
 
-作者：很洋气的一个名字
-链接：https://juejin.cn/post/6844904058466074637
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 這個套件說實在也沒用過幾次，比較多搭配 Vue 使用，但我主要是開發 AG 的，所以這裡就只列出基本使用方式，感覺跟 JQ 也沒有太大差異，主要是其輕量化、與 fetch 一樣反傳 promise 物件，不限於瀏覽器在node.js中也能使用，提供 axios.create 類似於 Router 管理 API 的介面，詳細請直接參考 [Axios 官方文件](https://axios-http.com/zh/docs/intro)。
 
 ```Javascript
