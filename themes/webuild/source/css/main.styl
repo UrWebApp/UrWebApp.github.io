@@ -47,9 +47,11 @@ a {
 h1,h2,h3,h4,h5{
     font-family: 'Noto Sans TC', sans-serif;
 }
+
 * .token {
-        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
+
 h1 {
     font-size: $font-size * 7;
 }
@@ -435,6 +437,10 @@ nav>ul>li>h4>a {
 }
 
 @media (min-width: 1080px) {
+    .postArticle {
+        padding: 15px;
+    }
+
     nav {
         position: sticky;
     }
@@ -697,6 +703,10 @@ nav>ul>li>h4>a {
         font-size: $font-size * 5;
     }
 
+    .infoBox>p {
+        font-size: 12px;
+    }
+
     .postArticleContent {
         details {
             border-bottom: 1px dashed black;
@@ -752,4 +762,8 @@ nav>ul>li>h4>a {
             }
         }
     }
+}
+
+.hamburger {
+    color: #979797 !important;
 }
