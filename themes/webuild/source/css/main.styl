@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
-@import './mixin/_layout.styl';
 
 $font-size = 4px;
 $theme-background-color = convert(hexo-config('theme_style.background'));
@@ -331,7 +330,7 @@ nav>ul>li>h4>a {
 }
 
 .postArticle {
-    padding: 15px 15px;
+    padding: 15px;
     background: white;
     border-radius: 10px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
@@ -742,27 +741,27 @@ nav>ul>li>h4>a {
     }
 }
 
-@media (min-width: 1400px) {
-    .postWrap {
-        max-width: 980px;
-    }
+// @media (min-width: 1400px) {
+//     .postWrap {
+//         max-width: 980px;
+//     }
 
-    .waterfall {
-        margin: 0 auto;
-        column-count: 3;
-        column-gap: 0px;
-        counter-reset: item-counter;
+//     .waterfall {
+//         margin: 0 auto;
+//         column-count: 3;
+//         column-gap: 0px;
+//         counter-reset: item-counter;
 
-        .main {
-            max-width: 1080px;
-        }
-    }
+//         .main {
+//             max-width: 1080px;
+//         }
+//     }
 
-    header {
-        padding: 15px;
-    }
-}
-
+//     header {
+//         padding: 15px;
+//     }
+// }
+@import "./mixin/_layout.styl";
 @media (min-width: 2200px) {
     .main {
         max-width: 1980px;

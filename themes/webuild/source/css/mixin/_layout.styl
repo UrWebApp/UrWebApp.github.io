@@ -1,1 +1,23 @@
 @import "./_breakPoint.styl";
+
++desktop-lg() {
+      .postWrap {
+        max-width: 980px;
+    }
+
+    .waterfall {
+        margin: 0 auto;
+        column-count: 3;
+        column-gap: 0px;
+        counter-reset: item-counter;
+
+        .main {
+            max-width: 1080px;
+        }
+    }
+
+    header {
+        padding: 15px;
+    }
+
+  }
