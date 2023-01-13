@@ -1,15 +1,12 @@
 ---
 title: .NET6 使用 Serilog，在 log 當下同時寄信
 date: 2023-01-04 22:11:18
-categories: 後端開發
-author: 凱煞大地
+categories: Back-End
+author: Kai98k
 tags:
 - Log
-- .NET
+- .Net
 ---
-
-## 前言
-
 在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。除此之外，當特定的事件發生時，除了要 Log 下來，還要寄信給相關人員時，就可以嘗試使用 Serilog。
 
 如果沒有複雜的 Log 需求時，我推薦使用輕量/視覺化的 WatchDog 來做 log 輔助。
