@@ -1,13 +1,12 @@
-https://urwebapp.github.io/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/
-https://urwebapp.github.io/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/NET6%20%E4%BD%BF%E7%94%A8%20Serilog%EF%BC%8C%E5%9C%A8%20Log%20%E7%95%B6%E4%B8%8B%E5%90%8C%E6%99%82%E5%AF%84%E4%BF%A1/
+https://urwebapp.github.io/Back-End/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/
+https://urwebapp.github.io/Back-End/NET6%20%E4%BD%BF%E7%94%A8%20Serilog%EF%BC%8C%E5%9C%A8%20Log%20%E7%95%B6%E4%B8%8B%E5%90%8C%E6%99%82%E5%AF%84%E4%BF%A1/
 https://urwebapp.github.io/Internet/LetYouRoughlyUnderstandWhatRequestIsDoing/
 https://urwebapp.github.io/
 https://urwebapp.github.io/tags/Log/
 https://urwebapp.github.io/tags/Net/
-https://urwebapp.github.io/tags/NET/
 https://urwebapp.github.io/tags/Internet/
 https://urwebapp.github.io/tags/Response/
 https://urwebapp.github.io/tags/Request/
 https://urwebapp.github.io/tags/Angular/
-https://urwebapp.github.io/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/
+https://urwebapp.github.io/categories/Back-End/
 https://urwebapp.github.io/categories/Internet/

@@ -46,7 +46,7 @@
           </h1>
         </a>
       </div>
-      <a href="#" id="barBtn"><i class="fa-solid fa-bars"></i></a>
+      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
     </div>
   </header>
   <!-- <h1>
@@ -69,14 +69,14 @@
               <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
             <div id="categories">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Internet/">Internet</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/">後端開發</a><span class="category-list-count">2</span></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back-End/">Back-End</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Internet/">Internet</a><span class="category-list-count">1</span></li></ul>
             </div>
           </li>
           <li>
             <h4>
               <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
-            <div id="tags"><a href="/tags/NET/" style="font-size: 10px;">.NET</a> <a href="/tags/Net/" style="font-size: 10px;">.Net</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Internet/" style="font-size: 10px;">Internet</a> <a href="/tags/Log/" style="font-size: 20px;">Log</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a></div>
+            <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Internet/" style="font-size: 10px;">Internet</a> <a href="/tags/Log/" style="font-size: 20px;">Log</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a></div>
           </li>
         </ul>
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
@@ -156,7 +156,13 @@
 </blockquote>
 <p>以往<code>同步請求</code>，前端透過 URL 或 Form 發出 Synchronous Request 與後端溝通，必須要接收到後端的 Synchronous Response 才能繼續下一步動作。<br><code>非同步請求</code>則是類似抽號碼牌的概念，抽完號碼牌發出 Asynchronous Request 則就可以去做其他事情等叫號再來執行領取資料。</p>
 <p>而 JavaScript and XML 則是指這是一套透過 JavaScript 執行上述動作的網頁開發技術，溝通的資料格式為 XML (Extensible Markup Language)，但現在資料格式不局限於 XML 但 AJAX 還是延續下來。</p>
-<h3 id="API-Application-Programming-Interface"><a href="#API-Application-Programming-Interface" class="headerlink" title="API (Application Programming Interface)"></a>API (Application Programming Interface)</h3><h2 id="Request-溝通實例"><a href="#Request-溝通實例" class="headerlink" title="Request 溝通實例"></a>Request 溝通實例</h2><p>在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。</p>
+<h3 id="API-Application-Programming-Interface"><a href="#API-Application-Programming-Interface" class="headerlink" title="API (Application Programming Interface)"></a>API (Application Programming Interface)</h3><blockquote>
+<p>應用程式 <code>介面：兩種不同物質或狀態之間的接觸面</code>。</p>
+</blockquote>
+<p>所以不限於人對物 e.g. 麥當勞點餐機、手機、汽車面板 etc…</p>
+<p>還包括機器對機器 e.g. 點餐機對中控點餐系統、手機 APP 對 APP 伺服器、汽車系統對汽車音響 etc …</p>
+<p>所以以下 Request 多半是瀏覽器大廠根據 RFC Http 傳輸協議，去提供的函式庫 API 讓你可以操控瀏覽器去對後端伺服器發送 Request 或以之為基底所封裝的高階一點的函式庫。</p>
+<h2 id="Request-溝通實例"><a href="#Request-溝通實例" class="headerlink" title="Request 溝通實例"></a>Request 溝通實例</h2><p>在 AG 中應該通常都使用 HttpClient 直接存取資料內容，從下面可以看到，這是以 XMLHttpRequest API Http 協議，再包一層 RxJS observable 的 API，製作成觀察者設計模式的易用組件。</p>
 <blockquote>
 <p>What Is HttpClient? <code>HttpClient</code> is a built-in service class available in the @angular&#x2F;common&#x2F;http package. It has multiple signature and return types for each request. It uses the <code>RxJS</code> observable-based APIs, which means it returns the observable and what we need to subscribe it. This API was developed based on <code>XMLHttpRequest</code> interface exposed by browsers.</p>
 </blockquote>
@@ -393,12 +399,12 @@ console.log(&#39;url.href&#39;,url.href); &#x2F;&#x2F; http:&#x2F;&#x2F;127.0.0.
 <h3 id="FormData"><a href="#FormData" class="headerlink" title="FormData"></a>FormData</h3><p>FormData API 可以將表單資料建立相對應的的（key&#x2F;string）集合，特點是可以傳送二進制檔案（File、Blob)，並且可以將上傳檔案、圖片、影片與複數個資料合併 (<code>一般的 Content-Type 往往只能傳送一種形式的資料</code>)，並用 XMLHttpRequest.send() 一次傳送出去。它在編碼類型設定為 multipart&#x2F;form-data 時會採用與表單相同的格式送出，也可以利用它的 API 快速的去針對資料做轉格式、加密、驗證、錯誤處理、狀態轉換、Accessibility等其餘處理 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/API/FormData">MDN FormData</a>。</p>
 <blockquote>
 <p>以下三種 ContentType 應該是最常使用到的了</p>
-</blockquote>
 <ul>
 <li>multipart&#x2F;form-data：表單支援的格式，可以將不同格式的內容包在一起，可以夾帶檔案，但似乎是 key&#x2F;string 無法像 JSON 有基礎資料型別</li>
 <li>application&#x2F;json：API 常用的檔案交換格式，純文字，不支援二進位內容，SAP 通常用 JSON 與後端 Restful 交換資料</li>
 <li>text&#x2F;plain：純文字內容，實際應用中不常出現</li>
 </ul>
+</blockquote>
 <blockquote>
 <p>延伸閱讀 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/5871640/why-is-using-onclick-in-html-a-bad-practice">why-is-using-onclick-in-html-a-bad-practice</a> ( TL;DR 關注點分離 &gt; 資安 )</p>
 </blockquote>
@@ -710,7 +716,7 @@ ngOnDestroy()
     
         
           <h4>
-            <a href="/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/">
+            <a href="/Back-End/NET%206%20%E8%BC%95%E9%87%8F%E8%A6%96%E8%A6%BA%E5%8C%96%20Log%20%E5%B7%A5%E5%85%B7%20WatchDog/">
               .NET 6 輕量視覺化 Log 工具 WatchDog <i class="fa-solid fa-angles-right"></i>
             </a>
           </h4>
@@ -749,7 +755,7 @@ ngOnDestroy()
     <ul>
       
       <li>
-        <a href="/categories/%E5%BE%8C%E7%AB%AF%E9%96%8B%E7%99%BC/"> 後端開發  </a>
+        <a href="/categories/Back-End/"> Back-End  </a>
       </li>
       
       <li>
@@ -767,10 +773,6 @@ ngOnDestroy()
       
       <li>
         <a href="/tags/Net/"> .Net </a>
-      </li>
-      
-      <li>
-        <a href="/tags/NET/"> .NET </a>
       </li>
       
       <li>

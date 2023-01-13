@@ -19,7 +19,11 @@ a:hover {
   transition: all 0.5s;
   color: #0d0d0d;
 }
-* {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Noto Sans TC', sans-serif;
 }
 * .token {
@@ -89,7 +93,7 @@ nav {
   top: 60px;
 }
 nav>ul {
-  padding: 50px 0px;
+  padding: 20px 0px;
 }
 nav>ul>li {
   list-style: none;
@@ -259,7 +263,7 @@ nav>ul>li>h4>a:hover {
   padding-left: 1rem;
 }
 .postArticle {
-  padding: 15px 40px;
+  padding: 15px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
@@ -341,104 +345,6 @@ nav>ul>li>h4>a:hover {
   appearance: none;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-@media (min-width: 1080px) {
-  nav {
-    position: sticky;
-  }
-  .rightAside {
-    display: block;
-    padding-top: 60px;
-  }
-  .rightAside>section {
-    border-left: 1px dashed rgba(0,0,0,0.3);
-    min-width: 285px;
-    position: sticky;
-    top: 110px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .rightAside>section >ol {
-    padding: 0px;
-    list-style: none;
-  }
-  .main {
-    margin-top: 110px;
-  }
-  .leftAside {
-    max-width: 275px;
-    position: relative;
-    display: block;
-    animation: leftopen 2s;
-  }
-  .waterfall {
-    margin: 0 auto;
-    column-count: 3;
-    column-gap: 0px;
-    counter-reset: item-counter;
-  }
-  #barBtn {
-    display: none;
-  }
-  header {
-    padding: 10px 10px 10px 10px;
-    background-color: #dcf2e6;
-    position: fixed;
-  }
-@-moz-keyframes leftopen {
-    from {
-      max-width: 0;
-    }
-    to {
-      max-width: 275px;
-    }
-}
-@-webkit-keyframes leftopen {
-    from {
-      max-width: 0;
-    }
-    to {
-      max-width: 275px;
-    }
-}
-@-o-keyframes leftopen {
-    from {
-      max-width: 0;
-    }
-    to {
-      max-width: 275px;
-    }
-}
-@keyframes leftopen {
-    from {
-      max-width: 0;
-    }
-    to {
-      max-width: 275px;
-    }
-}
-}
-@media (min-width: 1400px) {
-  .postWrap {
-    max-width: 980px;
-  }
-  .waterfall {
-    margin: 0 auto;
-    column-count: 3;
-    column-gap: 0px;
-    counter-reset: item-counter;
-  }
-  .waterfall .main {
-    max-width: 1080px;
-  }
-  header {
-    padding: 15px;
-  }
-}
-@media (min-width: 2200px) {
-  .main {
-    max-width: 1980px;
-  }
 }
 .card-title {
   margin-bottom: 0;
@@ -591,6 +497,9 @@ nav>ul>li>h4>a:hover {
 .postArticle p {
   font-size: 20px;
 }
+.postArticle .infoBox>p {
+  font-size: 12px;
+}
 .postArticle .postArticleContent details {
   border-bottom: 1px dashed #000;
   margin-bottom: 2rem;
@@ -617,7 +526,7 @@ nav>ul>li>h4>a:hover {
 }
 .postArticle .postArticleContent ol li,
 .postArticle .postArticleContent ul li {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .postArticle .postArticleContent p >a,
 .postArticle .postArticleContent li >a {
@@ -637,6 +546,110 @@ nav>ul>li>h4>a:hover {
 .postArticle .postArticleContent blockquote >p {
   margin: 0;
   font-size: 16px;
+}
+.hamburger {
+  color: #979797 !important;
+}
+@media (min-width: 1080px) {
+  .postArticle {
+    padding: 15px 40px;
+  }
+  nav {
+    position: sticky;
+  }
+  .rightAside {
+    display: block;
+    padding-top: 60px;
+  }
+  .rightAside>section {
+    border-left: 1px dashed rgba(0,0,0,0.3);
+    min-width: 285px;
+    position: sticky;
+    top: 110px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .rightAside>section >ol {
+    padding: 0px;
+    list-style: none;
+  }
+  .main {
+    margin-top: 110px;
+  }
+  .leftAside {
+    max-width: 275px;
+    position: relative;
+    display: block;
+    animation: leftopen 2s;
+  }
+  .waterfall {
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 0px;
+    counter-reset: item-counter;
+  }
+  #barBtn {
+    display: none;
+  }
+  header {
+    padding: 10px 10px 10px 10px;
+    background-color: #dcf2e6;
+    position: fixed;
+  }
+@-moz-keyframes leftopen {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 275px;
+    }
+}
+@-webkit-keyframes leftopen {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 275px;
+    }
+}
+@-o-keyframes leftopen {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 275px;
+    }
+}
+@keyframes leftopen {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 275px;
+    }
+}
+}
+@media (min-width: 1400px) {
+  .postWrap {
+    max-width: 980px;
+  }
+  .waterfall {
+    margin: 0 auto;
+    column-count: 3;
+    column-gap: 0px;
+    counter-reset: item-counter;
+  }
+  .waterfall .main {
+    max-width: 1080px;
+  }
+  header {
+    padding: 15px;
+  }
+}
+@media (min-width: 2200px) {
+  .main {
+    max-width: 1980px;
+  }
 }
 @-moz-keyframes fadein {
   from {
