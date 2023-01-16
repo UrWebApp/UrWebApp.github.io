@@ -1,6 +1,6 @@
 ---
 title: .NET 6 輕量視覺化 Log 工具 WatchDog
-date: 2023-01-08 19:11:18
+date: 2023-01-08
 categories: Back-End
 author: Kai98k
 tags:
@@ -16,7 +16,7 @@ WatchDog 利用 SignalR 與預設 LiteDb 來實現 Web UI 即時監控 Http/Erro
 * 可在程式內客製化 Log 訊息紀錄
 * 友善的 Log 察看頁面
 * 支援 Log 日誌搜尋
-* 可定時自動清除 Log 
+* 可定時自動清除 Log
 ## 安裝
 使用 Nuget 介面安裝，或是使用以下指令
 ```console=
