@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>您的網路共筆-UrWeb</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+  
+<link rel="stylesheet" href="/css/prism.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T4FDJRJ');</script>
+  <!-- End Google Tag Manager -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="mobileBox">
+      <div class="brandBox">
+        <a href="/" class="d-flex align-items-center">
+          <h1 class="m-0">
+            您的網路共筆
+          </h1>
+        </a>
+      </div>
+      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+  <!-- <h1>
+      <a href="/">Home</a> |
+      <a href="/archives">Archive</a> |
+      tags
+      <a href="/about/">About</a>
+    </h1> -->
+  <div class="outter-wrap container-fluid">
+    <aside class="leftAside">
+      <nav>
+        <ul>
+          <!-- <li>
+            <h4>
+              <a href="/about/">關於我們</a>
+            </h4>
+          </li> -->
+          <li>
+            <h4>
+              <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+            </h4>
+            <div id="categories">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back-End/">Back-End</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front-End/">Front-End</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Internet/">Internet</a><span class="category-list-count">1</span></li></ul>
+            </div>
+          </li>
+          <li>
+            <h4>
+              <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+            </h4>
+            <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Front-End/" style="font-size: 20px;">Front-End</a> <a href="/tags/Internet/" style="font-size: 10px;">Internet</a> <a href="/tags/Log/" style="font-size: 20px;">Log</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a></div>
+          </li>
+        </ul>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+      </nav>
+    </aside>
+
+    <main class="container postWrap">
+  <article class="postArticle">
+    <div class="postArticleHeader">
+      <h1 class="pt-1">筆記 React Hooks</h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="/Front-End/ReactHooksItHelpNote/" />
+        </p>
+        <span>|</span>
+        <p>2023/01/14</p>
+        <span>|</span>
+        <p>
+          johch3n611u
+        </p>
+        <span>|</span>
+        <p>
+          
+            <a href="/categories/Front-End/ ">Front-End </a>
+            
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
+          
+            <li>
+              <a href="/tags/Front-End/"><i class="fa-solid fa-tag"></i> Front-End
+              </a>
+            </li>
+            
+            <li>
+              <a href="/tags/Note/"><i class="fa-solid fa-tag"></i> Note
+              </a>
+            </li>
+            
+            <li>
+              <a href="/tags/React/"><i class="fa-solid fa-tag"></i> React
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+    <div class="postArticleContent">
+      <p>工作上有需要編輯 SAP 的 impEx 定義檔，所以想透過 React 寫個簡單的編輯器，順便研究一下 React 怎麼使用。</p>
+<blockquote>
+<p>筆記內容節錄 <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20203315/ironman/2668">[筆記]從 Hooks 開始，讓你的網頁 React 起來系列</a> 閱讀重點，如有侵權煩請告知，會立刻將文章移除，感謝。<br><code>TL;DR</code> 不管是 React function 還是 class Component ，感覺就算是 AG 前端摸的深，很容易陷入在技術債陷阱，而不是商業邏輯上… 但還是歹學歹用</p>
+</blockquote>
+<h2 id="Hooks-class"><a href="#Hooks-class" class="headerlink" title="Hooks ? class ?"></a>Hooks ? class ?</h2><p>版本 16.8 &#x2F; 時間 2019-09</p>
+<p>舊 class &#x3D;&gt; component &#x3D;&gt; 掛載複用 &#x3D;&gt; 重新渲染 &#x3D;&gt; 生命週期</p>
+<p>新 Hooks &#x3D;&gt; functional programming?</p>
+<h2 id="es6-Syntax"><a href="#es6-Syntax" class="headerlink" title="es6 Syntax"></a>es6 Syntax</h2><p>解構賦值（Destructuring assignment）</p>
+<p>展開語法（Spread Syntax）</p>
+<p>其餘語法 ( Rest Syntax )</p>
+<h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><p>JSX ( JavaScript Syntax Extension and occasionally referred as JavaScript XML ) ： 透過 JSX 等於我們可以直接把 HTML 放到 JavaScript 中去操作，不再需要先用 querySelector 去選到該元素後才能換掉，而是可以在 HTML 中直接帶入 JavaScript 的變數。</p>
+<p><code>感覺有點像把 View 又跟 Function 卡在一起的感覺，不確定是好是壞，在個人開發經驗中行數不多時是不排斥，還蠻好寫的，可能用這種方式就要盡量拆元件？像是 Angular 通常又會拆出 TS 檔與 Html 檔，不確定 Html 的部分，底層是不是也是類似 JSX 的處理方式</code></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">1. &#x2F;&#x2F; 需要引入 Babel：JavaScript 前處理器（Preprocessor）
+const word &#x3D; &#39;React&#39;;
+2. &#x2F;&#x2F; ReactDOM 套件：渲染綁定 Html
+const root &#x3D; ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+3. &#x2F;&#x2F; &lt;h1&gt; 的部分及為 JSX
+4. &#x2F;&#x2F; React 套件：提供 JSX 解析
+5. &#x2F;&#x2F; JSX &#123;&#125; 內為 JavaScript 表達式（expression）
+root.render(&lt;h1&gt;Hello, &#123;word&#125;!&lt;&#x2F;h1&gt;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="React、ReactDOM-Library"><a href="#React、ReactDOM-Library" class="headerlink" title="React、ReactDOM Library"></a>React、ReactDOM Library</h2><pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">1. &#x2F;&#x2F; 定義 inline-style 行內樣式
+const someStyle &#x3D; &#123;
+  backgroundColor: white,
+  fontSize: &#39;20px&#39;,          2. &#x2F;&#x2F; 也可以寫 20，引號和 px 可以省略
+  border: &#39;1px solid white&#39;,
+  padding: 10,               3. &#x2F;&#x2F; 省略 px，樣式會自動帶入單位變成 &#39;10px&#39;
+&#125;
+
+1. &#x2F;&#x2F; JSX 的內容可以放到 () 內當成變數
+2. &#x2F;&#x2F; 避免關鍵字衝突，在 JSX 中把原本的 CSS class 都改成用 className
+const Counter &#x3D; (
+  &lt;div className&#x3D;&quot;container&quot; style&#x3D;&#123;someStyle&#125;&gt;
+    &lt;div className&#x3D;&quot;chevron chevron-up&quot; &#x2F;&gt;
+    &lt;div className&#x3D;&quot;number&quot;&gt;256&lt;&#x2F;div&gt;
+    3. &#x2F;&#x2F; 直接把定義 inline-style 的物件，放到 style&#x3D;&#123;&#125; 的 &#123;&#125; 內
+    &lt;div className&#x3D;&quot;chevron chevron-down&quot; style&#x3D;&#123;&#123;
+      color: &#39;#FFE8E8&#39;,
+      textShadow: &#39;2px 2px #434a54&#39;,
+    &#125;&#125; &#x2F;&gt;
+  &lt;&#x2F;div&gt;
+);
+
+1. &#96;React 18 後已經棄用 ReactDOM.render()，改用 ReactDOM.createRoot()&#96;
+const root &#x3D; ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+root.render(Counter);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="React-Component、-Hooks-useState、-Hooks-useEffect"><a href="#React-Component、-Hooks-useState、-Hooks-useEffect" class="headerlink" title="React Component、[Hooks] useState、[Hooks] useEffect"></a>React Component、[Hooks] useState、[Hooks] useEffect</h2><ol>
+<li>arrow function： const component &#x3D; ()&#x3D;&gt;(&#x2F;<em>return</em>&#x2F;);</li>
+</ol>
+<p><code>該函式只是單純回傳某一值時，可以把要回傳的內容直接放到 =&gt; 後面而不用額外再寫 return</code></p>
+<ol start="2">
+<li><p><code>不能在條件式（conditions）、迴圈（loops）或嵌套函式（nested functions）中呼叫 Hook 方法，避免 React 組件紀錄 Hooks 調用順序錯誤，但透過 use() 產出的變數和方法，可以在判斷式內使用</code></p>
+</li>
+<li><p>useEffect()：(side-effect) 這個函式會在「每次」畫面渲染完成後，<code>丟入的觀察值改變了</code>就會被呼叫，所以可以把觀察值參數 dependencies 丟個固定 []？</p>
+</li>
+</ol>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">1.&#x2F;&#x2F; React Hooks - useState：呼叫 useState 方法後可以建立一個被監控的資料變數「變數（count）」和「改變該變數 React 會幫我們重新轉譯畫面的方法（setCount）」
+2.&#x2F;&#x2F; React.useState(); &#x2F;&#x2F; 直接透過 &#96;.&#96; 來取用 React 物件內的方法
+3. &#96;只要開頭為 use 的函式，就表示它是個 &quot;Hook&quot;&#96;
+const &#123; useState, useEffect &#125; &#x3D; React; &#x2F;&#x2F; 透過物件的解構賦值把 useState 方法取出
+
+1. &#x2F;&#x2F; 建立一個名為 Counter 的 React 元件
+2. &#96;React 的「元件名稱」會以大寫駝峰的方式來命名，如果沒這麼做的話，React 會把它當作一般的 HTML 元素處理，並跳出錯誤提示。其他像是 HTML 中的屬性、CSS 樣式屬性或一般的函式來說，則會遵行 JavaScript 以小寫駝峰來命名變數的慣例，不然一樣會拋出錯誤。&#96;
+const Counter &#x3D; () &#x3D;&gt; &#123;
+
+  1. &#x2F;&#x2F; 透過 useState 建立 &#96;count&#96; 取得修改變數的 &#96;setCount&#96; 方法
+  2. &#x2F;&#x2F; const arrayReturnFromUseState &#x3D; useState(&lt;資料預設值&gt;);
+  3. &#x2F;&#x2F; 陣列中的第一個元素是「想要監控的資料」
+  4. &#x2F;&#x2F; const count &#x3D; arrayReturnFromUseState[0];
+  5. &#x2F;&#x2F; 陣列中的第二個元素是「修改該資料的方法」
+  6. &#x2F;&#x2F; const setCount &#x3D; arrayReturnFromUseState[1];
+  7. &#96;useState 得到的變數和方法名稱是可以自己取的，而慣例上用來改變變數的方法名稱會以 set開頭；預設值也可以不一定要是字串或數值，而是可以帶入物件。&#96;
+  const [count, setCount] &#x3D; useState(256);
+
+  &#x2F;&#x2F; 抽函式
+  const handleIncrement &#x3D; () &#x3D;&gt; setCount(count + 1);
+  const handleDecrement &#x3D; () &#x3D;&gt; setCount(count - 1);
+  const handleClick &#x3D; (type) &#x3D;&gt; &#123;
+    if (type &#x3D;&#x3D;&#x3D; &#39;increment&#39;) &#123;
+      setCount(count + 1);
+    &#125;
+    if (type &#x3D;&#x3D;&#x3D; &#39;decrement&#39;) &#123;
+      setCount(count - 1);
+    &#125;
+  &#125;;
+
+  &#x2F;&#x2F; 渲染過後執行一次，並在第二個參數 [] 改變時在重複進行
+  useEffect(() &#x3D;&gt; &#123;
+    console.log(&#39;execute function in useEffect&#39;);
+    return () &#x3D;&gt; &#123;
+      &#x2F;&#x2F; cleanup function ， component 即將從畫面離開前、每次 component 重新渲染前
+    &#125;
+  &#125;,[]);
+
+  return (
+    1. &#x2F;&#x2F; 一個 JSX 元素只能有一個根節點
+    &lt;div className&#x3D;&quot;container&quot;&gt;
+      &lt;div className&#x3D;&quot;chevron chevron-up&quot;
+      2. &#x2F;&#x2F; 也可以將此邏輯寫在上面 className
+      style&#x3D;&#123;&#123;
+          visibility: count &gt;&#x3D; 10 &amp;&amp; &#39;hidden&#39;,
+      &#125;&#125;
+      3. &#x2F;&#x2F; 事件處理器（event handlers）
+      onClick&#x3D;&#123;() &#x3D;&gt; &#123;
+          4. &#x2F;&#x2F; setCount(參數) 參數必須有改變 React 才會偵測到重新渲染
+          5. &#x2F;&#x2F; 每次 setSomething 時都是用新的資料覆蓋舊的，格式不一樣也會蓋，不能只寫出要修改或添加的物件屬性
+          6. &#x2F;&#x2F; 先透過解構賦值把舊資料帶入新物件中，再去添加或修改想要變更的資料
+          7. &#x2F;&#x2F; 有關聯的資料放在同一個物件中，而沒有關聯的資料，就另外在使用 useState 去定義資料狀態
+          setCount(&#123;
+            ...currentWeather,
+            temperature: 31,
+          &#125;);
+        &#125;&#125;
+      7. &#x2F;&#x2F; JSX 中標籤內如果沒有內容的話可以自己關閉 &lt;div &#x2F;&gt; 所以不用 &lt;div&gt;&lt;&#x2F;div&gt;
+      &#x2F;&gt;
+      &lt;div className&#x3D;&quot;number&quot;
+      8. &#x2F;&#x2F; onClick&#x3D;&#123;表達式（expression）&#125;
+         &#x2F;&#x2F; 函式後面沒有()不會立即執行：
+         &#x2F;&#x2F; onClick&#x3D;&#123;handleIncrement&#125;
+         &#x2F;&#x2F; 立即執行：
+         &#x2F;&#x2F; onClick&#x3D;&#123;handleClick(&#39;increment&#39;)&#125;
+         &#x2F;&#x2F; 需要把 handleClick() 包在一個函式中不被立即執行：
+         &#x2F;&#x2F; onClick&#x3D;&#123;()&#x3D;&gt;handleClick(&#39;increment&#39;)&#125;
+         &#96;我猜應該是因為 JSX 其實就像是 JS 導致寫在這的函式變為 IIFE 而不是傳統意義上的 Html onclick &lt;&#x3D; 小寫&#96;
+      onClick&#x3D;&#123;()&#x3D;&gt;handleClick(&#39;decrement&#39;)&#125;&gt;256&lt;&#x2F;div&gt;
+      &lt;div className&#x3D;&quot;chevron chevron-down&quot;
+      onClick&#x3D;&#123;handleDecrement&#125;
+      &#x2F;&gt;
+      &lt;input
+      type&#x3D;&quot;number&quot;
+      onChange&#x3D;&#123;() &#x3D;&gt; console.log(&#39;onChange&#39;)&#125;
+      className&#x3D;&quot;input-number&quot;
+      min&#x3D;&quot;0&quot;
+      &#x2F;&gt;
+    &lt;&#x2F;div&gt;
+  );
+&#125;;
+
+const root &#x3D; ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+&#x2F;&#x2F; 使用 &lt;Counter &#x2F;&gt; 來帶入 React 元件
+root.render(&lt;Counter &#x2F;&gt;);
+
+&#x2F;&#x2F; 重複使用三次 &lt;Counter &#x2F;&gt; 元件
+root.render(
+   &lt;div
+    style&#x3D;&#123;&#123;
+      display: &#39;flex&#39;,
+      alignItems: &#39;center&#39;,
+      justifyContent: &#39;space-around&#39;,
+    &#125;&#125;
+  &gt;
+    &lt;Counter &#x2F;&gt;
+    &lt;Counter &#x2F;&gt;
+    &lt;Counter &#x2F;&gt;
+  &lt;&#x2F;div&gt;
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="邏輯運算子（Expressions-Logical-operator）-amp-amp-、三元判斷式（ternary-operator）-…-…"><a href="#邏輯運算子（Expressions-Logical-operator）-amp-amp-、三元判斷式（ternary-operator）-…-…" class="headerlink" title="邏輯運算子（Expressions - Logical operator）&amp;&amp; ||、三元判斷式（ternary operator）? … : …"></a>邏輯運算子（Expressions - Logical operator）&amp;&amp; ||、三元判斷式（ternary operator）? … : …</h2><p><code>在 JSX 中的 &#123;&#125; 內只能放入表達式（expressions），而不能寫入像是 if...else... 這種陳述句（statement），因此在 React 中很常時候都會使用邏輯運算子這種語法。</code></p>
+<p><code>JavaScript 中的真假值在判斷會自動作轉型，因此像是 null、NaN、0、空字串（&quot;&quot;、&#39;&#39;）、undefined 都會被轉型並判斷為「false（假）」</code></p>
+<h3 id="或（or）"><a href="#或（or）" class="headerlink" title="|| 或（or）"></a>|| 或（or）</h3><p>a 為 false（為假）時就用 b，當 a 為 true（為真）時就直接用 a</p>
+<h3 id="amp-amp-與-and"><a href="#amp-amp-與-and" class="headerlink" title="&amp;&amp; 與 (and)"></a>&amp;&amp; 與 (and)</h3><p>當 a 為 true（為真）時，就拿後面的 b，否則拿 a</p>
+<pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">style&#x3D;&#123;&#123;
+          visibility: count &gt;&#x3D; 10 &amp;&amp; &#39;hidden&#39;,
+          1. &#x2F;&#x2F; count 大於 10 &#x3D;&gt; false 或 true，當前參數 false 則回傳 (count &gt;&#x3D; 10) 等於回傳 false
+      &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="…-…-若-…-則-…，否則…"><a href="#…-…-若-…-則-…，否則…" class="headerlink" title="? … : … (若 … 則 …，否則…)"></a>? … : … (若 … 則 …，否則…)</h3><h2 id="函式執行後回傳另一個函式-Callback-Function"><a href="#函式執行後回傳另一個函式-Callback-Function" class="headerlink" title="函式執行後回傳另一個函式 Callback Function"></a>函式執行後回傳另一個函式 Callback Function</h2><blockquote>
+<p>延伸閱讀 <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10250445">JavaScript基本功修練：Day22 - 回傳函式與立即函式(IIFE)</a></p>
+<ul>
+<li>回傳函式 (Callback Function) 回傳函式不一定是非同步<br>e.g. <code>btn.addEventListener(&#39;click&#39;,function()&#123;console.log(&#39;You clicked the button&#39;)&#125;);</code></li>
+<li>IIFE (Immediately Invoked Function Expression) 定義完馬上就執行的 Function</li>
+</ul>
+</blockquote>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">return (
+    &lt;div
+      className&#x3D;&quot;chevron chevron-up&quot;
+      onClick&#x3D;&#123;handleClick(&#39;increment&#39;)&#125;
+      style&#x3D;&#123;&#123;
+        visibility: count &gt;&#x3D; 10 &amp;&amp; &#39;hidden&#39;,
+      &#125;&#125;
+    &#x2F;&gt;
+);
+&#x2F;&#x2F; handleClick(&#39;increment&#39;) 執行的時候實際上是回傳一個 type 為 increment 的函式
+const handleClick &#x3D; (type) &#x3D;&gt; &#123;
+  return function () &#123;
+    if (type &#x3D;&#x3D;&#x3D; &#39;increment&#39;) &#123;
+      setCount(count + 1);
+    &#125;
+    if (type &#x3D;&#x3D;&#x3D; &#39;decrement&#39;) &#123;
+      setCount(count - 1);
+    &#125;
+  &#125;;
+&#125;;
+
+const handleClick &#x3D; (type) &#x3D;&gt; () &#x3D;&gt;&#123;
+    if (type &#x3D;&#x3D;&#x3D; &#39;increment&#39;) &#123;
+      setCount(count + 1);
+    &#125;
+    if (type &#x3D;&#x3D;&#x3D; &#39;decrement&#39;) &#123;
+      setCount(count - 1);
+    &#125;
+&#125;;
+
+const handleClick &#x3D; (type) &#x3D;&gt; () &#x3D;&gt;
+  setCount(type &#x3D;&#x3D;&#x3D; &#39;increment&#39; ? count + 1 : count - 1);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="如何在-JSX-流程控制邏輯-IF-x2F-FOR"><a href="#如何在-JSX-流程控制邏輯-IF-x2F-FOR" class="headerlink" title="如何在 JSX 流程控制邏輯 IF &#x2F; FOR"></a>如何在 JSX 流程控制邏輯 IF &#x2F; FOR</h2><p>for 迴圈、if 判斷 本身是個 statements 而非 expressions，JSX 無法 run statements</p>
+<p>React 中會透過陣列的 Array.map 猿聲方法並且回傳 <Counter /> 元素</p>
+<p><code>感覺用這種方法有種多此一舉的狀況，不確定意義性在哪，感覺是為了 JSX 而去多做一步</code></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903926823649293">Array.from</a></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">&#x2F;&#x2F; 產生元素數目為 10，元素值為 0 ~ 9 的陣列
+const counters &#x3D; [...Array(5).keys()];
+&#x2F;&#x2F;const counters &#x3D; Array.from(&#123; length: 10 &#125;, (_, index) &#x3D;&gt; index);
+&#x2F;&#x2F; [0, 1, 2, ..., 8, 9]
+const root &#x3D; ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+root.render(
+   &lt;div
+     style&#x3D;&#123;&#123;
+       display: &#39;flex&#39;,
+       flexWrap: &#39;wrap&#39;,
+     &#125;&#125;
+   &gt;
+    &#x2F;&#x2F; 使用 map 產生多個 &lt;Counter &#x2F;&gt;
+    &#123;counters.map((item) &#x3D;&gt; (
+      &lt;Counter &#x2F;&gt;
+    ))&#125;
+
+    &#x2F;&#x2F; &#123;[
+    &#x2F;&#x2F;  &lt;Counter &#x2F;&gt;,
+    &#x2F;&#x2F;  &lt;Counter &#x2F;&gt;,
+    &#x2F;&#x2F;  &lt;Counter &#x2F;&gt;,
+    &#x2F;&#x2F;  ...
+    &#x2F;&#x2F; ]&#125;
+  &lt;&#x2F;div&gt;
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="React-的-ng-container-x3D-gt-lt-React-Fragment-gt"><a href="#React-的-ng-container-x3D-gt-lt-React-Fragment-gt" class="headerlink" title="React 的 ng-container &#x3D;&gt; &lt;React.Fragment&gt;"></a>React 的 ng-container &#x3D;&gt; &lt;React.Fragment&gt;</h2><pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">&#x2F;&#x2F; &#x2F;&#x2F; &lt;&gt;&lt;&#x2F;&gt; 是 &lt;React.Fragment&gt;&lt;&#x2F;React.Fragment&gt; 的縮寫
+const Counter &#x3D; () &#x3D;&gt; (
+  &lt;&gt;
+    &lt;div class&#x3D;&quot;container&quot;&gt;
+      &lt;div class&#x3D;&quot;chevron chevron-up&quot; &#x2F;&gt;
+      &lt;div class&#x3D;&quot;number&quot;&gt;256&lt;&#x2F;div&gt;
+      &lt;div class&#x3D;&quot;chevron chevron-down&quot; &#x2F;&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;other-container&quot;&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;&gt;
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="條件轉譯"><a href="#條件轉譯" class="headerlink" title="條件轉譯"></a>條件轉譯</h2><pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const CardFooter &#x3D; () &#x3D;&gt; &#123;
+  let inputValue &#x3D; 30;
+  let criteria;
+  &#x2F;&#x2F; 根據 inputValue 改變要顯示的內容和背景色
+  if (!inputValue) &#123;
+    criteria &#x3D; &#123;
+      title: &#39;---&#39;,
+      backgroundColor: &#39;#d3d8e2&#39;,
+    &#125;;
+  &#125; else if (inputValue &lt; 15) &#123;
+    criteria &#x3D; &#123;
+      title: &#39;SLOW&#39;,
+      backgroundColor: &#39;#ee362d&#39;,
+    &#125;;
+  &#125; else if (inputValue &lt; 40) &#123;
+    criteria &#x3D; &#123;
+      title: &#39;GOOD&#39;,
+      backgroundColor: &#39;#1b82f1&#39;,
+    &#125;;
+  &#125; else if (inputValue &gt;&#x3D; 40) &#123;
+    criteria &#x3D; &#123;
+      title: &#39;FAST&#39;,
+      backgroundColor: &#39;#13d569&#39;,
+    &#125;;
+  &#125;
+
+  return (
+  &lt;div
+    style&#x3D;&#123;&#123;
+      backgroundColor: criteria.backgroundColor,
+    &#125;&#125;
+  &gt;
+    &#123;criteria.title&#125;
+  &lt;&#x2F;div&gt;
+);
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="將資料從父層組件傳遞到子層組件"><a href="#將資料從父層組件傳遞到子層組件" class="headerlink" title="將資料從父層組件傳遞到子層組件"></a>將資料從父層組件傳遞到子層組件</h2><p><code>使用 props 傳遞資料時， key 和 value 的命名可以自己取</code></p>
+<pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">&#x2F;&#x2F; ChildComponent(&#123; firstName, lastName, inputValue &#125;) &#123;
+const ChildComponent &#x3D; (props) &#x3D;&gt; &#123;
+  const &#123; firstName, lastName , inputValue &#125; &#x3D; props;
+  return &lt;h1&gt;Hello, &#123;firstName&#125; &#123;lastName&#125; &#123;inputValue&#125;&lt;&#x2F;h1&gt;;
+&#125;
+const FatherComponent &#x3D; () &#x3D;&gt; &#123;
+    const [inputValue, setInputValue] &#x3D; useState(0);
+    return (&lt;ChildComponent firstName&#x3D;&quot;Aaron&quot; lastName&#x3D;&quot;Chen&quot; inputValue&#x3D;&#123;inputValue&#125; &#x2F;&gt;)
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="React-Developer-Tools"><a href="#React-Developer-Tools" class="headerlink" title="React Developer Tools"></a>React Developer Tools</h2><h3 id="元件檢視"><a href="#元件檢視" class="headerlink" title="元件檢視"></a>元件檢視</h3><ol>
+<li>props 就是指由外部傳入該組件內的資料</li>
+<li>hooks 裡面的 State 表示的是該組件自身內部的資料，也就是使用 useState 產生的資料</li>
+<li>碼表 React.Suspense 組件 等待畫面</li>
+</ol>
+<h3 id="效能檢視-Profilers"><a href="#效能檢視-Profilers" class="headerlink" title="效能檢視 Profilers"></a>效能檢視 Profilers</h3><p>資料狀態沒有處理好的情況下，可能會使得這些組件多了一些不必要的渲染次數，可以去看該頁面內各組件渲染所花費的時間和次數。</p>
+<h2 id="React-專案架構"><a href="#React-專案架構" class="headerlink" title="React 專案架構"></a>React 專案架構</h2><p>create-react-app：工具建立 React 開發環境，不然 webpack 需要自己設定。</p>
+<p>public：靜態檔案，不須再 preprocess、compile。</p>
+<p>src：開發用的資料夾，內層的 js 檔通常需要 webpack 打包，組要透過 es6 modules 串起來。</p>
+<p>CSS-in-JS：類似 Angular 一樣，component 有自己的 css 會編譯再一起，在 React 內需要用額外套件去整合這件事，現存的有 styled-components、emotion 可以選擇，挑選套件時，可以透過 npm trends 把幾個具有相似功能的套件進行比較，看出趨勢找到適合的。</p>
+<p>normalize.css：一種 css reset 保留了原生瀏覽器的樣式，與修正一些 bug 似乎較好用。 參考：<a target="_blank" rel="noopener" href="https://israynotarray.com/css/20210807/3641451940/">Reset CSS 與 Normalize.css 差異</a></p>
+<p>prevState：useSomething 系列內除了初始化，最好還是用 prevState 才會是上一次 setSomething 的值</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// ./src/index.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> WeatherApp <span class="token keyword">from</span> <span class="token string">'./WeatherApp'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 這種引入的方式 CSS 檔的樣式會作用到全域</span>
+<span class="token keyword">import</span> <span class="token string">'./styles.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span>WeatherApp <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ./src/WeatherApp.js</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token comment">// 載入 emotion 的 styled 套件</span>
+<span class="token keyword">import</span> styled <span class="token keyword">from</span> <span class="token string">'@emotion/styled'</span><span class="token punctuation">;</span>
+<span class="token comment">// 使用 create-react-app 提供的 ReactComponent 載入 SVG，( 與以下方式都需要，或者需要自行調整 Webpack 設定 )</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> ReactComponent <span class="token keyword">as</span> Cloudy <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'./images/cloudy.svg'</span><span class="token punctuation">;</span>
+<span class="token comment">// 使用此種方式會取得該圖檔路徑，須放置於 src 屬性，但會侷限於 img element 不是 svg 的可控性</span>
+<span class="token keyword">import</span> cloudyIcon <span class="token keyword">from</span> <span class="token string">'./images/cloudy.svg'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 定義帶有 styled 的 component</span>
+<span class="token keyword">const</span> Container <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  background-color: #ededed;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> WeatherCard <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  position: relative;
+  min-width: 360px;
+  box-shadow: 0 1px 3px 0 #999999;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  padding: 30px 15px;
+
+  svg &#123;
+    width: 25px;
+    height: auto;
+    margin-right: 30px;
+  &#125;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// 透過 styled(組件) 來把樣式帶入已存在的組件中</span>
+<span class="token keyword">const</span> CloudyIcon <span class="token operator">=</span> <span class="token function">styled</span><span class="token punctuation">(</span>Cloudy<span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token parameter">props</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">
+  color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token parameter">props</span> <span class="token operator">=></span> props<span class="token punctuation">.</span>theme <span class="token operator">===</span> <span class="token string">'dark'</span> <span class="token operator">?</span> <span class="token string">'#dadada'</span> <span class="token operator">:</span> <span class="token string">'#212121'</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">;
+  /* 在這裡寫入 CSS 樣式 */
+  flex-basis: 30%;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// Fetch Request</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span>
+    <span class="token string">'Url'</span>
+  <span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+         <span class="token function">setCurrentWeather</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+            <span class="token literal-property property">observationTime</span><span class="token operator">:</span> locationData<span class="token punctuation">.</span>time<span class="token punctuation">.</span>obsTime<span class="token punctuation">,</span>
+            <span class="token literal-property property">locationName</span><span class="token operator">:</span> locationData<span class="token punctuation">.</span>locationName<span class="token punctuation">,</span>
+            <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">'多雲時晴'</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">temperature</span><span class="token operator">:</span> weatherElements<span class="token punctuation">.</span><span class="token constant">TEMP</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">windSpeed</span><span class="token operator">:</span> weatherElements<span class="token punctuation">.</span><span class="token constant">WDSD</span><span class="token punctuation">,</span>
+            <span class="token literal-property property">humid</span><span class="token operator">:</span> weatherElements<span class="token punctuation">.</span><span class="token constant">HUMD</span><span class="token punctuation">,</span>
+         <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">WeatherApp</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token comment">// 定義好的 styled-component 當成元件使用</span>
+    <span class="token operator">&lt;</span>Container<span class="token operator">></span>
+      <span class="token operator">&lt;</span>WeatherCard onClick<span class="token operator">=</span><span class="token punctuation">&#123;</span>handleClick<span class="token punctuation">&#125;</span><span class="token operator">></span>
+        <span class="token punctuation">&#123;</span> CurrentWeather<span class="token punctuation">.</span>observationTime <span class="token punctuation">&#125;</span>
+        <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token punctuation">&#123;</span>cloudyIcon<span class="token punctuation">&#125;</span> alt<span class="token operator">=</span><span class="token string">"cloudy icon"</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">></span>Weather<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Cloudy <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token comment">// 透過 Emotion 建立的 Styled Components 中仍然是個 React 的組件，props 是同樣的方式</span>
+        <span class="token operator">&lt;</span>CloudyIcon theme<span class="token operator">=</span><span class="token string">"dark"</span><span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>WeatherCard<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Container<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> WeatherApp<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Emotion-中可以把撰寫好的-CSS-樣式當作-JavaScript-函式保存起來"><a href="#Emotion-中可以把撰寫好的-CSS-樣式當作-JavaScript-函式保存起來" class="headerlink" title="Emotion 中可以把撰寫好的 CSS 樣式當作 JavaScript 函式保存起來"></a>Emotion 中可以把撰寫好的 CSS 樣式當作 JavaScript 函式保存起來</h3><pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">&#x2F;&#x2F; 匯入 Emotion 提供的 css 函式
+import &#123; css &#125; from &#39;@emotion&#x2F;core&#39;;
+
+&#x2F;&#x2F; CSS 樣式定義成 JavaScript 函式，在共用樣式的函式中，一樣可以透過 props 取得外部傳來的資料
+const buttonDefault &#x3D; (props) &#x3D;&gt; css&#96;
+  display: block;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  background-color: transparent;
+  color: $&#123;props.theme &#x3D;&#x3D;&#x3D; &#39;dark&#39; ? &#39;#dadada&#39; : &#39;#212121&#39;&#125;;
+&#96;;
+
+&#x2F;&#x2F; 在定義 Styled Components 時載入定義好的 CSS 樣式，同樣的樣式後面寫的會覆蓋前面寫的
+const rejectButton &#x3D; styled.button&#96;
+  $&#123;buttonDefault&#125;
+  background-color: red;
+&#96;;
+
+const acceptButton &#x3D; styled.button&#96;
+  $&#123;buttonDefault&#125;
+  background-color: green;
+&#96;;
+
+export default ;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Internationalization-API-優化時間呈現"><a href="#Internationalization-API-優化時間呈現" class="headerlink" title="Internationalization API 優化時間呈現"></a>Internationalization API 優化時間呈現</h3><p>可以使用瀏覽器原生的 Intl 這個方法，這個方法的全名是 Internationalization API，它可以針對日期、時間、數字（貨幣）等資料進行多語系的呈現處理</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">&#123;new Intl.DateTimeFormat(&#39;zh-TW&#39;, &#123;
+            hour: &#39;numeric&#39;,
+            minute: &#39;numeric&#39;,
+          &#125;).format(new Date(currentWeather.observationTime))&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Fetch-Request-資料撈回來後的處理"><a href="#Fetch-Request-資料撈回來後的處理" class="headerlink" title="Fetch Request 資料撈回來後的處理"></a>Fetch Request 資料撈回來後的處理</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">Array.reduce()</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.includes()</a></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const array1 &#x3D; [1, 2, 3, 4];
+
+&#x2F;&#x2F; 0 + 1 + 2 + 3 + 4
+const initialValue &#x3D; 0;
+const sumWithInitial &#x3D; array1.reduce(
+  (accumulator, currentValue) &#x3D;&gt; accumulator + currentValue,
+  initialValue
+);
+
+&#x2F;&#x2F; Expected output: 10
+console.log(sumWithInitial);
+
+const array1 &#x3D; [1, 2, 3];
+&#x2F;&#x2F; Expected output: true
+console.log(array1.includes(2));
+
+
+&#x2F;&#x2F; 處理資料
+const weatherElements &#x3D; locationData.weatherElement.reduce(
+  (neededElements, item) &#x3D;&gt; &#123;
+    if ([&#39;WDSD&#39;, &#39;TEMP&#39;, &#39;HUMD&#39;].includes(item.elementName)) &#123;
+      neededElements[item.elementName] &#x3D; item.elementValue;
+    &#125;
+    return neededElements;
+  &#125;,
+  &#123;&#125; &#x2F;&#x2F; 初始值
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="兩支以上-API-取得的資料需要做-Mix-時-類似-RxJS-combineLatest"><a href="#兩支以上-API-取得的資料需要做-Mix-時-類似-RxJS-combineLatest" class="headerlink" title="兩支以上 API 取得的資料需要做 Mix 時 ( 類似 RxJS combineLatest )"></a>兩支以上 API 取得的資料需要做 Mix 時 ( 類似 RxJS combineLatest )</h2><p>兩支 API Response 先後順序不確定的狀況下，資料覆蓋會成為問題，以前做過類似情境就是分前後 Call API 或用非同步更新狀態，若不使用類似 RxJS Zip combineLatest 混合資料，其實就是後端做掉是最好的選擇 ( API 直接針對這個功能給資料 )，React 這邊則是透過 SetSomething 的別種用法處理。</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const [weatherElement, setWeatherElement] &#x3D; useState(&#x2F;* ... *&#x2F;)
+
+const fetchGetXXX1 &#x3D; () &#x3D;&gt; &#123;
+  fetch(...)
+  .then((data)&#x3D;&gt;&#123;
+      &#x2F;&#x2F; 在 setWeatherElement 中也可以帶入函式
+      &#x2F;&#x2F; 可以透過這個函式的參數取得前一次的資料狀態
+      setWeatherElement((prevState &#x3D;&gt; &#123;
+          &#x2F;&#x2F; 記得要回傳新的資料狀態回去
+          return &#123;
+              ...prevState            &#x2F;&#x2F; 保留原有的資料狀態
+              rainPossibility: 0.1    &#x2F;&#x2F; 添加或更新的資料
+          &#125;
+      &#125;));
+&#125;
+
+const fetchGetXXX2 &#x3D; () &#x3D;&gt; &#123;
+  fetch(...2)
+  .then((data)&#x3D;&gt;&#123;
+      setWeatherElement((prevState &#x3D;&gt; (&#123;
+                ...prevState
+                rainPossibility: 0.1
+            &#125;)
+      ));
+  &#125;);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Hooks-useCallback-x3D-gt-情境：-當…後，才能…-x2F-回呼函式（callback-function）-x2F-Promise-x2F-async-function"><a href="#Hooks-useCallback-x3D-gt-情境：-當…後，才能…-x2F-回呼函式（callback-function）-x2F-Promise-x2F-async-function" class="headerlink" title="[Hooks] useCallback &#x3D;&gt; 情境： 當…後，才能…&#x2F; 回呼函式（callback function） &#x2F; Promise &#x2F; async function"></a>[Hooks] useCallback &#x3D;&gt; 情境： 當…後，才能…&#x2F; 回呼函式（callback function） &#x2F; Promise &#x2F; async function</h3><p>上述方式會造成同畫面，資料不同速度回來，所以分別渲染兩次，也可以透過 async 非同步去等待兩者都回來後再做一次渲染。</p>
+<p>取得所有資料後觸發一次畫面的更新，不複用的化，可以寫在 useEffect 內，但因為 [] 觀察值 相依參數 dependencies 都不會更新所以只會執行一次渲染</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">useEffect(() &#x3D;&gt; &#123;
+   &#x2F;&#x2F; 在 useEffect 中定義 async function 取名為 fetchData
+   const fetchData &#x3D; async () &#x3D;&gt; &#123;
+     &#x2F;&#x2F; 使用 Promise.all 搭配 await 等待兩個 API 都取得回應後才繼續
+     &#x2F;&#x2F; 使用陣列的解構賦值把資料取出
+     const [currentWeather, weatherForecast] &#x3D; await Promise.all([
+       fetchCurrentWeather(),
+       fetchWeatherForecast(),
+     ]);
+
+     &#x2F;&#x2F; 把取得的資料透過物件的解構賦值放入
+     setWeatherElement(&#123;
+       ...currentWeather,
+       ...weatherForecast,
+     &#125;);
+   &#125;;
+
+   &#x2F;&#x2F; 呼叫 fetchData 這個方法
+   fetchData();
+ &#125;, []);
+
+ const fetchCurrentWeather &#x3D; () &#x3D;&gt; &#123;
+   &#x2F;&#x2F; 加上 return 直接把 fetch API 回傳的 Promise 回傳出去
+   return fetch(&#x2F;* ... *&#x2F;)
+     .then((response) &#x3D;&gt; response.json())
+     .then((data) &#x3D;&gt; &#123;
+       &#x2F;&#x2F; ...
+       &#x2F;&#x2F; 把取得的資料內容回傳出去，而不是在這裡 setWeatherElement
+       return &#123;
+         observationTime: locationData.time.obsTime,
+         locationName: locationData.locationName,
+         temperature: weatherElements.TEMP,
+         windSpeed: weatherElements.WDSD,
+         humid: weatherElements.HUMD,
+       &#125;;
+     &#125;);
+ &#125;;
+
+ const fetchWeatherForecast &#x3D; () &#x3D;&gt; &#123;
+   &#x2F;&#x2F; 加上 return 直接把 fetch API 回傳的 Promise 回傳出去
+   return fetch(&#x2F;* ... *&#x2F;)
+     .then((response) &#x3D;&gt; response.json())
+     .then((data) &#x3D;&gt; &#123;
+       &#x2F;&#x2F; ...
+       &#x2F;&#x2F; 把取得的資料內容回傳出去，而不是在這裡 setWeatherElement
+       return &#123;
+         description: weatherElements.Wx.parameterName,
+         weatherCode: weatherElements.Wx.parameterValue,
+         rainPossibility: weatherElements.PoP.parameterName,
+         comfortability: weatherElements.CI.parameterName,
+       &#125;;
+     &#125;);
+ &#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>為了複用重新呼叫，將共用函式搬到 useEffect 之外，但 useEffect 有包裝過內部使用到的函式雖然可以直接複用但此處會被 eslint 報錯，必須相依才可複用，所以需要再 dependencies 定義相依，重點來了<code>此時將 handleClick 放入 dependencies 時，一樣會發生偵測 handleClick 不一樣所以重複執行 useEffect，主要是因為 JS 特性 [call by ref &amp; value &amp; sharing]，「物件」、「陣列」、「函式」 =&gt; 物件 !== 物件</code>，此時就要透過 <code>useCallback</code> 來解決這個問題。</p>
+<p><a target="_blank" rel="noopener" href="https://blog.techbridge.cc/2018/06/23/javascript-call-by-value-or-reference/">深入探討 JavaScript 中的參數傳遞：call by value 還是 reference？</a></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const handleClick &#x3D; async () &#x3D;&gt; &#123;
+            const [currentWeather, weatherForecast] &#x3D; await Promise.all([
+              fetchCurrentWeather(),
+              fetchWeatherForecast(),
+            ]);
+            setWeatherElement(&#123;
+              ...currentWeather,
+              ...weatherForecast,
+            &#125;);
+&#125;;
+
+&lt;Redo onClick&#x3D;&#123;handleClick&#125;&gt;
+           &#123;&#x2F;* ... *&#x2F;&#125;
+&lt;&#x2F;Redo&gt;
+
+useEffect(() &#x3D;&gt; &#123;
+    handleClick();
+&#125;, [handleClick]);
+
+&#x2F;&#x2F; call by ref
+const a &#x3D; &#123;
+  aa: &#39;aaa&#39;,
+&#125;;
+
+const b &#x3D; a;
+
+const c &#x3D; &#123;
+  aa: &#39;aaa&#39;,
+&#125;;
+
+console.log(a &#x3D;&#x3D;&#x3D; b); &#x2F;&#x2F; true
+console.log(a &#x3D;&#x3D;&#x3D; c); &#x2F;&#x2F; false
+
+b.aa &#x3D; &#39;bbb&#39;;
+console.log(a); &#x2F;&#x2F; &#123; title: &#39;bbb&#39; &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>useCallback (函式,dependencies)：它不會隨著每次組件重新執行後，因為作用域不同而得到兩個不同的函式，<code>會回傳一個函式，只有當 dependencies 有改變時，這個回傳的函式才會改變</code>，可以避免因為 Functional Component 每次重新執行後，函式內容明明相同，但卻被判斷為不同，進而導致 useEffect 又再次被呼叫到的情況。</p>
+<p><code>如果某個函式不需要被覆用，那麼可以直接定義在 useEffect 中，但若該方法會需要被共用，則把該方法提到 useEffect 外面後，記得用 useCallback 進行處理後再放到 useEffect 的 dependencies 中</code></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const memoizedCallback &#x3D; useCallback(() &#x3D;&gt; &#123;
+  doSomething(a, b);
+&#125;, [a, b]);
+
+console.log(memoizedCallback &#x3D;&#x3D;&#x3D; memoizedCallback) &#x2F;&#x2F; true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const fetchData &#x3D; useCallback(() &#x3D;&gt; &#123;
+    const fetchingData &#x3D; async () &#x3D;&gt; &#123;
+      const [currentWeather, weatherForecast] &#x3D; await Promise.all([
+        fetchCurrentWeather(),
+        fetchWeatherForecast(),
+      ]);
+
+      setWeatherElement(&#123;
+        ...currentWeather,
+        ...weatherForecast,
+      &#125;);
+    &#125;;
+
+    fetchingData();
+    &#x2F;&#x2F; 因為 fetchingData 沒有相依到 React 組件中的資料狀態，所以 dependencies 陣列中不帶入元素
+&#125;, []);
+
+useEffect(() &#x3D;&gt; &#123;
+    fetchData();
+    &#x2F;&#x2F; 把透過 useCallback 回傳的函式放到 useEffect 的 dependencies 中
+  &#125;, [fetchData]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="Hooks-useMemo-保存複雜運算的資料結果"><a href="#Hooks-useMemo-保存複雜運算的資料結果" class="headerlink" title="[Hooks] useMemo 保存複雜運算的資料結果"></a>[Hooks] useMemo 保存複雜運算的資料結果</h3><p>會在 dependencies 沒有改變的情況下，useMemo 就會直接使用上一次計算過的結果而不會重新在運算一次，<code>useMemo 會在組件渲染時（rendering）被呼叫，因此不應該在這個時間點進行任何會有副作用（side effect）的操作；若需要有副作用的操作，則應該使用的是 useEffect 而不是 useMemo</code>。</p>
+<p><code>useCallback(fn, deps) 等同於 useMemo(() =&gt; fn, deps)</code></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const memoizedValue &#x3D; useMemo(() &#x3D;&gt; computeExpensiveValue(a, b), [a, b]);
+
+&#x2F;&#x2F; 搬到組件外
+const weatherCode2Type &#x3D; (weatherCode) &#x3D;&gt; &#123;
+  const [weatherType] &#x3D;
+    Object.entries(weatherTypes).find(([weatherType, weatherCodes]) &#x3D;&gt;
+      weatherCodes.includes(Number(weatherCode))
+    ) || [];
+
+  return weatherType;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Hooks-useRef-x2F-controlled-amp-uncontrolled-components"><a href="#Hooks-useRef-x2F-controlled-amp-uncontrolled-components" class="headerlink" title="[Hooks] useRef &#x2F; controlled &amp; uncontrolled components"></a>[Hooks] useRef &#x2F; controlled &amp; uncontrolled components</h3><p>Controlled 和 Uncontrolled 指的是「資料受不受到 React 所控制」，<code>&lt;input /&gt;</code> 這類的表單元素本身就可以保有自己的資料狀態，而透過 React 控制則是類似 ngModel 或 Reative Form 綁定表單元素那樣，可以做驗證或更新等等需求。</p>
+<p>Controlled：透過 useState 與 事件監聽去與表單元素雙向綁定</p>
+<p>Uncontrolled：有些時候可能只是想要很簡單的去取得表單中某個欄位的值，或者是有一些情況下需要直接操作 DOM，可以使用 useRef。</p>
+<p><code>useRef：會回傳一個物件（refContainer），這個物件不會隨著每一次畫面重新渲染而指稱到不同的物件，而是可以一直指稱到同一個物件</code>。</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const refContainer &#x3D; useRef(initialValue);
+const InputElement &#x3D; () &#x3D;&gt; (
+  &#x2F;&#x2F; refContainer.current 就會指稱到這個 &lt;input&gt;
+  &lt;input ref&#x3D;&#123;refContainer&#125; &#x2F;&gt;
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="多-Icons-CSS-組件寫法"><a href="#多-Icons-CSS-組件寫法" class="headerlink" title="多 Icons CSS 組件寫法"></a>多 Icons CSS 組件寫法</h3><pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">let currentWeatherIcon &#x3D; weatherIcons[moment][currentWeather];
+
+const weatherIcons &#x3D; &#123;
+  day: &#123;
+    isThunderstorm: &lt;DayThunderstorm &#x2F;&gt;,
+    isClear: &lt;DayClear &#x2F;&gt;,
+    isCloudyFog: &lt;DayCloudyFog &#x2F;&gt;,
+    isCloudy: &lt;DayCloudy &#x2F;&gt;,
+    isFog: &lt;DayFog &#x2F;&gt;,
+    isPartiallyClearWithRain: &lt;DayPartiallyClearWithRain &#x2F;&gt;,
+    isSnowing: &lt;DaySnowing &#x2F;&gt;,
+  &#125;,
+  night: &#123;
+    isThunderstorm: &lt;NightThunderstorm &#x2F;&gt;,
+    isClear: &lt;NightClear &#x2F;&gt;,
+    isCloudyFog: &lt;NightCloudyFog &#x2F;&gt;,
+    isCloudy: &lt;NightCloudy &#x2F;&gt;,
+    isFog: &lt;NightFog &#x2F;&gt;,
+    isPartiallyClearWithRain: &lt;NightPartiallyClearWithRain &#x2F;&gt;,
+    isSnowing: &lt;NightSnowing &#x2F;&gt;,
+  &#125;,
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Object-entries"><a href="#Object-entries" class="headerlink" title="Object.entries"></a>Object.entries</h3><p>直接取得所有 property 的 name 和 value，並以陣列回傳</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> object <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// [</span>
+<span class="token comment">//   ["a", 1],</span>
+<span class="token comment">//   ["b", 2],</span>
+<span class="token comment">//   ["c", 3]</span>
+<span class="token comment">// ]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Array-find"><a href="#Array-find" class="headerlink" title="Array.find"></a>Array.find</h3><p>方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const array1 &#x3D; [5, 12, 8, 130, 44];
+
+const found &#x3D; array1.find(element &#x3D;&gt; element &gt; 10);
+
+console.log(found);
+&#x2F;&#x2F; Expected output: 12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Array-includes"><a href="#Array-includes" class="headerlink" title="Array.includes"></a>Array.includes</h3><p>方法會判斷陣列是否包含特定的元素，並以此來回傳 true 或 false。</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const array1 &#x3D; [1, 2, 3];
+
+console.log(array1.includes(2));
+&#x2F;&#x2F; Expected output: true
+
+const pets &#x3D; [&#39;cat&#39;, &#39;dog&#39;, &#39;bat&#39;];
+
+console.log(pets.includes(&#39;cat&#39;));
+&#x2F;&#x2F; Expected output: true
+
+console.log(pets.includes(&#39;at&#39;));
+&#x2F;&#x2F; Expected output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使用情境"><a href="#使用情境" class="headerlink" title="|| [] 使用情境"></a>|| [] 使用情境</h3><p>.find()如果沒有找到東西(回傳undefined)的話，會變成[weatherType]&#x3D;[];，應該是要避免[weatherType]在解構賦值的時候接到undefined(非陣列)，導致報錯。</p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">const [weatherType] &#x3D;
+    Object.entries(weatherTypes).find(([weatherType, weatherCodes]) &#x3D;&gt;
+      weatherCodes.includes(Number(weatherCode))
+    ) || [];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="物件的解構賦值"><a href="#物件的解構賦值" class="headerlink" title="物件的解構賦值"></a>物件的解構賦值</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">&#123;</span>
+    observationTime<span class="token punctuation">,</span>
+    locationName<span class="token punctuation">,</span>
+    temperature<span class="token punctuation">,</span>
+    windSpeed<span class="token punctuation">,</span>
+    description<span class="token punctuation">,</span>
+    weatherCode<span class="token punctuation">,</span>
+    rainPossibility<span class="token punctuation">,</span>
+    comfortability<span class="token punctuation">,</span>
+    isLoading<span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span> <span class="token operator">=</span> weatherElement<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="載入中"><a href="#載入中" class="headerlink" title="載入中"></a>載入中</h3><p>思路：新增一控制是否再載入中的狀態 isLoading 初始值 false ，fetch 一開始將值改為 true ，並且控制 Style Component 讓 UI 動起來，Response 回來時在將值改為 false。</p>
+<h3 id="主題-theme-切換-Emotion-ThemeProvider-組件"><a href="#主題-theme-切換-Emotion-ThemeProvider-組件" class="headerlink" title="主題 theme 切換 Emotion ThemeProvider 組件"></a>主題 theme 切換 Emotion ThemeProvider 組件</h3><p>思路：定義主題配色與 useState 綁定主題控制狀態，在改變主題事件 handle 傳入主題參數到 Styled Component，但這樣程式碼會議動到 N 處，所以要利用 Emotion ThemeProvider 組件，類似 ng Service 或者是 event bus，所有的 Styled Components 都可以取得傳入 ThemeProvider 組件的參數。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> ThemeProvider <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'emotion-theming'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> theme <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">light</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">'#ededed'</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">dark</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">backgroundColor</span><span class="token operator">:</span> <span class="token string">'#1F2022'</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Container <span class="token operator">=</span> styled<span class="token punctuation">.</span>div<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  // 解構賦值
+  background-color: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">&#123;</span> theme <span class="token punctuation">&#125;</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> theme<span class="token punctuation">.</span>backgroundColor<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">;
+  ...
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>ThemeProvider theme<span class="token operator">=</span><span class="token punctuation">&#123;</span>theme<span class="token punctuation">.</span>dark<span class="token punctuation">&#125;</span><span class="token operator">></span>
+    <span class="token comment">// &lt;Container theme=&#123;theme.dark&#125;></span>
+    <span class="token operator">&lt;</span>Container <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ThemeProvider<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="自定義鉤子-Custom-Hook-類似-ng-Service"><a href="#自定義鉤子-Custom-Hook-類似-ng-Service" class="headerlink" title="自定義鉤子 Custom Hook 類似 ng Service"></a>自定義鉤子 Custom Hook 類似 ng Service</h2><p><code>透過 props 不只可以傳遞「字串」、「物件」、「陣列」、「數值」這類資料，也可以直接把「函式」傳進去，並透過解構賦值解出使用</code>，在 Custom Hook 中一樣可以使用 useState、useEffect 這些原本 React 就有提供的 Hooks，只是在 React Component 中最後你會回傳的是 JSX，而在 Hook 中最後回傳的是一些資料或改變資料的方法。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// useWeatherApi.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> useState<span class="token punctuation">,</span> useEffect<span class="token punctuation">,</span> useCallback <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">fetchCurrentWeather</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">locationName</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">fetchWeatherForecast</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">cityName</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">useWeatherApi</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">currentLocation</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>weatherElement<span class="token punctuation">,</span> setWeatherElement<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> fetchData <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">fetchingData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      <span class="token comment">// ...</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+    <span class="token function">setWeatherElement</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prevState</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      <span class="token operator">...</span>prevState<span class="token punctuation">,</span>
+      <span class="token literal-property property">isLoading</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">fetchingData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>fetchData<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 把要給其他 React 組件使用的資料或方法回傳出去</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>weatherElement<span class="token punctuation">,</span> fetchData<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> useWeatherApi<span class="token punctuation">;</span>
+
+<span class="token comment">// other Component</span>
+<span class="token keyword">import</span> useWeatherApi <span class="token keyword">from</span> <span class="token string">'./useWeatherApi'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span>weatherElement<span class="token punctuation">,</span> fetchData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useWeatherApi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>WeatherCard
+          weatherElement<span class="token operator">=</span><span class="token punctuation">&#123;</span>weatherElement<span class="token punctuation">&#125;</span>
+          moment<span class="token operator">=</span><span class="token punctuation">&#123;</span>moment<span class="token punctuation">&#125;</span>
+          fetchData<span class="token operator">=</span><span class="token punctuation">&#123;</span>fetchData<span class="token punctuation">&#125;</span>
+<span class="token operator">/</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="子層組件修改父層組件資料狀態"><a href="#子層組件修改父層組件資料狀態" class="headerlink" title="子層組件修改父層組件資料狀態"></a>子層組件修改父層組件資料狀態</h2><p>label 屬性 for 關鍵字與 javascript for 衝突，改為 htmlFor</p>
+<p>datalist element：類似 select 但是可以 autocomplete</p>
+<p>思路：不透過 react-router 而是在組件內透過控制參數邏輯判別切換 Component，將父層組件的控制參數 setXXXXX 方法 props 到子層使用修改控制參數。</p>
+<h2 id="Create-React-App-Cli"><a href="#Create-React-App-Cli" class="headerlink" title="Create React App ( Cli )"></a>Create React App ( Cli )</h2><h2 id="PWA-Progressive-Web-App"><a href="#PWA-Progressive-Web-App" class="headerlink" title="PWA (Progressive Web App)"></a>PWA (Progressive Web App)</h2><ol>
+<li>serviceWorker.unregister() 改成 serviceWorker.register()</li>
+<li>定義 PWA 的說明檔 - manifest.json</li>
+<li>使用瀏覽器 Chrome 開啟，符合 PWA 的規範，所以會自動跳出提示來詢問使用者是否要安裝</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://create-react-app.dev/docs/making-a-progressive-web-app/">https://create-react-app.dev/docs/making-a-progressive-web-app/</a></p>
+<h2 id="Codecademy-Learn-React"><a href="#Codecademy-Learn-React" class="headerlink" title="Codecademy Learn React"></a>Codecademy Learn React</h2><p><a target="_blank" rel="noopener" href="https://www.codecademy.com/learn/react-101">https://www.codecademy.com/learn/react-101</a></p>
+<h3 id="Day-js"><a href="#Day-js" class="headerlink" title="Day.js"></a>Day.js</h3><p><a target="_blank" rel="noopener" href="https://github.com/pjchender/realtime-weather-app/commit/e37e940001f1acab18a44e21e319761815ac9489">https://github.com/pjchender/realtime-weather-app/commit/e37e940001f1acab18a44e21e319761815ac9489</a></p>
+
+    </div>
+  </article>
+  <div class="postNext d-flex justify-content-between mt-3 mb-3">
+    
+        
+          <h4>
+            <a href="/Internet/LetYouRoughlyUnderstandWhatHttpRequestIsDoing/">
+              讓你大概搞懂 Http Request 在幹什麼！ <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </h4>
+          
+  </div>
+  
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    let option = '{"el":"#waline","enable":true,"serverURL":"https://waline-urweb.vercel.app/","placeholder":"歡迎隨時提出您的建議，並不吝指教","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/waline/2.14.5/waline.js","pageview":true,"reaction":true}';
+    init(JSON.parse(option));
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+  
+    <input style="display:none" onload="addTotalViews()">
+</main>
+      
+        <aside class="rightAside">
+          <section>
+            <h4>Table of contents</h4>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hooks-class"><span class="toc-text">Hooks ? class ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#es6-Syntax"><span class="toc-text">es6 Syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSX"><span class="toc-text">JSX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React%E3%80%81ReactDOM-Library"><span class="toc-text">React、ReactDOM Library</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Component%E3%80%81-Hooks-useState%E3%80%81-Hooks-useEffect"><span class="toc-text">React Component、[Hooks] useState、[Hooks] useEffect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%8F%E8%BC%AF%E9%81%8B%E7%AE%97%E5%AD%90%EF%BC%88Expressions-Logical-operator%EF%BC%89-amp-amp-%E3%80%81%E4%B8%89%E5%85%83%E5%88%A4%E6%96%B7%E5%BC%8F%EF%BC%88ternary-operator%EF%BC%89-%E2%80%A6-%E2%80%A6"><span class="toc-text">邏輯運算子（Expressions - Logical operator）&amp;&amp; ||、三元判斷式（ternary operator）? … : …</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%96%EF%BC%88or%EF%BC%89"><span class="toc-text">|| 或（or）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#amp-amp-%E8%88%87-and"><span class="toc-text">&amp;&amp; 與 (and)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%A6-%E2%80%A6-%E8%8B%A5-%E2%80%A6-%E5%89%87-%E2%80%A6%EF%BC%8C%E5%90%A6%E5%89%87%E2%80%A6"><span class="toc-text">? … : … (若 … 則 …，否則…)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E5%BC%8F%E5%9F%B7%E8%A1%8C%E5%BE%8C%E5%9B%9E%E5%82%B3%E5%8F%A6%E4%B8%80%E5%80%8B%E5%87%BD%E5%BC%8F-Callback-Function"><span class="toc-text">函式執行後回傳另一個函式 Callback Function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8-JSX-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E9%82%8F%E8%BC%AF-IF-x2F-FOR"><span class="toc-text">如何在 JSX 流程控制邏輯 IF &#x2F; FOR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-%E7%9A%84-ng-container-x3D-gt-lt-React-Fragment-gt"><span class="toc-text">React 的 ng-container &#x3D;&gt; &lt;React.Fragment&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A2%9D%E4%BB%B6%E8%BD%89%E8%AD%AF"><span class="toc-text">條件轉譯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%87%E8%B3%87%E6%96%99%E5%BE%9E%E7%88%B6%E5%B1%A4%E7%B5%84%E4%BB%B6%E5%82%B3%E9%81%9E%E5%88%B0%E5%AD%90%E5%B1%A4%E7%B5%84%E4%BB%B6"><span class="toc-text">將資料從父層組件傳遞到子層組件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Developer-Tools"><span class="toc-text">React Developer Tools</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E4%BB%B6%E6%AA%A2%E8%A6%96"><span class="toc-text">元件檢視</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E8%83%BD%E6%AA%A2%E8%A6%96-Profilers"><span class="toc-text">效能檢視 Profilers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-%E5%B0%88%E6%A1%88%E6%9E%B6%E6%A7%8B"><span class="toc-text">React 專案架構</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Emotion-%E4%B8%AD%E5%8F%AF%E4%BB%A5%E6%8A%8A%E6%92%B0%E5%AF%AB%E5%A5%BD%E7%9A%84-CSS-%E6%A8%A3%E5%BC%8F%E7%95%B6%E4%BD%9C-JavaScript-%E5%87%BD%E5%BC%8F%E4%BF%9D%E5%AD%98%E8%B5%B7%E4%BE%86"><span class="toc-text">Emotion 中可以把撰寫好的 CSS 樣式當作 JavaScript 函式保存起來</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Internationalization-API-%E5%84%AA%E5%8C%96%E6%99%82%E9%96%93%E5%91%88%E7%8F%BE"><span class="toc-text">Internationalization API 優化時間呈現</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fetch-Request-%E8%B3%87%E6%96%99%E6%92%88%E5%9B%9E%E4%BE%86%E5%BE%8C%E7%9A%84%E8%99%95%E7%90%86"><span class="toc-text">Fetch Request 資料撈回來後的處理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A9%E6%94%AF%E4%BB%A5%E4%B8%8A-API-%E5%8F%96%E5%BE%97%E7%9A%84%E8%B3%87%E6%96%99%E9%9C%80%E8%A6%81%E5%81%9A-Mix-%E6%99%82-%E9%A1%9E%E4%BC%BC-RxJS-combineLatest"><span class="toc-text">兩支以上 API 取得的資料需要做 Mix 時 ( 類似 RxJS combineLatest )</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks-useCallback-x3D-gt-%E6%83%85%E5%A2%83%EF%BC%9A-%E7%95%B6%E2%80%A6%E5%BE%8C%EF%BC%8C%E6%89%8D%E8%83%BD%E2%80%A6-x2F-%E5%9B%9E%E5%91%BC%E5%87%BD%E5%BC%8F%EF%BC%88callback-function%EF%BC%89-x2F-Promise-x2F-async-function"><span class="toc-text">[Hooks] useCallback &#x3D;&gt; 情境： 當…後，才能…&#x2F; 回呼函式（callback function） &#x2F; Promise &#x2F; async function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks-useMemo-%E4%BF%9D%E5%AD%98%E8%A4%87%E9%9B%9C%E9%81%8B%E7%AE%97%E7%9A%84%E8%B3%87%E6%96%99%E7%B5%90%E6%9E%9C"><span class="toc-text">[Hooks] useMemo 保存複雜運算的資料結果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks-useRef-x2F-controlled-amp-uncontrolled-components"><span class="toc-text">[Hooks] useRef &#x2F; controlled &amp; uncontrolled components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A-Icons-CSS-%E7%B5%84%E4%BB%B6%E5%AF%AB%E6%B3%95"><span class="toc-text">多 Icons CSS 組件寫法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-entries"><span class="toc-text">Object.entries</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-find"><span class="toc-text">Array.find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Array-includes"><span class="toc-text">Array.includes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">|| [] 使用情境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E4%BB%B6%E7%9A%84%E8%A7%A3%E6%A7%8B%E8%B3%A6%E5%80%BC"><span class="toc-text">物件的解構賦值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BC%89%E5%85%A5%E4%B8%AD"><span class="toc-text">載入中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A1%8C-theme-%E5%88%87%E6%8F%9B-Emotion-ThemeProvider-%E7%B5%84%E4%BB%B6"><span class="toc-text">主題 theme 切換 Emotion ThemeProvider 組件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E7%BE%A9%E9%89%A4%E5%AD%90-Custom-Hook-%E9%A1%9E%E4%BC%BC-ng-Service"><span class="toc-text">自定義鉤子 Custom Hook 類似 ng Service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E5%B1%A4%E7%B5%84%E4%BB%B6%E4%BF%AE%E6%94%B9%E7%88%B6%E5%B1%A4%E7%B5%84%E4%BB%B6%E8%B3%87%E6%96%99%E7%8B%80%E6%85%8B"><span class="toc-text">子層組件修改父層組件資料狀態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-React-App-Cli"><span class="toc-text">Create React App ( Cli )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PWA-Progressive-Web-App"><span class="toc-text">PWA (Progressive Web App)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Codecademy-Learn-React"><span class="toc-text">Codecademy Learn React</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-js"><span class="toc-text">Day.js</span></a></li></ol></li></ol>
+  </div>
+  </section>
+  
+
+    </div>
+    <footer class="cotainer-fluid">
+      <p id="milestone" class="text-center m-0">
+        <span>Copyright © 2021-2023 UrWeb. All rights reserved.</span><br>
+        <span>This site is in orbit around internet 1 days.</span>
+        <span>people witnessed it all</span>
+      </p>
+    </footer>
+
+    <!-- <h3>categories</h3>
+    <ul>
+      
+      <li>
+        <a href="/categories/Back-End/"> Back-End  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Internet/"> Internet  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Front-End/"> Front-End  </a>
+      </li>
+      
+    </ul>
+
+    <h3>tags</h3>
+    <ul>
+      
+      <li>
+        <a href="/tags/Log/"> Log </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Net/"> .Net </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Internet/"> Internet </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Response/"> Response </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Request/"> Request </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Angular/"> Angular </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Front-End/"> Front-End </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Note/"> Note </a>
+      </li>
+      
+      <li>
+        <a href="/tags/React/"> React </a>
+      </li>
+      
+    </ul> -->
+</body>
+
+
+<script src="/js/prism.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+</html>
