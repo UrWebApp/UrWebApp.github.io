@@ -1,14 +1,13 @@
 ---
 title: 讓你大概搞懂 Http Request 在幹什麼！
 date: 2023-01-09
-categories: Internet
+categories: Web
 author: johch3n611u
 tags:
 - Internet
 - Response
 - Request
 - Angular
-- Front-End
 ---
 
 > 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！
