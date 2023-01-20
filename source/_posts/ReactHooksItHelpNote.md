@@ -6,7 +6,6 @@ author: johch3n611u
 tags:
 - Note
 - React
-- Front-End
 ---
 
 工作上有需要編輯 SAP 的 impEx 定義檔，所以想透過 React 寫個簡單的編輯器，順便研究一下 React 怎麼使用。
