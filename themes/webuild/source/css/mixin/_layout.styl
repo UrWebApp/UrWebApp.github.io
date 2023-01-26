@@ -72,7 +72,7 @@ body {
 
 footer {
     background: #36403A;
-    padding: 20px 0;
+    padding: 10px 0;
 
     >p {
         font-size: 12px;
@@ -336,7 +336,16 @@ nav {
     color: #979797 !important;
 }
 
+.mobileBtn{
+    background: rgba(0,0,0,0.1)
+    position: fixed;
+    bottom: 10px;
+    right: 10px;    
+}
 +desktop-sm() {
+    .mobileBtn{
+        display:none;
+    }
     nav {
         position: sticky;
     }
@@ -387,7 +396,12 @@ nav {
     }
 }
 +desktop-lg() {
-
+    footer {
+        padding: 15px;
+    }
+    header {
+        padding: 15px;
+    }
 }
 +desktop-xl(){
 
