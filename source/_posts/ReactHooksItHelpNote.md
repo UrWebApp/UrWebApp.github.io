@@ -991,3 +991,50 @@ https://www.codecademy.com/learn/react-101
 ### Day.js
 
 https://github.com/pjchender/realtime-weather-app/commit/e37e940001f1acab18a44e21e319761815ac9489
+
+## Redux
+
+https://pjchender.dev/webdev/note-without-redux/
+
+> `TL;DR` useContext + useReducer (適合小專案) 無法完全取代 redux 而 redux 也需要提升到 observable 才夠用
+
+類似 vuex、flux、ngrx 感覺 ngrx 整合度比較好直接有觀察者模式 rxjs 的相關部件可以直接使用。
+
+Redux：解決 prop drilling 類似 ng service， reducer 類似 RxJS 實作 DAO 層，但不支援非同步的資料處理，所以透過 redux-thunk、redux saga 和 redux observable 這些用來處理非同步資料請求的工具。
+
+Redux useSelector (只要一層 Provider)、async <=> React useContext + useReducer (需要多層 Provider、boilerplate、race condition 問題)
+
+Reducer：透過 action 指令 CRUD state
+
+Store：整合所有 Reducer
+
+Provider：jsx 組件用於 prop state
+
+useSelector：Redux 獲取資料的 hook
+
+### [Hooks] useContext
+
+https://medium.com/hannah-lin/react-hook-%E7%AD%86%E8%A8%98-usecontext-4bc289976847
+
+useContext 每一次 contex t更新時都會迫使「有使用 useContext 取得該 context 」的元件更新，必須拆分 Context，但這又會造成 boilerplate
+
+```js
+export const OpenContext = React.createContext(true);
+export const SetOpenContext = React.createContext(()=>{});
+<OpenContext.Provider value={isOpen}>
+            <SetOpenContext.Provider value={setIsOpen}>
+            </SetOpenContext.Provider>
+</OpenContext.Provider>
+```
+
+### [Hooks] useReducer
+
+useReducer 是無法存取 global store，必須搭配 useContext
+
+### [Hooks] useLayoutEffect
+
+## 參考
+
+* [[React Hook 筆記] useReducer 真的能完全取代 Redux 嗎?](https://medium.com/hannah-lin/react-hook-%E7%AD%86%E8%A8%98-usereducer-%E7%9C%9F%E7%9A%84%E8%83%BD%E5%AE%8C%E5%85%A8%E5%8F%96%E4%BB%A3-redux-%E5%97%8E-fabcc1e9b400)
+* [Day 16 - 用 useReducer 取代 Redux !?](https://ithelp.ithome.com.tw/m/articles/10276005)
+* [【Day.22】React效能 - 如何處理useContext的效能問題](https://ithelp.ithome.com.tw/articles/10249827)
