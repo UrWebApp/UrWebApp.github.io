@@ -18,6 +18,16 @@ $('#barBtn').click(() => {
     $(".leftAside").slideToggle();
 })
 
+
+$('.mobileBtn').click(()=>{
+    console.log("mobile");
+    $("#tocModal").fadeToggle();
+})
+
+function tocModalClose(){
+    $("#tocModal").fadeOut();
+}
+
 // 讓 Google Search 外開搜尋，並且搜尋後清空搜尋欄
 $(".input-group>button")[0].formTarget = '_blank';
 $(".input-group>button").click(() => { $(".input-group-input")[0].value = '' })

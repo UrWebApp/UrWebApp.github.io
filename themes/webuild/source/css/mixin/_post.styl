@@ -1,3 +1,5 @@
+@import "./_breakPoint.styl";
+
 .postArticle {
     padding: 15px;
     background: white;
@@ -15,4 +17,172 @@
 .postWrap {
     margin-top: ($header-max-height + 50) px;
     max-width: 800px;
+}
+
+.postNext {
+    >h4 {
+        margin-top: unset;
+        margin-bottom: unset;
+
+        >a {
+            color: #808080;
+
+            &:hover {
+                color: black;
+
+                >i {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.wl-comment {
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 3px 5px rgba(92, 92, 92, 0.2);
+}
+
+.wl-meta-head, .wl-cards, .wl-loading, .wl-empty, .wl-power {
+    padding: 15px;
+    background: #fff;
+    box-shadow: 1px 3px 5px rgba(92, 92, 92, 0.2);
+
+    &:not(.wl-cards, .wl-loading, .wl-empty) {
+        border-radius: 10px;
+    }
+}
+
+.wl-meta-head {
+    border-bottom-left-radius: unset !important;
+    border-bottom-right-radius: unset !important;
+}
+
+.wl-power {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border-top-left-radius: unset !important;
+    border-top-right-radius: unset !important;
+}
+
+.postArticle {
+    h1, h2, h3, h4, h5 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        &:hover {
+            >.headerlink {
+                &::after {
+                    content: '#';
+                    color: rgb(130, 170, 255);
+                    padding: 0 0.3rem;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-size: $font-size * 10;
+    }
+
+    h2 {
+        font-size: $font-size * 9;
+        padding-bottom: 0.5rem;
+        margin-top: 4rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        font-size: $font-size * 8;
+        padding-bottom: 0.5rem;
+        margin-top: 3rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    h4 {
+        font-size: $font-size * 7;
+    }
+
+    h5 {
+        font-size: $font-size * 6;
+    }
+
+    p {
+        font-size: $font-size * 5;
+    }
+
+    .infoBox>p {
+        font-size: 12px;
+    }
+
+    .postArticleContent {
+        details {
+            border-bottom: 1px dashed black;
+            margin-bottom: 2rem;
+
+            >summary {
+                padding: 0.8rem;
+                font-weight: 500;
+            }
+
+            >* {
+                font-size: 0.8rem;
+            }
+
+            ol, ul {
+                border-top: 1px dashed black;
+
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        ol, ul {
+            padding: 1rem 2rem;
+            margin-bottom: unset;
+
+            li {
+                font-size: 1rem;
+            }
+        }
+
+        p, li {
+            >a {
+                color: rgb(130, 170, 255);
+
+                &:hover {
+                    color: rgb(130, 170, 255);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        blockquote {
+            border-left: solid #ccc;
+            font-size: 0.8rem;
+            padding: 0px 0.8rem;
+            font-weight: 500;
+
+            >p {
+                margin: 0;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
++desktop-sm() {
+     .postArticle {
+        padding: 15px 40px;
+    }
+}
+
++desktop-lg() {
+    .postWrap {
+        max-width: 980px;
+    }
 }
