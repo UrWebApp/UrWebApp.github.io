@@ -93,10 +93,24 @@
             <%- toc(page.content,{list_number:false}) %>
   </section>
   </aside>
-  <div>
+
     <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+
+    <div class="modal" tabindex="-1" id="tocModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="tocModalClose()"></button>
+          </div>
+          <div class="modal-body">
+            <%- toc(page.content,{list_number:false}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <% } %>
-  </div>
     </div>
     <footer class="cotainer-fluid">
       <p id="milestone" class="text-center m-0">
