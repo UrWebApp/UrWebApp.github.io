@@ -177,7 +177,7 @@ nav {
     padding: 0;
     display: flex;
 }
-.category-list, .toc {
+.category-list{
     padding-left: 10px;
     list-style-type: '';
     padding-bottom: 10px;
@@ -210,6 +210,40 @@ nav {
         }
     }
 }
+
+.toc {
+    padding-left: 10px;
+    list-style-type: '';
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    max-height: 80vh;
+
+    li {
+        font-size: 16px;
+        justify-content: space-between;
+
+        a {
+            display: block;
+            width: 100%;
+            color: grey;
+        }
+
+        span {
+            font-size: 12px;
+            margin-left: 5px;
+            // background: black;
+            color: gray;
+            padding: 0px 1.5px;
+            border-radius: 5px;
+        }
+
+        ol {
+            padding-left: 1rem;
+        }
+    }
+}
+
+
 
 .category-list-item {
     padding: 3px 0;
