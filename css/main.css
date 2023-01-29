@@ -477,6 +477,7 @@ nav >ul >li >h4 >a:hover {
   display: block;
   width: 100%;
   color: #808080;
+  font-weight: 700;
 }
 .category-list li span {
   font-size: 12px;
@@ -489,30 +490,30 @@ nav >ul >li >h4 >a:hover {
   padding-left: 1rem;
 }
 .toc {
-  padding-left: 10px;
-  list-style-type: '';
+  padding-left: 0px;
   padding-bottom: 10px;
   overflow-y: scroll;
   max-height: 80vh;
 }
-.toc li {
-  font-size: 16px;
-  justify-content: space-between;
-}
-.toc li a {
-  display: block;
-  width: 100%;
-  color: #808080;
-}
-.toc li span {
-  font-size: 12px;
-  margin-left: 5px;
-  color: #808080;
-  padding: 0px 1.5px;
-  border-radius: 5px;
-}
-.toc li ol {
+.toc ol {
   padding-left: 1rem;
+}
+.toc .toc-item {
+  color: #808080;
+  list-style: none;
+  padding: 1.5px 0px;
+}
+.toc .toc-level-2 {
+  font-weight: 700;
+  font-size: 16px;
+}
+.toc .toc-level-3 {
+  font-weight: 500;
+  font-size: 15px;
+}
+.toc .toc-level-4 {
+  font-weight: 300;
+  font-size: 14px;
 }
 .category-list-item {
   padding: 3px 0;
