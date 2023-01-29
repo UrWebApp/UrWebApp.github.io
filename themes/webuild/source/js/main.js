@@ -28,6 +28,10 @@ function tocModalClose(){
     $("#tocModal").fadeOut();
 }
 
+$('#tocModal a').click(()=>{
+    tocModalClose();
+})
+
 // 讓 Google Search 外開搜尋，並且搜尋後清空搜尋欄
 $(".input-group>button")[0].formTarget = '_blank';
 $(".input-group>button").click(() => { $(".input-group-input")[0].value = '' })
