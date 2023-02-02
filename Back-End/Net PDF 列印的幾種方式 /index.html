@@ -8,7 +8,7 @@
   <title>您的網路共筆-UrWeb</title>
   
   
-    <meta name="description" content="文章作者: Kai98k 創作日期: 2023/01/20 文章類型: Back-End，查看本文章獲取更多訊息。">
+    <meta name="description" content="文章作者: Kai98k 創作日期: 2023/02/01 文章類型: Back-End，查看本文章獲取更多訊息。">
     
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -80,7 +80,7 @@
             <h4>
               <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
-            <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/Internet/" style="font-size: 10px;">Internet</a> <a href="/tags/Log/" style="font-size: 15px;">Log</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a></div>
+            <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/Internet/" style="font-size: 10px;">Internet</a> <a href="/tags/Log/" style="font-size: 15px;">Log</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/Print/" style="font-size: 10px;">Print</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a></div>
           </li>
         </ul>
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
@@ -90,13 +90,13 @@
     <main class="container postWrap">
   <article class="postArticle">
     <div class="postArticleHeader">
-      <h1 class="pt-1">幾種 .Net 列印 PDF 的方式</h1>
+      <h1 class="pt-1">幾種 .Net 列印的方式</h1>
       <div class="infoBox">
         <i class="fa fa-eye" aria-hidden="true"></i>
         <p class="waline-pageview-count" data-path="/Back-End/Net%20PDF%20%E5%88%97%E5%8D%B0%E7%9A%84%E5%B9%BE%E7%A8%AE%E6%96%B9%E5%BC%8F%20/" />
         </p>
         <span>|</span>
-        <p>2023/01/20</p>
+        <p>2023/02/01</p>
         <span>|</span>
         <p>
           Kai98k
@@ -116,7 +116,7 @@
             </li>
             
             <li>
-              <a href="/tags/PDF/"><i class="fa-solid fa-tag"></i> PDF
+              <a href="/tags/Print/"><i class="fa-solid fa-tag"></i> Print
               </a>
             </li>
             
@@ -138,8 +138,36 @@
 <li>假設印表機是透過網路方式連接，須至設定增加 IP 埠道</li>
 </ol>
 <p><img src="https://i.imgur.com/cSunWhn.png"><br><img src="https://i.imgur.com/6upmKAf.png"><br><img src="https://i.imgur.com/aaC4fTz.png"></p>
-<h2 id="程式實作"><a href="#程式實作" class="headerlink" title="程式實作"></a>程式實作</h2><h3 id="PrintDocument"><a href="#PrintDocument" class="headerlink" title="PrintDocument"></a>PrintDocument</h3><p>PrintDocument 類別是 .Net Framework 內建的套件，可以操作列印時輸出傳送至印表機的物件。</p>
+<h2 id="程式實作"><a href="#程式實作" class="headerlink" title="程式實作"></a>程式實作</h2><h3 id="PrintDocument-與-Process"><a href="#PrintDocument-與-Process" class="headerlink" title="PrintDocument 與 Process"></a>PrintDocument 與 Process</h3><p>PrintDocument 類別是 .Net Framework 內建的套件，好處是可以在設定與操作輸出傳送至印表機的物件，可搭配 Process 利用指令列印。</p>
+<blockquote>
 <p>注意: 當專案部屬在非 Windows 環境中無法作用，其實就是最好只在 .Net Framework 專案中使用。</p>
+</blockquote>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Print</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> pdfPath<span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+   <span class="token class-name">PrintDocument</span> pd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PrintDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   pd<span class="token punctuation">.</span>DefaultPageSettings<span class="token punctuation">.</span>PrinterSettings<span class="token punctuation">.</span>Copies <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// 印幾份</span>
+   pd<span class="token punctuation">.</span>DefaultPageSettings<span class="token punctuation">.</span>PrinterSettings<span class="token punctuation">.</span>PrinterName <span class="token operator">=</span> <span class="token string">@"印表機名稱"</span><span class="token punctuation">;</span> 
+            
+   <span class="token class-name">Process</span> ps <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">Process</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token class-name">ProcessStartInfo</span> startInfo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ProcessStartInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   startInfo<span class="token punctuation">.</span>UseShellExecute <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+   startInfo<span class="token punctuation">.</span>Verb <span class="token operator">=</span> <span class="token string">"Print"</span><span class="token punctuation">;</span>
+   startInfo<span class="token punctuation">.</span>CreateNoWindow <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+   startInfo<span class="token punctuation">.</span>WindowStyle <span class="token operator">=</span> ProcessWindowStyle<span class="token punctuation">.</span>Hidden<span class="token punctuation">;</span>
+   startInfo<span class="token punctuation">.</span>Arguments <span class="token operator">=</span> <span class="token string">@"/p /h \" + pdfPath + "</span>\" \"<span class="token string">" + pd.PrinterSettings.PrinterName + "</span> \""<span class="token punctuation">;</span>
+
+   startInfo<span class="token punctuation">.</span>FileName <span class="token operator">=</span> pdfPath<span class="token punctuation">;</span>
+   ps<span class="token punctuation">.</span>StartInfo <span class="token operator">=</span> startInfo<span class="token punctuation">;</span>
+
+   ps<span class="token punctuation">.</span><span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   ps<span class="token punctuation">.</span><span class="token function">WaitForExit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   ps<span class="token punctuation">.</span><span class="token function">Dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<p>純 PrintDocument</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">System</span><span class="token punctuation">;</span>
 <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Drawing</span><span class="token punctuation">;</span>
 <span class="token keyword">using</span> <span class="token namespace">System<span class="token punctuation">.</span>Drawing<span class="token punctuation">.</span>Printing</span><span class="token punctuation">;</span>
@@ -190,7 +218,10 @@
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="Spire-Pdf"><a href="#Spire-Pdf" class="headerlink" title="Spire.Pdf"></a>Spire.Pdf</h3><p><a target="_blank" rel="noopener" href="https://www.gushiciku.cn/pl/2N0Y/zh-tw">https://www.gushiciku.cn/pl/2N0Y/zh-tw</a><br>Spire.Pdf 需使用 Nuget 或指令安裝</p>
+<h3 id="FreeSpire-Pdf"><a href="#FreeSpire-Pdf" class="headerlink" title="FreeSpire.Pdf"></a>FreeSpire.Pdf</h3><p><a target="_blank" rel="noopener" href="https://www.gushiciku.cn/pl/2N0Y/zh-tw">https://www.gushiciku.cn/pl/2N0Y/zh-tw</a><br>FreeSpire.Pdf 需使用 Nuget 或指令安裝</p>
+<blockquote>
+<p>免費社群版本印超過十頁時會報錯</p>
+</blockquote>
 <ol>
 <li>使用預設印表機列印所有頁面<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token class-name">PdfDocument</span> pd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">PdfDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 pd<span class="token punctuation">.</span><span class="token function">LoadFromFile</span><span class="token punctuation">(</span><span class="token string">@"C:\File\testPdf.pdf"</span><span class="token punctuation">)</span>
@@ -218,26 +249,47 @@ pd<span class="token punctuation">.</span>PrintSettings<span class="token punctu
 <span class="token punctuation">&#125;</span>
 pd<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
+<h3 id="PdfiumViewer"><a href="#PdfiumViewer" class="headerlink" title="PdfiumViewer"></a>PdfiumViewer</h3><p>可參考<a target="_blank" rel="noopener" href="https://github.com/pvginkel/PdfiumBuild">官方文件</a>安裝，因為套件作者已沒在維護，所以在 Nuget 中安裝 PdfiumViewer 以外，還需要安裝 pdfiumViewer.Native.x86_64.v8-xfa，這邊推薦安裝 2.10.0 的 PdfiumViewer，安裝完後，專案中會出現 x64 資料夾。</p>
+<p><img src="https://i.imgur.com/aMo9UrL.png"></p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token class-name"><span class="token keyword">var</span></span> pdfPath <span class="token operator">=</span> <span class="token string">@"資料位置"</span> 
+<span class="token keyword">try</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> document <span class="token operator">=</span> PdfDocument<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span>pdfPath<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    <span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">var</span></span> printDocument <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">CreatePrintDocument</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">&#123;</span>
+                        printDocument<span class="token punctuation">.</span>PrinterSettings<span class="token punctuation">.</span>PrintFileName <span class="token operator">=</span> <span class="token string">"testPdf.pdf"</span><span class="token punctuation">;</span>
+                        printDocument<span class="token punctuation">.</span>PrinterSettings<span class="token punctuation">.</span>PrinterName <span class="token operator">=</span> <span class="token string">@"印標機名稱"</span><span class="token punctuation">;</span>
+                        printDocument<span class="token punctuation">.</span>DocumentName <span class="token operator">=</span> <span class="token string">"file.pdf"</span><span class="token punctuation">;</span>
+                        printDocument<span class="token punctuation">.</span>PrinterSettings<span class="token punctuation">.</span>PrintFileName <span class="token operator">=</span> <span class="token string">"file.pdf"</span><span class="token punctuation">;</span>
+                        printDocument<span class="token punctuation">.</span>PrintController <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">StandardPrintController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        printDocument<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">&#125;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> ex<span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token keyword">return</span> ex<span class="token punctuation">.</span>Message<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-tw/dotnet/api/system.drawing.printing.printdocument?view=dotnet-plat-ext-7.0">PrintDocument</a></li>
 <li><a target="_blank" rel="noopener" href="https://medium.com/@alexaae9/7-ways-to-print-pdf-in-a-net-application-ab15905bb98f">7 Ways to Print PDF in a .NET Application</a></li>
 <li><a target="_blank" rel="noopener" href="https://dotblogs.com.tw/whd/2016/03/22/234526">使用預設印表機列印pdf文件</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.gushiciku.cn/pl/2N0Y/zh-tw">C# 列印PDF文件的10種方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/47857500/c-sharp-how-to-programmatically-print-an-existing-pdf-file-using-printdocument">C# - How to programmatically print an existing PDF file using PrintDocument</a></li>
 </ul>
 
     </div>
   </article>
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
     
-      <h4>
-        <a href="/Design-Pattern/%E6%96%B0%E6%89%8B%E7%9A%84%E9%A0%98%E5%9F%9F%E5%B1%95%E9%96%8B-%E9%A0%98%E5%9F%9F%E9%A9%85%E5%8B%95%E8%A8%AD%E8%A8%88/"><i class="fa-solid fa-angles-left"></i> 新手的領域展開-領域驅動設計
-        </a>
-      </h4>
-      
         
           <h4>
-            <a href="/computer-science/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/">
-              免升級硬體，透過軟體調整電腦性能 <i class="fa-solid fa-angles-right"></i>
+            <a href="/Design-Pattern/%E6%96%B0%E6%89%8B%E7%9A%84%E9%A0%98%E5%9F%9F%E5%B1%95%E9%96%8B-%E9%A0%98%E5%9F%9F%E9%A9%85%E5%8B%95%E8%A8%AD%E8%A8%88/">
+              新手的領域展開-領域驅動設計 <i class="fa-solid fa-angles-right"></i>
             </a>
           </h4>
           
@@ -257,7 +309,7 @@ pd<span class="token punctuation">.</span><span class="token function">Print</sp
         <aside class="rightAside">
           <section>
             <h4>Table of contents</h4>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D%E9%A9%85%E5%8B%95"><span class="toc-text">安裝驅動</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C"><span class="toc-text">程式實作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PrintDocument"><span class="toc-text">PrintDocument</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spire-Pdf"><span class="toc-text">Spire.Pdf</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D%E9%A9%85%E5%8B%95"><span class="toc-text">安裝驅動</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C"><span class="toc-text">程式實作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PrintDocument-%E8%88%87-Process"><span class="toc-text">PrintDocument 與 Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FreeSpire-Pdf"><span class="toc-text">FreeSpire.Pdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PdfiumViewer"><span class="toc-text">PdfiumViewer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
   </section>
   </aside>
 
@@ -271,7 +323,7 @@ pd<span class="token punctuation">.</span><span class="token function">Print</sp
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="tocModalClose()"></button>
           </div>
           <div class="modal-body">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D%E9%A9%85%E5%8B%95"><span class="toc-text">安裝驅動</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C"><span class="toc-text">程式實作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PrintDocument"><span class="toc-text">PrintDocument</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spire-Pdf"><span class="toc-text">Spire.Pdf</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D%E9%A9%85%E5%8B%95"><span class="toc-text">安裝驅動</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C"><span class="toc-text">程式實作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PrintDocument-%E8%88%87-Process"><span class="toc-text">PrintDocument 與 Process</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FreeSpire-Pdf"><span class="toc-text">FreeSpire.Pdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PdfiumViewer"><span class="toc-text">PdfiumViewer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
           </div>
         </div>
       </div>
@@ -324,7 +376,7 @@ pd<span class="token punctuation">.</span><span class="token function">Print</sp
       </li>
       
       <li>
-        <a href="/tags/PDF/"> PDF </a>
+        <a href="/tags/Print/"> Print </a>
       </li>
       
       <li>
