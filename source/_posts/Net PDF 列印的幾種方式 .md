@@ -1,11 +1,11 @@
 ---
 title: 幾種 .Net 列印的方式
-date: 2023-02-01 23:00
+date: 2023-02/05 15:00
 categories: Back-End
 author: Kai98k
 tags:
 - .Net
-- Print
+- PDF
 ---
 通常印表機可以傳送 ZPL 或是直接透過驅動程式來觸發列印程序，本文主要講的是後者的列印方式。
 
@@ -29,11 +29,23 @@ tags:
 
 
 ## 程式實作
+
 ### PrintDocument 與 Process
 
 PrintDocument 類別是 .Net Framework 內建的套件，好處是可以在設定與操作輸出傳送至印表機的物件，可搭配 Process 利用指令列印。
 
 >注意: 當專案部屬在非 Windows 環境中無法作用，其實就是最好只在 .Net Framework 專案中使用。
+
+
+#### 使用指令列印
+
+這邊要使用 `Print` Verb 時，要先至 Regedit，查看電腦是否有登入此指令
+
+![](https://i.imgur.com/DdhyIbi.png)
+
+![](https://i.imgur.com/Z5X7uF7.png)
+
+如果沒有的話，通常是沒有安裝 [Acrobat Reader](https://get.adobe.com/tw/reader/)，此 PDF 閱讀軟體會自動在電腦上登錄列印紙令，如有此指令便可實作程式碼。
 
 ```csharp
 private void Print(string pdfPath)
@@ -42,8 +54,9 @@ private void Print(string pdfPath)
 
    pd.DefaultPageSettings.PrinterSettings.Copies = 2; // 印幾份
    pd.DefaultPageSettings.PrinterSettings.PrinterName = @"印表機名稱"; 
-            
-   Process ps = new Process();
+    
+    // 新增指令
+   Process ps = new Process(); 
    ProcessStartInfo startInfo = new ProcessStartInfo();
    startInfo.UseShellExecute = true;
    startInfo.Verb = "Print";
@@ -54,7 +67,7 @@ private void Print(string pdfPath)
    startInfo.FileName = pdfPath;
    ps.StartInfo = startInfo;
 
-   ps.Start();
+   ps.Start(); // 執行指令
    ps.WaitForExit();
    ps.Dispose();
             
@@ -62,7 +75,7 @@ private void Print(string pdfPath)
 ```
 
 ---
-純 PrintDocument
+#### 純 PrintDocument
 ```csharp=
 using System;
 using System.Drawing;
@@ -116,9 +129,10 @@ namespace PrintTest
 ```
 
 ### FreeSpire.Pdf
+
 <https://www.gushiciku.cn/pl/2N0Y/zh-tw>
 FreeSpire.Pdf 需使用 Nuget 或指令安裝
->免費社群版本印超過十頁時會報錯
+>免費社群版本印超過十頁時會報錯，也許你可以寫個每印九頁...
 
 1. 使用預設印表機列印所有頁面
 ```csharp=
@@ -189,5 +203,6 @@ try
 * [PrintDocument](https://learn.microsoft.com/zh-tw/dotnet/api/system.drawing.printing.printdocument?view=dotnet-plat-ext-7.0)
 * [7 Ways to Print PDF in a .NET Application](https://medium.com/@alexaae9/7-ways-to-print-pdf-in-a-net-application-ab15905bb98f)
 * [使用預設印表機列印pdf文件](https://dotblogs.com.tw/whd/2016/03/22/234526)
+* [使用 C# 批次列印 PDF 檔案](https://blog.darkthread.net/blog/print-pdf-with-c)
 * [C# 列印PDF文件的10種方法](https://www.gushiciku.cn/pl/2N0Y/zh-tw)
 * [C# - How to programmatically print an existing PDF file using PrintDocument](https://stackoverflow.com/questions/47857500/c-sharp-how-to-programmatically-print-an-existing-pdf-file-using-printdocument)
