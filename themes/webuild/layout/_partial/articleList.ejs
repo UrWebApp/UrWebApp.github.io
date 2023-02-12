@@ -42,7 +42,7 @@
                         </a></h2>
                     <div class="infoBox">
                         <%  if (post.author) {%>
-                            <p><%= post.author %></p>
+                            <i class="fa-solid fa-user-pen"></i> <p> <%= post.author %></p>
                             <% } %>
                             <span>|</span><p>
                             <% post.categories.each(category=>{ %>
