@@ -189,7 +189,7 @@
 .infoBox p,
 .infoBox span,
 .infoBox a {
-  font-weight: 300;
+  font-weight: 400;
 }
 .infoBox >p>a {
   text-decoration: none;
@@ -801,10 +801,6 @@ nav >ul >li >h4 >a:hover {
 }
 .card-title {
   margin-bottom: 0;
-}
-.fa-solid,
-.fa-eye {
-  color: rgba(0,0,0,0.1) !important;
 }
 #tagsBtn:hover .fa-solid,
 #categoriesBtn:hover .fa-solid {
