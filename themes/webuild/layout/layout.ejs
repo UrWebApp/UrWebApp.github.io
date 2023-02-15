@@ -61,12 +61,13 @@
     <aside class="leftAside">
       <nav>
         <ul>
+          <%- search_form({class:"input-group",button:true,external: true}) %>
           <!-- <li>
             <h4>
               <a href="/about/">關於我們</a>
             </h4>
           </li> -->
-          <li>
+          <li style="margin-top: 50px;">
             <h4>
               <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
             </h4>
@@ -81,7 +82,6 @@
             <div id="tags"><%- tagcloud({amount: 30,}) %></div>
           </li>
         </ul>
-        <%- search_form({class:"input-group",button:true,external: true}) %>
       </nav>
     </aside>
 
