@@ -22,7 +22,6 @@ tags:
    2. 不及物動詞 intransitive verb：
    3. 完全不及物動詞 complete intransitive verb：
    4. 不完全不及物動詞 incomplete intransitive Verb：
-   ---
    1. 動狀詞/準動詞：由動詞演變而來
       1. (現在/過去)分詞：扮演著形容詞
       3. 動名詞/現在分詞：扮演著名詞
@@ -31,9 +30,7 @@ tags:
          * It(n/虛主詞) is my goal next yeat (to study abroad)(S).
          * Peter is a nice man (to work with)(adj).
          * I came (to see Mary)(adv).
-   ---
-   1. 助動詞 auxiliary verb：形成各種時態、語氣、語態、疑問句、或否定句 e.g. am, are, is, was, were,have,can,will,must ...
-
+   2. 助動詞 auxiliary verb：形成各種時態、語氣、語態、疑問句、或否定句 e.g. am, are, is, was, were,have,can,will,must ...
 4. 形容詞 adjective：形容名詞、代名詞 e.g. excellent,possible,big ...
 5. 副詞 adverb：修飾動詞、形容詞、副詞、句子 e.g. very,early ...
    * 副詞子句：從屬連接詞所引導的從屬子句
