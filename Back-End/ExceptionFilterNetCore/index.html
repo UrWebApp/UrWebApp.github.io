@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>您的網路共筆-UrWeb</title>
+  
+  
+    <meta name="description" content="文章作者: Kai98k 創作日期: 2023/02/28 文章類型: Back-End，查看本文章獲取更多訊息。">
+    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+  
+<link rel="stylesheet" href="/css/prism.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T4FDJRJ');</script>
+  <!-- End Google Tag Manager -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="mobileBox">
+      <div class="brandBox">
+        <a href="/" class="d-flex align-items-center">
+          <h1 class="m-0">
+            您的網路共筆
+          </h1>
+        </a>
+      </div>
+      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+  <!-- <h1>
+      <a href="/">Home</a> |
+      <a href="/archives">Archive</a> |
+      tags
+      <a href="/about/">About</a>
+    </h1> -->
+  <div class="outter-wrap container-fluid">
+    <aside class="leftAside">
+      <nav>
+        <ul>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+          <!-- <li>
+            <h4>
+              <a href="/about/">關於我們</a>
+            </h4>
+          </li> -->
+          <li style="margin-top: 50px;">
+            <h4>
+              <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+            </h4>
+            <div id="categories">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back-End/">Back-End</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Front-End/">Front-End</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack/">Full-Stack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer-science/">computer-science</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/">職涯發展</a><span class="category-list-count">1</span></li></ul>
+            </div>
+          </li>
+          <li>
+            <h4>
+              <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+            </h4>
+            <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Exception/" style="font-size: 10px;">Exception</a> <a href="/tags/Filter/" style="font-size: 10px;">Filter</a> <a href="/tags/Internet/" style="font-size: 15px;">Internet</a> <a href="/tags/Log/" style="font-size: 15px;">Log</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a> <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/" style="font-size: 10px;">設計思考</a> <a href="/tags/%E8%BD%89%E8%81%B7/" style="font-size: 10px;">轉職</a></div>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="container postWrap">
+  <article class="postArticle">
+    <div class="postArticleHeader">
+      <h1 class="pt-1">Net core 全域異常處理</h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="/Back-End/ExceptionFilterNetCore/" />
+        </p>
+        <span>|</span>
+        <p>2023/02/28</p>
+        <span>|</span>
+        <p>
+          Kai98k
+        </p>
+        <span>|</span>
+        <p>
+          
+            <a href="/categories/Back-End/ ">Back-End </a>
+            
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
+          
+            <li>
+              <a href="/tags/Net/"><i class="fa-solid fa-tag"></i> .Net
+              </a>
+            </li>
+            
+            <li>
+              <a href="/tags/Exception/"><i class="fa-solid fa-tag"></i> Exception
+              </a>
+            </li>
+            
+            <li>
+              <a href="/tags/Filter/"><i class="fa-solid fa-tag"></i> Filter
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+    <div class="postArticleContent">
+      <p>在開發中除了利用 Log 套件幫助我們記下有問題或是 Error 的地方，還可以利用 .Net core 中的 Filter 來處理一些異常發生時，該做的事。</p>
+<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>藉由微軟提供的視圖，可以看到 Filter 有點類似管道或是過濾器的概念，在 .Net core 中程式的生命週期會先進到中介層(Middleware)，再進到這次要談的 Filter。</p>
+<p><img src="https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/filters/_static/filter-pipeline-1.png?view=aspnetcore-7.0" alt=".net pipe"></p>
+<h2 id="Exception-Filter"><a href="#Exception-Filter" class="headerlink" title="Exception Filter"></a>Exception Filter</h2><p>Filter 有很多種，這次要使用到的是 Exception Filter，顧名思義，就是在異常發生時會進到的過濾器。</p>
+<p><img src="https://images2015.cnblogs.com/blog/162090/201707/162090-20170716130815660-1249491527.png" alt="filter"></p>
+<h3 id="新增-ExceptionFilter-自訂名稱-class"><a href="#新增-ExceptionFilter-自訂名稱-class" class="headerlink" title="新增 ExceptionFilter(自訂名稱) class"></a>新增 ExceptionFilter(自訂名稱) class</h3><p>繼承 <code>IAsyncExceptionFilter</code> &#x2F; <code>IExceptionFilter</code>，利用 <code>OnExceptionAsync</code> 方法來自訂異常發生時該做什麼事，在範例中選擇寄信。</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>Filters</span><span class="token punctuation">;</span>
+
+<span class="token keyword">namespace</span> <span class="token namespace">Test<span class="token punctuation">.</span>Filter</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExceptionFilter</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">IAsyncExceptionFilter</span></span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token keyword">private</span> <span class="token class-name">IMailService</span> _mailService<span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token function">ExceptionFilter</span><span class="token punctuation">(</span><span class="token class-name">IMailService</span> mailService<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            _mailService <span class="token operator">=</span> mailService<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">public</span> <span class="token return-type class-name">Task</span> <span class="token function">OnExceptionAsync</span><span class="token punctuation">(</span><span class="token class-name">ExceptionContext</span> _exceptionContext<span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token comment">// 尚未處理的異常</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>_exceptionContext<span class="token punctuation">.</span>ExceptionHandled <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
+            <span class="token punctuation">&#123;</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> errorMsg <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> exception <span class="token operator">=</span> _exceptionContext<span class="token punctuation">.</span>Exception<span class="token punctuation">;</span>
+                <span class="token class-name"><span class="token keyword">var</span></span> stackTrace <span class="token operator">=</span> exception<span class="token punctuation">.</span>StackTrace<span class="token punctuation">;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>exception <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                <span class="token punctuation">&#123;</span>
+                    errorMsg <span class="token operator">+=</span> <span class="token interpolation-string"><span class="token string">$@"&lt;p></span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">exception<span class="token punctuation">.</span>Message</span><span class="token punctuation">&#125;</span></span><span class="token string">&lt;/p>"</span></span><span class="token punctuation">;</span>
+                    exception <span class="token operator">=</span> exception<span class="token punctuation">.</span>InnerException<span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                
+                _exceptionContext<span class="token punctuation">.</span>Result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">ContentResult</span>
+                <span class="token punctuation">&#123;</span>
+
+                <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+                _mailService<span class="token punctuation">.</span><span class="token function">CreateMessage</span><span class="token punctuation">(</span><span class="token string">"test Error"</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">errorMsg</span><span class="token punctuation">&#125;</span></span><span class="token string">,&lt;p></span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">stackTrace</span><span class="token punctuation">&#125;</span></span><span class="token string">&lt;/p>"</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                _mailService<span class="token punctuation">.</span><span class="token function">SendMessage</span><span class="token punctuation">(</span><span class="token string">"test@test.com.tw"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                _exceptionContext<span class="token punctuation">.</span>ExceptionHandled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+
+            <span class="token keyword">return</span> Task<span class="token punctuation">.</span>CompletedTask<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="在-Program-cs-註冊"><a href="#在-Program-cs-註冊" class="headerlink" title="在 Program.cs 註冊"></a>在 Program.cs 註冊</h3><pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token function">AddMvc</span><span class="token punctuation">(</span>config <span class="token operator">=></span>
+  <span class="token punctuation">&#123;</span>
+      config<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token constructor-invocation class-name">ExceptionFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如在 Filter 中有使用到 DI 注入的 Service，可以選擇用以下方法註冊。</p>
+<pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp">builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">AddScoped</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>IMailService<span class="token punctuation">,</span> MailService<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token range operator">..</span><span class="token punctuation">.</span>
+
+builder<span class="token punctuation">.</span>Services<span class="token punctuation">.</span><span class="token function">AddMvc</span><span class="token punctuation">(</span>config <span class="token operator">=></span>
+    <span class="token punctuation">&#123;</span>
+        config<span class="token punctuation">.</span>Filters<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span><span class="token type-expression class-name">ExceptionFilter</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.tpisoftware.com/tpu/articleDetails/2257">ASP.NET Core 中的 Filter</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dotnet261010/p/13193124.html">.NET Core：处理全局异常</a></li>
+</ul>
+
+    </div>
+  </article>
+  <div class="postNext d-flex justify-content-between mt-3 mb-3">
+    
+      <h4>
+        <a href="/Web/Windows%20%E6%B8%AC%E8%A9%A6%E9%80%A3%E7%B7%9A%E5%B7%A5%E5%85%B7/"><i class="fa-solid fa-angles-left"></i> Windows 測試連線工具
+        </a>
+      </h4>
+      
+        
+          <h4>
+            <a href="/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/ShiftJobMethod/">
+              適用所有行業的轉職評估法 <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </h4>
+          
+  </div>
+  
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    let option = '{"el":"#waline","enable":true,"serverURL":"https://waline-urweb.vercel.app/","placeholder":"歡迎隨時提出您的建議，並不吝指教","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/waline/2.14.5/waline.js","pageview":true,"reaction":true}';
+    init(JSON.parse(option));
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+  
+    <input style="display:none" onload="addTotalViews()">
+</main>
+      
+        <aside class="rightAside">
+          <section>
+            <h4>Table of contents</h4>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Filter"><span class="toc-text">Filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exception-Filter"><span class="toc-text">Exception Filter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E-ExceptionFilter-%E8%87%AA%E8%A8%82%E5%90%8D%E7%A8%B1-class"><span class="toc-text">新增 ExceptionFilter(自訂名稱) class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8-Program-cs-%E8%A8%BB%E5%86%8A"><span class="toc-text">在 Program.cs 註冊</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+  </section>
+  </aside>
+
+    <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+
+    <div class="modal" tabindex="-1" id="tocModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="tocModalClose()"></button>
+          </div>
+          <div class="modal-body">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Filter"><span class="toc-text">Filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exception-Filter"><span class="toc-text">Exception Filter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E-ExceptionFilter-%E8%87%AA%E8%A8%82%E5%90%8D%E7%A8%B1-class"><span class="toc-text">新增 ExceptionFilter(自訂名稱) class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8-Program-cs-%E8%A8%BB%E5%86%8A"><span class="toc-text">在 Program.cs 註冊</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    </div>
+    <footer class="cotainer-fluid">
+      <p id="milestone" class="text-center m-0">
+        <span>Copyright © 2021-2023 UrWeb. All rights reserved.</span><br>
+        <span>This site is in orbit around internet 1 days.</span>
+        <span>people witnessed it all</span>
+      </p>
+    </footer>
+
+    <!-- <h3>categories</h3>
+    <ul>
+      
+      <li>
+        <a href="/categories/English/"> English  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Back-End/"> Back-End  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/computer-science/"> computer-science  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/"> 職涯發展  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Web/"> Web  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Design-Pattern/"> Design Pattern  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Full-Stack/"> Full-Stack  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Front-End/"> Front-End  </a>
+      </li>
+      
+    </ul>
+
+    <h3>tags</h3>
+    <ul>
+      
+      <li>
+        <a href="/tags/English/"> English </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Net/"> .Net </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Exception/"> Exception </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Filter/"> Filter </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Log/"> Log </a>
+      </li>
+      
+      <li>
+        <a href="/tags/PDF/"> PDF </a>
+      </li>
+      
+      <li>
+        <a href="/tags/computer-science/"> computer-science </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%BD%89%E8%81%B7/"> 轉職 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/"> 設計思考 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Internet/"> Internet </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Architecture/"> Architecture </a>
+      </li>
+      
+      <li>
+        <a href="/tags/C/"> C# </a>
+      </li>
+      
+      <li>
+        <a href="/tags/DDD/"> DDD </a>
+      </li>
+      
+      <li>
+        <a href="/tags/OOD-OOP/"> OOD/OOP </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Response/"> Response </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Request/"> Request </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Angular/"> Angular </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Note/"> Note </a>
+      </li>
+      
+      <li>
+        <a href="/tags/React/"> React </a>
+      </li>
+      
+    </ul> -->
+</body>
+
+
+<script src="/js/prism.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+</html>
