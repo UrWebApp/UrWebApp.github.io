@@ -19,7 +19,35 @@ tags:
 
 舊 class => component => 掛載複用 => 重新渲染 => 生命週期
 
-新 Hooks => functional programming?
+[React Class Components](https://www.w3schools.com/react/react_class.asp)
+
+```js
+// Example
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+```
+
+`Feel free to skip this section, and use Function Components instead.`
+
+---
+
+新 Hooks => functional programming => Function Components
+
+```js
+// Example
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+
+let Car = () => {
+  return <h2>Hi, I am a Car!</h2>;
+}
+```
+
+##
 
 ## es6 Syntax
 
@@ -47,6 +75,16 @@ root.render(<h1>Hello, {word}!</h1>);
 ```
 
 ## React、ReactDOM Library
+
+* [React](https://www.npmjs.com/package/react)
+
+React is a JavaScript library `for creating user interfaces`.
+
+The react package contains `only the functionality necessary to define React components`. `It is typically used together with a React renderer` like react-dom for the web, or react-native for the native environments.
+
+* [ReactDOM](https://www.npmjs.com/package/react-dom)
+
+This package serves as the `entry point to the DOM` and `server renderers for React`. `It is intended to be paired with the generic React package`, which is shipped as react to npm.
 
 ```JS
 1. // 定義 inline-style 行內樣式
