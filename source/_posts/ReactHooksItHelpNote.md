@@ -19,6 +19,8 @@ tags:
 
 舊 class => component => 掛載複用 => 重新渲染 => 生命週期
 
+因為有 extends React.Component 所以可以在內部使用一些 setState() 之類的語法
+
 [React Class Components](https://www.w3schools.com/react/react_class.asp)
 
 ```js
@@ -36,20 +38,31 @@ class Car extends React.Component {
 
 新 Hooks => functional programming => Function Components
 
+單純只是一個普通的 JavaScript 函數
+
 ```js
 // Example
-function Car() {
+function Car(props) {
   return <h2>Hi, I am a Car!</h2>;
 }
 
-let Car = () => {
+let Car = (props) => {
   return <h2>Hi, I am a Car!</h2>;
 }
 ```
 
-##
+---
+
+[functional-vs-class-components](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108)
+
+* 需要生命週期 hook ，您應該使用 class component
+* function component 更容易閱讀與測試，沒有狀態、生命週期 hook 的純 js function
+* function component 產生更少的程式碼
+* 分離容器組件和展示組件會變得更容易
 
 ## es6 Syntax
+
+以下只提供關鍵字
 
 解構賦值（Destructuring assignment）
 
@@ -116,7 +129,7 @@ root.render(Counter);
 
 ## React Component、[Hooks] useState、[Hooks] useEffect
 
-1. arrow function： const component = ()=>(/*return*/);
+1. arrow function： const component = () => (/*return*/);
 
 `該函式只是單純回傳某一值時，可以把要回傳的內容直接放到 => 後面而不用額外再寫 return`
 
