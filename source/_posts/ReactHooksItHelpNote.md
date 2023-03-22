@@ -21,58 +21,49 @@ tags:
 * [React Class Components](https://www.w3schools.com/react/react_class.asp)
 * [functional-vs-class-components](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108)
 * [React初心者30天的探索之路 [Day 07] Functional Component v.s Class Component](https://ithelp.ithome.com.tw/articles/10234746)
+* [該來理解 JavaScript 的原型鍊了 ](https://github.com/aszx87410/blog/issues/18)
+* [淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂](https://blog.techbridge.cc/2019/02/23/javascript-this/)
 
 > class component
 
-* 舊 class => component => 掛載複用 => 重新渲染 => 生命週期
-* 需要生命週期 hook ，您應該使用 class component
-* function component 更容易閱讀與測試，沒有狀態、生命週期 hook 的純 js function
-* function component 產生更少的程式碼
-* 分離容器組件和展示組件會變得更容易
-
 * 需繼承 React.Component
 * 具有生命週期，可以針對某些情境決定是否渲染，ex shouldComponentUpdate()
-* 具有 state ( Stateful component )
-* 需要實作 render 方法
-* 擁有 this
+* 需要在設置 state ( Stateful component )
 * 每次都可以拿到最新的 this.props，因為 this 隨時都在變化
-
-* 需要比較多 JS 的背景知識。
-  1. this 概念 怎麼 Call function 決定。
-  2. 需要有物件導向的知識
+* 需要比較多 JS 的背景知識。this 概念 怎麼 Call function 決定、需要有物件導向的知識
 * 具有生命週期。
-* 需要在 Component 中設置狀態（state）。
 * 不能使用 Hook。
+* 需定義 render() 並將要渲染到畫面上的內容 return。
+* this 必須在一開始被指向才可以使用
 
 ```js
 // Example
-class Car extends React.Component { // extends React.Component 可以在內部使用一些 setState() 之類的語法
+class Car extends React.Component { 
+  // extends React.Component 可以在內部使用一些 setState() 之類的語法
+  constructor() { this.state = { name: "miaHsu" }; }
   render() {
     return <h2>Hi, I am a Car!</h2>;
   }
+
+  this.setState({name: 'BrainLin'});
 }
 ```
 
 > hook / functional programming / Function Components
 
-感覺很像 vue 3
-
+* 感覺很像 vue 3
 * 2019 年 v16.8 Hooks 釋出後的寫法
-* 沒有生命週期 （React Hook userEffect 出現後，就有生命週期了！）
-* 沒有state（Stateless），所以被稱為無狀態組件（但React Hook useState出現後就可以有state了！）
-* 可以用arrow function 宣告或是一般的function
-* 沒有 this
-* 編譯更快（因為不用將class轉換成es5
-* props會一直是原本傳進來的那個，而不會跟著更新，閉包的概念
-
-* 編譯快程式碼更少
-* 性能比起 Class Component 更好
-* 無狀態、沒有生命週期的 Component（使用 Hooks 取代）
-
+* 生命週期要透過 userEffect Hook
+* 無狀態組件 state（Stateless）要透過 useState Hook
+* 可以用 arrow function 宣告或是一般的 function
+* 編譯快程式碼更少，不用將 class 轉換成 es5，不繼承 react component
+* props 會一直是原本傳進來的那個，而不會跟著更新，閉包的概念，this 會直接指向 component 本身
+* 分離容器組件和展示組件會變得更容易
 
 ```js
 // Example 單純只是一個普通的 JavaScript 函數
 function Car(props) {
+  const [count, setCount] = useState(0); // hook
   return <h2>Hi, I am a Car!</h2>;
 }
 

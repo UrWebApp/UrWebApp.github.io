@@ -1,5 +1,5 @@
 ---
-title: 讓你大概搞懂 Http Request 在幹什麼！
+title: 讓你大概搞懂 Http Request
 date: 2023-01-09
 categories: Web
 author: johch3n611u
