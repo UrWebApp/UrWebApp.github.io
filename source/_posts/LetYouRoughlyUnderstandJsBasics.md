@@ -13,7 +13,31 @@ tags:
 
 [該來理解 JavaScript 的原型鍊了 #18](https://github.com/aszx87410/blog/issues/18)
 
-相較於 c# / java 等語言，js 開發者的初衷是單純 script 輕量在沒有 class 的狀況下 ( ES6 的 class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用，构造函数在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。
+相較於 c# / java 等 class-base 語言，js 開發者的初衷是單純 script 輕量 ( object / prototype ) -base 在沒有 class 的狀況下 ( ES6 的 class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用；
+
+构造函数在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。
+
+```js
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+  
+Person.prototype.log = function () {
+  console.log(this.name + ', age:' + this.age);
+}
+  
+var nick = new Person('nick', 18);
+  
+// 這個剛講過了，nick.__proto__ 會指向 Person.prototype
+console.log(nick.__proto__ === Person.prototype) // true
+  
+// 那 Person.prototype.__proto__ 會指向誰呢？會指向 Object.prototype
+console.log(Person.prototype.__proto__ === Object.prototype) // true
+  
+// 那 Object.prototype.__proto__ 又會指向誰呢？會指向 null，這就是原型鍊的頂端了
+console.log(Object.prototype.__proto__) // null
+```
 
 ## 构造函数 ( Constructor ) 和一般函数
 
@@ -59,6 +83,11 @@ console.log(sum); // 输出 5
 [淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂](https://blog.techbridge.cc/2019/02/23/javascript-this/)
 
 在回调函数中，如果没有使用箭头函数或者显式地将 this 绑定到当前组件实例上，this 将会指向 undefined 或者全局对象，而不是当前组件实例。因此，我们通常会在构造函数中将 this 绑定到回调函数中，或者使用箭头函数来确保 this 指向当前组件实例。
+
+箭头函数与传统函数不同之处在于，它没有自己的 this 绑定。箭头函数中的 this 值取决于该函数在定义时所处的词法作用域。
+换句话说，箭头函数中的 this 始终指向它外部的词法作用域中的 this。这通常是函数被创建时所在的上下文对象。
+这种行为与传统函数不同，因为在传统函数中，this 的值取决于函数被调用时的上下文对象。如果函数没有被绑定到一个对象上，那么 this 的值将是全局对象（在浏览器中是 window 对象）。
+因此，使用箭头函数可以避免在回调函数中出现 this 绑定问题。但是，如果你需要动态绑定 this，那么你仍然需要使用传统函数语法。
 
 ## callback function
 

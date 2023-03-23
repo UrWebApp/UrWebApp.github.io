@@ -21,8 +21,6 @@ tags:
 * [React Class Components](https://www.w3schools.com/react/react_class.asp)
 * [functional-vs-class-components](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108)
 * [React初心者30天的探索之路 [Day 07] Functional Component v.s Class Component](https://ithelp.ithome.com.tw/articles/10234746)
-* [該來理解 JavaScript 的原型鍊了 ](https://github.com/aszx87410/blog/issues/18)
-* [淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂](https://blog.techbridge.cc/2019/02/23/javascript-this/)
 
 > class component
 
@@ -1093,6 +1091,67 @@ export const SetOpenContext = React.createContext(()=>{});
 useReducer 是無法存取 global store，必須搭配 useContext
 
 ### [Hooks] useLayoutEffect
+
+### forwardRef
+
+forwardRef 是 React 中一個重要的 API 之一，其主要用途是允許子組件（child component）向父組件（parent component）傳遞參數，並且可以獲得對子組件 DOM 元素的引用。
+
+在一般情況下，如果要讓父組件能夠直接訪問子組件中的 DOM 元素，需要在子組件中定義一個回調函數（callback function），然後將這個回調函數傳遞給子組件的 props，讓子組件在適當的時候調用這個回調函數，將 DOM 元素作為參數傳遞給父組件。
+
+使用 forwardRef 可以簡化這個過程，通過 forwardRef，父組件可以直接獲得對子組件 DOM 元素的引用，而無需在子組件中定義回調函數。
+
+```js
+import React, { forwardRef } from 'react';
+
+const MyInput = forwardRef((props, ref) => {
+  return (
+    <input type="text" ref={ref} {...props} />
+  );
+});
+
+const App = () => {
+  const inputRef = React.createRef();
+
+  const handleButtonClick = () => {
+    console.log(inputRef.current.value);
+  };
+
+  return (
+    <div>
+      <MyInput ref={inputRef} />
+      <button onClick={handleButtonClick}>Submit</button>
+    </div>
+  );
+};
+```
+
+### [Hooks] useMergedState
+
+[react-component/util/useMergedState](https://github.com/react-component/util/blob/master/src/hooks/useMergedState.ts)
+
+[我们应该如何优雅的处理 React 中受控与非受控](https://juejin.cn/post/7178485530223444026)
+
+通过该 Hook 你可以自由定义表单控件的受控和非受控状态。
+
+在前端工程中，受控元素和被控元素是指在表單中的輸入元素。
+
+受控元素是指表單中的輸入元素，如input、textarea、select等元素，其值是由React或其他JavaScript框架管理的元素。這些元素的值被存儲在組件狀態中，並且只能通過setState()方法更改。
+
+被控元素是指表單中的輸入元素，其值由DOM管理。這些元素的值可以通過JavaScript編程更改，也可以由用戶輸入更改。但是，值並不存儲在組件狀態中，因此在React或其他JavaScript框架中，它們需要透過refs來讀取或更改。
+
+簡而言之，受控元素是由React或其他JavaScript框架管理其值的元素，而被控元素則由DOM管理其值的元素。受控元素的值存儲在組件狀態中，而被控元素的值不是。
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 參考
 
