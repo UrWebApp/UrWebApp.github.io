@@ -119,7 +119,7 @@
       </div>
     </div>
     <div class="postArticleContent">
-      <p>原先是在研究 React Class &#x2F; Function 差異 <a target="_blank" rel="noopener" href="https://www.tpisoftware.com/tpu/articleDetails/2822">[Day 07] Functional Component v.s Class Component</a> 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。</p>
+      <p>原先是在研究 React Class &#x2F; Function 差異 <a target="_blank" rel="noopener" href="https://www.tpisoftware.com/tpu/articleDetails/2822">[React] Functional-component vs Class-component</a> 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。</p>
 <h2 id="原型链-prototype-chain"><a href="#原型链-prototype-chain" class="headerlink" title="原型链 ( prototype chain )"></a>原型链 ( prototype chain )</h2><p><a target="_blank" rel="noopener" href="https://github.com/aszx87410/blog/issues/18">該來理解 JavaScript 的原型鍊了 #18</a></p>
 <p>相較於 c# &#x2F; java 等 class-base 語言，js 開發者的初衷是單純 script 輕量 ( object &#x2F; prototype ) -base 在沒有 class 的狀況下 ( ES6 的 class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用；</p>
 <p>构造函数在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。</p>
@@ -178,10 +178,76 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p><a target="_blank" rel="noopener" href="https://blog.techbridge.cc/2019/02/23/javascript-this/">淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂</a></p>
-<p>在回调函数中，如果没有使用箭头函数或者显式地将 this 绑定到当前组件实例上，this 将会指向 undefined 或者全局对象，而不是当前组件实例。因此，我们通常会在构造函数中将 this 绑定到回调函数中，或者使用箭头函数来确保 this 指向当前组件实例。</p>
-<p>箭头函数与传统函数不同之处在于，它没有自己的 this 绑定。箭头函数中的 this 值取决于该函数在定义时所处的词法作用域。<br>换句话说，箭头函数中的 this 始终指向它外部的词法作用域中的 this。这通常是函数被创建时所在的上下文对象。<br>这种行为与传统函数不同，因为在传统函数中，this 的值取决于函数被调用时的上下文对象。如果函数没有被绑定到一个对象上，那么 this 的值将是全局对象（在浏览器中是 window 对象）。<br>因此，使用箭头函数可以避免在回调函数中出现 this 绑定问题。但是，如果你需要动态绑定 this，那么你仍然需要使用传统函数语法。</p>
-<h2 id="callback-function"><a href="#callback-function" class="headerlink" title="callback function"></a>callback function</h2><p>回调函数指的是将一个函数作为参数传递给另一个函数，并在后者的执行过程中被调用的函数。通常，回调函数被用于异步编程，例如在处理事件、执行网络请求或执行其他需要一定时间才能完成的任务时。</p>
+<h2 id="this-amp-箭頭凾式"><a href="#this-amp-箭頭凾式" class="headerlink" title="this &amp; 箭頭凾式"></a>this &amp; 箭頭凾式</h2><p><a target="_blank" rel="noopener" href="https://blog.techbridge.cc/2019/02/23/javascript-this/">淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂</a></p>
+<ul>
+<li>箭頭函式中的 this 始終指向外部詞法作用域中的 this，而傳統函式中的 this 值則取決於函式被調用時的上下文對象。</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Alice'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayHello</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 箭頭函式中的 this 始終指向外部詞法作用域中的 this，即全域對象</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayHi</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hi, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 傳統函式中的 this 取決於調用該函式的對象，即 obj</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+obj<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hello, my name is undefined</span>
+obj<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hi, my name is Alice</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>箭頭函式中的 this 在定義時就固定了，而不會隨著使用時的脈絡而改變。</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Alice'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayHello</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">greet</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 箭頭函式中的 this 在定義時就固定了，即 obj 的 this</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+obj<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hello, my name is Alice</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>在傳統函式中，如果函式沒有被綁定到一個對象上，this 的值將是全域對象（在瀏覽器中是 window 對象）。</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hi, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 沒有綁定到對象上，this 的值將是全域對象</span>
+<span class="token punctuation">&#125;</span>
+
+name <span class="token operator">=</span> <span class="token string">'Bob'</span><span class="token punctuation">;</span>
+<span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Hi, my name is Bob</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>為避免在回調函式中出現 this 綁定問題，通常會在構造函式中將 this 綁定到回調函式中，或使用箭頭函式來確保 this 指向當前元件實例。</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Counter</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token comment">// 沒有將 this 綁定到 Counter 的實例，this 的值將是全域對象</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Count is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token function">incrementArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      <span class="token comment">// 使用箭頭函式確保 this 指向當前元件實例</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Count is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">const</span> counter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+counter<span class="token punctuation">.</span><span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Count is undefined</span>
+counter<span class="token punctuation">.</span><span class="token function">incrementArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Count is 0（1 秒後顯示）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="callback-function"><a href="#callback-function" class="headerlink" title="callback function"></a>callback function</h2><p>回调函数指的是将一个函数作为参数传递给另一个函数，并在后者的执行过程中被调用的函数。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello, '</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">'!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -231,8 +297,102 @@ console<span class="token punctuation">.</span><span class="token function">log<
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<ul>
+<li>如果需要動態綁定 this，仍需使用傳統函式語法。</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 傳統函式中的 this 取決於函式被調用時的上下文對象</span>
+<span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Object 1'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
+<span class="token keyword">const</span> obj2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Object 2'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
+obj1<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 輸出 Object 1</span>
+obj1<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 輸出 Object 2</span>
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 輸出 window</span>
+
+<span class="token comment">// 箭頭函式中的 this 始終指向外部詞法作用域中的 this</span>
+<span class="token keyword">const</span> obj3 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Object 3'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> obj4 <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Object 4'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+obj3<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 輸出 undefined</span>
+
+<span class="token comment">// obj3.sayName 傳遞給 call 函式，用 obj4 來動態調用改變 this 的值</span>
+obj3<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj4<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 輸出 undefined</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Class-ES6"><a href="#Class-ES6" class="headerlink" title="Class ES6"></a>Class ES6</h2><p>JavaScript 是一種無 class 語言。ES6 class 中引入的主要是對現有的基於原型的繼承模型的語法糖，<br>可以定义一个对象的属性和方法，可以利用 继承、静态方法、实例方法、构造函数、new 等特性，創造更複雜的 class。</p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method">javascript-class-method-vs-class-prototype-method</a></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Class<span class="token punctuation">.</span><span class="token function-variable function">method</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">/* code */</span> <span class="token punctuation">&#125;</span>
+<span class="token class-name">Class</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">method</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">/* code using this.values */</span> <span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 構造函數 </span>
+<span class="token keyword">function</span> <span class="token function">MyClass</span> <span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+  <span class="token comment">// es5</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">=</span> firstName<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>lastName <span class="token operator">=</span> lastName<span class="token punctuation">;</span>
+  <span class="token comment">// es6</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">firstName<span class="token punctuation">,</span> lastName</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>firstName <span class="token operator">=</span> firstName<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>lastName <span class="token operator">=</span> lastName<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">var</span> privateVariable<span class="token punctuation">;</span> <span class="token comment">// private member only available within the constructor fn</span>
+
+  <span class="token comment">// es5</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">privilegedMethod</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// it can access private members</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">.</span>constructor <span class="token operator">===</span> MyClass<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// es6</span>
+  <span class="token keyword">static</span> <span class="token function">privilegedMethod</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">.</span>constructor <span class="token operator">===</span> Person<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">// es6</span>
+  <span class="token function">publicMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hi </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token keyword">this</span><span class="token punctuation">.</span>firstName<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">var</span> aminu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token string">"Aminu"</span><span class="token punctuation">,</span> <span class="token string">"Abubakar"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+MyClass<span class="token punctuation">.</span><span class="token function">privilegedMethod</span><span class="token punctuation">(</span>aminu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// will return true</span>
+
+<span class="token comment">// A 'static method', it's just like a normal function </span>
+<span class="token comment">// it has no relation with any 'MyClass' object instance</span>
+MyClass<span class="token punctuation">.</span><span class="token function-variable function">staticMethod</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// es5</span>
+<span class="token class-name">MyClass</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">publicMethod</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// instance method</span>
+  <span class="token comment">// the 'this' keyword refers to the object instance</span>
+  <span class="token comment">// you can access only 'privileged' and 'public' members</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> myObj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// new object instance</span>
+
+myObj<span class="token punctuation">.</span><span class="token function">publicMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+MyClass<span class="token punctuation">.</span><span class="token function">staticMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
 <p>什么是JavaScript？<br>JavaScript与Java有何不同？<br>JavaScript中的数据类型是什么？如何检查变量的数据类型？<br>什么是JavaScript的作用域？如何声明变量以使其在特定作用域中可用？<br>什么是闭包？它们有什么作用？<br>什么是原型？如何使用它创建对象？<br>什么是JavaScript的事件循环？它与同步和异步编程有什么关系？<br>如何使用JavaScript创建对象？什么是构造函数？<br>什么是回调函数？如何使用它们处理异步事件？<br>什么是Promise？如何使用它们处理异步事件？<br>什么是箭头函数？它们与普通函数有何不同？<br>什么是ES6（ECMAScript 6）？它带来了哪些新的功能和语法？<br>什么是JavaScript的REST参数？如何使用它们？<br>什么是解构？如何使用它们在JavaScript中处理对象和数组？<br>什么是闭包？它们有什么作用？<br>什么是IIFE（立即调用的函<br>事件循環（Event Loop）？它是如何工作的？<br>如何實現繼承（Inheritance）？JavaScript 支援哪些類型的繼承？<br>閉包（Closure）？你能舉一個使用閉包的例子嗎？<br> call()、apply() 和 bind() 的區別？<br>如何避免 JavaScript 的“回呼地獄”（Callback Hell）？<br>箭頭函數（Arrow Functions）和傳統函數的區別？<br> var、let 和 const 的區別？<br>如何處理 JavaScript 中的異步編程（Asynchronous Programming）？<br>原型繼承（Prototype Inheritance）的概念？<br>如何使用 Promise 進行異步操作，它是如何工作的？<br> hoisting（變量提升）是什麼？<br>事件委派（Event Delegation）？它有什麼優點？<br> DOM（Document Object Model）是什麼？如何操作 DOM？<br> RESTful API？如何使用 JavaScript 來呼叫它們？<br>同步和異步的區別？如何使用 JavaScript 進行同步和異步編程？<br> CORS（Cross-Origin Resource Sharing）是什麼？如何在 JavaScript 中處理它？<br> event bubbling 和 event capturing？它們有什麼區別？<br>事件（Event）是什麼？如何處理事件？<br>虛擬 DOM（Virtual DOM）？它有什麼優點？<br>如何使用 JavaScript 來實現模組化（Modularization）？<br>嚴格模式（Strict Mode）是什麼？它有什麼優點？<br> AJAX？如何使用 JavaScript 進行 AJAX 請求？<br>事件委託（Event Delegation）和事件繫結（Event Binding）是什麼？它們有什麼區別？<br>立即執行函數（Immediately Invoked Function Expression, IIFE）？它有什麼作用？<br>如何使用 JavaScript 中的 fetch() 方法來進行網絡請求？<br> HTTP Cookies？如何使用 JavaScript 操作 Cookies？<br>解構賦值（Destructuring Assignment）是什麼？它有什麼優點？<br>模板字面量（Template Literals）？它們有什麼優點？<br>代碼注入（Code Injection）是什麼？如何避免它？<br>資料結構？JavaScript 中有哪些常見的資料結構？如何實現它們？<br>原型繼承（Prototype Inheritance）是什麼？它與傳統的繼承方式有何區別？<br> Promise？如何使用 Promise 進行異步編程？<br>作用域（Scope）是什麼？它與閉包（Closure）有何關聯？<br>高階函數（Higher-Order Function）？它有什麼作用？<br>箭頭函數（Arrow Function）是什麼？它與傳統函數有何區別？<br> Proxy？如何使用 Proxy 來監聽對象的操作？<br>事件循環（Event Loop）是什麼？它有什麼作用？<br> Map 和 Set？它們與傳統的數組有何區別？<br>同源策略（Same-Origin Policy）是什麼？它如何保護網頁安全？<br> JavaScript 中的模組（Module）？它有什麼優點？<br> async&#x2F;await 是什麼？它如何簡化異步編程？<br> JavaScript 中的柯里化（Currying）？它有什麼優點？<br>事件冒泡（Event Bubbling）是什麼？它有什麼作用？<br> JavaScript 中的回調函數（Callback）？如何使用回調函數進行異步編程？<br>原型鏈（Prototype Chain）是什麼？它有什麼作用？<br> JavaScript 中的函數式編程（Functional Programming）？它與面向對象編程有何區別？<br>事件（Event）是什麼？它如何與 DOM 相關聯？<br> JavaScript 中的垃圾回收（Garbage Collection）？它如何工作？<br>模板字面量（Template Literal）是什麼？它與傳統字符串有何區別？<br> JavaScript 中的函數柯南特（Function Currying）？它有什麼優點？<br>事件循環（Event Loop）是什麼？它如何處理異步編程？<br> JavaScript 中的閉包（Closure）？它有什麼作用？<br> IIFE 是什麼？它有什麼作用？<br> JavaScript 中的原型繼承（Prototype Inheritance）？它與傳統繼承有何區別？<br>箭頭函數（Arrow Function）是什麼？它與傳統函數有何區別？<br> JavaScript 中的 Promise？它如何簡化異步編程？<br>變量作用域（Variable Scope）是什麼？它與作用域鏈有何區別？<br> JavaScript 中的跨域請求（Cross-Origin Request）？它如何實現？<br>模塊化（Modularization）是什麼？它有什麼作用？<br> JavaScript 中的遞迴（Recursion）？它如何實現？它與循環有何區別？<br> hoisting 是什麼？它如何影響變量和函數聲明？<br> JavaScript 中的事件委託（Event Delegation）？它有什麼作用？<br>綁定（Binding）是什麼？它與 this 關鍵字有什麼關係？<br> JavaScript 中的 currying？它有什麼作用？<br>嚴格模式（Strict Mode）是什麼？它有什麼作用？<br> JavaScript 中的生成器（Generator）？它有什麼作用？<br>封裝（Encapsulation）是什麼？它有什麼作用？<br> JavaScript 中的 map() 和 reduce() 方法？它們有什麼作用？<br>事件捕獲（Event Capturing）和事件冒泡（Event Bubbling）是什麼？它們有什麼區別？<br> JavaScript 中的代碼優化（Code Optimization）？你可以舉一些例子嗎？<br> JavaScript 中的闭包（Closure）？它有什麼作用？可以舉一個實際的應用場景嗎？<br>作用域（Scope）是什麼？它與作用域鏈（Scope Chain）有什麼關係？<br> JavaScript 中的原型（Prototype）？它有什麼作用？<br>事件循環（Event Loop）是什麼？它如何處理異步任務？<br> JavaScript 中的箭頭函數（Arrow Function）？它有什麼優點？<br> promise 是什麼？它如何處理異步操作？<br> JavaScript 中的變量提升（Variable Hoisting）？它如何影響代碼執行？<br>模塊化（Module）是什麼？它有什麼作用？<br> JavaScript 中的類（Class）？它與原型有什麼關係？<br>可變（Mutable）和不可變（Immutable）數據類型的區別？舉一些例子。</p>
 
     </div>
@@ -262,7 +422,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         <aside class="rightAside">
           <section>
             <h4>Table of contents</h4>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE-prototype-chain"><span class="toc-text">原型链 ( prototype chain )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-Constructor-%E5%92%8C%E4%B8%80%E8%88%AC%E5%87%BD%E6%95%B0"><span class="toc-text">构造函数 ( Constructor ) 和一般函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this"><span class="toc-text">this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#callback-function"><span class="toc-text">callback function</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE-prototype-chain"><span class="toc-text">原型链 ( prototype chain )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-Constructor-%E5%92%8C%E4%B8%80%E8%88%AC%E5%87%BD%E6%95%B0"><span class="toc-text">构造函数 ( Constructor ) 和一般函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-amp-%E7%AE%AD%E9%A0%AD%E5%87%BE%E5%BC%8F"><span class="toc-text">this &amp; 箭頭凾式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#callback-function"><span class="toc-text">callback function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-ES6"><span class="toc-text">Class ES6</span></a></li></ol>
   </section>
   </aside>
 
@@ -276,7 +436,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="tocModalClose()"></button>
           </div>
           <div class="modal-body">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE-prototype-chain"><span class="toc-text">原型链 ( prototype chain )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-Constructor-%E5%92%8C%E4%B8%80%E8%88%AC%E5%87%BD%E6%95%B0"><span class="toc-text">构造函数 ( Constructor ) 和一般函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this"><span class="toc-text">this</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#callback-function"><span class="toc-text">callback function</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE-prototype-chain"><span class="toc-text">原型链 ( prototype chain )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-Constructor-%E5%92%8C%E4%B8%80%E8%88%AC%E5%87%BD%E6%95%B0"><span class="toc-text">构造函数 ( Constructor ) 和一般函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-amp-%E7%AE%AD%E9%A0%AD%E5%87%BE%E5%BC%8F"><span class="toc-text">this &amp; 箭頭凾式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#callback-function"><span class="toc-text">callback function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-ES6"><span class="toc-text">Class ES6</span></a></li></ol>
           </div>
         </div>
       </div>
