@@ -7,7 +7,7 @@ tags:
 - Javascript
 ---
 
-原先是在研究 React Class / Function 差異 [[Day 07] Functional Component v.s Class Component](https://www.tpisoftware.com/tpu/articleDetails/2822) 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。
+原先是在研究 React Class / Function 差異 [[React] Functional-component vs Class-component](https://www.tpisoftware.com/tpu/articleDetails/2822) 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。
 
 ## 原型链 ( prototype chain )
 
@@ -78,20 +78,85 @@ var sum = add(2, 3);
 console.log(sum); // 输出 5
 ```
 
-## this
+## this & 箭頭凾式
 
 [淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂](https://blog.techbridge.cc/2019/02/23/javascript-this/)
 
-在回调函数中，如果没有使用箭头函数或者显式地将 this 绑定到当前组件实例上，this 将会指向 undefined 或者全局对象，而不是当前组件实例。因此，我们通常会在构造函数中将 this 绑定到回调函数中，或者使用箭头函数来确保 this 指向当前组件实例。
+* 箭頭函式中的 this 始終指向外部詞法作用域中的 this，而傳統函式中的 this 值則取決於函式被調用時的上下文對象。
 
-箭头函数与传统函数不同之处在于，它没有自己的 this 绑定。箭头函数中的 this 值取决于该函数在定义时所处的词法作用域。
-换句话说，箭头函数中的 this 始终指向它外部的词法作用域中的 this。这通常是函数被创建时所在的上下文对象。
-这种行为与传统函数不同，因为在传统函数中，this 的值取决于函数被调用时的上下文对象。如果函数没有被绑定到一个对象上，那么 this 的值将是全局对象（在浏览器中是 window 对象）。
-因此，使用箭头函数可以避免在回调函数中出现 this 绑定问题。但是，如果你需要动态绑定 this，那么你仍然需要使用传统函数语法。
+```js
+const obj = {
+  name: 'Alice',
+  sayHello: () => {
+    console.log(`Hello, my name is ${this.name}`); // 箭頭函式中的 this 始終指向外部詞法作用域中的 this，即全域對象
+  },
+  sayHi: function() {
+    console.log(`Hi, my name is ${this.name}`); // 傳統函式中的 this 取決於調用該函式的對象，即 obj
+  }
+};
+
+obj.sayHello(); // Hello, my name is undefined
+obj.sayHi(); // Hi, my name is Alice
+```
+
+* 箭頭函式中的 this 在定義時就固定了，而不會隨著使用時的脈絡而改變。
+
+```js
+const obj = {
+  name: 'Alice',
+  sayHello: function() {
+    const greet = () => {
+      console.log(`Hello, my name is ${this.name}`); // 箭頭函式中的 this 在定義時就固定了，即 obj 的 this
+    }
+    greet();
+  }
+};
+
+obj.sayHello(); // Hello, my name is Alice
+```
+
+* 在傳統函式中，如果函式沒有被綁定到一個對象上，this 的值將是全域對象（在瀏覽器中是 window 對象）。
+
+```js
+function sayHi() {
+  console.log(`Hi, my name is ${this.name}`); // 沒有綁定到對象上，this 的值將是全域對象
+}
+
+name = 'Bob';
+sayHi(); // Hi, my name is Bob
+```
+
+* 為避免在回調函式中出現 this 綁定問題，通常會在構造函式中將 this 綁定到回調函式中，或使用箭頭函式來確保 this 指向當前元件實例。
+
+```js
+class Counter {
+  constructor() {
+    this.count = 0;
+  }
+
+  increment() {
+    setTimeout(function() {
+      // 沒有將 this 綁定到 Counter 的實例，this 的值將是全域對象
+      console.log(`Count is ${this.count}`);
+    }, 1000);
+  }
+
+  incrementArrow() {
+    setTimeout(() => {
+      // 使用箭頭函式確保 this 指向當前元件實例
+      console.log(`Count is ${this.count}`);
+    }, 1000);
+  }
+}
+
+const counter = new Counter();
+counter.increment(); // Count is undefined
+counter.incrementArrow(); // Count is 0（1 秒後顯示）
+```
 
 ## callback function
 
-回调函数指的是将一个函数作为参数传递给另一个函数，并在后者的执行过程中被调用的函数。通常，回调函数被用于异步编程，例如在处理事件、执行网络请求或执行其他需要一定时间才能完成的任务时。
+回调函数指的是将一个函数作为参数传递给另一个函数，并在后者的执行过程中被调用的函数。
 
 ```js
 function greet(name, callback) {
@@ -147,7 +212,110 @@ doSomethingAsync(function(result) {
 });
 ```
 
+* 如果需要動態綁定 this，仍需使用傳統函式語法。
 
+```js
+// 傳統函式中的 this 取決於函式被調用時的上下文對象
+const obj1 = {
+  name: 'Object 1',
+  sayName: function() {
+    console.log(this.name);
+  }
+};
+
+const obj2 = {
+  name: 'Object 2'
+};
+
+obj1.sayName(); // 輸出 Object 1
+obj1.sayName.call(obj2); // 輸出 Object 2
+
+function foo() {
+  console.log(this);
+}
+
+foo(); // 輸出 window
+
+// 箭頭函式中的 this 始終指向外部詞法作用域中的 this
+const obj3 = {
+  name: 'Object 3',
+  sayName: () => {
+    console.log(this.name);
+  }
+};
+
+const obj4 = {
+  name: 'Object 4'
+};
+
+obj3.sayName(); // 輸出 undefined
+
+// obj3.sayName 傳遞給 call 函式，用 obj4 來動態調用改變 this 的值
+obj3.sayName.call(obj4); // 輸出 undefined
+```
+
+## Class ES6
+
+JavaScript 是一種無 class 語言。ES6 class 中引入的主要是對現有的基於原型的繼承模型的語法糖，
+可以定义一个对象的属性和方法，可以利用 继承、静态方法、实例方法、构造函数、new 等特性，創造更複雜的 class。
+
+[javascript-class-method-vs-class-prototype-method](https://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method)
+
+```js
+Class.method = function () { /* code */ }
+Class.prototype.method = function () { /* code using this.values */ }
+
+// 構造函數 
+function MyClass (firstName, lastName) {
+
+  // es5
+  this.firstName = firstName;
+  this.lastName = lastName;
+  // es6
+  constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+  }
+
+  var privateVariable; // private member only available within the constructor fn
+
+  // es5
+  this.privilegedMethod = function (obj) { // it can access private members
+    return obj.constructor === MyClass;
+  };
+
+  // es6
+  static privilegedMethod(obj) {
+    return obj.constructor === Person;
+  }
+
+  // es6
+  publicMethod() {
+      return `Hi ${this.firstName}`;
+  }
+}
+
+var aminu = new MyClass("Aminu", "Abubakar");
+MyClass.privilegedMethod(aminu); // will return true
+
+// A 'static method', it's just like a normal function 
+// it has no relation with any 'MyClass' object instance
+MyClass.staticMethod = function () {}; 
+
+// es5
+MyClass.prototype.publicMethod = function () {
+  // instance method
+  // the 'this' keyword refers to the object instance
+  // you can access only 'privileged' and 'public' members
+};
+
+var myObj = new MyClass(); // new object instance
+
+myObj.publicMethod();
+MyClass.staticMethod();
+```
+
+---
 
 什么是JavaScript？
 JavaScript与Java有何不同？

@@ -28,10 +28,9 @@ tags:
 * 具有生命週期，可以針對某些情境決定是否渲染，ex shouldComponentUpdate()
 * 需要在設置 state ( Stateful component )
 * 每次都可以拿到最新的 this.props，因為 this 隨時都在變化
-* 需要比較多 JS 的背景知識。this 概念 怎麼 Call function 決定、需要有物件導向的知識
-* 具有生命週期。
-* 不能使用 Hook。
-* 需定義 render() 並將要渲染到畫面上的內容 return。
+* [需要比較多 JS 的背景知識](/Web/LetYouRoughlyUnderstandJsBasics/)
+* 不能使用 Hook
+* 需定義 render() 並將要渲染到畫面上的內容 return
 * this 必須在一開始被指向才可以使用
 
 ```js
@@ -51,7 +50,7 @@ class Car extends React.Component {
 
 * 感覺很像 vue 3
 * 2019 年 v16.8 Hooks 釋出後的寫法
-* 生命週期要透過 userEffect Hook
+* 生命週期要透過 useEffect Hook
 * 無狀態組件 state（Stateless）要透過 useState Hook
 * 可以用 arrow function 宣告或是一般的 function
 * 編譯快程式碼更少，不用將 class 轉換成 es5，不繼承 react component
@@ -1141,17 +1140,13 @@ const App = () => {
 
 簡而言之，受控元素是由React或其他JavaScript框架管理其值的元素，而被控元素則由DOM管理其值的元素。受控元素的值存儲在組件狀態中，而被控元素的值不是。
 
+### [Hooks] useEffect
 
+一個 Component 從 建立 => ️️ 更新 => 銷毀
 
+![react-hooks-lifecycle](https://wavez.github.io/react-hooks-lifecycle/)
 
-
-
-
-
-
-
-
-
+### 副作用（side effect）
 
 ## 參考
 
