@@ -13,7 +13,7 @@ tags:
 > 筆記內容節錄 [[筆記]從 Hooks 開始，讓你的網頁 React 起來系列](https://ithelp.ithome.com.tw/users/20203315/ironman/2668) 閱讀重點，如有侵權煩請告知，會立刻將文章移除，感謝。
 > `TL;DR` 不管是 React function 還是 class Component ，感覺就算是 AG 前端摸的深，很容易陷入在技術債陷阱，而不是商業邏輯上... 但還是歹學歹用
 
-## Hooks ? Functional / class ?
+## Hooks / Functional / class
 
 直接用最新的，但維護的時候要維護舊的
 
@@ -21,6 +21,7 @@ tags:
 * [React Class Components](https://www.w3schools.com/react/react_class.asp)
 * [functional-vs-class-components](https://djoech.medium.com/functional-vs-class-components-in-react-231e3fbd7108)
 * [React初心者30天的探索之路 [Day 07] Functional Component v.s Class Component](https://ithelp.ithome.com.tw/articles/10234746)
+* [Call child method from parent](https://stackoverflow.com/questions/37949981/call-child-method-from-parent)
 
 > class component
 
@@ -37,7 +38,13 @@ tags:
 // Example
 class Car extends React.Component { 
   // extends React.Component 可以在內部使用一些 setState() 之類的語法
-  constructor() { this.state = { name: "miaHsu" }; }
+  constructor() { 
+    super();
+    this.state = { name: "miaHsu" };
+  }
+
+  this.props;
+
   render() {
     return <h2>Hi, I am a Car!</h2>;
   }
@@ -69,13 +76,15 @@ let Car = (props) => {
 }
 ```
 
-## es6 Syntax
+## Keyword
 
-解構賦值（Destructuring assignment）
-
-展開語法（Spread Syntax）
-
-其餘語法 ( Rest Syntax )
+* Virtual DOM 
+  * repaint 重繪
+  * reflow 回流
+* create-react-app ( cli )
+  * @babel/plugin-proposal-class-properties ( 可省略建構子直接寫 state )
+* npx
+* [Jest](https://blog.devgenius.io/the-karma-you-get-for-not-using-jest-e928e7f6b23f)
 
 ## JSX
 
@@ -1130,6 +1139,8 @@ const App = () => {
 
 [我们应该如何优雅的处理 React 中受控与非受控](https://juejin.cn/post/7178485530223444026)
 
+[[Day 15] React controlled components v.s uncontrolled components](https://ithelp.ithome.com.tw/articles/10237281)
+
 通过该 Hook 你可以自由定义表单控件的受控和非受控状态。
 
 在前端工程中，受控元素和被控元素是指在表單中的輸入元素。
@@ -1145,9 +1156,44 @@ const App = () => {
 一個 Component 從 建立 => ️️ 更新 => 銷毀
 
 ![react-hooks-lifecycle](./img/ReactHookLifecycle.jpeg)
-![react-lifecycle](./img/ReactLifecycle.jpeg)
+
+https://wavez.github.io/react-hooks-lifecycle/
+
+![react-class-lifecycle](./img/ReactClassLifecycle.jpeg)
+
+https://yakimhsu.com/project/project_w21_03_React_life_componentDidUpdate.html
+
+![react-lifecycle](./img/ReactLifecycle.jpg)
+
+https://twitter.com/siddharthkmr1/status/1294733239429369857?lang=zh-Hant
+
+### pure function
+
+https://ithelp.ithome.com.tw/articles/10241071
 
 ### 副作用（side effect）
+
+## Style Component
+
+[[Day 11] React CSS 最重要的小事（下）](https://ithelp.ithome.com.tw/articles/10235714)
+
+## HOC component
+
+## Ref 操作 DOM
+
+document.getElementById、document.getElementsByClassName...
+
+* 觸發即時動畫
+* 與第三方 DOM 函式庫整合。
+* 管理 focus、選擇文字、或影音播放
+
+## 呼叫 api with fetch & axios
+
+https://ithelp.ithome.com.tw/articles/10237982
+
+## React Router
+
+https://ithelp.ithome.com.tw/articles/10243368
 
 ## 參考
 

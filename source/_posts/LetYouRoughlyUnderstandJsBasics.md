@@ -1,5 +1,5 @@
 ---
-title: 讓你大概搞懂 JS 特性 prototype chain / Constructor / this / callback fun
+title: 讓你大概搞懂 JS 特性大全
 date: 2023-03-22
 categories: Web
 author: johch3n611u
@@ -254,67 +254,6 @@ obj3.sayName(); // 輸出 undefined
 obj3.sayName.call(obj4); // 輸出 undefined
 ```
 
-## Class ES6
-
-JavaScript 是一種無 class 語言。ES6 class 中引入的主要是對現有的基於原型的繼承模型的語法糖，
-可以定义一个对象的属性和方法，可以利用 继承、静态方法、实例方法、构造函数、new 等特性，創造更複雜的 class。
-
-[javascript-class-method-vs-class-prototype-method](https://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method)
-
-```js
-Class.method = function () { /* code */ }
-Class.prototype.method = function () { /* code using this.values */ }
-
-// 構造函數 
-function MyClass (firstName, lastName) {
-
-  // es5
-  this.firstName = firstName;
-  this.lastName = lastName;
-  // es6
-  constructor(firstName, lastName) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-  }
-
-  var privateVariable; // private member only available within the constructor fn
-
-  // es5
-  this.privilegedMethod = function (obj) { // it can access private members
-    return obj.constructor === MyClass;
-  };
-
-  // es6
-  static privilegedMethod(obj) {
-    return obj.constructor === Person;
-  }
-
-  // es6
-  publicMethod() {
-      return `Hi ${this.firstName}`;
-  }
-}
-
-var aminu = new MyClass("Aminu", "Abubakar");
-MyClass.privilegedMethod(aminu); // will return true
-
-// A 'static method', it's just like a normal function 
-// it has no relation with any 'MyClass' object instance
-MyClass.staticMethod = function () {}; 
-
-// es5
-MyClass.prototype.publicMethod = function () {
-  // instance method
-  // the 'this' keyword refers to the object instance
-  // you can access only 'privileged' and 'public' members
-};
-
-var myObj = new MyClass(); // new object instance
-
-myObj.publicMethod();
-MyClass.staticMethod();
-```
-
 ---
 
 什么是JavaScript？
@@ -413,3 +352,106 @@ JavaScript中的数据类型是什么？如何检查变量的数据类型？
 模塊化（Module）是什麼？它有什麼作用？
  JavaScript 中的類（Class）？它與原型有什麼關係？
 可變（Mutable）和不可變（Immutable）數據類型的區別？舉一些例子。
+
+## ES6 ( ES2015 )
+
+[JavaScript ES6 介紹](https://www.fooish.com/javascript/ES6/)
+
+ES6 其實是一個泛指的名詞，泛指 ES5.1 版以後的新一代 JavaScript 語言標準，涵蓋了 ES2015, ES2016, ES2017 等等，ES2015 則是正式名稱，特指該年度發佈的語言標準，現在常聽到人家說的 ES6，一般是指 ES2015 標準。
+
+### [ES6] Syntax 解構賦值（Destructuring assignment）
+
+### [ES6] 展開語法（Spread Syntax）
+
+### [ES6] 其餘語法 ( Rest Syntax )
+
+### [ES6] Class
+
+JavaScript 是一種無 class 語言。ES6 class 中引入的主要是對現有的基於原型的繼承模型的語法糖，
+可以定义一个对象的属性和方法，可以利用 继承、静态方法、实例方法、构造函数、new 等特性，創造更複雜的 class。
+
+[javascript-class-method-vs-class-prototype-method](https://stackoverflow.com/questions/1635116/javascript-class-method-vs-class-prototype-method)
+
+```js
+Class.method = function () { /* code */ }
+Class.prototype.method = function () { /* code using this.values */ }
+
+// 構造函數 
+function MyClass (firstName, lastName) {
+
+  // es5
+  this.firstName = firstName;
+  this.lastName = lastName;
+  // es6
+  constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+  }
+
+  var privateVariable; // private member only available within the constructor fn
+
+  // es5
+  this.privilegedMethod = function (obj) { // it can access private members
+    return obj.constructor === MyClass;
+  };
+
+  // es6
+  static privilegedMethod(obj) {
+    return obj.constructor === Person;
+  }
+
+  // es6
+  publicMethod() {
+      return `Hi ${this.firstName}`;
+  }
+}
+
+var aminu = new MyClass("Aminu", "Abubakar");
+MyClass.privilegedMethod(aminu); // will return true
+
+// A 'static method', it's just like a normal function 
+// it has no relation with any 'MyClass' object instance
+MyClass.staticMethod = function () {}; 
+
+// es5
+MyClass.prototype.publicMethod = function () {
+  // instance method
+  // the 'this' keyword refers to the object instance
+  // you can access only 'privileged' and 'public' members
+};
+
+var myObj = new MyClass(); // new object instance
+
+myObj.publicMethod();
+MyClass.staticMethod();
+```
+
+#### super
+
+> super () 使用父類別的建構函式
+
+```js
+class Father{
+    constructor(age,weight){
+        this.age=age;
+        this.weight=weight;
+    }
+}
+
+class Child extends Father {
+	constructor(age,weight,power){
+    // 如果在super()之前就呼叫this 的話，會refference error
+		super();
+		this.power=power;		
+	}
+  hello(){
+		console.log(`我是個有 ${this.power} 戰鬥力的SuperMAN`);
+	}
+}
+```
+
+> super 物件呼叫父類別的原型
+
+* 增加屬性 / 修改屬性
+* 呼叫父類別的方法
+* 使用父類別 prototype 中的屬性
