@@ -9,7 +9,7 @@ tags:
 
 原先是在研究 React Class / Function 差異 [[React] Functional-component vs Class-component](https://www.tpisoftware.com/tpu/articleDetails/2822) 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。
 
-## 原型链 ( prototype chain )
+## 原型鏈 ( prototype chain )
 
 [該來理解 JavaScript 的原型鍊了 #18](https://github.com/aszx87410/blog/issues/18)
 
@@ -39,10 +39,10 @@ console.log(Person.prototype.__proto__ === Object.prototype) // true
 console.log(Object.prototype.__proto__) // null
 ```
 
-## 构造函数 ( Constructor ) 和一般函数
+## 構造函數 ( Constructor ) 和一般函数
 
 ```js
-// 构造函数
+// 構造函數
 function Person(name, age) {
   this.name = name;
   this.age = age;
@@ -57,25 +57,25 @@ console.log(nick.log === peter.log) // true
 nick.log(); // nick, age:18
 peter.log(); // peter, age:20
 
-// 创建 Person 对象实例
+// 創建 Person 物件實例
 var person1 = new Person("Tom", 25);
 var person2 = new Person("Jerry", 30);
 
-console.log(person1.name); // 输出 "Tom"
-console.log(person2.age); // 输出 30
+console.log(person1.name); // 輸出 "Tom"
+console.log(person2.age); // 輸出 30
 
 // prototype
-console.log(person1.surname); // 输出 Jones
-console.log(person2.surname); // 输出 Jones
+console.log(person1.surname); // 輸出 Jones
+console.log(person2.surname); // 輸出 Jones
 
-// 一般函数
+// 一般函數
 function add(a, b) {
   return a + b;
 }
 
 var sum = add(2, 3);
 
-console.log(sum); // 输出 5
+console.log(sum); // 輸出 5
 ```
 
 ## this & 箭頭凾式

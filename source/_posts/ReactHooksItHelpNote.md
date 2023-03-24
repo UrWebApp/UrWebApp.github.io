@@ -1144,7 +1144,8 @@ const App = () => {
 
 一個 Component 從 建立 => ️️ 更新 => 銷毀
 
-![react-hooks-lifecycle](https://wavez.github.io/react-hooks-lifecycle/)
+![react-hooks-lifecycle](./img/ReactHookLifecycle.jpeg)
+![react-lifecycle](./img/ReactLifecycle.jpeg)
 
 ### 副作用（side effect）
 
