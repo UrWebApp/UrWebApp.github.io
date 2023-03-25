@@ -132,6 +132,41 @@
 </tr>
 </thead>
 <tbody><tr>
+<td><ul><li>需繼承 React.Component</li><li>具有生命週期，可以針對某些情境決定是否渲染</li><li>需要在設置 State ( Stateful Component )</li><li>每次都可以拿到最新的 this.props，因為 this 隨時都在變化</li><li><a href="/Web/LetYouRoughlyUnderstandJsBasics/">需要比較多 JS 的背景知識</a></li><li>不能使用 Hook</li><li>需定義 render() 並將要渲染到畫面上的內容 return</li><li>this 必須在一開始被指向才可以使用</li></ul></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+    <tr>
+        <td>Class-based</td>
+        <td>Functional Component</td>
+    </tr>
+    <tr>
+        <td>
+<ul>
+<li>需繼承 React.Component</li>
+<li>具有生命週期，可以針對某些情境決定是否渲染</li>
+<li>需要在設置 State ( Stateful Component )</li>
+<li>每次都可以拿到最新的 this.props，因為 this 隨時都在變化</li>
+<li>[需要比較多 JS 的背景知識](/Web/LetYouRoughlyUnderstandJsBasics/)</li>
+<li>不能使用 Hook</li>
+<li>需定義 render() 並將要渲染到畫面上的內容 return</li>
+<li>this 必須在一開始被指向才可以使用</li>
+</ul>
+        </td>
+        <td>
+        </td>
+    </tr>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Class-based</th>
+<th>Functional Component</th>
+</tr>
+</thead>
+<tbody><tr>
 <td>* 需繼承 React.Component</td>
 <td></td>
 </tr>
@@ -152,16 +187,6 @@
 <li><p>this 必須在一開始被指向才可以使用| |</p>
 </li>
 <li><p>Class-based</p>
-<ul>
-<li>需繼承 React.Component</li>
-<li>具有生命週期，可以針對某些情境決定是否渲染</li>
-<li>需要在設置 State ( Stateful Component )</li>
-<li>每次都可以拿到最新的 this.props，因為 this 隨時都在變化</li>
-<li><a href="/Web/LetYouRoughlyUnderstandJsBasics/">需要比較多 JS 的背景知識</a></li>
-<li>不能使用 Hook</li>
-<li>需定義 render() 並將要渲染到畫面上的內容 return</li>
-<li>this 必須在一開始被指向才可以使用</li>
-</ul>
 </li>
 </ul>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">&#123;</span> 
