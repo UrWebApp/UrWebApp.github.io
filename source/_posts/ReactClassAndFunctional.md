@@ -9,6 +9,33 @@ tags:
 ---
 
 |Class-based|Functional Component|
+|-------------|-------------|
+|<ul><li>需繼承 React.Component</li><li>具有生命週期，可以針對某些情境決定是否渲染</li><li>需要在設置 State ( Stateful Component )</li><li>每次都可以拿到最新的 this.props，因為 this 隨時都在變化</li><li>[需要比較多 JS 的背景知識](/Web/LetYouRoughlyUnderstandJsBasics/)</li><li>不能使用 Hook</li><li>需定義 render() 並將要渲染到畫面上的內容 return</li><li>this 必須在一開始被指向才可以使用</li></ul>||
+
+<table>
+    <tr>
+        <td>Class-based</td>
+        <td>Functional Component</td>
+    </tr>
+    <tr>
+        <td>
+<ul>
+<li>需繼承 React.Component</li>
+<li>具有生命週期，可以針對某些情境決定是否渲染</li>
+<li>需要在設置 State ( Stateful Component )</li>
+<li>每次都可以拿到最新的 this.props，因為 this 隨時都在變化</li>
+<li>[需要比較多 JS 的背景知識](/Web/LetYouRoughlyUnderstandJsBasics/)</li>
+<li>不能使用 Hook</li>
+<li>需定義 render() 並將要渲染到畫面上的內容 return</li>
+<li>this 必須在一開始被指向才可以使用</li>
+</ul>
+        </td>
+        <td>
+        </td>
+    </tr>
+</table>
+
+|Class-based|Functional Component|
 |-----|-----|
 | * 需繼承 React.Component
   * 具有生命週期，可以針對某些情境決定是否渲染
@@ -20,14 +47,7 @@ tags:
   * this 必須在一開始被指向才可以使用| |
 
 * Class-based
-  * 需繼承 React.Component
-  * 具有生命週期，可以針對某些情境決定是否渲染
-  * 需要在設置 State ( Stateful Component )
-  * 每次都可以拿到最新的 this.props，因為 this 隨時都在變化
-  * [需要比較多 JS 的背景知識](/Web/LetYouRoughlyUnderstandJsBasics/)
-  * 不能使用 Hook
-  * 需定義 render() 並將要渲染到畫面上的內容 return
-  * this 必須在一開始被指向才可以使用
+
 
 ```js
 class Car extends React.Component { 
