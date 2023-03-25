@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Web/LetYouRoughlyUnderstandJsBasics/</loc>
+    <loc>https://urwebapp.github.io/Javascript/LetYouRoughlyUnderstandJsBasics/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/React/LetYouRoughlyUnderstandReact/</loc>
     
     <lastmod>2023-03-25</lastmod>
     
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://urwebapp.github.io/computer-science/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/</loc>
-    
-    <lastmod>2023-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Front-End/ReactClassAndFunctional/</loc>
     
     <lastmod>2023-03-25</lastmod>
     
@@ -109,15 +109,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://urwebapp.github.io/Front-End/ReactHooksItHelpNote/</loc>
-    
-    <lastmod>2023-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://urwebapp.github.io/</loc>
@@ -156,6 +147,27 @@
   </url>
   
   <url>
+    <loc>https://urwebapp.github.io/tags/ES6/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/Note/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/React/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/tags/Log/</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -171,20 +183,6 @@
   
   <url>
     <loc>https://urwebapp.github.io/tags/computer-science/</loc>
-    <lastmod>2023-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/tags/Note/</loc>
-    <lastmod>2023-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/tags/React/</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -270,7 +268,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/categories/Web/</loc>
+    <loc>https://urwebapp.github.io/categories/Javascript/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/categories/React/</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -284,14 +289,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/categories/Front-End/</loc>
+    <loc>https://urwebapp.github.io/categories/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/categories/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/</loc>
+    <loc>https://urwebapp.github.io/categories/Web/</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

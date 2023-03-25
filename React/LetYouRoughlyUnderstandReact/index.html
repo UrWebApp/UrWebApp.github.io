@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>您的網路共筆-UrWeb</title>
+  
+  
+    <meta name="description" content="文章作者: johch3n611u 創作日期: 2023/03/25 文章類型: React，查看本文章獲取更多訊息。">
+    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+  
+<link rel="stylesheet" href="/css/prism.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T4FDJRJ');</script>
+  <!-- End Google Tag Manager -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="mobileBox">
+      <div class="brandBox">
+        <a href="/" class="d-flex align-items-center">
+          <h1 class="m-0">
+            您的網路共筆
+          </h1>
+        </a>
+      </div>
+      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+  <!-- <h1>
+      <a href="/">Home</a> |
+      <a href="/archives">Archive</a> |
+      tags
+      <a href="/about/">About</a>
+    </h1> -->
+  <div class="outter-wrap container-fluid">
+    <aside class="leftAside">
+      <nav>
+        <ul>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+          <!-- <li>
+            <h4>
+              <a href="/about/">關於我們</a>
+            </h4>
+          </li> -->
+          <li style="margin-top: 50px;">
+            <h4>
+              <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+            </h4>
+            <div id="categories">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Back-End/">Back-End</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Design-Pattern/">Design Pattern</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack/">Full-Stack</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer-science/">computer-science</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/">職涯發展</a><span class="category-list-count">1</span></li></ul>
+            </div>
+          </li>
+          <li>
+            <h4>
+              <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+            </h4>
+            <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Exception/" style="font-size: 10px;">Exception</a> <a href="/tags/Filter/" style="font-size: 10px;">Filter</a> <a href="/tags/Internet/" style="font-size: 15px;">Internet</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Log/" style="font-size: 15px;">Log</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a> <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/" style="font-size: 10px;">設計思考</a> <a href="/tags/%E8%BD%89%E8%81%B7/" style="font-size: 10px;">轉職</a></div>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="container postWrap">
+  <article class="postArticle">
+    <div class="postArticleHeader">
+      <h1 class="pt-1">讓你大概搞懂 React</h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="/React/LetYouRoughlyUnderstandReact/" />
+        </p>
+        <span>|</span>
+        <p>2023/03/25</p>
+        <span>|</span>
+        <p>
+          johch3n611u
+        </p>
+        <span>|</span>
+        <p>
+          
+            <a href="/categories/React/ ">React </a>
+            
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
+          
+            <li>
+              <a href="/tags/Note/"><i class="fa-solid fa-tag"></i> Note
+              </a>
+            </li>
+            
+            <li>
+              <a href="/tags/React/"><i class="fa-solid fa-tag"></i> React
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+    <div class="postArticleContent">
+      <h2 id="React、ReactDOM-Library"><a href="#React、ReactDOM-Library" class="headerlink" title="React、ReactDOM Library"></a>React、ReactDOM Library</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/react">React</a>：用於創建用戶界面的函式庫，只有定義元件所必需的功能，通常與渲染器一起使用。</li>
+</ul>
+<p>React is a JavaScript library <code>for creating user interfaces</code>. </p>
+<p>The react package contains <code>only the functionality necessary to define React components</code>. <code>It is typically used together with a React renderer</code> like react-dom for the web, or react-native for the native environments.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/react-dom">ReactDOM</a>：渲染器函式庫，用於渲染元件、掛載模組、操作 DOM、創建 SPA 根結點、提供 JSX 解析</li>
+</ul>
+<p>This package serves as the <code>entry point to the DOM</code> and <code>server renderers for React</code>. <code>It is intended to be paired with the generic React package</code>, which is shipped as react to npm.</p>
+<h2 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h2><ul>
+<li>repaint 重繪</li>
+<li>reflow 回流</li>
+</ul>
+<h2 id="Create-React-App-cli"><a href="#Create-React-App-cli" class="headerlink" title="Create-React-App ( cli )"></a>Create-React-App ( cli )</h2><ul>
+<li>@babel&#x2F;plugin-proposal-class-properties ( 可省略建構子直接寫 state )</li>
+</ul>
+<h2 id="React-命名規則"><a href="#React-命名規則" class="headerlink" title="React 命名規則"></a>React 命名規則</h2><ul>
+<li>JSX 屬性、變數、函式、事件處理器 “小駝峰”，類別、元件則是 “大駝峰”</li>
+</ul>
+<h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><p>JavaScript XML  ( JSX )：透過 JSX 等於我們可以直接把 HTML 放到 JavaScript 中去操作，不再需要先用 querySelector 去選到該元素後才能換掉，而是可以在 HTML 中直接帶入 JavaScript 的變數。</p>
+<ul>
+<li>ReactDOM Library 提供 JSX 解析</li>
+<li>JSX 的內容可以放到 () 內當成變數</li>
+<li>避免關鍵字衝突，在 JSX 中把原本的屬性都改成用小駝峰命名 className</li>
+<li>避免關鍵字衝突，在 JSX 中 for &#x3D; htmlFor</li>
+<li>表達式只能返回一個值 ( 根節點 ) 或用 <code>&lt;React.Fragment&gt;</code>、<code>&lt;&gt;&lt;/&gt;</code> 容器</li>
+<li>InlineStyle Css 屬性需要改為駝峰式</li>
+<li>JSX 中標籤內如果沒有內容的話可以自己關閉 <code>&lt;div /&gt;</code> 所以不用 <code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li>想要深入了解 babel.js 如何編譯 JSX 可以問 ChatGPT <code>jsx 中 &lt;button onClick=&#123;pop()&#125; /&gt; 與 &lt;button onClick=&#123;pop&#125; /&gt; 會被 babel.js 編譯為什麼</code></li>
+<li>InlineStyle 必須要 {}</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> someStyle <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">display</span><span class="token operator">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">alignItems</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">justifyContent</span><span class="token operator">:</span> <span class="token string">'space-around'</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Counter <span class="token operator">=</span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"container"</span> style<span class="token operator">=</span><span class="token punctuation">&#123;</span>someStyle<span class="token punctuation">&#125;</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"chevron chevron-up"</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"number"</span><span class="token operator">></span><span class="token number">256</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"chevron chevron-down"</span> style<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>
+      <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'#FFE8E8'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">textShadow</span><span class="token operator">:</span> <span class="token string">'2px 2px #434a54'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> root <span class="token operator">=</span> ReactDOM<span class="token punctuation">.</span><span class="token function">createRoot</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+root<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>Counter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// JSX</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="事件處理器（Event-Handlers）"><a href="#事件處理器（Event-Handlers）" class="headerlink" title="事件處理器（Event Handlers）"></a>事件處理器（Event Handlers）</h3><ul>
+<li>JSX {} 內為 JS 表達式（Expression）</li>
+<li>函式後面沒有 () 不會立即執行，透過此種方法就比較不會有參數外漏在 html 的狀況</li>
+<li>handleClick() 包在一個函式中不被立即執行</li>
+<li>透過箭頭函式回傳函式或 Callback Function</li>
+</ul>
+<p>我猜應該是因為 JSX 其實就像是 JS 導致寫在這的函式變為 IIFE 而不是傳統意義上的 Html onclick</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div key<span class="token operator">=</span><span class="token punctuation">&#123;</span> id <span class="token punctuation">&#125;</span> data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token punctuation">&#123;</span> id <span class="token punctuation">&#125;</span>
+     onClick <span class="token operator">=</span> <span class="token punctuation">&#123;</span> 表達式（expression）<span class="token punctuation">&#125;</span>
+     onClick<span class="token operator">=</span><span class="token punctuation">&#123;</span>handleIncrement<span class="token punctuation">&#125;</span>
+     onClick<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token function">handleClick</span><span class="token punctuation">(</span><span class="token string">'立即執行'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+     onClick<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token function">handleClick</span><span class="token punctuation">(</span><span class="token string">'不會立即執行'</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span>
+<span class="token operator">></span><span class="token number">256</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">handleIncrement</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> id <span class="token punctuation">&#125;</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>dataset<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function">handleClick</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token function">setCount</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'increment'</span> <span class="token operator">?</span> count <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">:</span> count <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// const handleClick = (type) => () =></span>
+<span class="token comment">//   setCount(</span>
+<span class="token comment">//     type === 'increment' ? count + 1 : count - 1</span>
+<span class="token comment">//   );</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="不使用-If-x2F-For-流程控制邏輯操作-JSX"><a href="#不使用-If-x2F-For-流程控制邏輯操作-JSX" class="headerlink" title="不使用 If &#x2F; For 流程控制邏輯操作 JSX"></a>不使用 If &#x2F; For 流程控制邏輯操作 JSX</h3><p>在 JSX 中的 {} 內只能放入表達式（expressions）</p>
+<p>if…else… 陳述句的取代方式會使用邏輯運算子，&amp;&amp; ||、三元判斷式，或利用 JS 真假值自動轉型，null、NaN、0、空字串（””、’’）、undefined 轉型為「false」</p>
+<p>For 陳述句的取代方式會透過陣列的 Array.map 原生方法並且回傳 <code>&lt;Counter /&gt;</code> 元素</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903926823649293">Array.from</a></p>
+<pre class="line-numbers language-JS" data-language="JS"><code class="language-JS">&#x2F;&#x2F; 產生元素數目為 10，元素值為 0 ~ 9 的陣列
+const counters &#x3D; [...Array(5).keys()];
+&#x2F;&#x2F;const counters &#x3D; Array.from(&#123; length: 10 &#125;, (_, index) &#x3D;&gt; index);
+&#x2F;&#x2F; [0, 1, 2, ..., 8, 9]
+const root &#x3D; ReactDOM.createRoot(document.getElementById(&#39;root&#39;));
+root.render(
+   &lt;div
+     style&#x3D;&#123;&#123;
+       display: count &gt;&#x3D; 10 &amp;&amp; &#39;flex&#39;,
+       flexWrap: count &gt;&#x3D; 10 ? unset : &#39;wrap&#39;,
+     &#125;&#125;
+   &gt;
+    &#x2F;&#x2F; 使用 map 產生多個 &lt;Counter &#x2F;&gt;
+    &#123;counters.map((item) &#x3D;&gt; (
+      &lt;Counter &#x2F;&gt;
+    ))&#125;
+
+    &#x2F;&#x2F; &#123;[
+    &#x2F;&#x2F;  &lt;Counter &#x2F;&gt;,
+    &#x2F;&#x2F;  &lt;Counter &#x2F;&gt;,
+    &#x2F;&#x2F;  &lt;Counter &#x2F;&gt;,
+    &#x2F;&#x2F;  ...
+    &#x2F;&#x2F; ]&#125;
+  &lt;&#x2F;div&gt;
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="React-Class-based-amp-Functional-Component"><a href="#React-Class-based-amp-Functional-Component" class="headerlink" title="React Class-based &amp; Functional Component"></a><a href="/Front-End/ReactClassAndFunctional/">React Class-based &amp; Functional Component</a></h2><h2 id="Props-將資料從父層組件傳遞到子層組件"><a href="#Props-將資料從父層組件傳遞到子層組件" class="headerlink" title="Props 將資料從父層組件傳遞到子層組件"></a>Props 將資料從父層組件傳遞到子層組件</h2><ul>
+<li>Functional Component 使用 props 傳遞資料時， key 和 value 的命名可以自己取</li>
+</ul>
+<pre class="line-numbers language-Js" data-language="Js"><code class="language-Js">const ChildComponent &#x3D; (props) &#x3D;&gt; &#123;
+  const &#123; firstName, lastName , inputValue &#125; &#x3D; props;
+  return &lt;h1&gt;Hello, &#123;firstName&#125; &#123;lastName&#125; &#123;inputValue&#125;&lt;&#x2F;h1&gt;;
+&#125;
+const FatherComponent &#x3D; () &#x3D;&gt; &#123;
+    const [inputValue, setInputValue] &#x3D; useState(0);
+    return (&lt;ChildComponent firstName&#x3D;&quot;Aaron&quot; lastName&#x3D;&quot;Chen&quot; inputValue&#x3D;&#123;inputValue&#125; &#x2F;&gt;)
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Hooks"><a href="#Hooks" class="headerlink" title="Hooks"></a><a href="/Front-End/ReactHooksItHelpNote/">Hooks</a></h2>
+    </div>
+  </article>
+  <div class="postNext d-flex justify-content-between mt-3 mb-3">
+    
+        
+          <h4>
+            <a href="/Javascript/LetYouRoughlyUnderstandJsBasics/">
+              讓你大概搞懂 JS <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </h4>
+          
+  </div>
+  
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    let option = '{"el":"#waline","enable":true,"serverURL":"https://waline-urweb.vercel.app/","placeholder":"歡迎隨時提出您的建議，並不吝指教","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/waline/2.14.5/waline.js","pageview":true,"reaction":true}';
+    init(JSON.parse(option));
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+  
+    <input style="display:none" onload="addTotalViews()">
+</main>
+      
+        <aside class="rightAside">
+          <section>
+            <h4>Table of contents</h4>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React%E3%80%81ReactDOM-Library"><span class="toc-text">React、ReactDOM Library</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-DOM"><span class="toc-text">Virtual DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-React-App-cli"><span class="toc-text">Create-React-App ( cli )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87"><span class="toc-text">React 命名規則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSX"><span class="toc-text">JSX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E8%99%95%E7%90%86%E5%99%A8%EF%BC%88Event-Handlers%EF%BC%89"><span class="toc-text">事件處理器（Event Handlers）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E4%BD%BF%E7%94%A8-If-x2F-For-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E9%82%8F%E8%BC%AF%E6%93%8D%E4%BD%9C-JSX"><span class="toc-text">不使用 If &#x2F; For 流程控制邏輯操作 JSX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Class-based-amp-Functional-Component"><span class="toc-text">React Class-based &amp; Functional Component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Props-%E5%B0%87%E8%B3%87%E6%96%99%E5%BE%9E%E7%88%B6%E5%B1%A4%E7%B5%84%E4%BB%B6%E5%82%B3%E9%81%9E%E5%88%B0%E5%AD%90%E5%B1%A4%E7%B5%84%E4%BB%B6"><span class="toc-text">Props 將資料從父層組件傳遞到子層組件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hooks"><span class="toc-text">Hooks</span></a></li></ol>
+  </section>
+  </aside>
+
+    <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+
+    <div class="modal" tabindex="-1" id="tocModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="tocModalClose()"></button>
+          </div>
+          <div class="modal-body">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React%E3%80%81ReactDOM-Library"><span class="toc-text">React、ReactDOM Library</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-DOM"><span class="toc-text">Virtual DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-React-App-cli"><span class="toc-text">Create-React-App ( cli )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87"><span class="toc-text">React 命名規則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSX"><span class="toc-text">JSX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E8%99%95%E7%90%86%E5%99%A8%EF%BC%88Event-Handlers%EF%BC%89"><span class="toc-text">事件處理器（Event Handlers）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E4%BD%BF%E7%94%A8-If-x2F-For-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E9%82%8F%E8%BC%AF%E6%93%8D%E4%BD%9C-JSX"><span class="toc-text">不使用 If &#x2F; For 流程控制邏輯操作 JSX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-Class-based-amp-Functional-Component"><span class="toc-text">React Class-based &amp; Functional Component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Props-%E5%B0%87%E8%B3%87%E6%96%99%E5%BE%9E%E7%88%B6%E5%B1%A4%E7%B5%84%E4%BB%B6%E5%82%B3%E9%81%9E%E5%88%B0%E5%AD%90%E5%B1%A4%E7%B5%84%E4%BB%B6"><span class="toc-text">Props 將資料從父層組件傳遞到子層組件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hooks"><span class="toc-text">Hooks</span></a></li></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    </div>
+    <footer class="cotainer-fluid">
+      <p id="milestone" class="text-center m-0">
+        <span>Copyright © 2021-2023 UrWeb. All rights reserved.</span><br>
+        <span>This site is in orbit around internet 1 days.</span>
+        <span>people witnessed it all</span>
+      </p>
+    </footer>
+
+    <!-- <h3>categories</h3>
+    <ul>
+      
+      <li>
+        <a href="/categories/Back-End/"> Back-End  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Javascript/"> Javascript  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/React/"> React  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/computer-science/"> computer-science  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95/"> 職涯發展  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Web/"> Web  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Design-Pattern/"> Design Pattern  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Full-Stack/"> Full-Stack  </a>
+      </li>
+      
+    </ul>
+
+    <h3>tags</h3>
+    <ul>
+      
+      <li>
+        <a href="/tags/Net/"> .Net </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Exception/"> Exception </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Filter/"> Filter </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Javascript/"> Javascript </a>
+      </li>
+      
+      <li>
+        <a href="/tags/ES6/"> ES6 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Note/"> Note </a>
+      </li>
+      
+      <li>
+        <a href="/tags/React/"> React </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Log/"> Log </a>
+      </li>
+      
+      <li>
+        <a href="/tags/PDF/"> PDF </a>
+      </li>
+      
+      <li>
+        <a href="/tags/computer-science/"> computer-science </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%BD%89%E8%81%B7/"> 轉職 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/"> 設計思考 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Internet/"> Internet </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Architecture/"> Architecture </a>
+      </li>
+      
+      <li>
+        <a href="/tags/C/"> C# </a>
+      </li>
+      
+      <li>
+        <a href="/tags/DDD/"> DDD </a>
+      </li>
+      
+      <li>
+        <a href="/tags/OOD-OOP/"> OOD/OOP </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Response/"> Response </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Request/"> Request </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Angular/"> Angular </a>
+      </li>
+      
+    </ul> -->
+</body>
+
+
+<script src="/js/prism.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+</html>
