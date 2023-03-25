@@ -7,6 +7,8 @@ tags:
 - English
 ---
 
+> `TL;DR` Too Long; Don't Read
+
 ## 一個詞可能有 N 種詞性
 
 1. 名詞 noun ：人或事物 e.g. book,John ...
