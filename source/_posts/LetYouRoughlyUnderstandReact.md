@@ -1,108 +1,19 @@
 ---
-title: 筆記 React Hooks
+title: 讓你大概搞懂 React
 date: 2023-01-14
-categories: Front-End
+categories: React
 author: johch3n611u
 tags:
 - Note
 - React
 ---
-## Keyword
-
-* Virtual DOM 
-  * repaint 重繪
-  * reflow 回流
-* create-react-app ( cli )
-  * @babel/plugin-proposal-class-properties ( 可省略建構子直接寫 state )
-* npx
-* [Jest](https://blog.devgenius.io/the-karma-you-get-for-not-using-jest-e928e7f6b23f)
-
-## JSX
-
-JSX ( JavaScript Syntax Extension and occasionally referred as JavaScript XML ) ： 透過 JSX 等於我們可以直接把 HTML 放到 JavaScript 中去操作，不再需要先用 querySelector 去選到該元素後才能換掉，而是可以在 HTML 中直接帶入 JavaScript 的變數。
-
-`感覺有點像把 View 又跟 Function 卡在一起的感覺，不確定是好是壞，在個人開發經驗中行數不多時是不排斥，還蠻好寫的，可能用這種方式就要盡量拆元件？像是 Angular 通常又會拆出 TS 檔與 Html 檔，不確定 Html 的部分，底層是不是也是類似 JSX 的處理方式`
-
-```JS
-1. // 需要引入 Babel：JavaScript 前處理器（Preprocessor）
-const word = 'React';
-2. // ReactDOM 套件：渲染綁定 Html
-const root = ReactDOM.createRoot(document.getElementById('root'));
-3. // <h1> 的部分及為 JSX
-4. // React 套件：提供 JSX 解析
-5. // JSX {} 內為 JavaScript 表達式（expression）
-root.render(<h1>Hello, {word}!</h1>);
-```
-
-## React、ReactDOM Library
-
-* [React](https://www.npmjs.com/package/react)
-
-React is a JavaScript library `for creating user interfaces`.
-
-The react package contains `only the functionality necessary to define React components`. `It is typically used together with a React renderer` like react-dom for the web, or react-native for the native environments.
-
-* [ReactDOM](https://www.npmjs.com/package/react-dom)
-
-This package serves as the `entry point to the DOM` and `server renderers for React`. `It is intended to be paired with the generic React package`, which is shipped as react to npm.
-
-```JS
-1. // 定義 inline-style 行內樣式
-const someStyle = {
-  backgroundColor: white,
-  fontSize: '20px',          2. // 也可以寫 20，引號和 px 可以省略
-  border: '1px solid white',
-  padding: 10,               3. // 省略 px，樣式會自動帶入單位變成 '10px'
-}
-
-1. // JSX 的內容可以放到 () 內當成變數
-2. // 避免關鍵字衝突，在 JSX 中把原本的 CSS class 都改成用 className
-const Counter = (
-  <div className="container" style={someStyle}>
-    <div className="chevron chevron-up" />
-    <div className="number">256</div>
-    3. // 直接把定義 inline-style 的物件，放到 style={} 的 {} 內
-    <div className="chevron chevron-down" style={{
-      color: '#FFE8E8',
-      textShadow: '2px 2px #434a54',
-    }} />
-  </div>
-);
-
-1. `React 18 後已經棄用 ReactDOM.render()，改用 ReactDOM.createRoot()`
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(Counter);
-```
 
 ## React Component、[Hooks] useState、[Hooks] useEffect
-
-1. arrow function： const component = () => (/*return*/);
-
-`該函式只是單純回傳某一值時，可以把要回傳的內容直接放到 => 後面而不用額外再寫 return`
-
-2. `不能在條件式（conditions）、迴圈（loops）或嵌套函式（nested functions）中呼叫 Hook 方法，避免 React 組件紀錄 Hooks 調用順序錯誤，但透過 use() 產出的變數和方法，可以在判斷式內使用`
 
 3. useEffect()：(side-effect) 這個函式會在「每次」畫面渲染完成後，`丟入的觀察值改變了`就會被呼叫，所以可以把觀察值參數 dependencies 丟個固定 []？
 
 ```JS
-1.// React Hooks - useState：呼叫 useState 方法後可以建立一個被監控的資料變數「變數（count）」和「改變該變數 React 會幫我們重新轉譯畫面的方法（setCount）」
-2.// React.useState(); // 直接透過 `.` 來取用 React 物件內的方法
-3. `只要開頭為 use 的函式，就表示它是個 "Hook"`
-const { useState, useEffect } = React; // 透過物件的解構賦值把 useState 方法取出
-
-1. // 建立一個名為 Counter 的 React 元件
-2. `React 的「元件名稱」會以大寫駝峰的方式來命名，如果沒這麼做的話，React 會把它當作一般的 HTML 元素處理，並跳出錯誤提示。其他像是 HTML 中的屬性、CSS 樣式屬性或一般的函式來說，則會遵行 JavaScript 以小寫駝峰來命名變數的慣例，不然一樣會拋出錯誤。`
 const Counter = () => {
-
-  1. // 透過 useState 建立 `count` 取得修改變數的 `setCount` 方法
-  2. // const arrayReturnFromUseState = useState(<資料預設值>);
-  3. // 陣列中的第一個元素是「想要監控的資料」
-  4. // const count = arrayReturnFromUseState[0];
-  5. // 陣列中的第二個元素是「修改該資料的方法」
-  6. // const setCount = arrayReturnFromUseState[1];
-  7. `useState 得到的變數和方法名稱是可以自己取的，而慣例上用來改變變數的方法名稱會以 set開頭；預設值也可以不一定要是字串或數值，而是可以帶入物件。`
-  const [count, setCount] = useState(256);
-
   // 抽函式
   const handleIncrement = () => setCount(count + 1);
   const handleDecrement = () => setCount(count - 1);
@@ -253,44 +164,6 @@ const handleClick = (type) => () =>
   setCount(type === 'increment' ? count + 1 : count - 1);
 ```
 
-## 如何在 JSX 流程控制邏輯 IF / FOR
-
-for 迴圈、if 判斷 本身是個 statements 而非 expressions，JSX 無法 run statements
-
-React 中會透過陣列的 Array.map 猿聲方法並且回傳 <Counter /> 元素
-
-`感覺用這種方法有種多此一舉的狀況，不確定意義性在哪，感覺是為了 JSX 而去多做一步`
-
-[Array.from](https://juejin.cn/post/6844903926823649293)
-
-```JS
-// 產生元素數目為 10，元素值為 0 ~ 9 的陣列
-const counters = [...Array(5).keys()];
-//const counters = Array.from({ length: 10 }, (_, index) => index);
-// [0, 1, 2, ..., 8, 9]
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-   <div
-     style={{
-       display: 'flex',
-       flexWrap: 'wrap',
-     }}
-   >
-    // 使用 map 產生多個 <Counter />
-    {counters.map((item) => (
-      <Counter />
-    ))}
-
-    // {[
-    //  <Counter />,
-    //  <Counter />,
-    //  <Counter />,
-    //  ...
-    // ]}
-  </div>
-);
-```
-
 ## React 的 ng-container => <React.Fragment>
 
 ```JS
@@ -351,18 +224,40 @@ const CardFooter = () => {
 
 ## 將資料從父層組件傳遞到子層組件
 
-`使用 props 傳遞資料時， key 和 value 的命名可以自己取`
+* 使用 props 傳遞資料時， key 和 value 的命名可以自己取
+* 單向資料流，如何做到雙向資料流的功能，透過 Hook 管理組件的狀態，並通過屬性和回調函數在組件之間傳遞狀態
 
 ```Js
-// ChildComponent({ firstName, lastName, inputValue }) {
-const ChildComponent = (props) => {
-  const { firstName, lastName , inputValue } = props;
-  return <h1>Hello, {firstName} {lastName} {inputValue}</h1>;
+function ChildComponent(props) {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    props.onInputChange(event.target.value);
+  };
+
+  return (
+    <div>
+      <label>{props.labelText}</label>
+      <input type="text" value={inputValue} onChange={handleInputChange} />
+    </div>
+  );
 }
-const FatherComponent = () => {
-    const [inputValue, setInputValue] = useState(0);
-    return (<ChildComponent firstName="Aaron" lastName="Chen" inputValue={inputValue} />)
-};
+function ParentComponent() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (value) => {
+    setInputValue(value);
+  };
+
+  return (
+    <div>
+      <h1>Parent Component</h1>
+      <ChildComponent labelText="Input Label" onInputChange={handleInputChange} />
+      <p>Input value: {inputValue}</p>
+    </div>
+  );
+}
 ```
 
 ## React Developer Tools

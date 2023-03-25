@@ -1,19 +1,25 @@
 ---
-title: 讓你大概搞懂 JS 特性大全
+title: 讓你大概搞懂 JS
 date: 2023-03-22
-categories: Web
+categories: Javascript
 author: johch3n611u
 tags:
 - Javascript
+- ES6
 ---
 
 原先是在研究 React Class / Function 差異 [[React] Functional-component vs Class-component](https://www.tpisoftware.com/tpu/articleDetails/2822) 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。
+
+## 陳述式 Statement / 表達式 Expression
+
+* Statement：`執行某些操作的程式碼單元`。例如，if語句、for循環語句、函數聲明語句等都是語句。語句通常以分號（;）結尾，用於表示語句的結束。
+* Expression：`用於產生一個值的程式碼單元`。例如，算術表達式、邏輯表達式、函數調用表達式等都是表達式。表達式可以包含變數、常量、運算符等，計算結果通常會被用於其他操作中。
 
 ## 原型鏈 ( prototype chain )
 
 [該來理解 JavaScript 的原型鍊了 #18](https://github.com/aszx87410/blog/issues/18)
 
-相較於 c# / java 等 class-base 語言，js 開發者的初衷是單純 script 輕量 ( object / prototype ) -base 在沒有 class 的狀況下 ( ES6 的 class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用；
+相較於 C# / Java 等 Class-based 語言，JS 開發者的初衷是單純 Script 輕量 ( Object / Prototype ) -based 在沒有 Class 的狀況下 ( ES6 的 Class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用；
 
 构造函数在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。
 
@@ -154,7 +160,7 @@ counter.increment(); // Count is undefined
 counter.incrementArrow(); // Count is 0（1 秒後顯示）
 ```
 
-## callback function
+## Callback Function
 
 回调函数指的是将一个函数作为参数传递给另一个函数，并在后者的执行过程中被调用的函数。
 
@@ -358,6 +364,10 @@ JavaScript中的数据类型是什么？如何检查变量的数据类型？
 [JavaScript ES6 介紹](https://www.fooish.com/javascript/ES6/)
 
 ES6 其實是一個泛指的名詞，泛指 ES5.1 版以後的新一代 JavaScript 語言標準，涵蓋了 ES2015, ES2016, ES2017 等等，ES2015 則是正式名稱，特指該年度發佈的語言標準，現在常聽到人家說的 ES6，一般是指 ES2015 標準。
+
+### [ES6] 箭頭函式
+
+Arrow function： const component = () => (/*return*/);
 
 ### [ES6] Syntax 解構賦值（Destructuring assignment）
 
