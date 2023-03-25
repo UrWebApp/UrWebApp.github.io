@@ -21,7 +21,7 @@ tags:
 
 相較於 C# / Java 等 Class-based 語言，JS 開發者的初衷是單純 Script 輕量 ( Object / Prototype ) -based 在沒有 Class 的狀況下 ( ES6 的 Class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用；
 
-构造函数在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。
+構造函數在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。
 
 ```js
 function Person(name, age) {
