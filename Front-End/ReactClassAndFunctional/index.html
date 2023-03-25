@@ -136,9 +136,6 @@
 <td><ul><li>2019 年 v16.8 Hooks 釋出後的主流寫法</li><li>單純只是一個普通的 JavaScript 函式</li><li>感覺很像 Vue 3</li><li>生命週期要透過 useEffect Hook</li><li>無狀態組件 State（Stateless）要透過 useState Hook</li><li>可以用 Arrow Function 宣告或是一般的 Function</li><li>編譯快程式碼更少，不用將 Class 轉換成 ES5，不繼承 React Component</li><li>閉包的特性 props 會一直是原本傳進來的那個，而不會跟著外層狀態更新，必須透過 Hook 管控狀態</li><li>閉包的特性 this 會直接綁定元件本身</li><li>分離容器組件和展示組件會變得更容易</li></ul></td>
 </tr>
 </tbody></table>
-<div style="display:flex;">
-    <div>
-
 <ul>
 <li>Class-based</li>
 </ul>
@@ -155,9 +152,6 @@
   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'BrainLin'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>&lt;/div&gt;
-&lt;div&gt;
-</code></pre>
 <ul>
 <li>Functional Component</li>
 </ul>
@@ -169,10 +163,6 @@
 <span class="token keyword">let</span> <span class="token function-variable function">Car</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">return</span> <span class="token operator">&lt;</span>h2<span class="token operator">></span>Hi<span class="token punctuation">,</span> <span class="token constant">I</span> am a <span class="token punctuation">&#123;</span>props<span class="token punctuation">.</span>name<span class="token punctuation">&#125;</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>&lt;/div&gt;
-</code></pre>
-</div>
 
 <ul>
 <li><p>Functional Programming</p>

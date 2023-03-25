@@ -1113,6 +1113,11 @@ nav >ul >li >h4 >a:hover {
     padding: 15px;
   }
 }
+@media (min-width: 1800px) {
+  .main {
+    max-width: 1200px;
+  }
+}
 @media (min-width: 2200px) {
   .main {
     max-width: 1980px;
