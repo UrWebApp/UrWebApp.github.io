@@ -1,5 +1,5 @@
 ---
-title: 讓你大概搞懂 React Hooks
+title: [React] Hooks
 date: 2023-03-25
 categories: React
 author: johch3n611u
