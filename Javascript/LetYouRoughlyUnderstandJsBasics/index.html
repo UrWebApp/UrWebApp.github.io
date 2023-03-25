@@ -131,7 +131,7 @@
 </ul>
 <h2 id="原型鏈-prototype-chain"><a href="#原型鏈-prototype-chain" class="headerlink" title="原型鏈 ( prototype chain )"></a>原型鏈 ( prototype chain )</h2><p><a target="_blank" rel="noopener" href="https://github.com/aszx87410/blog/issues/18">該來理解 JavaScript 的原型鍊了 #18</a></p>
 <p>相較於 C# &#x2F; Java 等 Class-based 語言，JS 開發者的初衷是單純 Script 輕量 ( Object &#x2F; Prototype ) -based 在沒有 Class 的狀況下 ( ES6 的 Class 也只是語法糖 ) 運行於客戶端，所以單純以原型鍊來做繼承的特性，讓一些屬性可以共用；</p>
-<p>构造函数在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。</p>
+<p>構造函數在建構實例時會產生基於原型 ( 基礎型別 ) 的屬性 __proto__，一層層原型鍊的盡頭就是 Object.prototype，再往上找就是 null 。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
   <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
