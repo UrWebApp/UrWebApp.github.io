@@ -22,8 +22,20 @@ This package serves as the `entry point to the DOM` and `server renderers for Re
 
 ## Virtual DOM
 
+[网上都说操作真实 DOM 慢，但测试结果却比 React 更快，为什么？(尤雨溪)](https://www.zhihu.com/question/31809713)
+
+[[Day 09] 單向資料流 & DOM 渲染策略](https://ithelp.ithome.com.tw/articles/10296750?sc=iThelpR)
+
 * repaint 重繪
 * reflow 回流
+
+Angular 2+ 不再使用脏检查（dirty checking），采用了更高效变更检测。基于Zone.js库，它可以在Angular应用中跟踪和捕获异步事件的执行，并自动更新相关的视图部分。
+
+相比脏检查机制，变更检测机制具有更高的性能和更好的可伸缩性，因为它只会检测与模板绑定相关的部分，而不会检测整个应用的作用域。
+
+在Angular中，每个组件都会有一个变更检测器（ChangeDetector），用于跟踪组件的变化，并在需要时更新视图。当组件中的数据发生变化时，变更检测器会标记该组件为“脏”状态，并在下一次Angular的变更检测周期中检测该组件的变化，并更新相应的视图。
+
+Angular还提供了一些手动触发变更检测的方法，如调用$apply()方法、使用zone.run()方法等。这些方法可以用于在Angular应用中手动触发变更检测，并更新相应的视图。
 
 ## Create-React-App ( cli )
 
@@ -156,3 +168,9 @@ const FatherComponent = () => {
 ```
 
 ## [Hooks](/Front-End/ReactHooksItHelpNote/)
+
+## React Developer Tools
+
+以往在使用 AG 的 Tools 只有組件檢視連結回 Html 這個功能比較好用，再者就是可以截很炫炮的模組依賴圖放在開發文件內，至於 prop 或其他功能似乎因為 debug 還是要更連結 code 不如在程式碼內放 console.log 來的方便
+
+React 的 Tools 看起來比較有用的是效能檢視 Profilers 、碼表 React.Suspense，原因可以看 #Virtual DOM 章節
