@@ -9,7 +9,7 @@ tags:
 
 > `TL;DR` Too Long; Don't Read
 
-## 一個詞可能有 N 種詞性
+## 一個詞可能有 N 種詞性 tt
 
 1. 名詞 noun ：人或事物 e.g. book,John ...
 2. 代名詞 pronouns：取代名詞 e.g. he,she,it ...
