@@ -113,6 +113,8 @@ function useLocalStorage(key, initialValue) {
 
 ## Pure Component / React.memo ( HOC ) Higher Order Component 
 
+https://ithelp.ithome.com.tw/articles/10241071
+
 * shouldComponentUpdate()：Class-based Lifecycle 改變 State 之後、執行 Render 之前，回傳值決定了 Render 是否執行
 * Pure Component：[高階組件就是一個函數，傳給它一個組件，它返回一個新的組件](https://hackmd.io/@chrisHsiao/r1ZJu76DD)
 * memo：Functional Component 後透過 memo 監控 props 發生變化時才會重新渲染

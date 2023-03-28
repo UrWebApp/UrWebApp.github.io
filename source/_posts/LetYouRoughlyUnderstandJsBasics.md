@@ -260,6 +260,64 @@ obj3.sayName(); // 輸出 undefined
 obj3.sayName.call(obj4); // 輸出 undefined
 ```
 
+### Object.entries
+
+直接取得所有 property 的 name 和 value，並以陣列回傳
+
+```js
+let object = {a: 1, b: 2, c: 3};
+
+console.log(Object.entries(object));
+// [
+//   ["a", 1],
+//   ["b", 2],
+//   ["c", 3]
+// ]
+```
+
+### Array.find
+
+方法會回傳第一個滿足所提供之測試函式的元素值。否則回傳 undefined
+
+```JS
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
+
+### Array.includes
+
+方法會判斷陣列是否包含特定的元素，並以此來回傳 true 或 false。
+
+```JS
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// Expected output: true
+
+console.log(pets.includes('at'));
+// Expected output: false
+```
+
+### || [] 使用情境
+
+.find()如果沒有找到東西(回傳undefined)的話，會變成[weatherType]=[];，應該是要避免[weatherType]在解構賦值的時候接到undefined(非陣列)，導致報錯。
+
+```JS
+const [weatherType] =
+    Object.entries(weatherTypes).find(([weatherType, weatherCodes]) =>
+      weatherCodes.includes(Number(weatherCode))
+    ) || [];
+```
+
 ---
 
 什么是JavaScript？
@@ -370,6 +428,20 @@ ES6 其實是一個泛指的名詞，泛指 ES5.1 版以後的新一代 JavaScri
 Arrow function： const component = () => (/*return*/);
 
 ### [ES6] Syntax 解構賦值（Destructuring assignment）
+
+```js
+const {
+    observationTime,
+    locationName,
+    temperature,
+    windSpeed,
+    description,
+    weatherCode,
+    rainPossibility,
+    comfortability,
+    isLoading,
+} = weatherElement;
+```
 
 ### [ES6] 展開語法（Spread Syntax）
 
