@@ -26,3 +26,5 @@ waline:
   pageview: true
   # emoji: [ "link","link" ]
   reaction: true
+
+authorsWords: '這個作者很懶，什麼都沒留下...'
