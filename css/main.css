@@ -162,6 +162,24 @@
   margin: 0;
   font-size: 16px;
 }
+.postArticle .postArticleContent .authorsWordsBox {
+  padding: 15px;
+  border: 2px solid #555;
+  margin-bottom: 10px;
+}
+.postArticle .postArticleContent .authorsWordsBox .title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4em;
+  color: #555;
+  margin-bottom: 10px;
+}
+.postArticle .postArticleContent .authorsWordsBox .content {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4em;
+  letter-spacing: 0.3px;
+}
 @media (min-width: 1080px) {
   .postArticle {
     padding: 15px 40px;
