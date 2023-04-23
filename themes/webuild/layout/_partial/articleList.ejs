@@ -25,18 +25,18 @@
     %>
     <%
     let posts;
-    if(is_home()){
-        posts = site;
-    }
-    if(path.indexOf("author")!=-1){
+    if(is_home()){ // 首頁
+        posts = site.posts;
+    }else if(path.indexOf("author")!==-1){ // 不等於首頁但 url 有匹配 author
         posts = site.posts.filter((post, index, array) => {
             return post.author == page.title;
-        })
+        });
     }
-    else{
+    else{ // 不等於上述兩者
         posts = page.posts;
     }%>
     
+    <%= console.log(posts.length) %>
     <% if (path.indexOf("author")!=-1) { %>
                         <div class="authorBox card">
                             <div class="d-flex authorHeader">
