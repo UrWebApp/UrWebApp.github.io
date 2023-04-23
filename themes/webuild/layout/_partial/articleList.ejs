@@ -24,21 +24,17 @@
     return str; }
     %>
     <%
-    let currentPage;
+    let posts;
     if(is_home()){
-     currentPage = site;
-     console.log("currentPage:Site",currentPage);
+        posts = site;
     }
     if(path.indexOf("author")!=-1){
-        site.posts = site.posts.filter((post, index, array) => {
+        posts = site.posts.filter((post, index, array) => {
             return post.author == page.title;
         })
-        console.log("author:",page.title);
-        currentPage = site;
     }
     else{
-        currentPage = page;
-        console.log("currentPage:Page",currentPage)
+        posts = page.posts;
     }%>
     
     <% if (path.indexOf("author")!=-1) { %>
@@ -46,7 +42,7 @@
                             <div class="d-flex authorHeader">
                                 <div>
                                     <h3><%- page.title %></h3>
-                                    <p class="m-0">發表文章總數: <%- currentPage.posts.length %></p>
+                                    <p class="m-0">發表文章總數: <%- posts.length %></p>
                                 </div>
                                 <div class="socialBox d-flex">
                                 <%  if (page.line) {%>
@@ -71,7 +67,7 @@
                         </div>
                                 <% }　%>
     <section class="waterfall">
-        <% currentPage.posts.each(post=>{ %>
+        <% posts.each(post=>{ %>
             <article class="card item">
                 <div class="card-body">
                     <h2 class="card-title"><a href="<%=url_for(post.path)%>">
