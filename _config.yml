@@ -108,3 +108,7 @@ deploy:
   type: 'git'
   repo: https://github.com/UrWebAppUrWebApp.github.io.git
   branch: main
+
+menu:
+  Home: /
+  Author: /page/author/

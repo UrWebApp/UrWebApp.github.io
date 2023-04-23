@@ -1,4 +1,5 @@
 @import "./_breakPoint.styl";
+@import "./_varible.styl";
 
 .infoBox {
     display: flex;
@@ -7,7 +8,7 @@
     margin-bottom: 0.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-    >p, span, i {
+    >p, span, i, a {
         font-size: 12px;
         color: gray;
         margin: 2.5px 5px 2.5px 0px;
@@ -139,8 +140,35 @@
 .card-title {
     margin-bottom: 0;
 }
-
-
+.authorHeader{
+    justify-content: center;
+    div{
+        padding: 0px 15px;
+    }
+}
+.authorBox {
+    padding: 20px 20px 20px 20px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.6);
+    margin: 25px 10px;
+    .socialBox{
+        align-items: center;
+        a{
+            margin: 0px 2.5px
+            border: 1px solid rgba(0,0,0,0.6)
+            border-radius: 50% 50%;
+            padding: 6px 10px;
+        }
+        i {
+            color: $theme-dark;
+            font-size: 25px !important;
+        }
+    }
+}
+.authorIntro{
+    p{
+        font-size: 16px;    
+    }
+}
 +desktop-sm() {
     .waterfall {
         margin: 0 auto;

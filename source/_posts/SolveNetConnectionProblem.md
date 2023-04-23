@@ -2,7 +2,7 @@
 title: 解決連不到指定IP與Port問題
 date: 2023-04-09 15:00 
 categories: Web
-author: Kai98k
+author: kai98k
 tags:
 - Internet
 ---

@@ -26,3 +26,7 @@ waline:
   pageview: true
   # emoji: [ "link","link" ]
   reaction: true
+
+menu:
+  Home: /
+  Author: /page/author/
