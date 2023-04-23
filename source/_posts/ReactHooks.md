@@ -1,5 +1,5 @@
 ---
-title: [React] Hooks
+title: React-Hooks
 date: 2023-03-25
 categories: React
 author: johch3n611u
@@ -8,7 +8,7 @@ tags:
 - React
 ---
 
-## [Hooks] useState
+## useState
 
 useState( 資料預設值 )：建立一個被監控的資料變數「變數（count）」和「改變該變數 React 會幫我們重新轉譯畫面的方法（setCount）」
 
@@ -39,7 +39,7 @@ function Counter() {
 }
 ```
 
-## [Hooks] useEffect
+## useEffect
 
 想知道 useEffect 前需要了解什麼是副作用
 
@@ -80,7 +80,7 @@ function Counter() {
 }
 ```
 
-## [Hooks] useCallback => 情境： 當...後，才能.../ 回呼函式（callback function） / Promise / async function
+## useCallback => 情境： 當...後，才能.../ 回呼函式（callback function） / Promise / async function
 
 上述方式會造成同畫面，資料不同速度回來，所以分別渲染兩次，也可以透過 async 非同步去等待兩者都回來後再做一次渲染。
 
@@ -221,7 +221,7 @@ useEffect(() => {
 ```
 
 
-### [Hooks] useMemo 保存複雜運算的資料結果
+## useMemo 保存複雜運算的資料結果
 
 會在 dependencies 沒有改變的情況下，useMemo 就會直接使用上一次計算過的結果而不會重新在運算一次，`useMemo 會在組件渲染時（rendering）被呼叫，因此不應該在這個時間點進行任何會有副作用（side effect）的操作；若需要有副作用的操作，則應該使用的是 useEffect 而不是 useMemo`。
 
@@ -241,7 +241,7 @@ const weatherCode2Type = (weatherCode) => {
 };
 ```
 
-### [Hooks] useRef / controlled & uncontrolled components
+## useRef / controlled & uncontrolled components
 
 Controlled 和 Uncontrolled 指的是「資料受不受到 React 所控制」，`<input />` 這類的表單元素本身就可以保有自己的資料狀態，而透過 React 控制則是類似 ngModel 或 Reative Form 綁定表單元素那樣，可以做驗證或更新等等需求。
 
@@ -259,7 +259,7 @@ const InputElement = () => (
 )
 ```
 
-## [Hooks] useContext
+## useContext
 
 https://medium.com/hannah-lin/react-hook-%E7%AD%86%E8%A8%98-usecontext-4bc289976847
 
@@ -274,13 +274,13 @@ export const SetOpenContext = React.createContext(()=>{});
 </OpenContext.Provider>
 ```
 
-## [Hooks] useReducer
+## useReducer
 
 useReducer 是無法存取 global store，必須搭配 useContext
 
-## [Hooks] useLayoutEffect
+## useLayoutEffect
 
-## [Hooks] useMergedState
+## useMergedState
 
 [react-component/util/useMergedState](https://github.com/react-component/util/blob/master/src/hooks/useMergedState.ts)
 
