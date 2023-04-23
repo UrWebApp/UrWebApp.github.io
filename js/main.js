@@ -10,6 +10,11 @@ $("#tagsBtn").click(() => {
     $("#tagsBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
 })
 
+$("#authorsBtn").click(() => {
+    $("#authors").slideToggle();
+    $("#authorsBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+})
+
 $(".input-group-input").addClass("form-control");
 $(".input-group-submit").addClass("btn btn-secondary");
 
