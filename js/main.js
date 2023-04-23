@@ -25,7 +25,6 @@ $('#barBtn').click(() => {
 
 
 $('.mobileBtn').click(()=>{
-    console.log("mobile");
     $("#tocModal").fadeToggle();
 })
 
