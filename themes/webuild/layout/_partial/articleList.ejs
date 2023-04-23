@@ -27,7 +27,9 @@
     let currentPage;
     if(is_home()){
      currentPage = site;
-    }else if(path.indexOf("author")!=-1){
+     console.log("currentPage:Site",currentPage);
+    }
+    if(path.indexOf("author")!=-1){
         site.posts = site.posts.filter((post, index, array) => {
             return post.author == page.title;
         })
@@ -36,7 +38,7 @@
     }
     else{
         currentPage = page;
-        console.log("currentPage:",currentPage)
+        console.log("currentPage:Page",currentPage)
     }%>
     
     <% if (path.indexOf("author")!=-1) { %>
