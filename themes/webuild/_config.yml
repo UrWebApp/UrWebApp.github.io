@@ -27,6 +27,4 @@ waline:
   # emoji: [ "link","link" ]
   reaction: true
 
-menu:
-  Home: /
-  Author: /page/author/
+authorsWords: '這個作者很懶，什麼都沒留下...'

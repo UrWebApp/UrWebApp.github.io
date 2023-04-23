@@ -10,10 +10,6 @@
         <p><%- date( page.date , 'YYYY/MM/DD' ) %></p>
         <span>|</span>
         <p>
-          <%= page.author %>
-        </p>
-        <span>|</span>
-        <p>
           <% page.categories.each(category=>{ %>
             <a href="<%=url_for(category.path)  %> "><%- category.name %> </a>
             <% }) %>
@@ -30,6 +26,10 @@
       </div>
     </div>
     <div class="postArticleContent">
+      <div class="authorsWordsBox">
+        <p class="title"><%= page.author %></p>
+        <p class="content"><%= page.authorsWords ? page.authorsWords : theme.authorsWords %></p>
+      </div>
       <%- page.content %>
     </div>
   </article>
