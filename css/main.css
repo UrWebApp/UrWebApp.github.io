@@ -214,7 +214,8 @@ tr:nth-child(even) {
 }
 .infoBox >p,
 .infoBox span,
-.infoBox i {
+.infoBox i,
+.infoBox a {
   font-size: 12px;
   color: #808080;
   margin: 2.5px 5px 2.5px 0px;
@@ -321,6 +322,33 @@ tr:nth-child(even) {
 }
 .card-title {
   margin-bottom: 0;
+}
+.authorHeader {
+  justify-content: center;
+}
+.authorHeader div {
+  padding: 0px 15px;
+}
+.authorBox {
+  padding: 20px 20px 20px 20px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.6);
+  margin: 25px 10px;
+}
+.authorBox .socialBox {
+  align-items: center;
+}
+.authorBox .socialBox a {
+  margin: 0px 2.5px;
+  border: 1px solid rgba(0,0,0,0.6);
+  border-radius: 50% 50%;
+  padding: 6px 10px;
+}
+.authorBox .socialBox i {
+  color: #0d0d0d;
+  font-size: 25px !important;
+}
+.authorIntro p {
+  font-size: 16px;
 }
 @media (min-width: 1080px) {
   .waterfall {
@@ -494,32 +522,38 @@ nav >ul >li >h4 >a:hover {
   padding: 0;
   display: flex;
 }
-.category-list {
+.category-list,
+.author-list {
   padding-left: 10px;
   list-style-type: '';
   padding-bottom: 10px;
 }
-.category-list li:not(.toc>li) {
+.category-list li:not(.toc>li),
+.author-list li:not(.toc>li) {
   display: flex;
 }
-.category-list li {
+.category-list li,
+.author-list li {
   font-size: 16px;
   justify-content: space-between;
 }
-.category-list li a {
+.category-list li a,
+.author-list li a {
   display: block;
   width: 100%;
   color: #808080;
   font-weight: 700;
 }
-.category-list li span {
+.category-list li span,
+.author-list li span {
   font-size: 12px;
   margin-left: 5px;
   color: #808080;
   padding: 0px 1.5px;
   border-radius: 5px;
 }
-.category-list li ol {
+.category-list li ol,
+.author-list li ol {
   padding-left: 1rem;
 }
 .toc {
@@ -601,7 +635,8 @@ nav >ul >li >h4 >a:hover {
   color: rgba(0,0,0,0.3) !important;
 }
 #tagsBtn:hover .fa-solid,
-#categoriesBtn:hover .fa-solid {
+#categoriesBtn:hover .fa-solid,
+#authorBtn:hover .fa-solid {
   color: #000;
 }
 .input-group input,
