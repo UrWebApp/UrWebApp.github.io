@@ -2,7 +2,7 @@
 title: 新手的領域展開-領域驅動設計
 date: 2023-01-29 15:00
 categories: Design Pattern
-author: Kai98k
+author: kai98k
 tags:
 - Architecture
 - C#
