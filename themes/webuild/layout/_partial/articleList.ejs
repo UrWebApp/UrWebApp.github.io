@@ -40,9 +40,14 @@
     <% if (path.indexOf("author")!=-1) { %>
                         <div class="authorBox card">
                             <div class="d-flex authorHeader">
-                                <div>
+                                <div class="authorNameBox">
                                     <h3><%- page.title %></h3>
                                     <p class="m-0">發表文章總數: <%- posts.length %></p>
+                                </div>
+                                <div class="avatar">
+                                    <%  if (page.avatar) {%>
+                                        <img class="img-fluid";" src="<%- page.avatar %>">
+                                        <% } %>
                                 </div>
                                 <div class="socialBox d-flex">
                                 <%  if (page.line) {%>
@@ -59,7 +64,6 @@
                                         <% } %>
                                 </div>
                             </div>
-                            <h4 class="text-center my-1 mt-3">個人簡介</h4>
                             <hr>
                             <div class="authorIntro"> 
                                 <p><%- page.content %></p>
