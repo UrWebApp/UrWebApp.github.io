@@ -6,6 +6,7 @@ ig: https://www.instagram.com/ur.kai98k/
 github: https://github.com/kai98k
 linkedin: https://www.linkedin.com/in/kai98k/
 line: https://line.me/ti/p/R0gBYXr3SR
+avatar: https://avatars.githubusercontent.com/u/49471784?v=4
 ---
 大學期間對資訊與商業之間的脈動，產生興趣，除了修習資工的計概、程設、資管系的專案管理、網路行銷課程外，也在大三時參加六角學院的前端暑期營，後來在六角學院兼職線上助教，期間內融會貫通所學。
 
