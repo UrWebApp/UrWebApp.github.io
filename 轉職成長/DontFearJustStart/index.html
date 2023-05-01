@@ -9,7 +9,7 @@
   
       
         <meta name="description"
-          content="文章作者: kai98k 創作日期: 2023/01/08 文章類型: Back-End，查看本文章獲取更多訊息。">
+          content="文章作者: kai98k 創作日期: 2023/04/30 文章類型: 轉職成長，查看本文章獲取更多訊息。">
         
           <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -109,29 +109,24 @@
           <main class="container postWrap">
   <article class="postArticle">
     <div class="postArticleHeader">
-      <h1 class="pt-1">.NET 6 輕量視覺化 Log 工具 WatchDog</h1>
+      <h1 class="pt-1">不用很厲害才開始，要開始才會很厲害，你也可以從 0 -> ∞</h1>
       <div class="infoBox">
         <i class="fa fa-eye" aria-hidden="true"></i>
-        <p class="waline-pageview-count" data-path="/Back-End/NET6LogToolWatchDog/" />
+        <p class="waline-pageview-count" data-path="/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/DontFearJustStart/" />
         </p>
         <span>|</span>
-        <p>2023/01/08</p>
+        <p>2023/04/30</p>
         <span>|</span>
         <p>
           
-            <a href="/categories/Back-End/ ">Back-End </a>
+            <a href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/ ">轉職成長 </a>
             
         </p>
         <span>|</span>
         <ul class="tagBox">
           
             <li>
-              <a href="/tags/Net/"><i class="fa-solid fa-tag"></i> .Net
-              </a>
-            </li>
-            
-            <li>
-              <a href="/tags/Log/"><i class="fa-solid fa-tag"></i> Log
+              <a href="/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/"><i class="fa-solid fa-tag"></i> 成長思維
               </a>
             </li>
             
@@ -141,88 +136,38 @@
     <div class="postArticleContent">
       <div class="authorsWordsBox">
         <p class="title">kai98k</p>
-        <p class="content">這個作者很懶，什麼都沒留下...</p>
+        <p class="content">當我們想要開始學習新事物或是追求自己的夢想時，常常會感到不知道從何下手，或是因為自己的能力不足而猶豫不決。但事實上，真正重要的是要敢於踏出第一步，即便自己目前的水平還不夠高。因為只有開始行動，才有機會逐步地磨練自己的能力，並且在學習和實踐的過程中不斷成長，在自己之前的經驗中，體悟出四個道理。</p>
       </div>
-      <p>在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。如專案中的 Log 衍生需求不多，建議可使用這套 WatchDog 工具。</p>
-<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>WatchDog 利用 SignalR 與預設 LiteDb 來實現 Web UI 即時監控 Http&#x2F;Error Log 等事件 ，可依需求替換不同的資料庫，像是MSSQL、MySQl、Postgres。</p>
-<h3 id="特點"><a href="#特點" class="headerlink" title="特點"></a>特點</h3><ul>
-<li>即時捕獲 Http 請求&#x2F;回應</li>
-<li>即時異常例外紀錄</li>
-<li>可在程式內客製化 Log 訊息紀錄</li>
-<li>友善的 Log 察看頁面</li>
-<li>支援 Log 日誌搜尋</li>
-<li>可定時自動清除 Log</li>
-</ul>
-<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>使用 Nuget 介面安裝，或是使用以下指令</p>
-<pre class="line-numbers language-console" data-language="console"><code class="language-console">dotnet add package WatchDog.NET --version 1.3.3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="在-Program-cs-設定"><a href="#在-Program-cs-設定" class="headerlink" title="在 Program.cs 設定"></a>在 Program.cs 設定</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">&#x2F;&#x2F; Program.cs
-
-using WatchDog;
-
-var builder &#x3D; WebApplication.CreateBuilder(args);
-
-builder.Services.AddWatchDogServices(option &#x3D;&gt;
-    &#123;
-        option.IsAutoClear &#x3D; true;
-        option.ClearTimeSchedule &#x3D; WatchDogAutoClearScheduleEnum.Monthly;
-        &#x2F;&#x2F; 以下可不填
-        option.SqlDriverOption &#x3D; WatchDogSqlDriverEnum.MSSQL;
-        option.SetExternalDbConnString &#x3D; &quot;Data Source&#x3D;localhost;Initial Catalog&#x3D;WatchDog;Integrated Security&#x3D;True&quot;;
-
-    &#125;);
-
-var app &#x3D; builder.Build();
-
-app.UseWatchDogExceptionLogger();
-    app.UseWatchDog(option &#x3D;&gt;
-    &#123;
-        option.WatchPageUsername &#x3D; &quot;Username&quot;;
-        option.WatchPagePassword &#x3D; &quot;P@ssword&quot;;
-          &#x2F;&#x2F; 以下可不填
-        option.Blacklist &#x3D; &quot;Test&#x2F;testPost, weatherforecast&quot;; &#x2F;&#x2F;Prevent logging for specified endpoints
-        option.Serializer &#x3D; WatchDogSerializerEnum.Newtonsoft; &#x2F;&#x2F;If your project use a global json converter
-        option.CorsPolicy &#x3D; &quot;MyCorsPolicy&quot;
-
-    &#125;);
-
-app.UseAuthorization();
-app.Run();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><code>IsAutoClear</code>:設定 Log 自動清除。</li>
-<li><code>ClearTimeSchedule</code>: 設定自動清除計畫，上者要是 <code>true</code>。</li>
-<li><code>SqlDriverOption</code>: 可不填，不填時自動預設 liteDB 為資料庫，在範例中使用 MSSQL。</li>
-<li><code>SetExternalDbConnstring</code>: 為資料庫連線字串</li>
-<li><code>WatchPageUsername</code>: 為可視化頁面登入帳號。</li>
-<li><code>watchPagePassword</code>: 為可視化頁面登入密碼。</li>
-</ul>
-<h2 id="Log-訊息-x2F-事件"><a href="#Log-訊息-x2F-事件" class="headerlink" title="Log 訊息&#x2F;事件"></a>Log 訊息&#x2F;事件</h2><pre class="line-numbers language-c#" data-language="c#"><code class="language-c#">&#x2F;&#x2F; Program.cs
-WatchLogger.Log(&quot;...TestGet Started...&quot;);
-WatchLogger.LogWarning(JsonConvert.Serialize(model));
-WatchLogger.LogError(res.Content);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>事件層級為普通<code>Log</code>、<code>LogWarning</code>、<code>LogError</code>，可自訂義 log 訊息。</p>
-<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><p>專案啟動後，可在根目錄輸入 &#x2F;watchdog，可至可視化頁面，登入帳密在剛剛的設定中，登入後可以看到剛剛下的 Log。<br><img src="https://i.imgur.com/QuZHHMa.png" alt="watchdog"><br><img src="https://github.com/IzyPro/WatchDog/raw/main/watchlog.png" alt="watchdog"></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>在專案後期如果要增加需求時，以下劣勢就出現了，所以還是要自行評估是否引入。</p>
-<ul>
-<li>無法寫成 txt 檔</li>
-<li>無法在事件發生時寄信給相關人士</li>
-<li>只支援 .Net core 3.2+</li>
-</ul>
-<p>撇除這三點，其實還算是不錯的，且原始 source code 也算明瞭，可以 clone&#x2F;fork 下來魔改。<br>例如: <a target="_blank" rel="noopener" href="https://github.com/IzyPro/WatchDog/pull/91/files">結合 Mailkit 在 Log 時，寄信給相關人士</a></p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://github.com/IzyPro/WatchDog/pull/91/files">WatchDog</a></p>
+      <p><img src="https://i.imgur.com/toyKnTt.png"></p>
+<h2 id="不要給自己貼標籤"><a href="#不要給自己貼標籤" class="headerlink" title="不要給自己貼標籤"></a>不要給自己貼標籤</h2><p><img src="https://i.imgur.com/HNJXEhz.png"></p>
+<ol>
+<li>第一個故事:<br>在大學的某個暑假時，參加了資策會辦在台大的營隊，還記得剛到的時候，第一天聽完自己的組員介紹，個個都是頂大的，第二天差點就沒去了，還好最後有堅持下去，甚至也有勇敢的將自己的想法在專題討論的時候闡述出來，即使講的二二六六，但大家也很認真在聽，並立即給予反饋，所以不該總是假設其他人會用不好的眼光放大自己的缺失，別人其實並沒有很在乎我們的背景，而是講出來的東西有沒有料。</li>
+<li>第二個故事:<br>我學測的時候數學只考了低標四級分，高中就認識我的人都知道我數學真的很不好。所以雖然是自然組，但最後還是讀了文組科系。在參加上面說的資策會營隊後，我也慢慢接觸到一些分析方法，也將這些方法套用在自己身上，開始也想了解資訊業到底在幹嘛，就毅然決然去修了資工系的課，竟然還修過了線性代數，雖然是低空飛過，但這讓我了解到即使自己的能力再怎麼爛，都不代表自己不可能達成自己想要完成的事。BTW，其實在 80% 的 Web Dev 不需要用到太複雜的數學，而是在於拆解問題的能力與邏輯。</li>
+</ol>
+<h2 id="只要開始就會有機會"><a href="#只要開始就會有機會" class="headerlink" title="只要開始就會有機會"></a>只要開始就會有機會</h2><p><img src="https://i.imgur.com/8O4tHdN.gif"></p>
+<p>在我開始查詢如何自學轉職工程師後，沒想到連 FB ads 都來幫助我，推播了六X學院的免費暑期前端大專營報名連結給我，假設今天我沒有去開始查詢這些資訊的話，演算法也不會自動推薦我相關的資訊，可能就會錯過這個入門磚。</p>
+<p>因為從很久以前就很羨慕別人有一口整齊的牙齒，最近剛結束在南部的生活，回台北後馬上就衝去戴牙套，也是沒多久，就也很有感~</p>
+<h2 id="把握機會，保持平常心，堅持下去"><a href="#把握機會，保持平常心，堅持下去" class="headerlink" title="把握機會，保持平常心，堅持下去"></a>把握機會，保持平常心，堅持下去</h2><p><img src="https://i.imgur.com/9AWrvGc.gif"></p>
+<p>進到前端大專營後，我的計畫原本是營隊結束後，拿到前三名的獎勵 - 成為助教(免費的課程，及遠端打工)，但即使我真的很努力了，還是沒能進到前三名，不過也有前十名。在營隊結束後，還是繼續自學，在過了半年後，竟然獲得助教機會的通知，但前提是要在期限內繳交一份前端 Side Project，還好當初沒有放棄，馬上就做出來了，並成功拿下機會。</p>
+<h2 id="認清事實，即時止損"><a href="#認清事實，即時止損" class="headerlink" title="認清事實，即時止損"></a>認清事實，即時止損</h2><p>有時候，沒有分析周全，就馬上一股腦向前衝，很容易踢到鐵板，這時候如果還不知道止損的重要性，甚至想要凹單，真的就是幫自己繳學費，讓我學到有時候衝一波固然是好事，但分析周全跟止損真的很重要!</p>
+<p>之前在 BTC 60000 的時候，沒做什麼功課，覺得衝了就是良幣歸愷，沒想到一衝完，直接掉一根大的，這時候止損其實還得及，可惜我就是硬凹，到最後直接爆倉…</p>
+<hr>
+<p>有時候，我們會被自己的不足所束縛，認為自己必須先達到某個程度才有資格去嘗試新事物。但這樣的想法其實是一種錯誤的觀念。因為只有透過實際的行動，才能逐漸磨練自己的技能和經驗，並且在這個過程中不斷成長。只有敢於開始，才能有機會往更高的目標邁進。</p>
+<p>大家是否也有相同經驗或是有一直躊躇不前，猶豫很久而沒行動的事呢?</p>
 
     </div>
   </article>
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
     
       <h4>
-        <a href="/Web/LetYouRoughlyUnderstandWhatHttpRequest/"><i class="fa-solid fa-angles-left"></i> 讓你大概搞懂 Http Request
+        <a href="/Web/TalkAboutAuthorization/"><i class="fa-solid fa-angles-left"></i> 你是誰?淺談身分認證方式
         </a>
       </h4>
       
         
           <h4>
-            <a href="/Back-End/UseSerilogToSendMail/">
-              .NET6 使用 Serilog，在 log 當下同時寄信 <i class="fa-solid fa-angles-right"></i>
+            <a href="/ComputerScience/CouldNotLoadBecauseScriptExecutionDisabledOnSystem/">
+              因為這個系統上已停用指令碼執行，所以無法載入... <i class="fa-solid fa-angles-right"></i>
             </a>
           </h4>
           
@@ -242,7 +187,7 @@ WatchLogger.LogError(res.Content);<span aria-hidden="true" class="line-numbers-r
               <aside class="rightAside">
                 <section>
                   <h4>Table of contents</h4>
-                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%B4%B9"><span class="toc-text">介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E9%BB%9E"><span class="toc-text">特點</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D"><span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-Program-cs-%E8%A8%AD%E5%AE%9A"><span class="toc-text">在 Program.cs 設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Log-%E8%A8%8A%E6%81%AF-x2F-%E4%BA%8B%E4%BB%B6"><span class="toc-text">Log 訊息&#x2F;事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6"><span class="toc-text">測試</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B8%BD%E7%B5%90"><span class="toc-text">總結</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a></li></ol>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E7%B5%A6%E8%87%AA%E5%B7%B1%E8%B2%BC%E6%A8%99%E7%B1%A4"><span class="toc-text">不要給自己貼標籤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E8%A6%81%E9%96%8B%E5%A7%8B%E5%B0%B1%E6%9C%83%E6%9C%89%E6%A9%9F%E6%9C%83"><span class="toc-text">只要開始就會有機會</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E6%8F%A1%E6%A9%9F%E6%9C%83%EF%BC%8C%E4%BF%9D%E6%8C%81%E5%B9%B3%E5%B8%B8%E5%BF%83%EF%BC%8C%E5%A0%85%E6%8C%81%E4%B8%8B%E5%8E%BB"><span class="toc-text">把握機會，保持平常心，堅持下去</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%8D%E6%B8%85%E4%BA%8B%E5%AF%A6%EF%BC%8C%E5%8D%B3%E6%99%82%E6%AD%A2%E6%90%8D"><span class="toc-text">認清事實，即時止損</span></a></li></ol>
                 </section>
               </aside>
 
@@ -257,7 +202,7 @@ WatchLogger.LogError(res.Content);<span aria-hidden="true" class="line-numbers-r
                         onclick="tocModalClose()"></button>
                     </div>
                     <div class="modal-body">
-                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%B4%B9"><span class="toc-text">介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E9%BB%9E"><span class="toc-text">特點</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D"><span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-Program-cs-%E8%A8%AD%E5%AE%9A"><span class="toc-text">在 Program.cs 設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Log-%E8%A8%8A%E6%81%AF-x2F-%E4%BA%8B%E4%BB%B6"><span class="toc-text">Log 訊息&#x2F;事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6"><span class="toc-text">測試</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B8%BD%E7%B5%90"><span class="toc-text">總結</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a></li></ol>
+                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E7%B5%A6%E8%87%AA%E5%B7%B1%E8%B2%BC%E6%A8%99%E7%B1%A4"><span class="toc-text">不要給自己貼標籤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E8%A6%81%E9%96%8B%E5%A7%8B%E5%B0%B1%E6%9C%83%E6%9C%89%E6%A9%9F%E6%9C%83"><span class="toc-text">只要開始就會有機會</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E6%8F%A1%E6%A9%9F%E6%9C%83%EF%BC%8C%E4%BF%9D%E6%8C%81%E5%B9%B3%E5%B8%B8%E5%BF%83%EF%BC%8C%E5%A0%85%E6%8C%81%E4%B8%8B%E5%8E%BB"><span class="toc-text">把握機會，保持平常心，堅持下去</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AA%8D%E6%B8%85%E4%BA%8B%E5%AF%A6%EF%BC%8C%E5%8D%B3%E6%99%82%E6%AD%A2%E6%90%8D"><span class="toc-text">認清事實，即時止損</span></a></li></ol>
                     </div>
                   </div>
                 </div>
