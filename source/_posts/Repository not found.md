@@ -1,7 +1,7 @@
 ---
 title: 解決 Git 錯誤:Repository not found
 date: 2023-03-05    
-categories: Web
+categories: Dev Tech
 author: kai98k
 tags:
 - Git

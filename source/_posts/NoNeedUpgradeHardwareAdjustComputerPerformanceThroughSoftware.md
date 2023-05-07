@@ -1,7 +1,7 @@
 ---
 title: 免升級硬體，透過軟體調整電腦性能
 date: 2023-01-14
-categories: computer-science
+categories: Dev Tech
 author: johch3n611u
 tags:
 - computer-science

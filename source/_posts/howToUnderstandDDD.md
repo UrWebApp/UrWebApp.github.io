@@ -1,16 +1,15 @@
 ---
 title: 新手的領域展開-領域驅動設計
 date: 2023-01-29 15:00
-categories: Design Pattern
+categories: Dev Tech
 author: kai98k
+authorsWords: 剛接觸到設計模式的時候，真的覺得很抽象，根本就是甚麼術式吧，趁著業務需要，再次以新手術師的角度，重新認識一遍領域驅動設計(Domain-Driven Design,DDD)，這個高級咒術。
 tags:
 - Architecture
 - C#
 - DDD
 - OOD/OOP
 ---
-剛接觸到設計模式的時候，真的覺得很抽象，根本就是甚麼術式吧，趁著業務需要，再次以新手術師的角度，重新認識一遍領域驅動設計(Domain-Driven Design,DDD)，這個高級咒術。
-
 ## 關於 Domain 
 在開發前置作業中，開發者通常會有很大一部分的時間在理解業務 Know-how，也就是該領域的知識(Domain knowledge)，在了解之後，進而轉成有業務邏輯的程式碼。
 

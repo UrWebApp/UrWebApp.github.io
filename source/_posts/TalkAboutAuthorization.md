@@ -1,7 +1,7 @@
 ---
 title: 你是誰?淺談身分認證方式
 date: 2023-04-30 23:23:00
-categories: Web
+categories: Dev Tech
 author: kai98k
 tags:
 - Internet

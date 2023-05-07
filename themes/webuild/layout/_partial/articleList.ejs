@@ -39,7 +39,8 @@
 
 
     <%  if (path.indexOf("轉職成長")!=-1) {%>
-        <div class="mb-5"><img src="../_partial/banner.png" class="img-fluid"></div>
+        <div class="mb-5"><%- image_tag(url_for("asset/banner.png"), {class:"img-fluid ur-banner"}) %>
+        </div>
     <% } %>
 
     <% if (path.indexOf("author")!=-1) { %>

@@ -1,7 +1,7 @@
 ---
 title: Net core 全域異常處理
 date: 2023-02-28 13:22:55
-categories: Back-End
+categories: Dev Tech
 author: kai98k
 tags:
 - .Net

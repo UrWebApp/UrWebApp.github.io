@@ -1,7 +1,7 @@
 ---
 title: .NET 6 輕量視覺化 Log 工具 WatchDog
 date: 2023-01-08
-categories: Back-End
+categories: Dev Tech
 author: kai98k
 tags:
 - Log

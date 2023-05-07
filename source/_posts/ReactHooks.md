@@ -1,7 +1,7 @@
 ---
 title: React-Hooks
 date: 2023-03-25
-categories: React
+categories: Dev Tech
 author: johch3n611u
 tags:
 - Note

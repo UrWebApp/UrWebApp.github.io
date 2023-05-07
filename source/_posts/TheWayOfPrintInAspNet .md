@@ -1,7 +1,7 @@
 ---
 title: 幾種 .Net 列印的方式
 date: 2023-02-05 15:00
-categories: Back-End
+categories: Dev Tech
 author: kai98k
 tags:
 - .Net
