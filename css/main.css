@@ -364,6 +364,10 @@ tr:nth-child(even) {
 .authorIntro p {
   font-size: 16px;
 }
+.ur-banner {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
 @media (min-width: 1080px) {
   .waterfall {
     margin: 0 auto;
