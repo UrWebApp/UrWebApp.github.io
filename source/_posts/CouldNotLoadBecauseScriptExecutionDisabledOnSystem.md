@@ -1,10 +1,10 @@
 ---
 title: 因為這個系統上已停用指令碼執行，所以無法載入...
 date: 2023-04-23
-categories: ComputerScience
+categories: Dev Tech
 author: johch3n611u
 tags:
-- ComputerScience
+- Computer Science
 authorsWords: '打指令就對了'
 ---
 

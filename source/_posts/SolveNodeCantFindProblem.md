@@ -1,7 +1,7 @@
 ---
 title: 解決問題 - node 不是內部或外部命令
 date: 2023-04-09
-categories: Front-End
+categories: Dev Tech
 author: kai98k
 tags:
 - node.js

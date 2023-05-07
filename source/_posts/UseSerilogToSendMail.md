@@ -1,7 +1,7 @@
 ---
 title: .NET6 使用 Serilog，在 log 當下同時寄信
 date: 2023-01-04
-categories: Back-End
+categories: Dev Tech
 author: kai98k
 tags:
 - Log
