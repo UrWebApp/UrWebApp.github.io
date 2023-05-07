@@ -708,7 +708,13 @@ nav >ul >li >h4 >a:hover {
 #tocModal .modal-dialog {
   top: 150px;
 }
+.desktop-show {
+  display: none;
+}
 @media (min-width: 1080px) {
+  .desktop-show {
+    display: block;
+  }
   .mobileBtn {
     display: none;
   }
