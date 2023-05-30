@@ -37,6 +37,10 @@ Hexo 是一個靜態網站生成器，它通過 Markdown 文檔生成 HTML 網�
 
 [[Angular Universal] 使用 Prerender 建立自己的 Static Site Generator](https://fullstackladder.dev/blog/2021/10/16/static-site-generator-using-angular-universal-prerender/)
 
+[iframe-automatically](https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using)
+
+[react vs angular build size](https://www.techuz.com/blog/angular-vs-react/)
+
 ---
 
 ## HTML 嵌入
