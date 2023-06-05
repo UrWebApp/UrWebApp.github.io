@@ -60,10 +60,6 @@ Hexo 是一個靜態網站生成器，它通過 Markdown 文檔生成 HTML 網�
 
 ## Angular 嵌入
 
-
-
-<iframe src="/assets/angular/ec/index.html" title="W3Schools Free Online Web Tutorials"></iframe>
-
-## Angular & Prerender 嵌入
-
-## React
+<div class="responsiveIframe">
+	<iframe src="/assets/angular/ec/index.html" title="W3Schools Free Online Web Tutorials"></iframe>
+</div>
