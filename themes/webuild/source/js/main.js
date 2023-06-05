@@ -76,4 +76,12 @@ let addTotalViews = fetch("https://waline-urweb.vercel.app/article?lang=zh-TW", 
     "method": "POST",
     "mode": "cors",
     "credentials": "omit"
-  });
+});
+
+function responsiveIframe() {
+    let els = parent.document.getElementsByClassName("responsiveIframe");
+    Array.prototype.forEach.call(els, (el)=> { 
+        console.log(el.parentElement.offsetHeight )
+        el.height = el.parentElement.offsetHeight;
+    });
+}
