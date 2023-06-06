@@ -355,7 +355,8 @@ Filter藉由微軟提供的視圖，可以看到 Filter 有點類似管道或是
                     </div>
                     <p class="card-text">
                         <a href="/Dev-Tech/LetYouRoughlyUnderstandCallbackFnAndBindThis/">
-                                    最近遇到一個外部引入的 script ，因為對 CallbackFunction 與 this 不是很理解，在 Angular 中元件類中的 this 通常指向當前元件實例，而進到 CallbackFunction 後 this 亂了，印象當中有嘗試過箭頭函式也是失敗，最後用一個智障方法先保存在 localstage 在取出來用，還好是主管看 Code 用了 Bind，才想到有 Bind 這...
+                                    最近遇到一個外部引入的 script 需要整合進 Angular 中，CallbackFn 與 this 拆開來能理解，在 Angular 中元件中的 this 通常指向當前元件實例。
+而進到 CallbackFn 後 this 亂了，曾經嘗試過箭頭函式也是失敗，最後用一個智障方法，先保存在 localstage 在取出來用，還好是同事幫忙 Code Review 用了 Bin...
                                         </a>
                     </p>
 
