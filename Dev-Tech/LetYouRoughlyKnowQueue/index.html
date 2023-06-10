@@ -150,7 +150,109 @@
         <p class="title">johch3n611u</p>
         <p class="content">這個作者很懶，什麼都沒留下...</p>
       </div>
-      
+      <p><img src="https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png"></p>
+<h2 id="Remote-Procedure-Call-RPC-Queue"><a href="#Remote-Procedure-Call-RPC-Queue" class="headerlink" title="Remote Procedure Call ( RPC ) Queue"></a>Remote Procedure Call ( RPC ) Queue</h2><p>Remote Procedure Call Queue 是一種在分散式系統中用於處理遠程過程調用（RPC）的佇列。在分散式系統中，不同的應用程序可能運行在不同的主機或容器中，透過網路互相通信。當一個應用程序需要調用另一個應用程序中的函數或方法時，就需要使用RPC機制。</p>
+<p>通常用於在不同的應用程序之間傳遞 RPC 請求和回應。當應用程序需要調用另一個應用程序中的函數時，它將請求放入 RPC queue 中，然後等待該請求被處理。當另一個應用程序處理完該請求後，它將結果放回到 RPC queue 中，最終由發送請求的應用程序接收結果。</p>
+<p>通常基於一些消息佇列（Message Queue）系統實現，例如 RabbitMQ、Apache Kafka 等。這些消息佇列系統提供了可靠的消息傳遞保證，確保即使在應用程序離線或崩潰的情況下也能保證消息傳遞。</p>
+<h2 id="RabbitMQ"><a href="#RabbitMQ" class="headerlink" title="RabbitMQ"></a>RabbitMQ</h2><p>RabbitMQ 是一個開源的消息佇列（Message Queue）系統，使用Erlang語言實現，可以在分散式系統中用於處理消息傳遞和RPC通信。它是一個高度可靠、可擴展、跨平台的消息代理，支持多種消息協議，例如 AMQP（Advanced Message Queuing Protocol）、STOMP（Streaming Text Oriented Messaging Protocol）等。</p>
+<p>基本架構包括生產者（Producer）、消費者（Consumer）、Exchange、Queue 和 Binding。生產者將消息發送到Exchange，Exchange根據設定的路由規則將消息路由到對應的Queue，然後消費者從 Queue 中取出消息進行處理。Exchange 和 Queue 之間的關係可以通過Binding進行設定。</p>
+<p>RabbitMQ 提供了可靠的消息傳遞保證，支持多種消息模式，例如點對點（Point-to-Point）、發布&#x2F;訂閱（Publish&#x2F;Subscribe）、工作隊列（Work Queue）等。它還提供了豐富的管理界面和 API，方便用戶對消息佇列進行管理和監控。</p>
+<p>由於 RabbitMQ 具有高度可靠性、可擴展性和跨平台性，因此被廣泛應用於分散式系統、微服務架構、雲計算等領域。</p>
+<h2 id="Enqueue"><a href="#Enqueue" class="headerlink" title="Enqueue"></a>Enqueue</h2><p>Enqueue 是一個將元素添加到佇列資料結構尾端的操作。換句話說，它將元素添加到佇列中的最後一個位置。“enqueue”一詞通常用於計算機科學中，用於描述將元素添加到佇列的過程。</p>
+<p>佇列是計算機科學中常用的資料結構，通常用於實現需要先進先出（FIFO）處理順序的演算法。在佇列中，元素添加到佇列的尾端，並從佇列的前端刪除。這意味著第一個添加到佇列的元素是第一個被刪除的元素。</p>
+<p>Enqueue 的相反操作是 Dequeue，它是從佇列的前端刪除元素的操作。enqueue 和 dequeue 操作一起允許我們實現佇列資料結構，可在各種演算法和應用程序中使用。</p>
+<h2 id="C-實作-Producer-生產者"><a href="#C-實作-Producer-生產者" class="headerlink" title="C# 實作 Producer 生產者"></a>C# 實作 Producer 生產者</h2><blockquote>
+<p>Program.cs</p>
+</blockquote>
+<pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">using RabbitMQ.Client;
+using System;
+using System.Text;
+
+class Program
+&#123;
+    static void Main(string[] args)
+    &#123;
+        &#x2F;&#x2F; 建立 RabbitMQ 連線
+        var factory &#x3D; new ConnectionFactory() &#123; HostName &#x3D; &quot;localhost&quot; &#125;;
+        using var connection &#x3D; factory.CreateConnection();
+
+        &#x2F;&#x2F; 建立 RabbitMQ 頻道
+        using var channel &#x3D; connection.CreateModel();
+
+        &#x2F;&#x2F; 宣告一個名為「demo-queue」的佇列
+        channel.QueueDeclare(queue: &quot;demo-queue&quot;,
+                             durable: false,
+                             exclusive: false,
+                             autoDelete: false,
+                             arguments: null);
+
+        &#x2F;&#x2F; 要發送的訊息
+        string message &#x3D; &quot;Hello, RabbitMQ!&quot;;
+
+        &#x2F;&#x2F; 將訊息轉換成 byte 陣列
+        var body &#x3D; Encoding.UTF8.GetBytes(message);
+
+        &#x2F;&#x2F; 發送訊息到名為「demo-queue」的佇列中
+        channel.BasicPublish(exchange: &quot;&quot;,
+                             routingKey: &quot;demo-queue&quot;,
+                             basicProperties: null,
+                             body: body);
+
+        Console.WriteLine($&quot;Sent message: &#123;message&#125;&quot;);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="C-實作-Consumer-消費者"><a href="#C-實作-Consumer-消費者" class="headerlink" title="C# 實作 Consumer 消費者"></a>C# 實作 Consumer 消費者</h2><blockquote>
+<p>SomeService &#x3D;&gt; Receiver.cs</p>
+</blockquote>
+<pre class="line-numbers language-C#" data-language="C#"><code class="language-C#">using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using System;
+using System.Text;
+
+class Receiver
+&#123;
+    static void Main(string[] args)
+    &#123;
+        &#x2F;&#x2F; 建立 RabbitMQ 連線
+        var factory &#x3D; new ConnectionFactory() &#123; HostName &#x3D; &quot;localhost&quot; &#125;;
+        using var connection &#x3D; factory.CreateConnection();
+
+        &#x2F;&#x2F; 建立 RabbitMQ 頻道
+        using var channel &#x3D; connection.CreateModel();
+
+        &#x2F;&#x2F; 宣告一個名為「demo-queue」的佇列
+        channel.QueueDeclare(queue: &quot;demo-queue&quot;,
+                             durable: false,
+                             exclusive: false,
+                             autoDelete: false,
+                             arguments: null);
+
+        &#x2F;&#x2F; 建立一個事件消費者
+        var consumer &#x3D; new EventingBasicConsumer(channel);
+
+        &#x2F;&#x2F; 設定接收到訊息後的處理程序
+        consumer.Received +&#x3D; (model, ea) &#x3D;&gt;
+        &#123;
+            &#x2F;&#x2F; 取得接收到的訊息
+            var body &#x3D; ea.Body.ToArray();
+            var message &#x3D; Encoding.UTF8.GetString(body);
+
+            Console.WriteLine($&quot;Received message: &#123;message&#125;&quot;);
+        &#125;;
+
+        &#x2F;&#x2F; 開始接收來自名為「demo-queue」的佇列的訊息
+        channel.BasicConsume(queue: &quot;demo-queue&quot;,
+                             autoAck: true,
+                             consumer: consumer);
+
+        Console.WriteLine(&quot;Press [enter] to exit.&quot;);
+        Console.ReadLine();
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Q-amp-A：為何要宣告兩次-demo-queue-序列？"><a href="#Q-amp-A：為何要宣告兩次-demo-queue-序列？" class="headerlink" title="Q&amp;A：為何要宣告兩次 demo-queue 序列？"></a>Q&amp;A：為何要宣告兩次 demo-queue 序列？</h2><p>因為在 RabbitMQ 中，發送者和接收者都需要在他們的程式中宣告序列，以便能夠發送和接收訊息，兩個序列宣告是相同的，且<code>它們的設置必須是相同的</code>。如果一個<code>序列不存在</code>，那麼當我們向這個序列<code>發送訊息時，RabbitMQ 會自動創建這個序列</code>。</p>
+
     </div>
   </article>
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
@@ -178,7 +280,7 @@
               <aside class="rightAside">
                 <section>
                   <h4>Table of contents</h4>
-                  
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A%E7%82%BA%E4%BD%95%E8%A6%81%E5%AE%A3%E5%91%8A%E5%85%A9%E6%AC%A1-demo-queue-%E5%BA%8F%E5%88%97%EF%BC%9F"><span class="toc-text">Q&amp;A：為何要宣告兩次 demo-queue 序列？</span></a></li></ol>
                 </section>
               </aside>
 
@@ -193,7 +295,7 @@
                         onclick="tocModalClose()"></button>
                     </div>
                     <div class="modal-body">
-                      
+                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A%E7%82%BA%E4%BD%95%E8%A6%81%E5%AE%A3%E5%91%8A%E5%85%A9%E6%AC%A1-demo-queue-%E5%BA%8F%E5%88%97%EF%BC%9F"><span class="toc-text">Q&amp;A：為何要宣告兩次 demo-queue 序列？</span></a></li></ol>
                     </div>
                   </div>
                 </div>
