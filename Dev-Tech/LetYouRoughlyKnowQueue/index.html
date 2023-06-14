@@ -251,7 +251,15 @@ class Receiver
     &#125;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="Q-amp-A：為何要宣告兩次-demo-queue-序列？"><a href="#Q-amp-A：為何要宣告兩次-demo-queue-序列？" class="headerlink" title="Q&amp;A：為何要宣告兩次 demo-queue 序列？"></a>Q&amp;A：為何要宣告兩次 demo-queue 序列？</h2><p>因為在 RabbitMQ 中，發送者和接收者都需要在他們的程式中宣告序列，以便能夠發送和接收訊息，兩個序列宣告是相同的，且<code>它們的設置必須是相同的</code>。如果一個<code>序列不存在</code>，那麼當我們向這個序列<code>發送訊息時，RabbitMQ 會自動創建這個序列</code>。</p>
+<h2 id="Q-amp-A："><a href="#Q-amp-A：" class="headerlink" title="Q&amp;A："></a>Q&amp;A：</h2><ol>
+<li>為何要宣告兩次 demo-queue 序列？</li>
+</ol>
+<p>因為在 RabbitMQ 中，發送者和接收者都需要在他們的程式中宣告序列，以便能夠發送和接收訊息，兩個序列宣告是相同的，且<code>它們的設置必須是相同的</code>。如果一個<code>序列不存在</code>，那麼當我們向這個序列<code>發送訊息時，RabbitMQ 會自動創建這個序列</code>。</p>
+<ol start="2">
+<li>如果測試的 RabbitMQ 是架設在非本機，執行 queue 名稱可能會重複，造成 consume 收尋不到</li>
+</ol>
+<p>需要 mq server 重啟，或換名稱才能撈到</p>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a target="_blank" rel="noopener" href="https://kucw.github.io/blog/2020/11/rabbitmq/">RabbitMQ 基本介紹、安裝教學</a></p>
 
     </div>
   </article>
@@ -280,7 +288,7 @@ class Receiver
               <aside class="rightAside">
                 <section>
                   <h4>Table of contents</h4>
-                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A%E7%82%BA%E4%BD%95%E8%A6%81%E5%AE%A3%E5%91%8A%E5%85%A9%E6%AC%A1-demo-queue-%E5%BA%8F%E5%88%97%EF%BC%9F"><span class="toc-text">Q&amp;A：為何要宣告兩次 demo-queue 序列？</span></a></li></ol>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A"><span class="toc-text">Q&amp;A：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
                 </section>
               </aside>
 
@@ -295,7 +303,7 @@ class Receiver
                         onclick="tocModalClose()"></button>
                     </div>
                     <div class="modal-body">
-                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A%E7%82%BA%E4%BD%95%E8%A6%81%E5%AE%A3%E5%91%8A%E5%85%A9%E6%AC%A1-demo-queue-%E5%BA%8F%E5%88%97%EF%BC%9F"><span class="toc-text">Q&amp;A：為何要宣告兩次 demo-queue 序列？</span></a></li></ol>
+                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A"><span class="toc-text">Q&amp;A：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
                     </div>
                   </div>
                 </div>
