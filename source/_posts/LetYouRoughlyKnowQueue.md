@@ -132,6 +132,17 @@ class Receiver
 }
 ```
 
-## Q&A：為何要宣告兩次 demo-queue 序列？
+## Q&A：
+
+1. 為何要宣告兩次 demo-queue 序列？
 
 因為在 RabbitMQ 中，發送者和接收者都需要在他們的程式中宣告序列，以便能夠發送和接收訊息，兩個序列宣告是相同的，且`它們的設置必須是相同的`。如果一個`序列不存在`，那麼當我們向這個序列`發送訊息時，RabbitMQ 會自動創建這個序列`。
+
+
+2. 如果測試的 RabbitMQ 是架設在非本機，執行 queue 名稱可能會重複，造成 consume 收尋不到
+
+需要 mq server 重啟，或換名稱才能撈到
+
+## 參考
+
+[RabbitMQ 基本介紹、安裝教學](https://kucw.github.io/blog/2020/11/rabbitmq/)
