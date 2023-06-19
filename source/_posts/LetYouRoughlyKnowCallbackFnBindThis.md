@@ -196,3 +196,9 @@ function initFreshChat() {
 另一方面，當 initialize 函數中的 getElementById 方法返回 true，並且調用了 initFreshChat 函數時，initFreshChat 函數中的 this 則會指向 fcWidget 對象，因為 initFreshChat 函數是作為 fcWidget 對象的一個方法被調用的。在這種情況下，this 會被繫結到方法被調用的對象上，即 fcWidget 對象。
 
 [https://stackoverflow.com/questions/20279484/how-to-access-the-correct-this-inside-a-callback](how-to-access-the-correct-this-inside-a-callback)
+
+## 箭頭函式 & this
+
+[箭頭函式（arrow function）和它對 this 的影響](https://pjchender.dev/javascript/js-arrow-function/)
+
+todo 找時間補
