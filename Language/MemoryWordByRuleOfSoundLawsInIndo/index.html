@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>您的網路共筆-UrWeb</title>
+  
+      
+        <meta name="description"
+          content="文章作者: johch3n611u 創作日期: 2023/06/20 文章類型: Language，查看本文章獲取更多訊息。">
+        
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+          
+<link rel="stylesheet" href="/css/prism.css">
+
+            
+<link rel="stylesheet" href="/css/main.css">
+
+              <!-- Google Tag Manager -->
+              <script>(function (w, d, s, l, i) {
+                  w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                      new Date().getTime(), event: 'gtm.js'
+                  }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                      'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-T4FDJRJ');</script>
+              <!-- End Google Tag Manager -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+                integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body onload="responsiveIframe()">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="mobileBox">
+      <div class="brandBox">
+        <a href="/" class="d-flex align-items-center">
+          <h1 class="m-0">
+            您的網路共筆
+          </h1>
+        </a>
+      </div>
+      <div class="desktop-show">       <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+      </div>
+      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+  <!-- <h1>
+      <a href="/">Home</a> |
+      <a href="/archives">Archive</a> |
+      tags
+      <a href="/about/">About</a>
+    </h1> -->
+  <div class="outter-wrap container-fluid">
+    <aside class="leftAside">
+      <nav>
+        <ul>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="d-md-none input-group"><input type="search" name="q" class="d-md-none input-group-input" placeholder="Search"><button type="submit" class="d-md-none input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+            <!-- <li>
+            <h4>
+              <a href="/about/">關於我們</a>
+            </h4>
+          </li> -->
+          <li style="margin-top: 50px;">
+            <h4>
+              <a href="https://forms.gle/Mzn7eLEtW3oiscMT6" target="_blank">Contact / Subscribe</a>
+            </h4>
+          </li>
+            <li>
+              <h4>
+                <a href="#" id="authorsBtn">Authors <i class="fa-solid fa-square-caret-up"></i></a>
+              </h4>
+              <div id="authors">
+                <ul class="author-list">
+                  <li> 
+                    <a href="/author/kai98k">kai98k</a>
+                  </li>
+                  <li> 
+                    <a href="/author/johch3n611u">johch3n611u</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <h4>
+                <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+              </h4>
+              <div id="categories">
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dev-Tech/">Dev Tech</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/">轉職成長</a><span class="category-list-count">2</span></li></ul>
+              </div>
+            </li>
+            <li>
+              <h4>
+                <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+              </h4>
+              <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Authorization/" style="font-size: 10px;">Authorization</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/Computer-Science/" style="font-size: 10px;">Computer Science</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Exception/" style="font-size: 10px;">Exception</a> <a href="/tags/Filter/" style="font-size: 10px;">Filter</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/Internet/" style="font-size: 17.5px;">Internet</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Log/" style="font-size: 12.5px;">Log</a> <a href="/tags/Note/" style="font-size: 15px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/RabbitMQ/" style="font-size: 10px;">RabbitMQ</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/" style="font-size: 10px;">成長思維</a> <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/" style="font-size: 10px;">設計思考</a></div>
+            </li>
+        </ul>
+      </nav>
+    </aside>
+          <main class="container postWrap">
+  <article class="postArticle">
+    <div class="postArticleHeader">
+      <h1 class="pt-1">詞源學如何幫你五天記住一萬個單字-筆記</h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="/Language/MemoryWordByRuleOfSoundLawsInIndo/" />
+        </p>
+        <span>|</span>
+        <p>2023/06/20</p>
+        <span>|</span>
+        <p>
+          
+            <a href="/categories/Language/ ">Language </a>
+            
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
+          
+            <li>
+              <a href="/tags/English/"><i class="fa-solid fa-tag"></i> English
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+    <div class="postArticleContent">
+      <div class="authorsWordsBox">
+        <p class="title">johch3n611u</p>
+        <p class="content">感覺還是 WordUp 搭配艾賓浩斯遺忘曲線，計畫性複習感覺會比較有用，印歐語語音規則加減記憶就好</p>
+      </div>
+      <p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=AFgZbU3AhlY&ab_channel=CrazyEnglish">5天就能記住1萬個單詞的方法，老師為什麽不教？用结果说话，因为结果不会骗人一套高效背单词的方法，单词记忆法。快速提高中考高考英语，四级六级考研雅思托福词汇量</a></p>
+<h2 id="印歐語語音規則"><a href="#印歐語語音規則" class="headerlink" title="印歐語語音規則"></a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E5%8D%B0%E6%AC%A7%E8%AF%AD%E8%AF%AD%E9%9F%B3%E5%AE%9A%E5%BE%8B%E6%A6%82%E8%A7%88">印歐語語音規則</a></h2><p>單字 &#x3D; 字根 + 詞綴 (前中後間複綴)</p>
+<p>simultaneously 同時</p>
+<p>sim 字根 + ul 形容詞 + tane 字根 + ous 形容詞 + ly 副詞</p>
+<blockquote>
+<p>詞綴：附著在詞根或詞幹的語素不能單獨成字，只表示單字的詞性。 e.g. looking 裡面的 “ing”、吃過飯裡面的 “過”</p>
+</blockquote>
+<p>sim &#x3D; 相同，tane 時間</p>
+<p>s<code>i</code>m &#x3D; s<code>a</code>me , t<code>an</code>e &#x3D; t<code>im</code>e</p>
+<blockquote>
+<p>原音&#x2F;母音：a、e、i、o、u</p>
+</blockquote>
+<h2 id="印歐語語音規則-1"><a href="#印歐語語音規則-1" class="headerlink" title="印歐語語音規則"></a>印歐語語音規則</h2><ol>
+<li>元音大推移</li>
+<li>維爾納定律</li>
+<li>R 音位移</li>
+<li>薩賓 L</li>
+<li>格林定律</li>
+</ol>
+<hr>
+<p>詞源不變發音改變</p>
+<blockquote>
+<p>詞源：詞語的起源和演變過程，核心意思</p>
+</blockquote>
+<ol>
+<li>a e i o u 互換</li>
+<li>g k h 互換</li>
+<li>d t s 互換</li>
+<li>u v w 互換</li>
+<li>m n l r 互換</li>
+<li>b p m f v 互換</li>
+</ol>
+<hr>
+<ul>
+<li>簡單字 &#x3D;&gt; 複雜字</li>
+</ul>
+<p>英語是拼音文字，發音改變書寫改變</p>
+<p>b<code>i</code>g 大 &#x3D;&gt; b<code>a</code>g 袋子</p>
+<ul>
+<li>單數 &#x3D;&gt; 複數</li>
+</ul>
+<p>m<code>a</code>n &#x2F; m<code>e</code>n</p>
+<p>f<code>oo</code>t &#x2F; f<code>ee</code>t</p>
+<p>t<code>oo</code>th &#x2F; t<code>ee</code>th</p>
+<ul>
+<li>不規則動詞</li>
+</ul>
+<p>dr<code>i</code>nk &#x2F; dr<code>a</code>nk &#x2F; dr<code>u</code>nk</p>
+<p>s<code>i</code>ng &#x2F; s<code>o</code>ng &#x2F; s<code>u</code>ng</p>
+<p>f<code>i</code>nd &#x2F; f<code>ou</code>nd &#x2F; f<code>ou</code>nd</p>
+<p>t<code>ear</code> &#x2F; t<code>ore</code> &#x2F; t<code>orn</code></p>
+<h2 id="a-e-i-o-u-母音-w-y-半母音-互換"><a href="#a-e-i-o-u-母音-w-y-半母音-互換" class="headerlink" title="a e i o u 母音 w y 半母音 互換"></a>a e i o u 母音 w y 半母音 互換</h2><p>變換位子也會增減，但意思不變</p>
+<p>r<code>e</code>st 休息 &#x3D; r<code>u</code>st 生鏽 </p>
+<p>sh<code>i</code>rt 襯衫 &#x3D; sh<code>o</code>rt 短的</p>
+<p>a e i o u 母音 w y 半母音</p>
+<p>yes \jes\ , fly \flai\</p>
+<p>stud<code>y</code> -&gt; stud<code>i</code>ed , cit<code>y</code> -&gt; cit<code>i</code>es</p>
+<h3 id="詞根應用"><a href="#詞根應用" class="headerlink" title="詞根應用"></a>詞根應用</h3><p><code>u</code>n<code>i</code> 一、統一 &#x3D; <code>o</code>n<code>e</code></p>
+<p>詞綴常用的就幾十個</p>
+<p>tr<code>i</code> &#x3D; thr<code>ee</code></p>
+<p>t &#x3D; th &#x3D;&gt; h 送氣音脫落</p>
+<p>i &#x3D; ee 元音互換</p>
+<p>音變 &#x3D; 方言 &#x3D; 外語 ( 中文 &#x2F; 日語 &#x2F; 韓語 )</p>
+<h2 id="u-x3D-v-x3D-w-互換"><a href="#u-x3D-v-x3D-w-互換" class="headerlink" title="u &#x3D; v &#x3D; w 互換"></a>u &#x3D; v &#x3D; w 互換</h2><p>字母 u &#x2F; w 由 v 派生出來</p>
+<p>19th , u &#x3D; v</p>
+<p>w &#x3D; double u</p>
+<h3 id="詞根應用-1"><a href="#詞根應用-1" class="headerlink" title="詞根應用"></a>詞根應用</h3><p><code>nov</code>el coronavirus 新型冠狀病毒</p>
+<p>n<code>ov</code> (詞根) 新 + el (詞綴) 小東西 &#x3D;&gt; n<code>ew</code></p>
+<p>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</p>
+<p>新奇事物 <code>novel</code>ty &#x3D;&gt; ty 表名詞</p>
+<p>新星 <code>nov</code>a &#x3D;&gt; a 表方向</p>
+<p>更新 <code>nov</code>ation &#x3D;&gt; action 表名詞</p>
+<p>新手 <code>nov</code>ice &#x3D;&gt; ice 表人</p>
+<p>創新 in<code>nov</code>ate &#x3D;&gt; in 進入 + ate 表動詞 </p>
+<p>創新的 in<code>nov</code>ative &#x3D;&gt; in 進入 + ive 表形容詞</p>
+<p>翻新 re<code>nov</code>ate &#x3D;&gt; re 重新 + ate 表動詞</p>
+<p>創新 in<code>nov</code>ation &#x3D;&gt; in 進入 + tion 名詞</p>
+<p>翻新 re<code>nov</code>ation &#x3D;&gt; re 重新 + tion 名詞</p>
+<hr>
+<p><code>vol</code>unteer 志願者 </p>
+<p><code>vo</code>l &#x3D; <code>wi</code>ll 願意</p>
+<p>&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</p>
+<p>bene<code>vol</code>ence 善意 &#x3D; bene 好 + ence 表明詞</p>
+<p>bene<code>vol</code>ent 善心的 &#x3D; bene 好 + ent 形容詞</p>
+<p>b &#x3D; p &#x3D; m &#x3D; f &#x3D; v</p>
+<blockquote>
+<p><code>be</code>ne &#x3D;&gt; <code>fi</code>ne 好、頂尖 &#x3D;&gt; <code>fi</code>n 尖、結束、魚鰭 &#x3D;&gt; <code>pe</code>n 鋼筆 ( penn 羽毛 )<br>final 結果 &#x3D; fin 結束 + al 表形容詞<br>finance 資金 &#x3D; fin 結束 ance 名詞</p>
+</blockquote>
+<p>male<code>vol</code>ence 惡意 &#x3D; male 壞 + ence 表明詞</p>
+<p>male<code>vol</code>ent 壞心的 &#x3D; male 壞 + ent 形容詞</p>
+<p><code>vol</code>unteer 志願者 &#x3D; volunt 志願 + eer 者</p>
+<p><code>vol</code>untary 自願的 &#x3D; volunt 志願 + ary 表形容詞 ( 形容名詞 )</p>
+<p><code>vol</code>untarily 自願地 &#x3D; volunt 志願 + ly 表副詞 ( 形容動詞 )</p>
+<p>in<code>vol</code>untary 非自願的 &#x3D; in 不 + ary 表形容詞</p>
+<p><code>vol</code>ition 意志力 &#x3D; tion 表名詞</p>
+<p><code>vol</code>itional 意志力的 &#x3D; al 表形容詞</p>
+<p><code>vol</code>itive 意志的 &#x3D; tive 表形容詞</p>
+<h2 id="g-x3D-k-c-x3D-h"><a href="#g-x3D-k-c-x3D-h" class="headerlink" title="g &#x3D; k ( c ) &#x3D; h"></a>g &#x3D; k ( c ) &#x3D; h</h2><p><code>c</code>at &#x2F; s<code>k</code>irt &#x2F; s<code>k</code>ill</p>
+<p>合作 &#x2F; 給 &#x2F; 會計 &#x2F; 會議</p>
+<p><code>g</code>lue 澆水 &#x3D; <code>c</code>lue 線索 同詞源連接不同的東西</p>
+<p><code>h</code>orn 角 &#x3D; <code>c</code>orn 玉米 &#x3D; uni<code>c</code>orn 獨角獸</p>
+<h2 id="m-x3D-n-x3D-l-x3D-r"><a href="#m-x3D-n-x3D-l-x3D-r" class="headerlink" title="m &#x3D; n &#x3D; l &#x3D; r"></a>m &#x3D; n &#x3D; l &#x3D; r</h2><p>su<code>n</code> 太陽 &#x3D; su<code>m</code>mer 夏天 </p>
+<p>s<code>un</code> &#x3D; s<code>ol</code> 詞根 太陽、一個</p>
+<p><code>moo</code>n &#x3D; <code>lu</code>n 月亮</p>
+<p>s<code>am</code>e &#x3D; s<code>am</code> &#x3D; s<code>em</code> &#x3D; s<code>im</code> &#x3D; s<code>yn</code> &#x3D; s<code>y</code> &#x3D;s<code>ym</code> &#x3D; s<code>yl</code> 相同、一致</p>
+<p>n &#x3D; 鼻音脫落</p>
+<h2 id="d-x3D-t-x3D-s-c-x3D-th"><a href="#d-x3D-t-x3D-s-c-x3D-th" class="headerlink" title="d &#x3D; t &#x3D; s ( c ) &#x3D; th"></a>d &#x3D; t &#x3D; s ( c ) &#x3D; th</h2><p><code>c</code>at &#x2F; de<code>c</code>ide &#x2F; <code>th</code>ink &#x2F; <code>th</code>ank </p>
+<p>s<code>t</code>op &#x2F; s<code>t</code>and &#x3D;&gt; d 的音</p>
+<p>提高 &#x2F; 調皮 &#x2F; 堤防 &#x2F; 調換</p>
+<p><code>den</code>tal &#x2F; <code>tee</code>th &#x2F; <code>too</code>th 牙齒</p>
+<hr>
+<p>vit &#x3D; vis &#x3D; vid &#x3D; wis &#x3D; wit 看</p>
+<p><code>vid</code>eo &#x3D;&gt; o 聲波</p>
+<p><code>vis</code>it 參觀 &#x2F; <code>wit</code>ness 證人 ness 表名詞</p>
+<p>radio &#x3D;&gt; o 聲波</p>
+<h2 id="非典型音變"><a href="#非典型音變" class="headerlink" title="非典型音變"></a>非典型音變</h2><p>v &#x3D; s &#x3D; d </p>
+<p>ha<code>v</code>e &#x3D; ha<code>s</code> &#x3D; ha<code>d</code></p>
+<hr>
+<p>s &#x3D; z</p>
+<p>i<code>s</code>e 英式 &#x3D; i<code>z</code>e 美式</p>
+<hr>
+<p>g &#x3D; j</p>
+<p><code>g</code>ab  &#x3D; <code>j</code>ibe 嘲笑</p>
+<hr>
+<p>g &#x3D; y</p>
+<p><code>g</code>arden 花園 &#x3D; <code>y</code>ard 院子</p>
+<hr>
+<p>s &#x3D; h</p>
+<p><code>s</code>emi &#x3D; <code>h</code>emi 一半</p>
+<h2 id="象形字母記憶"><a href="#象形字母記憶" class="headerlink" title="象形字母記憶"></a>象形字母記憶</h2><p>A &#x3D; 牛角</p>
+<p><code>ac</code>ute 尖 &#x2F; <code>a</code>che 疼 &#x2F; <code>ar</code>row 箭 &#x2F; <code>ang</code>er 生氣</p>
+<p><code>eng</code>land 角形地 英格蘭</p>
+<p><code>a</code>ng &#x2F; <code>e</code>ng &#x2F; an<code>k</code> &#x2F; an<code>ch</code></p>
+<hr>
+<p>B 菲尼基人 房子</p>
+<p><code>b</code>uild &#x2F; <code>b</code>ath &#x2F; <code>b</code>ed &#x2F; <code>b</code>ase</p>
+<p>B 兩間房子 兩個 分開</p>
+<p><code>b</code>oth &#x2F; <code>b</code>ike</p>
+<p>br 兩個</p>
+<p><code>br</code>a &#x2F; <code>br</code>ow &#x2F; <code>br</code>ace</p>
+<p><code>br</code>other &#x2F; <code>br</code>ain &#x2F; <code>bir</code>th</p>
+<p>bio &#x3D; live</p>
+<p>birth 出生 &#x3D; bir &#x2F; bio &#x3D; live</p>
+<h2 id="詞根參考"><a href="#詞根參考" class="headerlink" title="詞根參考"></a>詞根參考</h2><ol>
+<li>a-：無、不，例如：atypical（非典型的）</li>
+<li>acu-：尖、銳利，例如：acupuncture（針灸）</li>
+<li>agri-：農業、農村，例如：agriculture（農業）</li>
+<li>ambi-：兩、雙、雙方，例如：ambidextrous（雙手靈巧的）</li>
+<li>anim-：生命、靈魂，例如：animation（動畫）</li>
+<li>ann-：年、年度，例如：anniversary（週年紀念）</li>
+<li>anthrop-：人類、人類學，例如：anthropology（人類學）</li>
+<li>aqua-：水、水色，例如：aquarium（水族館）</li>
+<li>arch-：統治、首領，例如：architect（建築師）</li>
+<li>audi-：聽、聽覺，例如：audience（觀眾）</li>
+<li>auto-：自動、自我，例如：automobile（汽車）</li>
+<li>bio-：生命、生物，例如：biology（生物學）</li>
+<li>cap-：拿、抓、取，例如：capture（捕捉）</li>
+<li>cept-：拿、抓、取，例如：concept（概念）</li>
+<li>chrom-：顏色，例如：chromosome（染色體）</li>
+<li>chron-：時間、歷史，例如：chronic（慢性的）</li>
+<li>cide-：殺、殺死，例如：suicide（自殺）</li>
+<li>circum-：環繞、周圍，例如：circumnavigate（環球航行）</li>
+<li>co-：共同、一起，例如：cooperate（合作）</li>
+<li>cogn-：知道、認識，例如：cognition（認知）</li>
+<li>contra-：相反、對立，例如：contradict（反駁）</li>
+<li>corp-：身體、軀體，例如：corporation（公司）</li>
+<li>cred-：相信、信任，例如：credible（可信的）</li>
+<li>crypto-：隱藏、秘密，例如：cryptocurrency（加密貨幣）</li>
+<li>cycl-：圓、環、周期，例如：cycle（循環）</li>
+<li>de-：向下、離開，例如：deactivate（使失效）</li>
+<li>dec-：十、十進位，例如：decade（十年）</li>
+<li>demo-：人民、民主，例如：democracy（民主）</li>
+<li>dent-：牙齒、齒狀物，例如：dentist（牙醫）</li>
+<li>derm-：皮膚、表皮，例如：dermatology（皮膚學）</li>
+<li>dis-：分開、不、否定，例如：disappear（消失）</li>
+<li>duct-：引導、運輸，例如：conductor（導體）</li>
+<li>du-：兩、雙、雙方，例如：dual（雙重的）</li>
+<li>dynam-：力量、能量，例如：dynamic（動態的）</li>
+<li>eco-：環境、生態，例如：ecosystem（生態系統）</li>
+<li>ego-：自我、自尊，例如：egotistical（自負的）</li>
+<li>en-：使、加強、使…變得更好，例如：enhance（增強）</li>
+<li>endo-：內部、內在，例如：endocrine（內分泌的）</li>
+<li>ex-：出、從…中、超過，例如：exit（出口）</li>
+<li>fac-：做、製造、裝配，例如：factory（工廠）</li>
+<li>fer-：運輸、攜帶，例如：transfer（轉移）</li>
+<li>fid-：信任、忠誠，例如：confide（信任）</li>
+<li>fin-：結束、完結，例如：finish（完成）</li>
+<li>flu-：流動、流利，例如：fluid（流體）</li>
+<li>fore-：前面、預先，例如：forecast（預測）</li>
+<li>form-：形狀、形式，例如：formation（形成）</li>
+<li>fract-：打破、折斷，例如：fracture（骨折）</li>
+<li>gen-：產生、起源、類型，例如：generation（世代）</li>
+<li>geo-：地球、地理，例如：geography（地理學）</li>
+<li>gest-：攜帶、搬運，例如：gestation（懷孕期）</li>
+<li>graph-：寫、繪製、記錄，例如：graphic（圖像的）</li>
+<li>gyn-：女性，例如：gynecology（婦科學）</li>
+<li>helio-：太陽、日光，例如：helioscope（日視儀）</li>
+<li>hetero-：不同、異性，例如：heterogeneous（異質的）</li>
+<li>homo-：同、同性，例如：homogeneous（同質的）</li>
+<li>hydro-：水、水力，例如：hydroelectric（水力發電的）</li>
+<li>hypno-：睡眠、催眠，例如：hypnotize（催眠）</li>
+<li>in-：不、無、否定，例如：invisible（看不見的）</li>
+<li>inter-：在…之間、相互，例如：international（國際的）</li>
+<li>intra-：在…內部、內部的，例如：intravenous（靜脈內的）</li>
+<li>intro-：進入、介紹、開始，例如：introduction（介紹）</li>
+<li>ject-：拋、投、注射，例如：inject（注射）</li>
+<li>jud-：判斷、審判，例如：judgment（判斷）</li>
+<li>junct-：連接、聯繫，例如：junction（連接處）</li>
+<li>kilo-：千、一千，例如：kilogram（千克）</li>
+<li>loc-：地方、位置，例如：location（位置）</li>
+<li>log-：言語、記錄、論文，例如：logic（邏輯）</li>
+<li>luc-：光、明亮，例如：lucent（透明的）</li>
+<li>magn-：大、重要、偉大，例如：magnify（放大）</li>
+<li>man-：手、手工、人，例如：manual（手動的）</li>
+<li>mater-：母親、母性，例如：maternity（母性）</li>
+<li>mega-：大、百萬，例如：megabyte（兆字節）</li>
+<li>micro-：小、微小，例如：microscope（顯微鏡）</li>
+<li>migr-：移動、遷移，例如：migrate（遷徙）</li>
+<li>milli-：千分之一，例如：millimeter（毫米）</li>
+<li>min-：小、少、最小，例如：minimize（最小化）</li>
+<li>mis-：錯誤、不正確，例如：misunderstand（誤解）</li>
+<li>mit-：送、發送，例如：submit（提交）</li>
+<li>mono-：單一、單一的，例如：monochrome（單色的）</li>
+<li>morph-：形狀、形態，例如：metamorphosis（變態）</li>
+<li>multi-：多、多種，例如：multifunctional（多功能的）</li>
+<li>narr-：講述、敘述，例如：narrative（敘事）</li>
+<li>nat-：出生、天然，例如：natural（自然的）</li>
+<li>nav-：船、航行，例如：navigation（導航）</li>
+<li>neg-：否定、否認，例如：negative（否定的）</li>
+<li>neo-：新、現代，例如：neoclassical（新古典主義的）</li>
+<li>neuro-：神經、神經系統，例如：neuroscience（神經科學）</li>
+<li>non-：不、非、無，例如：nonexistent（不存在的）</li>
+<li>nov-：新、新奇，例如：novelty（新奇）</li>
+<li>ob-：反對、對抗，例如：obstruct（阻礙）</li>
+<li>omni-：全部、萬能，例如：omniscient（全知的）</li>
+<li>ortho-：正確、直立，例如：orthodontics（牙齒矯正）</li>
+<li>paleo-：古代、古老，例如：paleontology（古生物學）</li>
+<li>pan-：全、全部、普遍，例如：panorama（全景）</li>
+<li>para-：旁、相對、相似，例如：paralegal（律師助手）</li>
+<li>path-：感情、疾病、痛苦，例如：pathology（病理學）</li>
+<li>ped-：兒童、教育，例如：pediatrics（兒科學）</li>
+<li>pent-：五、五個，例如：pentagon（五邊形）</li>
+<li>phil-：愛、友愛，例如：philosophy（哲學）</li>
+<li>phobia-：恐懼、厭惡，例如：arachnophobia（蜘蛛恐懼症）</li>
+</ol>
+<h2 id="詞綴參考"><a href="#詞綴參考" class="headerlink" title="詞綴參考"></a>詞綴參考</h2><ul>
+<li>前綴：</li>
+</ul>
+<ol>
+<li>a-：沒有、不，例如：amoral（不道德的）、atypical（非典型的）</li>
+<li>ab-：離開、不，例如：abnormal（異常的）、absent（缺席的）</li>
+<li>ad-：朝向、加強，例如：adapt（適應）、advance（前進）</li>
+<li>anti-：反對、對抗，例如：antibacterial（抗菌的）、antidepressant（抗抑郁劑）</li>
+<li>auto-：自動、自我，例如：autonomous（自治的）、automatic（自動的）</li>
+<li>co-：共同、一起，例如：cooperate（合作）、coexist（共存）</li>
+<li>de-：去除、除去，例如：devalue（貶值）、deactivate（使失效）</li>
+<li>dis-：相反、不、缺乏，例如：disagree（不同意）、dislike（不喜歡）</li>
+<li>en-：使、加強、使…變得更好，例如：enforce（強制執行）、enhance（增強）</li>
+<li>ex-：前、以前、超過，例如：ex-husband（前夫）、exceed（超過）</li>
+<li>fore-：在前面、預先，例如：forecast（預測）、foresee（預見）</li>
+<li>hyper-：過度、超過，例如：hyperactive（過度活躍的）、hypertension（高血壓）</li>
+<li>in-：否定、不、無、不完全，例如：incomplete（不完整的）、inaccurate（不精確的）</li>
+<li>inter-：相互、之間，例如：interact（互動）、interpersonal（人際關係的）</li>
+<li>intro-：內部、內在，例如：introvert（內向的）、introduce（介紹）</li>
+<li>mal-：不好的、壞的，例如：malfunction（故障）、malnutrition（營養不良）</li>
+<li>micro-：微小的、微觀的，例如：microbe（微生物）、microscopic（微小的）</li>
+<li>mid-：中間、中央，例如：midday（中午）、midlife（中年）</li>
+<li>mis-：錯誤、錯誤的，例如：misunderstand（誤解）、mistake（錯誤）</li>
+<li>multi-：多、多種、多樣化，例如：multicultural（多元文化的）、multitasking（多任務的）</li>
+<li>non-：非、不是，例如：nonprofit（非營利的）、nonstop（不停的）</li>
+<li>over-：過度、過多，例如：overconfident（過度自信的）、overestimate（高估）</li>
+<li>post-：後、後面、後期，例如：postgraduate（研究生）、postpone（延期）</li>
+<li>pre-：預先、事先，例如：prepare（準備）、prepay（預付）</li>
+<li>pro-：支持、贊成，例如：proactive（積極主動的）、protest（抗議）</li>
+<li>re-：重新、再次，例如：renew（更新）、recharge（重新充電）</li>
+<li>semi-：半、部分，例如：semicircle（半圓）、semifinal（半決賽）</li>
+<li>sub-：下、下面、次要的，例如：subway（地鐵）、substandard（不合規格的）</li>
+<li>super-：超級、超越，例如：superhuman（超人的）、superpower（超級大國）</li>
+<li>trans-：跨越、穿過，例如：transport（運輸）、transatlantic（跨大西洋的）</li>
+<li>ultra-：極端、超過，例如：ultraviolet（紫外線的）、ultram-odern（超現代的）</li>
+<li>un-：否定、不、缺乏，例如：unhappy（不快樂的）、unable（無法的）</li>
+</ol>
+<ul>
+<li>後綴：</li>
+</ul>
+<ol>
+<li>-able&#x2F;-ible：能夠、有能力，例如：comfortable（舒適的）、flexible（靈活的）</li>
+<li>-al&#x2F;-ial：與…有關、與…相似，例如：personal（個人的）、environmental（環境的）</li>
+<li>-an&#x2F;-ian：…的人或事物，例如：American（美國人）、musician（音樂家）</li>
+<li>-ant&#x2F;-ent：具有…性質的、做…的人，例如：important（重要的）、student（學生）</li>
+<li>-ar&#x2F;-er：做…的人、…器具，例如：teacher（教師）、computer（電腦）</li>
+<li>-ary&#x2F;-ery&#x2F;-ory：…的、…屬於，例如：library（圖書館）、military（軍事的）</li>
+<li>-ate：使…、成為…，例如：activate（啟動）、accumulate（累積）</li>
+<li>-en：使…、變成…，例如：enlighten（啟發）、brighten（變亮）</li>
+<li>-er&#x2F;-or：做…的人、…器具，例如：teacher（教師）、computer（電腦）</li>
+<li>-ful：充滿、具有，例如：grateful（感激的）、helpful（有幫助的）</li>
+<li>-fy：使…、變成…，例如：simplify（簡化）、beautify（美化）</li>
+<li>-ic&#x2F;-ical：…的、與…有關的，例如：scientific（科學的）、historical（歷史的）</li>
+<li>-ify：使…、變成…，例如：intensify（強化）、clarify（澄清）</li>
+<li>-ing：正在進行的、…的，例如：interesting（有趣的）、running（跑步的）</li>
+<li>-ion&#x2F;-tion&#x2F;-sion：動作或狀態，例如：action（行動）、attention（注意力）、decision（決定）</li>
+<li>-ish：稍微、有點，例如：yellowish（稍微帶黃色的）</li>
+<li>-ism：…主義，例如：capitalism（資本主義）、feminism（女權主義）</li>
+<li>-ist：…的人，例如：dentist（牙醫）、scientist（科學家）</li>
+<li>-ive&#x2F;-ative&#x2F;-itive：有…的、產生…的，例如：creative（有創造力的）、positive（積極的）</li>
+<li>-ize&#x2F;-ise：使…、變成…，例如：organize（組織）、realize（實現）</li>
+<li>-less：沒有、無，例如：hopeless（無望的）、useless（無用的）</li>
+<li>-ly：…的方式、以…方式，例如：quickly（快速地）、happily（快樂地）</li>
+<li>-ment：行動、過程，例如：movement（運動）、improvement（改進）</li>
+<li>-ness：…的狀態、…的品質，例如：happiness（幸福）、kindness（友善）</li>
+<li>-ous&#x2F;-eous&#x2F;-ious：有…特徵的，例如：famous（著名的）、delicious（美味的）</li>
+<li>-ship：…的狀態、…的關係，例如：leadership（領導能力）、friendship（友誼）</li>
+<li>-some：有…的、令人感到…的，例如：handsome（英俊的）、wholesome（健康的）</li>
+<li>-tion&#x2F;-ation：…的過程或狀態，例如：communication（溝通）、education（教育）</li>
+<li>-ty&#x2F;-ity：…的狀態，例如：quality（品質）、diversity（多樣性）</li>
+<li>-ward&#x2F;-wards：向…的方向，例如：forward（向前的）、upward（向上的）</li>
+</ol>
+
+    </div>
+  </article>
+  <div class="postNext d-flex justify-content-between mt-3 mb-3">
+    
+        
+          <h4>
+            <a href="/Dev-Tech/LetYouRoughlyKnowQueue/">
+              讓你大概搞懂 Queue <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </h4>
+          
+  </div>
+  
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    let option = '{"el":"#waline","enable":true,"serverURL":"https://waline-urweb.vercel.app/","placeholder":"歡迎隨時提出您的建議，並不吝指教","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/waline/2.14.5/waline.js","pageview":true,"reaction":true}';
+    init(JSON.parse(option));
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+  
+    <input style="display:none" onload="addTotalViews()">
+</main>
+            
+              <aside class="rightAside">
+                <section>
+                  <h4>Table of contents</h4>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B0%E6%AD%90%E8%AA%9E%E8%AA%9E%E9%9F%B3%E8%A6%8F%E5%89%87"><span class="toc-text">印歐語語音規則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B0%E6%AD%90%E8%AA%9E%E8%AA%9E%E9%9F%B3%E8%A6%8F%E5%89%87-1"><span class="toc-text">印歐語語音規則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a-e-i-o-u-%E6%AF%8D%E9%9F%B3-w-y-%E5%8D%8A%E6%AF%8D%E9%9F%B3-%E4%BA%92%E6%8F%9B"><span class="toc-text">a e i o u 母音 w y 半母音 互換</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A9%9E%E6%A0%B9%E6%87%89%E7%94%A8"><span class="toc-text">詞根應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u-x3D-v-x3D-w-%E4%BA%92%E6%8F%9B"><span class="toc-text">u &#x3D; v &#x3D; w 互換</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A9%9E%E6%A0%B9%E6%87%89%E7%94%A8-1"><span class="toc-text">詞根應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#g-x3D-k-c-x3D-h"><span class="toc-text">g &#x3D; k ( c ) &#x3D; h</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#m-x3D-n-x3D-l-x3D-r"><span class="toc-text">m &#x3D; n &#x3D; l &#x3D; r</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#d-x3D-t-x3D-s-c-x3D-th"><span class="toc-text">d &#x3D; t &#x3D; s ( c ) &#x3D; th</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E5%85%B8%E5%9E%8B%E9%9F%B3%E8%AE%8A"><span class="toc-text">非典型音變</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B1%A1%E5%BD%A2%E5%AD%97%E6%AF%8D%E8%A8%98%E6%86%B6"><span class="toc-text">象形字母記憶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A9%9E%E6%A0%B9%E5%8F%83%E8%80%83"><span class="toc-text">詞根參考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A9%9E%E7%B6%B4%E5%8F%83%E8%80%83"><span class="toc-text">詞綴參考</span></a></li></ol>
+                </section>
+              </aside>
+
+              <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+
+              <div class="modal" tabindex="-1" id="tocModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Table of Contents</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        onclick="tocModalClose()"></button>
+                    </div>
+                    <div class="modal-body">
+                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B0%E6%AD%90%E8%AA%9E%E8%AA%9E%E9%9F%B3%E8%A6%8F%E5%89%87"><span class="toc-text">印歐語語音規則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B0%E6%AD%90%E8%AA%9E%E8%AA%9E%E9%9F%B3%E8%A6%8F%E5%89%87-1"><span class="toc-text">印歐語語音規則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#a-e-i-o-u-%E6%AF%8D%E9%9F%B3-w-y-%E5%8D%8A%E6%AF%8D%E9%9F%B3-%E4%BA%92%E6%8F%9B"><span class="toc-text">a e i o u 母音 w y 半母音 互換</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A9%9E%E6%A0%B9%E6%87%89%E7%94%A8"><span class="toc-text">詞根應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u-x3D-v-x3D-w-%E4%BA%92%E6%8F%9B"><span class="toc-text">u &#x3D; v &#x3D; w 互換</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A9%9E%E6%A0%B9%E6%87%89%E7%94%A8-1"><span class="toc-text">詞根應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#g-x3D-k-c-x3D-h"><span class="toc-text">g &#x3D; k ( c ) &#x3D; h</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#m-x3D-n-x3D-l-x3D-r"><span class="toc-text">m &#x3D; n &#x3D; l &#x3D; r</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#d-x3D-t-x3D-s-c-x3D-th"><span class="toc-text">d &#x3D; t &#x3D; s ( c ) &#x3D; th</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E5%85%B8%E5%9E%8B%E9%9F%B3%E8%AE%8A"><span class="toc-text">非典型音變</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B1%A1%E5%BD%A2%E5%AD%97%E6%AF%8D%E8%A8%98%E6%86%B6"><span class="toc-text">象形字母記憶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A9%9E%E6%A0%B9%E5%8F%83%E8%80%83"><span class="toc-text">詞根參考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A9%9E%E7%B6%B4%E5%8F%83%E8%80%83"><span class="toc-text">詞綴參考</span></a></li></ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+  </div>
+  <footer class="cotainer-fluid">
+    <p id="milestone" class="text-center m-0">
+      <span>Copyright © 2021-2023 UrWeb. All rights reserved.</span><br>
+      <span>This site is in orbit around internet 1 days.</span>
+      <span>people witnessed it all</span>
+    </p>
+  </footer>
+
+  <!-- <h3>categories</h3>
+    <ul>
+      
+      <li>
+        <a href="/categories/Dev-Tech/"> Dev Tech  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/"> 轉職成長  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Language/"> Language  </a>
+      </li>
+      
+    </ul>
+
+    <h3>tags</h3>
+    <ul>
+      
+      <li>
+        <a href="/tags/Visual-Studio/"> Visual Studio </a>
+      </li>
+      
+      <li>
+        <a href="/tags/C/"> C# </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Computer-Science/"> Computer Science </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Internet/"> Internet </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/"> 成長思維 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Net/"> .Net </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Exception/"> Exception </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Filter/"> Filter </a>
+      </li>
+      
+      <li>
+        <a href="/tags/IIS/"> IIS </a>
+      </li>
+      
+      <li>
+        <a href="/tags/JavaScript/"> JavaScript </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Angular/"> Angular </a>
+      </li>
+      
+      <li>
+        <a href="/tags/RabbitMQ/"> RabbitMQ </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Log/"> Log </a>
+      </li>
+      
+      <li>
+        <a href="/tags/computer-science/"> computer-science </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Note/"> Note </a>
+      </li>
+      
+      <li>
+        <a href="/tags/React/"> React </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Git/"> Git </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%BD%89%E8%81%B7/"> 轉職 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/"> 設計思考 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/node-js/"> node.js </a>
+      </li>
+      
+      <li>
+        <a href="/tags/npm/"> npm </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Authorization/"> Authorization </a>
+      </li>
+      
+      <li>
+        <a href="/tags/PDF/"> PDF </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Architecture/"> Architecture </a>
+      </li>
+      
+      <li>
+        <a href="/tags/DDD/"> DDD </a>
+      </li>
+      
+      <li>
+        <a href="/tags/OOD-OOP/"> OOD/OOP </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Response/"> Response </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Request/"> Request </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Javascript/"> Javascript </a>
+      </li>
+      
+      <li>
+        <a href="/tags/ES6/"> ES6 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/English/"> English </a>
+      </li>
+      
+    </ul> -->
+</body>
+
+
+<script src="/js/prism.js"></script>
+
+  
+<script src="/js/main.js"></script>
+
+
+</html>
