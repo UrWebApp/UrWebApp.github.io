@@ -8,6 +8,7 @@ tags:
 - Response
 - Request
 - Angular
+authorsWords: 每次忘每次記憶不如寫起來以後再看
 ---
 
 > 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！

@@ -6,6 +6,7 @@ author: johch3n611u
 tags:
 - JavaScript
 - Angular
+authorsWords: 前端除了動畫以外真的還有好多可以深入的地方...
 ---
 
 最近遇到一個外部引入的 script 需要整合進 Angular 中，CallbackFn 與 this 拆開來能理解，在 Angular 中元件中的 this 通常指向當前元件實例。
