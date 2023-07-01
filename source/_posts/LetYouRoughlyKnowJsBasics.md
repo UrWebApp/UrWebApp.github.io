@@ -320,6 +320,7 @@ const [weatherType] =
 
 ---
 
+```
 什么是JavaScript？
 JavaScript与Java有何不同？
 JavaScript中的数据类型是什么？如何检查变量的数据类型？
@@ -416,6 +417,7 @@ JavaScript中的数据类型是什么？如何检查变量的数据类型？
 模塊化（Module）是什麼？它有什麼作用？
  JavaScript 中的類（Class）？它與原型有什麼關係？
 可變（Mutable）和不可變（Immutable）數據類型的區別？舉一些例子。
+```
 
 ## ES6 ( ES2015 )
 
