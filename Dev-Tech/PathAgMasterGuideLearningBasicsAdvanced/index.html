@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>您的網路共筆-UrWeb</title>
+  
+      
+        <meta name="description"
+          content="文章作者: johch3n611u 創作日期: 2023/06/28 文章類型: Dev Tech，查看本文章獲取更多訊息。">
+        
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+          
+<link rel="stylesheet" href="/css/prism.css">
+
+            
+<link rel="stylesheet" href="/css/main.css">
+
+              <!-- Google Tag Manager -->
+              <script>(function (w, d, s, l, i) {
+                  w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                      new Date().getTime(), event: 'gtm.js'
+                  }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                      'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-T4FDJRJ');</script>
+              <!-- End Google Tag Manager -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+                integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body onload="responsiveIframe()">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="mobileBox">
+      <div class="brandBox">
+        <a href="/" class="d-flex align-items-center">
+          <h1 class="m-0">
+            您的網路共筆
+          </h1>
+        </a>
+      </div>
+      <div class="desktop-show">       <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+      </div>
+      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+    </div>
+  </header>
+  <!-- <h1>
+      <a href="/">Home</a> |
+      <a href="/archives">Archive</a> |
+      tags
+      <a href="/about/">About</a>
+    </h1> -->
+  <div class="outter-wrap container-fluid">
+    <aside class="leftAside">
+      <nav>
+        <ul>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="d-md-none input-group"><input type="search" name="q" class="d-md-none input-group-input" placeholder="Search"><button type="submit" class="d-md-none input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+            <!-- <li>
+            <h4>
+              <a href="/about/">關於我們</a>
+            </h4>
+          </li> -->
+          <li style="margin-top: 50px;">
+            <h4>
+              <a href="https://forms.gle/Mzn7eLEtW3oiscMT6" target="_blank">Contact / Subscribe</a>
+            </h4>
+          </li>
+            <li>
+              <h4>
+                <a href="#" id="authorsBtn">Authors <i class="fa-solid fa-square-caret-up"></i></a>
+              </h4>
+              <div id="authors">
+                <ul class="author-list">
+                  <li> 
+                    <a href="/author/kai98k">kai98k</a>
+                  </li>
+                  <li> 
+                    <a href="/author/johch3n611u">johch3n611u</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <h4>
+                <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+              </h4>
+              <div id="categories">
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dev-Tech/">Dev Tech</a><span class="category-list-count">25</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/">轉職成長</a><span class="category-list-count">2</span></li></ul>
+              </div>
+            </li>
+            <li>
+              <h4>
+                <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+              </h4>
+              <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Authorization/" style="font-size: 10px;">Authorization</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/Computer-Science/" style="font-size: 10px;">Computer Science</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Exception/" style="font-size: 10px;">Exception</a> <a href="/tags/Filter/" style="font-size: 10px;">Filter</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/Internet/" style="font-size: 17.5px;">Internet</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Log/" style="font-size: 12.5px;">Log</a> <a href="/tags/Note/" style="font-size: 15px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/RabbitMQ/" style="font-size: 10px;">RabbitMQ</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/" style="font-size: 10px;">成長思維</a></div>
+            </li>
+        </ul>
+      </nav>
+    </aside>
+          <main class="container postWrap">
+  <article class="postArticle">
+    <div class="postArticleHeader">
+      <h1 class="pt-1">Angular 大師之路：淺出深入的學習指南</h1>
+      <div class="infoBox">
+        <i class="fa fa-eye" aria-hidden="true"></i>
+        <p class="waline-pageview-count" data-path="/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/" />
+        </p>
+        <span>|</span>
+        <p>2023/06/28</p>
+        <span>|</span>
+        <p>
+          
+            <a href="/categories/Dev-Tech/ ">Dev Tech </a>
+            
+        </p>
+        <span>|</span>
+        <ul class="tagBox">
+          
+            <li>
+              <a href="/tags/angular/"><i class="fa-solid fa-tag"></i> angular
+              </a>
+            </li>
+            
+        </ul>
+      </div>
+    </div>
+    <div class="postArticleContent">
+      <div class="authorsWordsBox">
+        <p class="title">johch3n611u</p>
+        <p class="content">這個作者很懶，什麼都沒留下...</p>
+      </div>
+      <p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20020617/ironman/1630">Angular 大師之路 系列</a></p>
+<h2 id="NG-大師之路-筆記大綱"><a href="#NG-大師之路-筆記大綱" class="headerlink" title="NG 大師之路 筆記大綱"></a>NG 大師之路 筆記大綱</h2><p>day1 大綱 幾乎什麼都講</p>
+<p>day2 JSON Schema, Monorepo</p>
+<p>day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) &#x3D;&gt; app.module.ts ( 可以啟動多個根元件 ) &#x3D;&gt; app.component.ts 根元件</p>
+<p>day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否</p>
+<p>day5 NgModule 參數應用、動&#x2F;靜態載入元件</p>
+<p>day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module</p>
+<p>day7 Two Way Binding</p>
+<p>day8 自訂表單控制項 &#x2F; Token：NG_VALUE_ACCESSOR &#x2F; ControlValueAccessor </p>
+<p>day9 Directive 指令 exportAs</p>
+<p>day10 $any</p>
+<p>day11</p>
+<p>day12</p>
+<p>day13</p>
+<p>day14</p>
+<p>day15</p>
+<p>day16</p>
+<p>day17</p>
+<p>day18</p>
+<p>day19</p>
+<p>day20</p>
+<p>day21</p>
+<p>day22</p>
+<p>day23</p>
+<p>day24</p>
+<p>day25</p>
+<p>day26</p>
+<p>day27</p>
+<p>day28</p>
+<p>day29</p>
+<p>day30</p>
+<h2 id="無頭組件-使用情境"><a href="#無頭組件-使用情境" class="headerlink" title="無頭組件 使用情境"></a>無頭組件 使用情境</h2><blockquote>
+<p>透過 Angular ComponentFactoryResolver 製作無頭組件</p>
+</blockquote>
+<ol>
+<li>動態生成組件</li>
+<li>組件化服務</li>
+<li>組件化渲染</li>
+<li>動態創建指令</li>
+<li>動態創建彈出框</li>
+</ol>
+<h3 id="動態生成組件"><a href="#動態生成組件" class="headerlink" title="動態生成組件"></a>動態生成組件</h3><p>在這個範例中，我們在 AppComponent 中創建了一個 MyComponent 組件的實例，並將其添加到畫面上。當用戶點擊 “Create Component” 按鈕時，我們使用 ComponentFactoryResolver 動態創建 MyComponent 組件的實例，並設定其 name 屬性。</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Component<span class="token punctuation">,</span> ComponentFactoryResolver<span class="token punctuation">,</span> ViewContainerRef <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-root'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;button (click)="createComponent()">Create Component&lt;/button>
+    &lt;div #container>&lt;/div>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token decorator"><span class="token at operator">@</span><span class="token function">ViewChild</span></span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> read<span class="token operator">:</span> ViewContainerRef <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> container<span class="token operator">:</span> ViewContainerRef<span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> resolver<span class="token operator">:</span> ComponentFactoryResolver<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token function">createComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>resolver<span class="token punctuation">.</span><span class="token function">resolveComponentFactory</span><span class="token punctuation">(</span>MyComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> componentRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">createComponent</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    componentRef<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'John Doe'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-my-component'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;p>Hello, &#123;&#123; name &#125;&#125;!&lt;/p>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="組件化服務"><a href="#組件化服務" class="headerlink" title="組件化服務"></a>組件化服務</h3><p>在這個範例中，我們創建了一個名為 MyService 的服務，它包含一個 doSomething 方法。我們還創建了一個 MyComponent 組件，它注入了 MyService，並在 ngOnInit 中調用了 doSomething 方法。在 AppComponent 中，我們使用 ComponentFactoryResolver 動態創建了 MyComponent 組件的實例，並將其添加到畫面上。當用戶點擊 “Create Component” 按鈕時，我們動態創建 MyComponent 組件的實例，這個實例包含了 MyService 服務的實例。這樣，我們就可以在組件化的環境中使用服務，實現了服務的組件化。</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Injectable<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> ComponentFactoryResolver<span class="token punctuation">,</span> ViewContainerRef <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Injectable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyService</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Doing something...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-my-component'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> service<span class="token operator">:</span> MyService<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>service<span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-root'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;button (click)="createComponent()">Create Component&lt;/button>
+    &lt;div #container>&lt;/div>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token decorator"><span class="token at operator">@</span><span class="token function">ViewChild</span></span><span class="token punctuation">(</span><span class="token string">'container'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> read<span class="token operator">:</span> ViewContainerRef <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> container<span class="token operator">:</span> ViewContainerRef<span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> resolver<span class="token operator">:</span> ComponentFactoryResolver<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token function">createComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>resolver<span class="token punctuation">.</span><span class="token function">resolveComponentFactory</span><span class="token punctuation">(</span>MyComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> componentRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">createComponent</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="組件化渲染"><a href="#組件化渲染" class="headerlink" title="組件化渲染"></a>組件化渲染</h3><p>在這個範例中，我們創建了兩個動態組件 DynamicFormComponent 和 DynamicTableComponent，並在 AppComponent 中動態創建了這兩個組件。我們還在 DynamicTableComponent 中添加了一個 data 屬性，用於設定表格組件的數據源。通過動態生成組件和設定組件的數據源，我們可以靈活地構建 UI 組件，實現高度可配置的 UI 系統。</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Component<span class="token punctuation">,</span> ComponentFactoryResolver<span class="token punctuation">,</span> ViewContainerRef <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-root'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;app-dynamic-form>&lt;/app-dynamic-form>
+    &lt;app-dynamic-table>&lt;/app-dynamic-table>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> resolver<span class="token operator">:</span> ComponentFactoryResolver<span class="token punctuation">,</span> <span class="token keyword">private</span> container<span class="token operator">:</span> ViewContainerRef<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 動態創建表單組件</span>
+    <span class="token keyword">const</span> formFactory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>resolver<span class="token punctuation">.</span><span class="token function">resolveComponentFactory</span><span class="token punctuation">(</span>DynamicFormComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> formRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">createComponent</span><span class="token punctuation">(</span>formFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 動態創建表格組件</span>
+    <span class="token keyword">const</span> tableFactory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>resolver<span class="token punctuation">.</span><span class="token function">resolveComponentFactory</span><span class="token punctuation">(</span>DynamicTableComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> tableRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">createComponent</span><span class="token punctuation">(</span>tableFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 設定表格組件的數據源</span>
+    <span class="token keyword">const</span> tableComponent <span class="token operator">=</span> <span class="token operator">&lt;</span>DynamicTableComponent<span class="token operator">></span>tableRef<span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
+    tableComponent<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'John Doe'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">30</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">'Jane Doe'</span><span class="token punctuation">,</span> age<span class="token operator">:</span> <span class="token number">25</span> <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-dynamic-form'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DynamicFormComponent</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-dynamic-table'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;table>
+      &lt;thead>
+        &lt;tr>
+          &lt;th>Name&lt;/th>
+          &lt;th>Age&lt;/th>
+        &lt;/tr>
+      &lt;/thead>
+      &lt;tbody>
+        &lt;tr *ngFor="let item of data">
+          &lt;td>&#123;&#123; item.name &#125;&#125;&lt;/td>
+          &lt;td>&#123;&#123; item.age &#125;&#125;&lt;/td>
+        &lt;/tr>
+      &lt;/tbody>
+    &lt;/table>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DynamicTableComponent</span> <span class="token punctuation">&#123;</span>
+  data<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="動態創建指令"><a href="#動態創建指令" class="headerlink" title="動態創建指令"></a>動態創建指令</h3><p>在這個範例中，我們創建了一個指令 TooltipDirective，它用於為 DOM 元素添加一個提示框。當用戶將鼠標懸停在元素上時，我們使用 ComponentFactoryResolver 動態創建了一個 TooltipComponent 組件的實例，並將其添加到 DOM 元素上。當用戶將鼠標移開時，我們將提示框從 DOM 中移除。</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Directive<span class="token punctuation">,</span> ComponentFactoryResolver<span class="token punctuation">,</span> ViewContainerRef<span class="token punctuation">,</span> ElementRef <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Directive</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'[appTooltip]'</span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">TooltipDirective</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> resolver<span class="token operator">:</span> ComponentFactoryResolver<span class="token punctuation">,</span> <span class="token keyword">private</span> container<span class="token operator">:</span> ViewContainerRef<span class="token punctuation">,</span> <span class="token keyword">private</span> el<span class="token operator">:</span> ElementRef<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token function">showTooltip</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>resolver<span class="token punctuation">.</span><span class="token function">resolveComponentFactory</span><span class="token punctuation">(</span>TooltipComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> componentRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">createComponent</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> tooltipElement <span class="token operator">=</span> componentRef<span class="token punctuation">.</span>location<span class="token punctuation">.</span>nativeElement<span class="token punctuation">;</span>
+
+    tooltipElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token string">'absolute'</span><span class="token punctuation">;</span>
+    tooltipElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span>offsetLeft <span class="token operator">+</span> <span class="token string">'px'</span><span class="token punctuation">;</span>
+    tooltipElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span>offsetTop <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span>offsetHeight<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'px'</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">.</span>nativeElement<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>tooltipElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token function">hideTooltip</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-tooltip'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;div>
+      &lt;div>&#123;&#123; text &#125;&#125;&lt;/div>
+      &lt;div *ngIf="showArrow" class="arrow">&lt;/div>
+    &lt;/div>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">TooltipComponent</span> <span class="token punctuation">&#123;</span>
+  text<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  showArrow<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="動態創建彈出框"><a href="#動態創建彈出框" class="headerlink" title="動態創建彈出框"></a>動態創建彈出框</h3><p>在這個範例中，我們創建了一個彈出框 ModalComponent，並在 AppComponent 中動態創建了這個彈出框的實例。我們還通過設定 title 和 message 屬性，設定了彈出框的標題和消息。當用戶點擊 “Close” 按鈕時，我們發出了一個 close 事件，並在 AppComponent 中訂閱了這個事件，在事件觸發時銷毀彈出框的實例。通過動態創建彈出框，我們可以實現更靈活的提示框、確認框等功能。</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Component<span class="token punctuation">,</span> ComponentFactoryResolver<span class="token punctuation">,</span> ViewContainerRef <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-root'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;button (click)="showModal()">Show Modal&lt;/button>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> resolver<span class="token operator">:</span> ComponentFactoryResolver<span class="token punctuation">,</span> <span class="token keyword">private</span> container<span class="token operator">:</span> ViewContainerRef<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>resolver<span class="token punctuation">.</span><span class="token function">resolveComponentFactory</span><span class="token punctuation">(</span>ModalComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> componentRef <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">createComponent</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    componentRef<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'Modal Title'</span><span class="token punctuation">;</span>
+    componentRef<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>message <span class="token operator">=</span> <span class="token string">'Modal Message'</span><span class="token punctuation">;</span>
+
+    componentRef<span class="token punctuation">.</span>instance<span class="token punctuation">.</span>close<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      componentRef<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-modal'</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;div class="modal">
+      &lt;div class="modal-content">
+        &lt;h2>&#123;&#123; title &#125;&#125;&lt;/h2>
+        &lt;p>&#123;&#123; message &#125;&#125;&lt;/p>
+        &lt;button (click)="close.next()">Close&lt;/button>
+      &lt;/div>
+    &lt;/div>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ModalComponent</span> <span class="token punctuation">&#123;</span>
+  title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  close <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    </div>
+  </article>
+  <div class="postNext d-flex justify-content-between mt-3 mb-3">
+    
+        
+          <h4>
+            <a href="/Language/MemoryWordByRuleOfSoundLawsInIndo/">
+              詞源學如何幫你五天記住一萬個單字-筆記 <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </h4>
+          
+  </div>
+  
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    let option = '{"el":"#waline","enable":true,"serverURL":"https://waline-urweb.vercel.app/","placeholder":"歡迎隨時提出您的建議，並不吝指教","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/waline/2.14.5/waline.js","pageview":true,"reaction":true}';
+    init(JSON.parse(option));
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+  
+    <input style="display:none" onload="addTotalViews()">
+</main>
+            
+              <aside class="rightAside">
+                <section>
+                  <h4>Table of contents</h4>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NG-%E5%A4%A7%E5%B8%AB%E4%B9%8B%E8%B7%AF-%E7%AD%86%E8%A8%98%E5%A4%A7%E7%B6%B1"><span class="toc-text">NG 大師之路 筆記大綱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6-%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">無頭組件 使用情境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%9F%E6%88%90%E7%B5%84%E4%BB%B6"><span class="toc-text">動態生成組件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%9C%8D%E5%8B%99"><span class="toc-text">組件化服務</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%B8%B2%E6%9F%93"><span class="toc-text">組件化渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E6%8C%87%E4%BB%A4"><span class="toc-text">動態創建指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E5%BD%88%E5%87%BA%E6%A1%86"><span class="toc-text">動態創建彈出框</span></a></li></ol></li></ol>
+                </section>
+              </aside>
+
+              <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+
+              <div class="modal" tabindex="-1" id="tocModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Table of Contents</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        onclick="tocModalClose()"></button>
+                    </div>
+                    <div class="modal-body">
+                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NG-%E5%A4%A7%E5%B8%AB%E4%B9%8B%E8%B7%AF-%E7%AD%86%E8%A8%98%E5%A4%A7%E7%B6%B1"><span class="toc-text">NG 大師之路 筆記大綱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6-%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">無頭組件 使用情境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%9F%E6%88%90%E7%B5%84%E4%BB%B6"><span class="toc-text">動態生成組件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%9C%8D%E5%8B%99"><span class="toc-text">組件化服務</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%B8%B2%E6%9F%93"><span class="toc-text">組件化渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E6%8C%87%E4%BB%A4"><span class="toc-text">動態創建指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E5%BD%88%E5%87%BA%E6%A1%86"><span class="toc-text">動態創建彈出框</span></a></li></ol></li></ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+  </div>
+  <footer class="cotainer-fluid">
+    <p id="milestone" class="text-center m-0">
+      <span>Copyright © 2021-2023 UrWeb. All rights reserved.</span><br>
+      <span>This site is in orbit around internet 1 days.</span>
+      <span>people witnessed it all</span>
+    </p>
+  </footer>
+
+  <!-- <h3>categories</h3>
+    <ul>
+      
+      <li>
+        <a href="/categories/Dev-Tech/"> Dev Tech  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/"> 轉職成長  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Language/"> Language  </a>
+      </li>
+      
+    </ul>
+
+    <h3>tags</h3>
+    <ul>
+      
+      <li>
+        <a href="/tags/Visual-Studio/"> Visual Studio </a>
+      </li>
+      
+      <li>
+        <a href="/tags/C/"> C# </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Computer-Science/"> Computer Science </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Internet/"> Internet </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/"> 成長思維 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Net/"> .Net </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Exception/"> Exception </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Filter/"> Filter </a>
+      </li>
+      
+      <li>
+        <a href="/tags/IIS/"> IIS </a>
+      </li>
+      
+      <li>
+        <a href="/tags/JavaScript/"> JavaScript </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Angular/"> Angular </a>
+      </li>
+      
+      <li>
+        <a href="/tags/RabbitMQ/"> RabbitMQ </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Log/"> Log </a>
+      </li>
+      
+      <li>
+        <a href="/tags/computer-science/"> computer-science </a>
+      </li>
+      
+      <li>
+        <a href="/tags/angular/"> angular </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Note/"> Note </a>
+      </li>
+      
+      <li>
+        <a href="/tags/React/"> React </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Git/"> Git </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%BD%89%E8%81%B7/"> 轉職 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83/"> 設計思考 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/node-js/"> node.js </a>
+      </li>
+      
+      <li>
+        <a href="/tags/npm/"> npm </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Authorization/"> Authorization </a>
+      </li>
+      
+      <li>
+        <a href="/tags/PDF/"> PDF </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Architecture/"> Architecture </a>
+      </li>
+      
+      <li>
+        <a href="/tags/DDD/"> DDD </a>
+      </li>
+      
+      <li>
+        <a href="/tags/OOD-OOP/"> OOD/OOP </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Response/"> Response </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Request/"> Request </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Javascript/"> Javascript </a>
+      </li>
+      
+      <li>
+        <a href="/tags/ES6/"> ES6 </a>
+      </li>
+      
+      <li>
+        <a href="/tags/English/"> English </a>
+      </li>
+      
+    </ul> -->
+</body>
+
+
+<script src="/js/prism.js"></script>
+
+  
+<script src="/js/main.js"></script>
+
+
+</html>
