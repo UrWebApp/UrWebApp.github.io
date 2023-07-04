@@ -3,6 +3,7 @@ title: Angular 大師之路：淺出深入的學習指南
 date: 2023-06-28
 categories: Dev Tech
 author: johch3n611u
+authorsWords: 除了一些 NG 原生語法與應用，感覺複雜點還是在設計模式 design pattern、函數式編程 Fn Programing、反應式編程 Rxjs，這些應該在各大框架都是共通的可以多投資點心力在這
 tags:
 - angular
 ---
