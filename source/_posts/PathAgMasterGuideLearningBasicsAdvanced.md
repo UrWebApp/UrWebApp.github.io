@@ -5,34 +5,34 @@ categories: Dev Tech
 author: johch3n611u
 authorsWords: 除了一些 NG 原生語法與應用，感覺複雜點還是在設計模式 design pattern、函數式編程 Fn Programing、反應式編程 Rxjs，這些應該在各大框架都是共通的可以多投資點心力在這
 tags:
-- angular
+- Angular
 ---
 
 [Angular 大師之路 系列](https://ithelp.ithome.com.tw/users/20020617/ironman/1630)
 
 ## NG 大師之路 筆記大綱
 
-> day1 大綱 幾乎什麼都講
+### day1 大綱 幾乎什麼都講
 
-> day2 JSON Schema, Monorepo
+### day2 JSON Schema, Monorepo
 
-> day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) => app.module.ts ( 可以啟動多個根元件 ) => app.component.ts 根元件
+### day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) => app.module.ts ( 可以啟動多個根元件 ) => app.component.ts 根元件
 
-> day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否
+### day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否
 
-> day5 NgModule 參數應用、動/靜態載入元件
+### day5 NgModule 參數應用、動/靜態載入元件
 
-> day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module
+### day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module
 
-> day7 Two Way Binding
+### day7 Two Way Binding
 
-> day8 自訂表單控制項 / Token：NG_VALUE_ACCESSOR / ControlValueAccessor 
+### day8 自訂表單控制項 / Token：NG_VALUE_ACCESSOR / ControlValueAccessor 
 
-> day9 Directive 指令 exportAs
+### day9 Directive 指令 exportAs
 
-> day10 $any 樣板語法
+### day10 $any 樣板語法
 
-> day11 *ngIf else 搭配樣板參考變數
+### day11 *ngIf else 搭配樣板參考變數
 
 ```html
 <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
@@ -47,7 +47,7 @@ ng-template 是一個標籤，可以在它裡面定義一段 HTML 代碼，但�
 
 ng-container 則是一個虛擬元素，它不會產生任何實際的 HTML 元素，只是用來包裹其他元素。
 
-> day12 *ngTemplateOutlet
+### day12 *ngTemplateOutlet
 
 原文做法利用 Directive 取得 @ViewChildren 但似乎可以同個 #ID 取得 @ViewChildren NG 會自行判斷一個還是多個 QueryList
 
@@ -134,12 +134,12 @@ export class CarouselPageDirective {
 }
 ```
 
-> day13 ng-container 不會產生元素標籤
+### day13 ng-container 不會產生元素標籤
 
 1. *ngIf 和 *ngFor 同時需要使用
 2. 避免需要改 CSS 選擇器
 
-> day14 動態載入元件 (簡易版) *ngComponentOutlet / Entry components
+### day14 動態載入元件 (簡易版) *ngComponentOutlet / Entry components
 
 情境：當樣板上要呈現不同元件時，容易不小心把樣板程式碼弄髒時
 
@@ -173,13 +173,13 @@ mapping = new Map<string, any>(
 );
 ```
 
-> day15 動態載入元件 (複雜版) ViewContainerRef / createEmbeddedView / ComponentFactoryResolver [請參考無頭組件應用](#無頭組件-使用情境)
+### day15 動態載入元件 (複雜版) ViewContainerRef / createEmbeddedView / ComponentFactoryResolver [請參考無頭組件應用](#無頭組件-使用情境)
 
 * ViewContainerRef：表示一個視圖容器，可以用來創建、插入和移除動態組件。通過 ViewContainerRef，可以動態創建一個子視圖並將其插入到容器中。例如，可以通過 ViewContainerRef.createComponent 方法動態創建一個組件，然後通過 ViewContainerRef.insert 方法將它插入到容器中。ViewContainerRef 可以在組件中通過 @ViewChild 或 @ViewChildren 裝飾器進行注入。
 * ElementRef：表示一個 DOM 元素的引用，可以用來操作和訪問該元素的屬性和方法。通過 ElementRef.nativeElement 屬性可以獲取到該元素的 DOM 對象。例如，可以使用 ElementRef.nativeElement.style 屬性來設置元素的樣式。ElementRef 可以在組件中通過 @ViewChild 或 @ViewChildren 裝飾器進行注入。
 * TemplateRef：表示一個模板的引用，可以用來動態創建和渲染模板。通過 TemplateRef.createEmbeddedView 方法可以動態創建一個嵌入式視圖（Embedded View），然後使用 ViewContainerRef.createEmbeddedView 方法將其插入到視圖容器中。TemplateRef 通常用於實現可重複使用的組件或動態生成模板的場景。TemplateRef 可以在組件中通過 @ViewChild 或 @ContentChild 裝飾器進行注入。
 
-> [day16 Customized Structural ( *data="data; xxx: { value: xxx }" ) / Attribute ( [data]="data" let-xxx ) Directive](https://ithelp.ithome.com.tw/articles/10207012)
+### day16 客製化指令 [Structural ( *data="data; xxx: { value: xxx }" ) / Attribute ( [data]="data" let-xxx ) Directive](https://ithelp.ithome.com.tw/articles/10207012)
 
 ```ts
 import { Directive, EmbeddedViewRef, ViewContainerRef, Input, TemplateRef } from '@angular/core';
@@ -201,15 +201,15 @@ export class TemplateOutletDirective {
 }
 ```
 
-> day17 HTTP_INTERCEPTORS 攔截 Http Request / HttpHandler
+### day17 HTTP_INTERCEPTORS 攔截 Http Request / HttpHandler
 
-> day18 ErrorHandler 集中處理錯誤
+### day18 ErrorHandler 集中處理錯誤
 
-> day19 APP_INITIALIZER 在程式運行早期處理資料
+### day19 APP_INITIALIZER 在程式運行早期處理資料
 
-> day20 @NgModule providers useClass useExisting
+### day20 @NgModule providers useClass useExisting
 
-> day21 @NgModule providers useValue useFactory
+### day21 @NgModule providers useValue useFactory
 
 ```ts
 const dataServiceFactory = (configService: ConfigService) => {
@@ -221,9 +221,9 @@ const dataServiceFactory = (configService: ConfigService) => {
 }
 ```
 
-> day22 注入 Token 實體方法 ( 建構式注入 / Injector 物件 / @Component 、 @Directive providers )
+### day22 注入 Token 實體方法 ( 建構式注入 / Injector 物件 / @Component 、 @Directive providers )
 
-> day23 InjectionToken 強制產生 Token / @Inject()
+### day23 InjectionToken 強制產生 Token / @Inject()
 
 ```TS
 import { InjectionToken } from '@angular/core';
@@ -257,17 +257,17 @@ export const NAME_TOKEN = new InjectionToken<string>('name token');
 export class AppModule { }
 ```
  
-> day24 NgZone 得知所有非同步事件的發生，確認何時要進行變更偵測的工具。 onUnstable / onStable / runOutsideAngular / run
+### day24 NgZone 得知所有非同步事件的發生，確認何時要進行變更偵測的工具。 onUnstable / onStable / runOutsideAngular / run
 
 * 避免發生變更偵測效能耗損
 * 脫離變更偵測整合第三方套件
 * 與 DOM 操作有關的再透過 run 讓程式回變更偵測
 
-> day25 ChangeDetectorRef 每個元件獨立控制變更偵測時機效能調校。 detach / reattach / detectChanges
+### day25 ChangeDetectorRef 每個元件獨立控制變更偵測時機效能調校。 detach / reattach / detectChanges
 
-> day26 元件的變更偵測策略 ( 關閉自動偵測、手動打開 ) changeDetection / ChangeDetectorRef / markForCheck
+### day26 元件的變更偵測策略 ( 關閉自動偵測、手動打開 ) changeDetection / ChangeDetectorRef / markForCheck
 
-> day27 AsyncPipe 技巧 as / Rxjs Operator shareReplay
+### day27 AsyncPipe 技巧 as / Rxjs Operator shareReplay
 
 `<li *ngFor="let todo of todos$ | async">{{ todo.title }}</li>`
 
@@ -287,12 +287,12 @@ export class AppModule { }
 
 shareReplay 若希望只有第一次要顯示時呼叫就好，保留最近 N 次內容，預設會先「重播」最新 N 次的紀錄
 
-> day28 AsyncPipe 進階技巧
+### day28 AsyncPipe 進階技巧
 
 * 自動退訂
 * 自動要求變更偵測
 
-> day29 RxJS operators 基礎篇
+### day29 RxJS operators 基礎篇
 
 1. map 將一個訂閱可以得到的資料轉換成另外一筆資料
    * 情境：
@@ -378,7 +378,7 @@ this.data$ = forkJoin(posts$, tags$).pipe(
 )
 ```
 
-> day30 RxJS operators 進階應用
+### day30 RxJS operators 進階應用
 
 5. debounceTime 緩衝設定一個時間(毫秒)只要還有新資料傳入暫時忽視，直到沒有更新後才傳給下一個 operators
    * 情境：
