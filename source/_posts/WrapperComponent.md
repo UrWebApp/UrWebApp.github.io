@@ -19,7 +19,7 @@ tags:
 
 ## 二次封裝
 
-首先，我想談談「二次封裝」這個名詞。在所有的程式語言中，我們都要遵守 DRY ( 不要重複自己 ) 的原則。這種原則不僅適用於機器語言的 0 和 1，也適用於高階語言中的 toString 等等操作。
+「二次封裝」在所有的程式語言中，我們都要遵守 DRY ( Don't repeat yourself ) 的原則，不僅適用於機器語言的 0 和 1，也適用於高階語言中的 toString 等等操作，開發人員可以使用高階元件（Higher-order Component, HOC）的原理來封裝現有的元件，以提供額外的功能或更簡單的介面。
 
 在前端開發中，各種 UI 元件庫都是將原生元素進行第一層封裝，例如 W3C 並沒有提供 `<my-search />` 元素，因此 UI 元件庫開發者使用 input、button、div 等原生元素，並根據 Search 功能的設計進行封裝。然而，當我們拿到這些元件時，它們可能不符合業務需求，因此我們需要對它們進行二次封裝，例如使用 `<my-search> + <autocomplete />` 進行封裝。
 
@@ -88,6 +88,8 @@ tags:
 </script>
 ```
 
+## 需要遵守的原則
+
 以 Vue 與 React 來說提供了蠻多方便組織二次組件屬性與方法，但在 Angular 檢查了一些社群熱度高的組件庫似乎看不到什麼二次封裝的好方法
 
 以 [nebular card](https://github.com/akveo/nebular/blob/master/src/framework/theme/components/card/card.component.ts) 來看，內部就封裝了多個 @HostBinding
@@ -95,14 +97,16 @@ tags:
 [学会正确地二次封装组件，让同事抱着你的大腿喊大神！](https://juejin.cn/post/7105009142242213925)
 
 1. 能夠封裝 UI 樣式、業務邏輯和補充功能
-2. 開放/封閉原則：組件必須暴露所有的 props、事件、插槽和方法，以避免多次修改
+2. 開放/封閉原則：組件必須暴露所有的屬性、事件、插槽和方法，以避免多次修改
+   * vue 透過以下屬性與方法進行二次封裝
+   * 屬性 $attrs、事件 $listeners、插槽 slots scopedSlots、方法 $refs
 3. 單向資訊流原則：明確哪些是 props，不要修改 props 的資料
-4. 單一職責原則：不要封裝多個資料的入口處理
-5. 載體分離原則：將組件和資料分離，提高程式碼的可維護性
+4. 單一職責原則：不要封裝資料的接口，應該由父組件請求後注入與業務邏輯解偶
+5. 載體分離原則：將內容和載體分離，例如說表單元件應該與彈窗元件分離而不是耦合
 6. 實現雙向綁定，簡化事件處理
-7. 暴露修改組件庫的樣式
+7. 利用深度選擇器修改組件庫的樣式 /deep/
 
-
+[Angular Library Repo](https://github.com/UrWebApp/ComponentLibrary/tree/master/AngularLibrary)
 
 ## 參考
 
