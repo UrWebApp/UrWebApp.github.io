@@ -119,7 +119,7 @@
       <h1 class="pt-1">二次封裝實現自己的函式庫：Angular</h1>
       <div class="infoBox">
         <i class="fa fa-eye" aria-hidden="true"></i>
-        <p class="waline-pageview-count" data-path="/Dev-Tech/WrappedObject/" />
+        <p class="waline-pageview-count" data-path="/Dev-Tech/WrapperComponent/" />
         </p>
         <span>|</span>
         <p>2023/07/05</p>
@@ -154,7 +154,7 @@
 <p>我發現以往的做法往往只是針對特定情境封裝了較為死板的二次封裝元件，導致在遇到需求不符或需要修改代碼時，很難進行有效的維護和改進，</p>
 <p>有時候，甚至會出現時間久了或開發者離開後，沒有留下文檔的情況，這就讓業務方不得不接受一些奇怪的現象，</p>
 <p>改善這種情況非常必要，在本篇文章中將探討如何改善這種情況，包括 Angular 二次封裝元件的注意點、封裝方式，以及一些可能遇到的技術屏障。</p>
-<h2 id="二次封裝"><a href="#二次封裝" class="headerlink" title="二次封裝"></a>二次封裝</h2><p>首先，我想談談「二次封裝」這個名詞。在所有的程式語言中，我們都要遵守 DRY ( 不要重複自己 ) 的原則。這種原則不僅適用於機器語言的 0 和 1，也適用於高階語言中的 toString 等等操作。</p>
+<h2 id="二次封裝"><a href="#二次封裝" class="headerlink" title="二次封裝"></a>二次封裝</h2><p>「二次封裝」在所有的程式語言中，我們都要遵守 DRY ( Don’t repeat yourself ) 的原則，不僅適用於機器語言的 0 和 1，也適用於高階語言中的 toString 等等操作，開發人員可以使用高階元件（Higher-order Component, HOC）的原理來封裝現有的元件，以提供額外的功能或更簡單的介面。</p>
 <p>在前端開發中，各種 UI 元件庫都是將原生元素進行第一層封裝，例如 W3C 並沒有提供 <code>&lt;my-search /&gt;</code> 元素，因此 UI 元件庫開發者使用 input、button、div 等原生元素，並根據 Search 功能的設計進行封裝。然而，當我們拿到這些元件時，它們可能不符合業務需求，因此我們需要對它們進行二次封裝，例如使用 <code>&lt;my-search&gt; + &lt;autocomplete /&gt;</code> 進行封裝。</p>
 <p>然而，如果我們在 <code>&lt;my-search style=&quot;color:red;&quot; onclick&quot;click()&quot;/&gt;</code> 元件中考慮不周，沒有考慮到需要增加 <code>change()</code> 事件，那麼我們就需要去修改父層組件，這樣就不符合 OCP 開放&#x2F;封閉原則，也會導致程式碼難以維護、擴展性差、程式碼重複等問題。</p>
 <p>因此我們需要理解框架能否針對這些問題提供解決方案</p>
@@ -210,18 +210,23 @@
   <span class="token punctuation">&#125;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>以 Vue 與 React 來說提供了蠻多方便組織二次組件屬性與方法，但在 Angular 檢查了一些社群熱度高的組件庫似乎看不到什麼二次封裝的好方法</p>
+<h2 id="需要遵守的原則"><a href="#需要遵守的原則" class="headerlink" title="需要遵守的原則"></a>需要遵守的原則</h2><p>以 Vue 與 React 來說提供了蠻多方便組織二次組件屬性與方法，但在 Angular 檢查了一些社群熱度高的組件庫似乎看不到什麼二次封裝的好方法</p>
 <p>以 <a target="_blank" rel="noopener" href="https://github.com/akveo/nebular/blob/master/src/framework/theme/components/card/card.component.ts">nebular card</a> 來看，內部就封裝了多個 @HostBinding</p>
 <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7105009142242213925">学会正确地二次封装组件，让同事抱着你的大腿喊大神！</a></p>
 <ol>
 <li>能夠封裝 UI 樣式、業務邏輯和補充功能</li>
-<li>開放&#x2F;封閉原則：組件必須暴露所有的 props、事件、插槽和方法，以避免多次修改</li>
+<li>開放&#x2F;封閉原則：組件必須暴露所有的屬性、事件、插槽和方法，以避免多次修改<ul>
+<li>vue 透過以下屬性與方法進行二次封裝</li>
+<li>屬性 $attrs、事件 $listeners、插槽 slots scopedSlots、方法 $refs</li>
+</ul>
+</li>
 <li>單向資訊流原則：明確哪些是 props，不要修改 props 的資料</li>
-<li>單一職責原則：不要封裝多個資料的入口處理</li>
-<li>載體分離原則：將組件和資料分離，提高程式碼的可維護性</li>
+<li>單一職責原則：不要封裝資料的接口，應該由父組件請求後注入與業務邏輯解偶</li>
+<li>載體分離原則：將內容和載體分離，例如說表單元件應該與彈窗元件分離而不是耦合</li>
 <li>實現雙向綁定，簡化事件處理</li>
-<li>暴露修改組件庫的樣式</li>
+<li>利用深度選擇器修改組件庫的樣式 &#x2F;deep&#x2F;</li>
 </ol>
+<p><a target="_blank" rel="noopener" href="https://github.com/UrWebApp/ComponentLibrary/tree/master/AngularLibrary">Angular Library Repo</a></p>
 <h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/button/button.component.ts">NG-ZORRO</a></li>
 </ul>
@@ -253,7 +258,7 @@
               <aside class="rightAside">
                 <section>
                   <h4>Table of contents</h4>
-                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D"><span class="toc-text">二次封裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D%E7%AF%84%E4%BE%8B"><span class="toc-text">Vue 二次封裝範例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
+                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D"><span class="toc-text">二次封裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D%E7%AF%84%E4%BE%8B"><span class="toc-text">Vue 二次封裝範例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E9%81%B5%E5%AE%88%E7%9A%84%E5%8E%9F%E5%89%87"><span class="toc-text">需要遵守的原則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
                 </section>
               </aside>
 
@@ -268,7 +273,7 @@
                         onclick="tocModalClose()"></button>
                     </div>
                     <div class="modal-body">
-                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D"><span class="toc-text">二次封裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D%E7%AF%84%E4%BE%8B"><span class="toc-text">Vue 二次封裝範例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
+                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D"><span class="toc-text">二次封裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-%E4%BA%8C%E6%AC%A1%E5%B0%81%E8%A3%9D%E7%AF%84%E4%BE%8B"><span class="toc-text">Vue 二次封裝範例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E9%81%B5%E5%AE%88%E7%9A%84%E5%8E%9F%E5%89%87"><span class="toc-text">需要遵守的原則</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
                     </div>
                   </div>
                 </div>
