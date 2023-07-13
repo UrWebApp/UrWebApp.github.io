@@ -108,6 +108,8 @@ tags:
 
 [Angular Library Repo](https://github.com/UrWebApp/ComponentLibrary/tree/master/AngularLibrary)
 
+Vue、React 是將子組件包裝成 HOC ，但 NG 希望從父層定義，子組件只需要搭配使用，直接用指令當站位符號，渲染就好
+
 ## 注入物件
 
 ### ViewContainerRef：表示一個視圖容器，可以用來創建、插入和移除動態組件。
