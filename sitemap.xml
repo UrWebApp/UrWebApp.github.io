@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/</loc>
+    
+    <lastmod>2023-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/CouldNotLoadBecauseScriptExecutionDisabledOnSystem/</loc>
+    
+    <lastmod>2023-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/CreateFtpClitentWithFactory/</loc>
     
     <lastmod>2023-08-10</lastmod>
@@ -273,24 +291,6 @@
   
   <url>
     <loc>https://urwebapp.github.io/author/kai98k.html</loc>
-    
-    <lastmod>2023-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/</loc>
-    
-    <lastmod>2023-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/CouldNotLoadBecauseScriptExecutionDisabledOnSystem/</loc>
     
     <lastmod>2023-08-10</lastmod>
     
