@@ -3,9 +3,12 @@ title: 雅思筆記
 date: 2023-08-09
 categories: English
 author: johch3n611u
+authorsWords: 慎小嶷、劉洪波、顧家北、黑眼睛、Simon、何琼、王陸、雅思哥
 tags:
 - English
 ---
+
+## [平行閱讀法](https://vocus.cc/article/63a619f9fd897800012de202)
 
 ## [雅思備考順序](https://www.douyin.com/video/7262565165500075283)
 
