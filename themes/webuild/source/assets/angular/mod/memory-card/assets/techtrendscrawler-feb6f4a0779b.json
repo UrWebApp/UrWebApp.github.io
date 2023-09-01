@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "techtrendscrawler",
+  "private_key_id": "feb6f4a0779b22aff8997c3ec1cacad2618c2915",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCozqxYXAUZVeQ4\nHOCSdVTn/DTFVzUaWB6TtGDUgwRm8VmfWYIUg3AOYoUfCmMwumHrNTZ+ZHfHSHoq\nCQRbiLNae6BBeetiAFjGYJU6PA41+VW99Qo4fRUfGYudnbd1CRYOR20reJs7VBlQ\nshkTa2WL50Cpp3pQmhQP+v11H+j9N7XyxILuJgCLR8EixOwVIMJ6ZU5hHLTMOOF0\nC7xzq3rktDptxxqg5IwdfUWVus/84o0LmU/wvzPHz+uVnKmOpPPCq5n2b8HUubTZ\n0HDeTfyQGfwhAW+EITPbJ3G8wKrEpYKH0LYo/ihkQt4sSzmhuPvlHDpzofTRuX/H\nqti21mwPAgMBAAECggEADasSXGMzDH6eaIa6DlHOyqvqr/HkPFpXO3l2/64OHLG9\nIoByXmvYFmoWwlEqf+cPh6Z635gN9MZjEeVCA5FZiGGLM9IF450IkyN94cW8FtW2\nAhgFuFY0cBy258+9642NSiGxbrwowZCJLjYFfsOK6N2UKEiFyGH5buPRQvsO9/W5\newlEZvR6eArH22e2cZWd9a17FX9Bj0TTdzRcMitvWLdorEJ9BeHrnBK0G23waa9L\nFt1C6RWeLg1L6r8FGS5xITlczyg5hYYKSaYrBaNVAusc7SRAK+PoWx4ma0rEhdc1\nlnDTYJHxuL9AkAPiEvwSkC86Ex/4w9IEYvUr8LMFgQKBgQDnimo5rKQzyQiU8pYb\nmu1gbYLfxrLiikaZpN0vcU3f+OOMR4nhAUAe8Dqw1tnHHj7SajmGUN/C0Z5uViCc\nlAfPURzH2KAhAZ03ogLNjkA9dP6dh2BHgw2JVRpBeAiUzhChrkOLXdcxpd3l4+lt\nAgDFmOe1t7PznhrzR+GRj7FojwKBgQC6o8BrQZv5pcuvNNvqonr/SIPvoSB3LJSU\n8qw6WAnUtWi/JZSBtFdVwVmh4qYW81mRFfW8oWpLkL1xYNLGRQCOO1uJgpzR7Hvl\n8Zy8Vf6dfiSp6zk58ZZLpzGohCY1b7U0U5wVO+2dAMcUovXaFwp2sHax66nkK2eK\nyarLIImEgQKBgQCwLc8UIXwz9zTzeP6k9KbIp6tcsKlu3P5JbHvs3I7/7Dbgh5Kv\nRa9Pm0VdR64f57CvlKo+vIz2hV/C3wAjhDPJGRQIMJnvY3YIXds6I5JX8QzIOrkU\n0PBc3geDZ11INN/M1neItRfILEiC43+7NTn3IJi22Zgwt84T7U8C3k6EmwKBgHAl\nQtJvytv3/mqZlWboGIXaOcS8CXjyZZkWM9ye19Fi67ynRROmnC+gDU6TlH8H3BKs\nokqkpu0e3GYK6rtN7OaJzhfTTo1ozo29XxNfjK1vhXJAL9OcUVXF8bWzKg5DwBrf\n/lJX/w+uzvCcdqOD4rqsj7WayCuc1Qt039ZMB7WBAoGAFFCOFE+oroY0NxzLSfjS\nyJNEqcpk0OHh9VQXKa/p9FStnWcpIxQmhYEABRxn9fqT2VXkPRQ5P9PmFxpfE4js\n2dv/QkZeGYPczhEgAq3sUmms0k8ov19nr2r/1kgI0z06urT6SfTggfO9EUfGxFkk\nPmQkO0un32RBbDcy7HYsX+o=\n-----END PRIVATE KEY-----\n",
+  "client_email": "memory-card@techtrendscrawler.iam.gserviceaccount.com",
+  "client_id": "102330641129556977907",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/memory-card%40techtrendscrawler.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
