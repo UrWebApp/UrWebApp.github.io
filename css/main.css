@@ -458,9 +458,6 @@ footer >p {
   color: #fff;
   text-shadow: 1px 3px 3px rgba(0,0,0,0.3);
 }
-.container {
-  animation: fall 2s;
-}
 header {
   display: flex;
   height: 60px;
@@ -738,7 +735,6 @@ nav >ul >li >h4 >a:hover {
     max-width: 275px;
     position: relative;
     display: block;
-    animation: leftopen 2s;
   }
   #barBtn {
     display: none;
@@ -1121,7 +1117,6 @@ nav >ul >li >h4 >a:hover {
     max-width: 275px;
     position: relative;
     display: block;
-    animation: leftopen 2s;
   }
   .waterfall {
     margin: 0 auto;
