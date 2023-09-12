@@ -401,9 +401,6 @@ tr:nth-child(even) {
     max-width: 1980px;
   }
 }
-html {
-  animation: fadein 2s;
-}
 :root {
   scroll-padding-top: 70px;
 }
