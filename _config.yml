@@ -112,3 +112,10 @@ deploy:
 menu:
   Home: /
   Author: /page/author/
+
+lazyload:
+  enable: true
+  onlypost: false # optional
+  loadingImg: ./assets/img/download.png # optional eg ./images/loading.gif
+  isSPA: false # optional
+  preloadRatio: 3 # optional, default is 1
