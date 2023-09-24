@@ -150,7 +150,7 @@
         <p class="title">kai98k</p>
         <p class="content">隨著網路協定越來越多元，如果每多一種安全協定，就要為此協定，特別寫一個類別，而越來越多的類別，如果沒有介面規範，就很容易你中有我，我中有你，且無法讓我用你，你可以用我(?，也就是高耦合、低內聚，這時候就可以使用工廠方法，來重複使用單一元件，及不會改A動B。</p>
       </div>
-      <h2 id="工廠方法"><a href="#工廠方法" class="headerlink" title="工廠方法"></a>工廠方法</h2><p><img src="https://hackmd.io/_uploads/B1-Otf8Vh.png"></p>
+      <h2 id="工廠方法"><a href="#工廠方法" class="headerlink" title="工廠方法"></a>工廠方法</h2><p><img src="./assets/img/download.png" data-original="https://hackmd.io/_uploads/B1-Otf8Vh.png"></p>
 <p>工廠方法（Factory Method）是一種常見的設計模式，屬於物件導向設計模式的一種。它提供了一個創建物件的介面，但具體的物件的創建是由繼承類別來實現的。工廠方法模式允許一個類別將物件的創建延遲到子類別中進行。</p>
 <p>工廠方法模式的主要目的是將物件的創建與使用解耦，這樣可以在不修改現有程式碼的情況下，輕鬆地引入新的物件類別。它提供了一種靈活的方式來建立物件，並且可以根據需要在運行時決定要實例化的具體類別。</p>
 <p>在工廠方法模式中，通常會有一個抽象的工廠類別，該類別定義了一個創建物件的介面，但沒有具體實現。繼承類別將根據需要實現工廠類別，並覆寫工廠方法以創建具體的物件。</p>
@@ -695,7 +695,20 @@
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>

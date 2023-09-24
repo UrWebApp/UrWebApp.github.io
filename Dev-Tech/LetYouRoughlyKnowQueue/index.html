@@ -155,7 +155,7 @@
         <p class="title">johch3n611u</p>
         <p class="content">這個作者很懶，什麼都沒留下...</p>
       </div>
-      <p><img src="https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png"></p>
+      <p><img src="./assets/img/download.png" data-original="https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png"></p>
 <h2 id="Remote-Procedure-Call-RPC-Queue"><a href="#Remote-Procedure-Call-RPC-Queue" class="headerlink" title="Remote Procedure Call ( RPC ) Queue"></a>Remote Procedure Call ( RPC ) Queue</h2><p>Remote Procedure Call Queue 是一種在分散式系統中用於處理遠程過程調用（RPC）的佇列。在分散式系統中，不同的應用程序可能運行在不同的主機或容器中，透過網路互相通信。當一個應用程序需要調用另一個應用程序中的函數或方法時，就需要使用RPC機制。</p>
 <p>通常用於在不同的應用程序之間傳遞 RPC 請求和回應。當應用程序需要調用另一個應用程序中的函數時，它將請求放入 RPC queue 中，然後等待該請求被處理。當另一個應用程序處理完該請求後，它將結果放回到 RPC queue 中，最終由發送請求的應用程序接收結果。</p>
 <p>通常基於一些消息佇列（Message Queue）系統實現，例如 RabbitMQ、Apache Kafka 等。這些消息佇列系統提供了可靠的消息傳遞保證，確保即使在應用程序離線或崩潰的情況下也能保證消息傳遞。</p>
@@ -478,7 +478,20 @@ class Receiver
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>

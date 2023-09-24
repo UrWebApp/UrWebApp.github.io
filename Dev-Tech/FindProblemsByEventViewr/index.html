@@ -151,19 +151,19 @@
         <p class="content">這個作者很懶，什麼都沒留下...</p>
       </div>
       <p>許多人可能知道怎麼在 IIS 架設網站，卻不知道相關的伺服器 Log 要在哪尋找，答案就是事件檢視器(event viewer)。</p>
-<p><img src="https://i.imgur.com/ghSzGGS.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/ghSzGGS.png"></p>
 <h2 id="Event-Viewer"><a href="#Event-Viewer" class="headerlink" title="Event Viewer"></a>Event Viewer</h2><p>打開後，可以看到 Web Server 相關事件，以及站台關閉原因等等，有時候當站台剛部屬好時，Runtime 卻出了問題(套件可能需要 .net4.5 CLR application pool，但程式是 .net 6 等等)，這時候 Serilog 等套件也無法觀察到此現象時，就可以到 .NET EventLog 查看站台強制關閉等事件。 </p>
 <h2 id="Application-Pool機制"><a href="#Application-Pool機制" class="headerlink" title="Application Pool機制"></a>Application Pool機制</h2><p>而以下圖片顯示的站台關閉事件是 IIS (Internet Information Services) 警告訊息，表示應用程式池 (Application Pool) 內的工作程序 (worker process) 已經因為閒置時間過長而被關閉。</p>
-<p><img src="https://i.imgur.com/pbo8NBV.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/pbo8NBV.png"></p>
 <p>IIS 預設情況下會將應用程式池的閒置超時時間設置為 20 分鐘。如果工作程序在這段時間內沒有處理任何請求，就會被 IIS 自動關閉，以節省系統資源。</p>
 <p>在這種情況下，IIS 會在需要時啟動一個新的工作程序，以便繼續處理新的請求。</p>
 <p>如果你不希望應用程式池在閒置一段時間後被關閉，可以在 IIS 中調整應用程式池的閒置超時時間設定，或將其設置為 0，這樣工作程序就不會被自動關閉。</p>
 <p>需要注意的是，如果你的應用程式在處理請求時需要較長的時間，例如處理大量資料或執行複雜的演算法，就需要調整應用程式池的配置，以避免在處理請求時被自動關閉。</p>
 <p>在 IIS 中調整應用程式池的閒置超時時間設定，或將其設置為 0，可以按照以下步驟進行：</p>
 <ol>
-<li><p>開啟 IIS 管理員控制台，選擇應用程式池，右鍵點選需要調整的應用程式池，並選擇 “進階設定”。<br><img src="https://i.imgur.com/SzmWmlK.png"></p>
+<li><p>開啟 IIS 管理員控制台，選擇應用程式池，右鍵點選需要調整的應用程式池，並選擇 “進階設定”。<br><img src="./assets/img/download.png" data-original="https://i.imgur.com/SzmWmlK.png"></p>
 </li>
-<li><p>找到 “進程模型” 區段，滾動到下面的 “閒置時間 (分鐘)” 設定項目。<br><img src="https://i.imgur.com/lZKXdao.png"></p>
+<li><p>找到 “進程模型” 區段，滾動到下面的 “閒置時間 (分鐘)” 設定項目。<br><img src="./assets/img/download.png" data-original="https://i.imgur.com/lZKXdao.png"></p>
 </li>
 <li><p>將閒置時間設定為所需的值，或者設定為 0，表示永遠不會自動關閉工作程序。</p>
 </li>
@@ -178,27 +178,27 @@
 <li><p>點擊 Create Basic Task</p>
 </li>
 </ol>
-<p><img src="https://i.imgur.com/4xt36ui.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/4xt36ui.png"></p>
 <ol start="3">
 <li>填寫工作描述</li>
 </ol>
-<p><img src="https://i.imgur.com/cYK8qjt.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/cYK8qjt.png"></p>
 <ol start="4">
 <li>選擇 Event Trigger</li>
 </ol>
-<p><img src="https://i.imgur.com/rJcONAr.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/rJcONAr.png"></p>
 <ol start="5">
 <li>選擇 Event</li>
 </ol>
-<p><img src="https://i.imgur.com/14hEStj.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/14hEStj.png"></p>
 <ol start="6">
 <li>選擇觸發時，需執行的步驟，這邊選擇執行程序</li>
 </ol>
-<p><img src="https://i.imgur.com/cnyGvo7.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/cnyGvo7.png"></p>
 <ol start="7">
 <li>選擇要執行的程序，這邊選擇我自己寫的 Bat 檔</li>
 </ol>
-<p><img src="https://i.imgur.com/vzCpuJj.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/vzCpuJj.png"></p>
 <ol start="8">
 <li>完成!</li>
 </ol>
@@ -418,7 +418,20 @@
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>

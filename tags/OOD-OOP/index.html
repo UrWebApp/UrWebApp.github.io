@@ -146,7 +146,7 @@
                     <p class="card-text">
                         <a href="/Dev-Tech/howToUnderstandDDD/">
                                     關於 Domain在開發前置作業中，開發者通常會有很大一部分的時間在理解業務 Know-how，也就是該領域的知識(Domain knowledge)，在了解之後，進而轉成有業務邏輯的程式碼。
-但是像我在剛接觸專案開發的時候，就會一股腦的把所業務邏輯寫在一起，好一點的狀況是還有分層的概念，壞一點就是直接都塞在 MVC 的 Model 中<img src="https://i.imgur.com/ubO98GX.png" alt="What&#39;s in the model?">
+但是像我在剛接觸專案開發的時候，就會一股腦的把所業務邏輯寫在一起，好一點的狀況是還有分層的概念，壞一點就是直接都塞在 MVC 的 Model 中<img src="./assets/img/download.png" data-original="https://i.imgur.com/ubO98GX.png" alt="What&#39;s in the model?">
 久而久之，系統的龐大會造成雜亂無章的結構，不僅會降低開發效率，光是找一個功能就不知道...
                                         </a>
                     </p>
@@ -359,7 +359,20 @@
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>

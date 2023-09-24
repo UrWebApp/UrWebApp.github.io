@@ -156,37 +156,37 @@
 <ol>
 <li>打開 firewall 點到左側 Inbound&#x2F;Outbound Rules</li>
 </ol>
-<p><img src="https://i.imgur.com/wu9lcih.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/wu9lcih.png"></p>
 <ol start="2">
 <li>點選右側新增規則</li>
 </ol>
-<p><img src="https://i.imgur.com/5uC54sa.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/5uC54sa.png"></p>
 <ol start="3">
 <li>點選 Port</li>
 </ol>
-<p><img src="https://i.imgur.com/jKF8YRr.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/jKF8YRr.png"></p>
 <ol start="4">
 <li>輸入指定 Port，千萬不要打開所有的 Port</li>
 </ol>
-<p><img src="https://i.imgur.com/c4Ls19Q.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/c4Ls19Q.png"></p>
 <ol start="5">
 <li>允許該 Port 的連接</li>
 </ol>
-<p><img src="https://i.imgur.com/XSmbvJd.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/XSmbvJd.png"></p>
 <ol start="6">
 <li>選擇規則應用的網路場景，也就是常常電腦在設定網路連線時會跳出來的三個選項。</li>
 </ol>
-<p><img src="https://i.imgur.com/ZkjUWvO.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/ZkjUWvO.png"></p>
 <ol start="7">
 <li>取名並完成新增</li>
 </ol>
-<p><img src="https://i.imgur.com/Hafw0Et.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/Hafw0Et.png"></p>
 <h2 id="檢查-SSL-及-URL-重新導向-x2F-重寫"><a href="#檢查-SSL-及-URL-重新導向-x2F-重寫" class="headerlink" title="檢查 SSL 及 URL 重新導向&#x2F;重寫"></a>檢查 SSL 及 URL 重新導向&#x2F;重寫</h2><p>以 windows 來說，可以在 IIS 上查看是否有設定到一定需要 SSL 才能連線，或是有沒有 URL 重寫的規則，也就是明明指定要連這個 IP address 卻被導向到另外一個。</p>
-<p><img src="https://i.imgur.com/gyC1NiT.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/gyC1NiT.png"></p>
 <h2 id="資源監視器-Resource-Monitor"><a href="#資源監視器-Resource-Monitor" class="headerlink" title="資源監視器 (Resource Monitor)"></a>資源監視器 (Resource Monitor)</h2><p>當以上都沒問題時，那很可能是該 port 被其他資源佔用了，此時就要打開資源監視器來查看。</p>
-<p><img src="https://i.imgur.com/L7trrzd.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/L7trrzd.png"></p>
 <p>可以看到目前資源所使用到的 port，檢查看看是否有重複的，很可能就是造成無法連線的原因。</p>
-<p><img src="https://i.imgur.com/3y3PPiO.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/3y3PPiO.png"></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>我和主管</p>
 
     </div>
@@ -401,7 +401,20 @@
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>

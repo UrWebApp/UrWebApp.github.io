@@ -191,11 +191,11 @@
 <li><p>一個 Component 從 建立 &#x3D;&gt; ️️ 更新 &#x3D;&gt; 銷毀</p>
 </li>
 </ul>
-<p><img src="/./img/ReactHookLifecycle.jpeg" alt="react-hooks-lifecycle"></p>
+<p><img src="./assets/img/download.png" data-original="/./img/ReactHookLifecycle.jpeg" alt="react-hooks-lifecycle"></p>
 <p><a target="_blank" rel="noopener" href="https://wavez.github.io/react-hooks-lifecycle/">https://wavez.github.io/react-hooks-lifecycle/</a></p>
-<p><img src="/./img/ReactClassLifecycle.jpeg" alt="react-class-lifecycle"></p>
+<p><img src="./assets/img/download.png" data-original="/./img/ReactClassLifecycle.jpeg" alt="react-class-lifecycle"></p>
 <p><a target="_blank" rel="noopener" href="https://yakimhsu.com/project/project_w21_03_React_life_componentDidUpdate.html">https://yakimhsu.com/project/project_w21_03_React_life_componentDidUpdate.html</a></p>
-<p><img src="/./img/ReactLifecycle.jpg" alt="react-lifecycle"></p>
+<p><img src="./assets/img/download.png" data-original="/./img/ReactLifecycle.jpg" alt="react-lifecycle"></p>
 <p><a target="_blank" rel="noopener" href="https://twitter.com/siddharthkmr1/status/1294733239429369857?lang=zh-Hant">https://twitter.com/siddharthkmr1/status/1294733239429369857?lang=zh-Hant</a></p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
@@ -642,7 +642,20 @@ const InputElement &#x3D; () &#x3D;&gt; (
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>

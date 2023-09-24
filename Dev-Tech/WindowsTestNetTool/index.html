@@ -155,11 +155,11 @@
 <ol>
 <li>打開命令提示字元(CMD)</li>
 </ol>
-<p><img src="https://i.imgur.com/KmlnDSO.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/KmlnDSO.png"></p>
 <ol start="2">
 <li><code>ping [IP address/Host name]</code>，可以看到如果是 ping Host name，會傳封包至該 IP，並計算來回時間，其實就是在算遊戲中常常聽到的 ping 值。</li>
 </ol>
-<p><img src="https://i.imgur.com/eEvXMyF.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/eEvXMyF.png"></p>
 <h2 id="telnet"><a href="#telnet" class="headerlink" title="telnet"></a>telnet</h2><p>參見<a target="_blank" rel="noopener" href="https://kb.synology.com/zh-tw/DSM/tutorial/Whether_TCP_port_is_open_or_closed">群暉 說明文件</a>，當連線問題有可能是以下情境時，</p>
 <ul>
 <li>連接埠(port)轉送規則未正確設定。</li>
@@ -169,11 +169,11 @@
 </ul>
 <p>就可以使用 <code>telnet</code> 來測試。</p>
 <ol>
-<li>在 windows 上需先至<code>開啟或關閉Windows功能</code>，開啟 telnet 服務<br><img src="https://i.imgur.com/gQ1dQLz.png"></li>
-<li>將 telnet 用戶端勾選<br><img src="https://i.imgur.com/By12ZLH.png"></li>
+<li>在 windows 上需先至<code>開啟或關閉Windows功能</code>，開啟 telnet 服務<br><img src="./assets/img/download.png" data-original="https://i.imgur.com/gQ1dQLz.png"></li>
+<li>將 telnet 用戶端勾選<br><img src="./assets/img/download.png" data-original="https://i.imgur.com/By12ZLH.png"></li>
 <li>使用 cmd 輸入 <code>telnet [ IP 位址或主機名稱] [port]</code></li>
 </ol>
-<p>如果失敗會回傳下圖<br><img src="https://i.imgur.com/SUPvDc2.png"></p>
+<p>如果失敗會回傳下圖<br><img src="./assets/img/download.png" data-original="https://i.imgur.com/SUPvDc2.png"></p>
 <p>如果成功會直接跳轉空白</p>
 <h2 id="tracert"><a href="#tracert" class="headerlink" title="tracert"></a>tracert</h2><p><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-tracert-%E7%96%91%E9%9B%A3%E6%8E%92%E8%A7%A3-windows-%E4%B8%AD%E7%9A%84-tcp-ip-%E5%95%8F%E9%A1%8C-e643d72b-2f4f-cdd6-09a0-fd2989c7ca8e">微軟官方文件中說道</a></p>
 <blockquote>
@@ -181,9 +181,9 @@
 </blockquote>
 <p>也太難懂… 但其實就是將封包傳送到指定 address，來解析路途中會經過的點及資訊，對於有多條路徑可以通到同一點的大型網路，或是涉及許多中介元件 (路由器或橋接器) 的大型網路，TRACERT 是很有用的疑難排解工具。</p>
 <p>用法也是在 cmd 下指令<code>tracert [IP address/hostname]</code></p>
-<p><img src="https://i.imgur.com/8dVwArb.png" alt="tracert"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/8dVwArb.png" alt="tracert"></p>
 <h2 id="Test-NetConnection"><a href="#Test-NetConnection" class="headerlink" title="Test-NetConnection"></a>Test-NetConnection</h2><p>Test-NetConnection 跟 telnet 有點像，但會獲得更多資訊，且成功時，資訊不會被刷新，但這次是在 <strong>windows powerShell</strong> 下指令。</p>
-<p><img src="https://i.imgur.com/EcLrSyD.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/EcLrSyD.png"></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.darkthread.net/blog/ps-test-netconnection/">Windows 測試 TCP 連線，比 Telnet 更好的方法</a></li>
 <li><a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-tw/topic/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-tracert-%E7%96%91%E9%9B%A3%E6%8E%92%E8%A7%A3-windows-%E4%B8%AD%E7%9A%84-tcp-ip-%E5%95%8F%E9%A1%8C-e643d72b-2f4f-cdd6-09a0-fd2989c7ca8e">如何使用 TRACERT 疑難排解 Windows 中的 TCP&#x2F;IP 問題</a></li>
@@ -402,7 +402,20 @@
       </li>
       
     </ul> -->
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 3,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 
 <script src="/js/prism.js"></script>
