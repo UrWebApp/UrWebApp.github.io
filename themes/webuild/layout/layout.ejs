@@ -13,8 +13,8 @@
         <meta name="description"
           content="文章作者: <%- page.author %> 創作日期: <%- date( page.date , 'YYYY/MM/DD' ) %> 文章類型: <% page.categories.each(category=>{ %><%- category.name %><% }) %>，查看本文章獲取更多訊息。">
         <% } %>
-          <!-- <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
           <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" /> -->
@@ -55,7 +55,10 @@
       </div>
       <div class="desktop-show"> <%- search_form({class:"input-group",button:true,external: true}) %>
       </div>
-      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+      <a href="#" id="barBtn">
+        <!-- <i class="hamburger fa-solid fa-bars"></i> -->
+        <span class="material-symbols-outlined">menu</span>
+      </a>
     </div>
   </header>
   <!-- <h1>
