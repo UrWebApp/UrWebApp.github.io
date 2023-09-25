@@ -386,9 +386,29 @@ tr:nth-child(even) {
     max-width: 1080px;
   }
 }
+.iconLine {
+  left: 0px;
+  width: 46px;
+  background: url("assets/img/brand-icon.png") 0 0;
+}
+.iconInstagram {
+  left: 0px;
+  width: 46px;
+  background: url("assets/img/brand-icon.png") 0 0;
+}
+.iconLinkedin {
+  left: 0px;
+  width: 46px;
+  background: url("assets/img/brand-icon.png") 0 0;
+}
+.iconGithub {
+  left: 0px;
+  width: 46px;
+  background: url("assets/img/brand-icon.png") 0 0;
+}
 .main {
   padding-bottom: 50px;
-  margin-top: 110px;
+  margin-top: 80px;
 }
 @media (min-width: 1080px) {
   .main {
@@ -516,7 +536,6 @@ nav >ul >li >h4 >a:hover {
   cursor: pointer;
 }
 #barBtn {
-  margin-right: 15px;
   padding: 5px;
 }
 #barBtn >i {
