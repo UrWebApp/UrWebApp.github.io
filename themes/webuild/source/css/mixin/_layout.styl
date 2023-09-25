@@ -131,6 +131,7 @@ header {
 
 
 
+
 nav {
     top: $header-max-height;
     >ul{
@@ -172,11 +173,12 @@ nav {
     width: 100%;
 }
 
-.outter-wrap {
+.outterWrap {
     min-height: 100vh;
     padding: 0;
     display: flex;
 }
+
 .category-list,.author-list{
     padding-left: 10px;
     list-style-type: '';
@@ -387,14 +389,24 @@ nav {
 
 .hamburger {
     color: #979797 !important;
+    width: 30px;
 }
 
 .mobileBtn{
-    background: rgba(0,0,0,0.1)
+    background: rgba(0,0,0,0.5)
     position: fixed;
     bottom: 10px;
     right: 10px;    
 }
+
+.bookmark{
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+    width: 36px;
+    height: 43px;
+    background: url(/assets/img/brand-icon.png) 1px 39px;
+    background-size: 80px;
+}
+
 #tocModal{
     background: rgba(0,0,0,0.5)
     .modal-dialog{
@@ -470,4 +482,22 @@ nav {
 }
 +desktop-xl(){
 
+}
+
+.sprintIcon {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("/assets/img/brand-icon.png") 26px 59px;
+    background-size: 70px;
+}
+
+.withinStationIcon {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("/assets/img/brand-icon.png") -4px 49px ;
+    background-size: 60px;
 }

@@ -68,8 +68,8 @@
     <meta name="description"
           content="文章作者: <%- page.author %> 創作日期: <%- date( page.date , 'YYYY/MM/DD' ) %> 文章類型: <% page.categories.each(category=>{ %><%- category.name %><% }) %>，查看本文章獲取更多訊息。">
   <% } %>
-          <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <!-- <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
           <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" /> -->
@@ -112,7 +112,8 @@
       </div>
       <a href="#" id="barBtn">
         <!-- <i class="hamburger fa-solid fa-bars"></i> -->
-        <span class="material-symbols-outlined">menu</span>
+        <!-- <span class="material-symbols-outlined">menu</span> -->
+        <img class="hamburger" src="/assets/img/burger-menu-svgrepo-com.svg">
       </a>
     </div>
   </header>
@@ -122,7 +123,7 @@
       <%- config.tag_dir %>
       <a href="/about/">About</a>
     </h1> -->
-  <div class="outter-wrap container-fluid">
+  <div class="outterWrap container-fluid">
     <aside class="leftAside">
       <nav>
         <ul>
@@ -183,7 +184,10 @@
           </section>
         </aside>
 
-        <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+        <div class="mobileBtn btn">
+          <!-- <i class="fa-solid fa-book-bookmark"></i> -->
+          <div class="bookmark"></div>
+        </div>
 
         <div class="modal" tabindex="-1" id="tocModal">
           <div class="modal-dialog">
