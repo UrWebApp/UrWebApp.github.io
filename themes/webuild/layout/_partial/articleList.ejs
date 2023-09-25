@@ -1,29 +1,32 @@
-<% function generateExcerpt(post) {
-    var maxExcerptWords=theme.max_excerpt_words;
-    if(!post.content){
-        return;
-    }
-    let str = post.content.substring(0,maxExcerptWords+200);
-    let imgStartIndex = str.indexOf(`<img`, 0);
-    if(imgStartIndex != -1){
-        let regExp =  new RegExp(`<img.*?>`);
-        let matches = post.content.match(regExp);
-        if (matches){
-            let imgEndIndex = imgStartIndex + matches[0].length;
-            str = str.substring(0, imgStartIndex-1)
-            str = strip_html(str);
-            str += matches[0];
-            str += strip_html(post.content.substring(imgEndIndex,imgEndIndex+50));
-            return str+"...";
+<% 
+    function generateExcerpt(post) {
+        var maxExcerptWords=theme.max_excerpt_words;
+        if(!post.content){
+            return;
         }
-    }else{
-        str= str.substring(0, maxExcerptWords);
+        let str = post.content.substring(0,maxExcerptWords+200);
+        let imgStartIndex = str.indexOf(`<img`, 0);
+        if(imgStartIndex != -1){
+            let regExp =  new RegExp(`<img.*?>`);
+            let matches = post.content.match(regExp);
+            if (matches){
+                let imgEndIndex = imgStartIndex + matches[0].length;
+                str = str.substring(0, imgStartIndex-1)
+                str = strip_html(str);
+                str += matches[0];
+                str += strip_html(post.content.substring(imgEndIndex,imgEndIndex+50));
+                return str+"...";
+            }
+        }else{
+            str= str.substring(0, maxExcerptWords);
+        }
+        str=strip_html(str);
+        str+=`...`;
+        return str;
     }
-    str=strip_html(str);
-    str+=`...`;
-    return str; }
-    %>
-    <%
+%>
+
+ <%
     let posts;
     if(is_home()){ // 首頁
         posts = site.posts;
