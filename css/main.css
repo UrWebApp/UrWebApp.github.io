@@ -11,7 +11,7 @@
   margin-bottom: 1.5rem;
 }
 .postWrap {
-  margin-top: 110px;
+  margin-top: 80px;
   max-width: 800px;
 }
 .postNext >h4 {
@@ -388,23 +388,31 @@ tr:nth-child(even) {
 }
 .iconLine {
   left: 0px;
-  width: 46px;
-  background: url("assets/img/brand-icon.png") 0 0;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 2px 2px;
+  background-size: 80px;
 }
 .iconInstagram {
   left: 0px;
-  width: 46px;
-  background: url("assets/img/brand-icon.png") 0 0;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 2px -32px;
+  background-size: 80px;
 }
 .iconLinkedin {
   left: 0px;
-  width: 46px;
-  background: url("assets/img/brand-icon.png") 0 0;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 39px 0px;
+  background-size: 80px;
 }
 .iconGithub {
   left: 0px;
-  width: 46px;
-  background: url("assets/img/brand-icon.png") 0 0;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 39px 108px;
+  background-size: 80px;
 }
 .main {
   padding-bottom: 50px;
@@ -547,7 +555,7 @@ nav >ul >li >h4 >a:hover {
   justify-content: space-between;
   width: 100%;
 }
-.outter-wrap {
+.outterWrap {
   min-height: 100vh;
   padding: 0;
   display: flex;
@@ -706,12 +714,20 @@ nav >ul >li >h4 >a:hover {
 }
 .hamburger {
   color: #979797 !important;
+  width: 30px;
 }
 .mobileBtn {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.5);
   position: fixed;
   bottom: 10px;
   right: 10px;
+}
+.bookmark {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+  width: 36px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 1px 39px;
+  background-size: 80px;
 }
 #tocModal {
   background: rgba(0,0,0,0.5);
@@ -801,6 +817,22 @@ nav >ul >li >h4 >a:hover {
   header {
     padding: 15px;
   }
+}
+.sprintIcon {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("/assets/img/brand-icon.png") 26px 59px;
+  background-size: 70px;
+}
+.withinStationIcon {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/img/brand-icon.png") -4px 49px;
+  background-size: 60px;
 }
 @-moz-keyframes fadein {
   from {
@@ -1103,6 +1135,7 @@ nav >ul >li >h4 >a:hover {
 }
 .hamburger {
   color: #979797 !important;
+  width: 30px;
 }
 @media (min-width: 1080px) {
   .postArticle {
