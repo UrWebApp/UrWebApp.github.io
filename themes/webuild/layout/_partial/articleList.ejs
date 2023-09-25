@@ -60,14 +60,20 @@
                                 </div>
                                 <div class="socialBox d-flex">
                                 <%  if (page.line) {%>
-                                            <a href="<%- page.line  %>" class="iconLine">
+                                    <div class="iconLine">
+                                        <a href="<%- page.line  %>" >
                                                 <!-- <i class="fa-brands fa-line"></i> -->
-                                            </a>
+                                        </a>
+                                    </div>
+                                            
                                         <% } %>
                                 <%  if (page.ig) {%>
-                                            <a href="<%- page.ig  %>" class="iconInstagram">
+                                    <div class="iconInstagram">
+                                        <a href="<%- page.ig  %>" >
                                                 <!-- <i class="fa-brands fa-instagram"></i> -->
-                                            </a>
+                                        </a>
+                                    </div>
+                                            
                                         <% } %>
                                 <%  if (page.linkedin) {%>
                                             <a href="<%- page.linkedin  %>" class="iconLinkedin">
