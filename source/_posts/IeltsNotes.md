@@ -41,6 +41,8 @@ tags:
 
 ## [发现了一个99%能考上雅思的方法！](https://www.douyin.com/video/7276420155649936701)
 
+https://www.douyin.com/video/7272953942831648052
+
 ## 雅思書單
 
 ### 聽

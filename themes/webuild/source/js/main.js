@@ -88,3 +88,7 @@ function responsiveIframe() {
         el.height = el.parentElement.offsetHeight;
     });
 }
+
+$('document').ready(()=>{
+    let img = $("img:not([alt])").attr("alt", "Default alt text");
+})
