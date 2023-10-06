@@ -549,6 +549,9 @@ nav >ul >li >h4 >a:hover {
 #barBtn >i {
   font-size: 24px;
 }
+#barBtn >span {
+  display: none;
+}
 .mobileBox {
   display: flex;
   align-items: center;
