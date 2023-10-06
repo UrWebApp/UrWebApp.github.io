@@ -165,7 +165,7 @@
         <p class="title">johch3n611u</p>
         <p class="content">這個作者很懶，什麼都沒留下...</p>
       </div>
-      <p><img src="./assets/img/download.png" data-original="https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png"></p>
+      <p><img src="./assets/img/download.png" data-original="https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png" alt="hello-world-example-routing"></p>
 <h2 id="Remote-Procedure-Call-RPC-Queue"><a href="#Remote-Procedure-Call-RPC-Queue" class="headerlink" title="Remote Procedure Call ( RPC ) Queue"></a>Remote Procedure Call ( RPC ) Queue</h2><p>Remote Procedure Call Queue 是一種在分散式系統中用於處理遠程過程調用（RPC）的佇列。在分散式系統中，不同的應用程序可能運行在不同的主機或容器中，透過網路互相通信。當一個應用程序需要調用另一個應用程序中的函數或方法時，就需要使用RPC機制。</p>
 <p>通常用於在不同的應用程序之間傳遞 RPC 請求和回應。當應用程序需要調用另一個應用程序中的函數時，它將請求放入 RPC queue 中，然後等待該請求被處理。當另一個應用程序處理完該請求後，它將結果放回到 RPC queue 中，最終由發送請求的應用程序接收結果。</p>
 <p>通常基於一些消息佇列（Message Queue）系統實現，例如 RabbitMQ、Apache Kafka 等。這些消息佇列系統提供了可靠的消息傳遞保證，確保即使在應用程序離線或崩潰的情況下也能保證消息傳遞。</p>
@@ -266,7 +266,7 @@ class Receiver
     &#125;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="Q-amp-A："><a href="#Q-amp-A：" class="headerlink" title="Q&amp;A："></a>Q&amp;A：</h2><ol>
+<h2 id="Q-A："><a href="#Q-A：" class="headerlink" title="Q&amp;A："></a>Q&amp;A：</h2><ol>
 <li>為何要宣告兩次 demo-queue 序列？</li>
 </ol>
 <p>因為在 RabbitMQ 中，發送者和接收者都需要在他們的程式中宣告序列，以便能夠發送和接收訊息，兩個序列宣告是相同的，且<code>它們的設置必須是相同的</code>。如果一個<code>序列不存在</code>，那麼當我們向這個序列<code>發送訊息時，RabbitMQ 會自動創建這個序列</code>。</p>
@@ -308,7 +308,7 @@ class Receiver
         <aside class="rightAside">
           <section>
             <h4>Table of contents</h4>
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A"><span class="toc-text">Q&amp;A：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-A%EF%BC%9A"><span class="toc-text">Q&amp;A：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
           </section>
         </aside>
 
@@ -326,7 +326,7 @@ class Receiver
                   onclick="tocModalClose()"></button>
               </div>
               <div class="modal-body">
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-amp-A%EF%BC%9A"><span class="toc-text">Q&amp;A：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote-Procedure-Call-RPC-Queue"><span class="toc-text">Remote Procedure Call ( RPC ) Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RabbitMQ"><span class="toc-text">RabbitMQ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enqueue"><span class="toc-text">Enqueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Producer-%E7%94%9F%E7%94%A2%E8%80%85"><span class="toc-text">C# 實作 Producer 生產者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AF%A6%E4%BD%9C-Consumer-%E6%B6%88%E8%B2%BB%E8%80%85"><span class="toc-text">C# 實作 Consumer 消費者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-A%EF%BC%9A"><span class="toc-text">Q&amp;A：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%83%E8%80%83"><span class="toc-text">參考</span></a></li></ol>
               </div>
             </div>
           </div>

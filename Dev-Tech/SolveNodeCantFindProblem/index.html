@@ -167,13 +167,13 @@
       </div>
       <p>npm、webpack 等等都需要 node 來支援，如果 node 出問題了，那通常其他相關的指令也無法運作，如果有灌 node，但還出現這樣的問題，可能是環境變數出現了錯誤。</p>
 <h2 id="環境變數"><a href="#環境變數" class="headerlink" title="環境變數"></a>環境變數</h2><p>如果是 Windows 環境，可以在開始搜尋列中查詢</p>
-<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/25vCJJm.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/25vCJJm.png" alt="步驟1"></p>
 <p>打開後，點擊環境變數</p>
-<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/6cdQIJ9.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/6cdQIJ9.png" alt="步驟2"></p>
 <p>如果你的 node 版本也是利用 nvm 做管控，那就會看到使用者變數中有 nvm 的相關資訊，但不管有沒有安裝 nvm，都要在下方系統變數中的 Path 查看 node 的環境變數。</p>
-<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/VgzTXOI.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/VgzTXOI.png" alt="步驟3"></p>
 <p>此時如果沒有發現含有 <code>node.exe</code> 的資料夾路徑，就要新增含有此檔案的路徑，因為我有安裝 nvm，所以就會在 node 版號的資料夾裡，如果使用 nvm 切換 node，但環境變數沒變的話，也可以在此設定。</p>
-<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/5oPMw6e.png"></p>
+<p><img src="./assets/img/download.png" data-original="https://i.imgur.com/5oPMw6e.png" alt="步驟4"></p>
 <h2 id="絕招"><a href="#絕招" class="headerlink" title="絕招"></a>絕招</h2><p>當發現有 node 的環境變數時，但還是報錯，可以檢查看看是否遺失 node.exe，就算沒有遺失，也可以直接重灌，但重灌能成功的前提是要先將環境變數都刪掉，讓重新安裝的 node&#x2F;nvm 來幫忙建立環境變數。</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://www.796t.com/content/1544611888.html">windows安裝nvm及手動配置系統node的path

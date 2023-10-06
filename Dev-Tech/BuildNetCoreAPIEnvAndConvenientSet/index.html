@@ -168,10 +168,10 @@
       <blockquote>
 <p>此文章記錄重新開專案時遇到的一些問題方便以後查看，會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！</p>
 </blockquote>
-<h2 id="Sql-Express"><a href="#Sql-Express" class="headerlink" title="Sql Express"></a>Sql Express</h2><p><img src="./assets/img/download.png" data-original="/assets/img/sql-express.png"></p>
+<h2 id="Sql-Express"><a href="#Sql-Express" class="headerlink" title="Sql Express"></a>Sql Express</h2><p><img src="./assets/img/download.png" data-original="/assets/img/sql-express.png" alt="sql-express"></p>
 <p>Sql Express 是免費的 Microsoft SQL Server 關聯式數據庫管理系統，適合獨立開發人員測試或小系統使用。</p>
 <p>網路上有看到有方法，拿到它獨立的安裝檔方便群體自動化安裝，目前是不知道什麼情境需要這種情境，暫且紀錄；</p>
-<p><img src="./assets/img/download.png" data-original="/assets/img/ef-dependency-mod.jpg"></p>
+<p><img src="./assets/img/download.png" data-original="/assets/img/ef-dependency-mod.jpg" alt="ef-dependency-mod"></p>
 <p><code>dotnet tool install --global dotnet-ef</code></p>
 <p>感覺比較複雜的應該是 EF 需要依賴哪些 Module 而後 Connection 與 EF DB First Update 指令怎麼取得，但這些在現今這個開發大環境下依靠 AI 或 VS IDE 本身的提示，應該都蠻好解決的，比較值得注意的是 </p>
 <ol>
@@ -179,11 +179,11 @@
 <li>TrustServerCertificate&#x3D;True，如果有遇到 SSL 的問題，不管在連線或更新 EF 都要補上。</li>
 </ol>
 <p><code>dotnet ef dbcontext scaffold &quot;Server=***;Database=***;User Id=***;Password=***;TrustServerCertificate=True&quot; Microsoft.EntityFrameworkCore.SqlServer -o Models -f</code></p>
-<h2 id="VS-IDE-瞄和定義"><a href="#VS-IDE-瞄和定義" class="headerlink" title="VS IDE 瞄和定義"></a>VS IDE 瞄和定義</h2><p><img src="./assets/img/download.png" data-original="/assets/img/vs-ide-definition.png"></p>
+<h2 id="VS-IDE-瞄和定義"><a href="#VS-IDE-瞄和定義" class="headerlink" title="VS IDE 瞄和定義"></a>VS IDE 瞄和定義</h2><p><img src="./assets/img/download.png" data-original="/assets/img/vs-ide-definition.png" alt="vs-ide-definition"></p>
 <p>想要查看某個方法、變數或類型的詳細定義時，可以更深入地理解程式碼中使用的各種元素。</p>
-<h2 id="VS-IDE-GitHub-的範例和文檔"><a href="#VS-IDE-GitHub-的範例和文檔" class="headerlink" title="VS IDE GitHub 的範例和文檔"></a>VS IDE GitHub 的範例和文檔</h2><p><img src="./assets/img/download.png" data-original="/assets/img/vs-ide-github-sample.png"></p>
+<h2 id="VS-IDE-GitHub-的範例和文檔"><a href="#VS-IDE-GitHub-的範例和文檔" class="headerlink" title="VS IDE GitHub 的範例和文檔"></a>VS IDE GitHub 的範例和文檔</h2><p><img src="./assets/img/download.png" data-original="/assets/img/vs-ide-github-sample.png" alt="vs-ide-github-sample"></p>
 <p>看起來蠻好用的，但實際目前的狀況發現，如果類型命名太相似會顯示錯誤的範例，所以還是要人工判斷。</p>
-<h2 id="VS-IDE-設定啟動專案…"><a href="#VS-IDE-設定啟動專案…" class="headerlink" title="VS IDE 設定啟動專案…"></a>VS IDE 設定啟動專案…</h2><p><img src="./assets/img/download.png" data-original="/assets/img/vs-ide-muti-run-serve.jpg"></p>
+<h2 id="VS-IDE-設定啟動專案…"><a href="#VS-IDE-設定啟動專案…" class="headerlink" title="VS IDE 設定啟動專案…"></a>VS IDE 設定啟動專案…</h2><p><img src="./assets/img/download.png" data-original="/assets/img/vs-ide-muti-run-serve.jpg" alt="vs-ide-muti-run-serve"></p>
 <p>其實在職訓局時就有接觸到這個功能，但在當時並沒有一次性啟動多個專案的需求，結果被上包人員教學了，非常感激，不然就會停留在原始人時代多開 IDE 啟動專案…</p>
 
     </div>
