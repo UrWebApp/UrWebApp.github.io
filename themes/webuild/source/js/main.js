@@ -2,17 +2,20 @@
 
 $("#categoriesBtn").click(() => {
     $("#categories").slideToggle();
-    $("#categoriesBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+    // $("#categoriesBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+    $("#categoriesBtn div").toggleClass("uponIcon").toggleClass("downIcon");
 })
 
 $("#tagsBtn").click(() => {
     $("#tags").slideToggle();
-    $("#tagsBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+    // $("#tagsBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+    $("#tagsBtn div").toggleClass("uponIcon").toggleClass("downIcon");
 })
 
 $("#authorsBtn").click(() => {
     $("#authors").slideToggle();
-    $("#authorsBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+    // $("#authorsBtn i").toggleClass("fa-solid fa-square-caret-up").toggleClass("fa-solid fa-square-caret-down");
+    $("#authorsBtn div").toggleClass("uponIcon").toggleClass("downIcon");
 })
 
 $(".input-group-input").addClass("form-control");
@@ -22,7 +25,6 @@ $(".input-group-submit").addClass("btn btn-secondary");
 $('#barBtn').click(() => {
     $(".leftAside").slideToggle();
 })
-
 
 $('.mobileBtn').click(()=>{
     $("#tocModal").fadeToggle();

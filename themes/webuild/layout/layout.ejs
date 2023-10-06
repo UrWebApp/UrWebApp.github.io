@@ -68,13 +68,13 @@
     <meta name="description"
           content="文章作者: <%- page.author %> 創作日期: <%- date( page.date , 'YYYY/MM/DD' ) %> 文章類型: <% page.categories.each(category=>{ %><%- category.name %><% }) %>，查看本文章獲取更多訊息。">
   <% } %>
-          <!-- <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
-          <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous" /> -->
-          <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
-            rel="stylesheet"> -->
+            crossorigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
           <%- css('css/prism.css') %>
@@ -141,7 +141,10 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="authorsBtn">Authors<i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="authorsBtn">Authors
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                  <div class="uponIcon"></div>
+                </a>
               </h4>
               <div id="authors">
                 <ul class="author-list">
@@ -156,7 +159,10 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="categoriesBtn">Categories 
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                  <div class="uponIcon"></div>
+                </a>
               </h4>
               <div id="categories">
                 <%- list_categories() %>
@@ -164,7 +170,10 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="tagsBtn">Tags 
+                  <div class="uponIcon"></div>
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                </a>
               </h4>
               <div id="tags"><%- tagcloud({amount: 30,}) %></div>
             </li>
@@ -187,7 +196,7 @@
 
         <div class="mobileBtn btn">
           <!-- <i class="fa-solid fa-book-bookmark"></i> -->
-          <div class="bookmark"></div>
+          <div class="bookmarkIcon"></div>
         </div>
 
         <div class="modal" tabindex="-1" id="tocModal">

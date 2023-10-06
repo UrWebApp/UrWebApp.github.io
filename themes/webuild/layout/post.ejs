@@ -18,7 +18,10 @@
         <ul class="tagBox">
           <% page.tags.each(tag=>{ %>
             <li>
-              <a href="<%- url_for(tag.path) %>"><i class="fa-solid fa-tag"></i> <%- tag.name %>
+              <a href="<%- url_for(tag.path) %>">
+                <!-- <i class="fa-solid fa-tag"></i>  -->
+                <div class="tagIcon"></div>
+                <%- tag.name %>
               </a>
             </li>
             <% }) %>
@@ -36,14 +39,19 @@
   <div class="postNext d-flex justify-content-between mt-3 mb-3">
     <% if (page.prev) { %>
       <h4>
-        <a href="<%- url_for(page.prev.path) %>"><i class="fa-solid fa-angles-left"></i> <%- page.prev.title %>
+        <a href="<%- url_for(page.prev.path) %>">
+          <span><<</span>
+          <!-- <i class="fa-solid fa-angles-left"></i>  -->
+          <%- page.prev.title %>
         </a>
       </h4>
       <% } %>
         <% if (page.next) { %>
           <h4>
             <a href="<%- url_for(page.next.path) %>">
-              <%- page.next.title %> <i class="fa-solid fa-angles-right"></i>
+              <%- page.next.title %> 
+              <span>>></span>
+              <!-- <i class="fa-solid fa-angles-right"></i> -->
             </a>
           </h4>
           <% } %>

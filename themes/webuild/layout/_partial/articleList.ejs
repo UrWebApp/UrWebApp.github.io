@@ -51,7 +51,7 @@
                             <div class="d-flex authorHeader">
                                 <div class="authorNameBox">
                                     <h3><%- page.title %></h3>
-                                    <p class="m-0">發表文章總數: <%- posts.length %></p>
+                                    <p class="m-0" style="font-size: 20px;">發表文章總數: <%- posts.length %></p>
                                 </div>
                                 <div class="avatar">
                                     <%  if (page.avatar) {%>
@@ -60,22 +60,22 @@
                                 </div>
                                 <div class="socialBox d-flex">
                                 <%  if (page.line) {%>
-                                            <a href="<%- page.line  %>" class="iconLine">
+                                            <a href="<%- page.line  %>" class="lineIcon">
                                                 <!-- <i class="fa-brands fa-line"></i> -->
                                             </a>
                                         <% } %>
                                 <%  if (page.ig) {%>
-                                            <a href="<%- page.ig  %>" class="iconInstagram">
+                                            <a href="<%- page.ig  %>" class="instagramIcon">
                                                 <!-- <i class="fa-brands fa-instagram"></i> -->
                                             </a>
                                         <% } %>
                                 <%  if (page.linkedin) {%>
-                                            <a href="<%- page.linkedin  %>" class="iconLinkedin">
+                                            <a href="<%- page.linkedin  %>" class="linkedinIcon">
                                                 <!-- <i class="fa-brands fa-linkedin-in"></i> -->
                                             </a>
                                         <% } %>
                                 <%  if (page.github) {%>
-                                            <a href="<%- page.github  %>" class="iconGithub">
+                                            <a href="<%- page.github  %>" class="githubIcon">
                                                 <!-- <i class="fa-brands fa-github"></i> -->
                                             </a>
                                         <% } %>
@@ -96,7 +96,9 @@
                         </a></h2>
                     <div class="infoBox">
                         <%  if (post.author) {%>
-                            <i class="fa-solid fa-user-pen"></i><a href="<%=url_for("author/"+post.author)%>"><%= post.author %></a>
+                            <!-- <i class="fa-solid fa-user-pen"></i> -->
+                            <div class="authorIcon"></div>
+                            <a href="<%=url_for("author/"+post.author)%>"><%= post.author %></a>
                             <% } %>
                             <span>|</span><p>
                             <% post.categories.each(category=>{ %>
@@ -121,7 +123,10 @@
                     <ul class="tagBox">
                         <% post.tags.each(tag=>{ %>
                             <li>
-                                <a href="<%- url_for(tag.path) %>"><i class="fa-solid fa-tag"></i> <%- tag.name %>
+                                <a href="<%- url_for(tag.path) %>">
+                                    <!-- <i class="fa-solid fa-tag"></i>  -->
+                                    <div class="tagIcon"></div>
+                                    <%- tag.name %>
                                 </a>
                             </li>
                             <% }) %>
