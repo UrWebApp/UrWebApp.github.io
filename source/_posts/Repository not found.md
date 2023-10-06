@@ -22,7 +22,7 @@ tags:
 1. 開啟認證管理員，請在工作列的搜尋方塊中輸入認證管理員，然後選取 [認證管理員控制台]。
 2. 選取 [Windows 認證] 來刪除 Git 的認證。
 
-![](https://i.imgur.com/6zCMAl0.png)
+![控制台](https://i.imgur.com/6zCMAl0.png)
 
 3. 再重新執行 clone、push、pull 等操作，重新登入一次 git 帳號。
 

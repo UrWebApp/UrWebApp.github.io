@@ -15,48 +15,48 @@ tags:
 
 1. 打開 firewall 點到左側 Inbound/Outbound Rules
 
-![](https://i.imgur.com/wu9lcih.png)
+![步驟1](https://i.imgur.com/wu9lcih.png)
 
 2. 點選右側新增規則
 
-![](https://i.imgur.com/5uC54sa.png)
+![步驟2](https://i.imgur.com/5uC54sa.png)
 
 3. 點選 Port 
 
-![](https://i.imgur.com/jKF8YRr.png)
+![步驟3](https://i.imgur.com/jKF8YRr.png)
 
 4. 輸入指定 Port，千萬不要打開所有的 Port
 
-![](https://i.imgur.com/c4Ls19Q.png)
+![步驟4](https://i.imgur.com/c4Ls19Q.png)
 
 5. 允許該 Port 的連接
 
-![](https://i.imgur.com/XSmbvJd.png)
+![步驟5](https://i.imgur.com/XSmbvJd.png)
 
 6. 選擇規則應用的網路場景，也就是常常電腦在設定網路連線時會跳出來的三個選項。
 
-![](https://i.imgur.com/ZkjUWvO.png)
+![步驟6](https://i.imgur.com/ZkjUWvO.png)
 
 7. 取名並完成新增
 
-![](https://i.imgur.com/Hafw0Et.png)
+![步驟7](https://i.imgur.com/Hafw0Et.png)
 
 
 ## 檢查 SSL 及 URL 重新導向/重寫
 
 以 windows 來說，可以在 IIS 上查看是否有設定到一定需要 SSL 才能連線，或是有沒有 URL 重寫的規則，也就是明明指定要連這個 IP address 卻被導向到另外一個。
 
-![](https://i.imgur.com/gyC1NiT.png)
+![檢查 SSL 及 URL 重新導向/重寫](https://i.imgur.com/gyC1NiT.png)
 
 ## 資源監視器 (Resource Monitor)
 
 當以上都沒問題時，那很可能是該 port 被其他資源佔用了，此時就要打開資源監視器來查看。
 
-![](https://i.imgur.com/L7trrzd.png)
+![資源監視器](https://i.imgur.com/L7trrzd.png)
 
 可以看到目前資源所使用到的 port，檢查看看是否有重複的，很可能就是造成無法連線的原因。
 
-![](https://i.imgur.com/3y3PPiO.png)
+![資源所使用到的 port](https://i.imgur.com/3y3PPiO.png)
 
 
 ## Reference

@@ -10,7 +10,7 @@ tags:
 
 ## 工廠方法
 
-![](https://hackmd.io/_uploads/B1-Otf8Vh.png)
+![工廠方法](https://hackmd.io/_uploads/B1-Otf8Vh.png)
 
 工廠方法（Factory Method）是一種常見的設計模式，屬於物件導向設計模式的一種。它提供了一個創建物件的介面，但具體的物件的創建是由繼承類別來實現的。工廠方法模式允許一個類別將物件的創建延遲到子類別中進行。
 

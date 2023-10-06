@@ -15,12 +15,12 @@ Ping 可以說是最基礎的指令，但如果要深層判斷網路及各種外
 
 1. 打開命令提示字元(CMD)
 
-![](https://i.imgur.com/KmlnDSO.png)
+![步驟1](https://i.imgur.com/KmlnDSO.png)
 
 
 2. `ping [IP address/Host name]`，可以看到如果是 ping Host name，會傳封包至該 IP，並計算來回時間，其實就是在算遊戲中常常聽到的 ping 值。
 
-![](https://i.imgur.com/eEvXMyF.png)
+![步驟2](https://i.imgur.com/eEvXMyF.png)
 
 
 ## telnet 
@@ -34,13 +34,13 @@ Ping 可以說是最基礎的指令，但如果要深層判斷網路及各種外
 就可以使用 `telnet` 來測試。
 
 1. 在 windows 上需先至`開啟或關閉Windows功能`，開啟 telnet 服務
-![](https://i.imgur.com/gQ1dQLz.png)
+![步驟1](https://i.imgur.com/gQ1dQLz.png)
 2. 將 telnet 用戶端勾選
-![](https://i.imgur.com/By12ZLH.png)
+![步驟2](https://i.imgur.com/By12ZLH.png)
 3. 使用 cmd 輸入 `telnet [ IP 位址或主機名稱] [port]`
 
 如果失敗會回傳下圖
-![](https://i.imgur.com/SUPvDc2.png)
+![步驟3](https://i.imgur.com/SUPvDc2.png)
 
 如果成功會直接跳轉空白
 
@@ -59,7 +59,7 @@ Ping 可以說是最基礎的指令，但如果要深層判斷網路及各種外
 
 Test-NetConnection 跟 telnet 有點像，但會獲得更多資訊，且成功時，資訊不會被刷新，但這次是在 **windows powerShell** 下指令。
 
-![](https://i.imgur.com/EcLrSyD.png)
+![Test-NetConnection](https://i.imgur.com/EcLrSyD.png)
 
 
 ## Reference

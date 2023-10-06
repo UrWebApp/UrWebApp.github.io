@@ -8,7 +8,7 @@ tags:
 - RabbitMQ
 ---
 
-![](https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png)
+![hello-world-example-routing](https://www.rabbitmq.com/img/tutorials/intro/hello-world-example-routing.png)
 
 ## Remote Procedure Call ( RPC ) Queue
 

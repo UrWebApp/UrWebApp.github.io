@@ -77,9 +77,9 @@ ng-app 屬性指定了 Angular 程序的根節點，`<my-app>` 將 angular.js �
 
 還有像是一些 PostMan、Swagger 提供的 `Code Snippet Generator` 都可以快速增加開發體驗與速度。
 
-![](/assets/img/postman-code-snippet.png)
+![postman-code-snippet](/assets/img/postman-code-snippet.png)
 
-![](/assets/img/swagger-editor-generate.png)
+![swagger-editor-generate](/assets/img/swagger-editor-generate.png)
 
 ## 參考文章
 

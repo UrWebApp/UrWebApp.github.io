@@ -15,17 +15,17 @@ tags:
 
 1. 下載完後選擇連接方式
 
-![](https://i.imgur.com/IjBDcBJ.png)
+![步驟1](https://i.imgur.com/IjBDcBJ.png)
 
 2. 指定印表機型號
 
-![](https://i.imgur.com/u5o7UKI.png)
+![步驟2](https://i.imgur.com/u5o7UKI.png)
 
 3. 假設印表機是透過網路方式連接，須至設定增加 IP 埠道
 
-![](https://i.imgur.com/cSunWhn.png)
-![](https://i.imgur.com/6upmKAf.png)
-![](https://i.imgur.com/aaC4fTz.png)
+![步驟3](https://i.imgur.com/cSunWhn.png)
+![步驟3-2](https://i.imgur.com/6upmKAf.png)
+![步驟3-3](https://i.imgur.com/aaC4fTz.png)
 
 
 ## 程式實作
@@ -41,9 +41,9 @@ PrintDocument 類別是 .Net Framework 內建的套件，好處是可以在設�
 
 這邊要使用 `Print` Verb 時，要先至 Regedit，查看電腦是否有登入此指令
 
-![](https://i.imgur.com/DdhyIbi.png)
+![步驟1](https://i.imgur.com/DdhyIbi.png)
 
-![](https://i.imgur.com/Z5X7uF7.png)
+![步驟2](https://i.imgur.com/Z5X7uF7.png)
 
 如果沒有的話，通常是沒有安裝 [Acrobat Reader](https://get.adobe.com/tw/reader/)，此 PDF 閱讀軟體會自動在電腦上登錄列印紙令，如有此指令便可實作程式碼。
 
@@ -172,7 +172,7 @@ pd.Print();
 ### PdfiumViewer 
 可參考[官方文件](https://github.com/pvginkel/PdfiumBuild)安裝，因為套件作者已沒在維護，所以在 Nuget 中安裝 PdfiumViewer 以外，還需要安裝 pdfiumViewer.Native.x86_64.v8-xfa，這邊推薦安裝 2.10.0 的 PdfiumViewer，安裝完後，專案中會出現 x64 資料夾。
 
-![](https://i.imgur.com/aMo9UrL.png)
+![PdfiumViewer](https://i.imgur.com/aMo9UrL.png)
 
 ``` csharp=
 var pdfPath = @"資料位置" 

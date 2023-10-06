@@ -1,5 +1,5 @@
 ---
-title: 查找 IIS 站台相關問題與重啟Application Pool機制
+title: 查找 IIS 站台相關問題與重啟 Application Pool 機制
 date: 2023-05-01
 categories: Dev Tech
 author: kai98k
@@ -8,7 +8,7 @@ tags:
 ---
 許多人可能知道怎麼在 IIS 架設網站，卻不知道相關的伺服器 Log 要在哪尋找，答案就是事件檢視器(event viewer)。
 
-![](https://i.imgur.com/ghSzGGS.png)
+![事件檢視器](https://i.imgur.com/ghSzGGS.png)
 
 ## Event Viewer
 
@@ -18,7 +18,7 @@ tags:
 
 而以下圖片顯示的站台關閉事件是 IIS (Internet Information Services) 警告訊息，表示應用程式池 (Application Pool) 內的工作程序 (worker process) 已經因為閒置時間過長而被關閉。
 
-![](https://i.imgur.com/pbo8NBV.png)
+![站台關閉事件](https://i.imgur.com/pbo8NBV.png)
 
 IIS 預設情況下會將應用程式池的閒置超時時間設置為 20 分鐘。如果工作程序在這段時間內沒有處理任何請求，就會被 IIS 自動關閉，以節省系統資源。
 
@@ -34,10 +34,10 @@ IIS 預設情況下會將應用程式池的閒置超時時間設置為 20 分鐘
 在 IIS 中調整應用程式池的閒置超時時間設定，或將其設置為 0，可以按照以下步驟進行：
 
 1. 開啟 IIS 管理員控制台，選擇應用程式池，右鍵點選需要調整的應用程式池，並選擇 "進階設定"。
-![](https://i.imgur.com/SzmWmlK.png)
+![步驟1](https://i.imgur.com/SzmWmlK.png)
 
 2. 找到 "進程模型" 區段，滾動到下面的 "閒置時間 (分鐘)" 設定項目。
-![](https://i.imgur.com/lZKXdao.png)
+![步驟2](https://i.imgur.com/lZKXdao.png)
 3. 將閒置時間設定為所需的值，或者設定為 0，表示永遠不會自動關閉工作程序。
 
 4. 按下 "確定" 按鈕，保存設定。
@@ -53,27 +53,27 @@ IIS 預設情況下會將應用程式池的閒置超時時間設置為 20 分鐘
 
 2. 點擊 Create Basic Task
 
-![](https://i.imgur.com/4xt36ui.png)
+![步驟2](https://i.imgur.com/4xt36ui.png)
 
 3. 填寫工作描述
 
-![](https://i.imgur.com/cYK8qjt.png)
+![步驟3](https://i.imgur.com/cYK8qjt.png)
 
 4. 選擇 Event Trigger
 
-![](https://i.imgur.com/rJcONAr.png)
+![步驟4](https://i.imgur.com/rJcONAr.png)
 
 5. 選擇 Event
 
-![](https://i.imgur.com/14hEStj.png)
+![步驟5](https://i.imgur.com/14hEStj.png)
 
 6. 選擇觸發時，需執行的步驟，這邊選擇執行程序
 
-![](https://i.imgur.com/cnyGvo7.png)
+![步驟6](https://i.imgur.com/cnyGvo7.png)
 
 7. 選擇要執行的程序，這邊選擇我自己寫的 Bat 檔 
 
-![](https://i.imgur.com/vzCpuJj.png)
+![步驟7](https://i.imgur.com/vzCpuJj.png)
 
 8. 完成!
 

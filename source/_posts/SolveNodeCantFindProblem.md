@@ -13,19 +13,19 @@ npm、webpack 等等都需要 node 來支援，如果 node 出問題了，那通
 
 如果是 Windows 環境，可以在開始搜尋列中查詢
 
-![](https://i.imgur.com/25vCJJm.png)
+![步驟1](https://i.imgur.com/25vCJJm.png)
 
 打開後，點擊環境變數
 
-![](https://i.imgur.com/6cdQIJ9.png)
+![步驟2](https://i.imgur.com/6cdQIJ9.png)
 
 如果你的 node 版本也是利用 nvm 做管控，那就會看到使用者變數中有 nvm 的相關資訊，但不管有沒有安裝 nvm，都要在下方系統變數中的 Path 查看 node 的環境變數。
 
-![](https://i.imgur.com/VgzTXOI.png)
+![步驟3](https://i.imgur.com/VgzTXOI.png)
 
 此時如果沒有發現含有 `node.exe` 的資料夾路徑，就要新增含有此檔案的路徑，因為我有安裝 nvm，所以就會在 node 版號的資料夾裡，如果使用 nvm 切換 node，但環境變數沒變的話，也可以在此設定。
 
-![](https://i.imgur.com/5oPMw6e.png)
+![步驟4](https://i.imgur.com/5oPMw6e.png)
 
 
 ## 絕招

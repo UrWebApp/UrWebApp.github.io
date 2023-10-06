@@ -17,7 +17,7 @@ abp.io 是 ASP.NET Boilerplate Project的擴展版本，兩者為不同框架，
 * DDD (Domain-driven Design)的最佳實踐: 包含但不限於實體、聚合根、工廠模式、倉儲模式等等的 DDD 基礎設施。
 * 內建 API 文件、Log 處理等等系統基礎設施。
 * 多租戶/Saas
-![](https://i.imgur.com/QULZ5wD.png)圖片來源: abp.io
+![多租戶](https://i.imgur.com/QULZ5wD.png)圖片來源: abp.io
 
 ## 框架最低要求
 * 須了解 DDD 的設計模式，與實踐方式。
@@ -27,7 +27,7 @@ abp.io 是 ASP.NET Boilerplate Project的擴展版本，兩者為不同框架，
 >這次範例會照著官網教程走一遍，並解決與說明可能會碰到的問題，如有興趣可以先直接照著官網文件，快速入門，如有問題再回來觀看。
 >
 可在官網的[開始](https://abp.io/get-started)，來快速產生初始化安裝指令，並加上自己所需的[額外指令](https://docs.abp.io/zh-Hans/abp/6.0/CLI)，像是版本等等，這邊範例使用多層應用、Angular 與預設主題作為 UI 框架，資料庫為 SQL Server。
-![](https://i.imgur.com/Id0AYUa.png)
+![Architecture](https://i.imgur.com/Id0AYUa.png)
 
 先安裝 abp cli
 ```=
@@ -327,7 +327,7 @@ UPDATE src/app/app-routing.module.ts (2181 bytes)
 abp generate-proxy -t ng
 ```
 上述指令編譯完成後，應該要出現下圖檔案列表
-![](https://i.imgur.com/9K3SXaM.png)
+![Architecture](https://i.imgur.com/9K3SXaM.png)
 在這邊如果有報錯，或是缺少檔案，可以試著使用 abl cli 更新 npm 套件。
 ```=
 abp update --npm
@@ -406,18 +406,18 @@ export class BookComponent implements OnInit {
 ```
 最後，使用指令`npm run start`運行前端頁面，可成功出現書籍列表畫面。
 
-![](https://i.imgur.com/DxP3Wsn.png)
+![Dashboard](https://i.imgur.com/DxP3Wsn.png)
 
 如果無法成功運行，請再將`package-lock.json` 刪掉並再下指令`yarn`重新安裝套件包，再運行看看。
 
 ## 前端頁面客製化
 可以至文件的主題中，裡面有更仔細的步驟與教學，但很可惜的是這邊目前沒有中文化，所以就要考驗小夥伴們的英文底仔了，這邊會簡單講解一下。
 
-![](https://i.imgur.com/jShCXgN.png)
+![Architecture](https://i.imgur.com/jShCXgN.png)
 
 abp vNext 提供版面客製化的選項，但這裡卻不真正意義上去客製化 abp vNext 元件，而是自己做一個去替換，可以看到文件內說明。
 
-![](https://i.imgur.com/mFZ3sg9.png)
+![說明](https://i.imgur.com/mFZ3sg9.png)
 
 所以要先找到要替換元件的 key，也就是元件名字，然後在 `app.component.ts`中做替換。
 ```typescript=
