@@ -266,6 +266,7 @@ tr:nth-child(even) {
   margin-left: 5px;
   text-decoration: none;
   color: #808080;
+  display: flex;
 }
 .tagBox {
   padding: 0;
@@ -294,6 +295,9 @@ tr:nth-child(even) {
   column-count: 1;
   column-gap: 0px;
   counter-reset: item-counter;
+}
+.waterfall img {
+  max-width: 50%;
 }
 .footerInfo {
   display: flex;
@@ -385,34 +389,6 @@ tr:nth-child(even) {
   .waterfall .main {
     max-width: 1080px;
   }
-}
-.iconLine {
-  left: 0px;
-  width: 43px;
-  height: 43px;
-  background: url("/assets/img/brand-icon.png") 2px 2px;
-  background-size: 80px;
-}
-.iconInstagram {
-  left: 0px;
-  width: 43px;
-  height: 43px;
-  background: url("/assets/img/brand-icon.png") 2px -32px;
-  background-size: 80px;
-}
-.iconLinkedin {
-  left: 0px;
-  width: 43px;
-  height: 43px;
-  background: url("/assets/img/brand-icon.png") 39px 0px;
-  background-size: 80px;
-}
-.iconGithub {
-  left: 0px;
-  width: 43px;
-  height: 43px;
-  background: url("/assets/img/brand-icon.png") 39px 108px;
-  background-size: 80px;
 }
 .main {
   padding-bottom: 50px;
@@ -725,13 +701,6 @@ nav >ul >li >h4 >a:hover {
   bottom: 10px;
   right: 10px;
 }
-.bookmark {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
-  width: 36px;
-  height: 43px;
-  background: url("/assets/img/brand-icon.png") 1px 39px;
-  background-size: 80px;
-}
 #tocModal {
   background: rgba(0,0,0,0.5);
 }
@@ -821,22 +790,6 @@ nav >ul >li >h4 >a:hover {
     padding: 15px;
   }
 }
-.sprintIcon {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: url("/assets/img/brand-icon.png") 26px 59px;
-  background-size: 70px;
-}
-.withinStationIcon {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: url("/assets/img/brand-icon.png") -4px 49px;
-  background-size: 60px;
-}
 @-moz-keyframes fadein {
   from {
     opacity: 0;
@@ -908,6 +861,101 @@ nav >ul >li >h4 >a:hover {
   to {
     margin-top: 110px;
   }
+}
+.sprintIcon {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("/assets/img/brand-icon.png") -37px 64px;
+  background-size: 100px;
+}
+.withinStationIcon {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/img/brand-icon.png") -7px 59px;
+  background-size: 100px;
+}
+.bookmarkIcon {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
+  width: 36px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 1px 39px;
+  background-size: 120px;
+}
+.lineIcon {
+  display: inline-block;
+  left: 0px;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 2px 2px;
+  background-size: 120px;
+}
+.instagramIcon {
+  display: inline-block;
+  left: 0px;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 2px -32px;
+  background-size: 120px;
+}
+.linkedinIcon {
+  display: inline-block;
+  left: 0px;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") -39px 2px;
+  background-size: 120px;
+}
+.githubIcon {
+  display: inline-block;
+  left: 0px;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") -40px 114px;
+  background-size: 120px;
+}
+.authorIcon {
+  display: inline-block;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/img/brand-icon.png") 19px 75px;
+  background-size: 60px;
+}
+.uponIcon {
+  display: inline-block;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/img/brand-icon.png") 20px 58px;
+  background-size: 60px;
+}
+.downIcon {
+  display: inline-block;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/img/brand-icon.png") 20px 113px;
+  background-size: 60px;
+}
+.viewerIcon {
+  display: inline-block;
+  left: 0px;
+  width: 43px;
+  height: 43px;
+  background: url("/assets/img/brand-icon.png") 39px 108px;
+  background-size: 80px;
+}
+.tagIcon {
+  display: inline-block;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: url("/assets/img/brand-icon.png") -22px 20px;
+  background-size: 60px;
 }
 .search-form {
   position: relative;
