@@ -2,124 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/ReactClassAndFunctional/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/ReactHooks/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/Repository%20not%20found/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/ShiftJobMethod/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/SolveNetConnectionProblem/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/SolveNodeCantFindProblem/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/TalkAboutAuthorization/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/</loc>
-    
-    <lastmod>2023-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
     
     <lastmod>2023-12-14</lastmod>
     
@@ -182,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/DontFearJustStart/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/ExceptionFilterNetCore/</loc>
     
     <lastmod>2023-12-14</lastmod>
     
@@ -191,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/ExceptionFilterNetCore/</loc>
+    <loc>https://urwebapp.github.io/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/DontFearJustStart/</loc>
     
     <lastmod>2023-12-14</lastmod>
     
@@ -245,6 +128,15 @@
   </url>
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/</loc>
     
     <lastmod>2023-12-14</lastmod>
@@ -254,7 +146,97 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/ReactClassAndFunctional/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/ReactHooks/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/Repository%20not%20found/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/ShiftJobMethod/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/SolveNetConnectionProblem/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/SolveNodeCantFindProblem/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/TalkAboutAuthorization/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
     
     <lastmod>2023-12-14</lastmod>
     
@@ -291,6 +273,24 @@
   
   <url>
     <loc>https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/</loc>
+    
+    <lastmod>2023-12-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
     
     <lastmod>2023-12-14</lastmod>
     
@@ -343,13 +343,6 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/</loc>
-    <lastmod>2023-12-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/tags/Exception/</loc>
     <lastmod>2023-12-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -358,6 +351,13 @@
   
   <url>
     <loc>https://urwebapp.github.io/tags/Filter/</loc>
+    <lastmod>2023-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/%E6%88%90%E9%95%B7%E6%80%9D%E7%B6%AD/</loc>
     <lastmod>2023-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -399,14 +399,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/computer-science/</loc>
+    <loc>https://urwebapp.github.io/tags/Log/</loc>
     <lastmod>2023-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Log/</loc>
+    <loc>https://urwebapp.github.io/tags/computer-science/</loc>
     <lastmod>2023-12-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
