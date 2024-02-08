@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="TW">
-
+  
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>您的網路共筆-UrWeb</title>
+  <!-- 您的網路共筆-UrWeb -->
+  <title>
+    
+      Angular 大師之路：淺出深入的學習指南 |  
+    
+    您的網路共筆
+  </title>
   
-      
-        <meta name="description"
+  
+    <meta name="description"
           content="文章作者: johch3n611u 創作日期: 2023/06/28 文章類型: Dev Tech，查看本文章獲取更多訊息。">
-        
+  
           <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -41,7 +47,7 @@
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-<body>
+<body onload="responsiveIframe()">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -55,9 +61,14 @@
           </h1>
         </a>
       </div>
-      <div class="desktop-show">       <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+      <div class="desktop-show"> <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
       </div>
-      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+      <a href="#" id="barBtn">
+        <span>hamburger-icon</span>
+        <!-- <i class="hamburger fa-solid fa-bars"></i> -->
+        <!-- <span class="material-symbols-outlined">menu</span> -->
+        <img class="hamburger" src="./assets/img/download.png" data-original="/assets/img/burger-menu-svgrepo-com.svg" alt="hamburger-icon">
+      </a>
     </div>
   </header>
   <!-- <h1>
@@ -66,7 +77,7 @@
       tags
       <a href="/about/">About</a>
     </h1> -->
-  <div class="outter-wrap container-fluid">
+  <div class="outterWrap container-fluid">
     <aside class="leftAside">
       <nav>
         <ul>
@@ -76,21 +87,24 @@
               <a href="/about/">關於我們</a>
             </h4>
           </li> -->
-          <li style="margin-top: 50px;">
-            <h4>
-              <a href="https://forms.gle/Mzn7eLEtW3oiscMT6" target="_blank">Contact / Subscribe</a>
-            </h4>
-          </li>
+            <li style="margin-top: 50px;">
+              <h4>
+                <a href="https://forms.gle/Mzn7eLEtW3oiscMT6" target="_blank">Contact / Subscribe</a>
+              </h4>
+            </li>
             <li>
               <h4>
-                <a href="#" id="authorsBtn">Authors <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="authorsBtn">Authors
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                  <div class="uponIcon"></div>
+                </a>
               </h4>
               <div id="authors">
                 <ul class="author-list">
-                  <li> 
+                  <li>
                     <a href="/author/kai98k">kai98k</a>
                   </li>
-                  <li> 
+                  <li>
                     <a href="/author/johch3n611u">johch3n611u</a>
                   </li>
                 </ul>
@@ -98,7 +112,10 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="categoriesBtn">Categories 
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                  <div class="uponIcon"></div>
+                </a>
               </h4>
               <div id="categories">
                 <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI-Tools/">AI Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev-Tech/">Dev Tech</a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/f2e/">f2e</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/">轉職成長</a><span class="category-list-count">2</span></li></ul>
@@ -106,14 +123,23 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="tagsBtn">Tags 
+                  <div class="uponIcon"></div>
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                </a>
               </h4>
               <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Authorization/" style="font-size: 10px;">Authorization</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/Computer-Science/" style="font-size: 10px;">Computer Science</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/English/" style="font-size: 12.5px;">English</a> <a href="/tags/Exception/" style="font-size: 10px;">Exception</a> <a href="/tags/Filter/" style="font-size: 10px;">Filter</a> <a href="/tags/GTM/" style="font-size: 10px;">GTM</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/Internet/" style="font-size: 17.5px;">Internet</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Log/" style="font-size: 12.5px;">Log</a> <a href="/tags/Note/" style="font-size: 15px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/RabbitMQ/" style="font-size: 10px;">RabbitMQ</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/Tools/" style="font-size: 10px;">Tools</a> <a href="/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a> <a href="/tags/f2e/" style="font-size: 10px;">f2e</a></div>
+            </li>
+            <li style="margin-top: 50px;">
+              <h4>
+                <a href="https://urwebapp.github.io/assets/angular/ec/index.html" target="_blank">EC Demo</a>
+                <a href="https://urwebapp.github.io/assets/angular/mod/EnglishLearningHelper/index.html" target="_blank">EnglishLearningHelper</a>
+              </h4>
             </li>
         </ul>
       </nav>
     </aside>
-          <main class="container postWrap">
+    <main class="container postWrap">
   <article class="postArticle">
     <div class="postArticleHeader">
       <h1 class="pt-1">Angular 大師之路：淺出深入的學習指南</h1>
@@ -838,32 +864,35 @@ export class AppModule &#123; &#125;<span aria-hidden="true" class="line-numbers
   
     <input style="display:none" onload="addTotalViews()">
 </main>
-            
-              <aside class="rightAside">
-                <section>
-                  <h4>Table of contents</h4>
-                  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NG-%E5%A4%A7%E5%B8%AB%E4%B9%8B%E8%B7%AF-%E7%AD%86%E8%A8%98%E5%A4%A7%E7%B6%B1"><span class="toc-text">NG 大師之路 筆記大綱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-%E5%A4%A7%E7%B6%B1-%E5%B9%BE%E4%B9%8E%E4%BB%80%E9%BA%BC%E9%83%BD%E8%AC%9B"><span class="toc-text">day1 大綱 幾乎什麼都講</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2-JSON-Schema-Monorepo"><span class="toc-text">day2 JSON Schema, Monorepo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-Lifecycle%EF%BC%9Amain-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E6%A8%A1%E7%B5%84-app-module-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E5%85%83%E4%BB%B6-app-component-ts-%E6%A0%B9%E5%85%83%E4%BB%B6"><span class="toc-text">day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) &#x3D;&gt; app.module.ts ( 可以啟動多個根元件 ) &#x3D;&gt; app.component.ts 根元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-%E5%85%83%E4%BB%B6-Lifecycle-%E9%99%A4%E4%BA%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%A4%96%E5%B7%AE%E7%95%B0%E5%9C%A8-OnChange-%E8%88%87-ng-Content-%E7%9A%84%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%EF%BC%8C%E6%9C%83%E5%BD%B1%E9%9F%BF%E5%88%B0-ContentChild-ContentChildren-%E7%9A%84%E5%8F%96%E5%BE%97%E8%88%87%E5%90%A6"><span class="toc-text">day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-NgModule-%E5%8F%83%E6%95%B8%E6%87%89%E7%94%A8%E3%80%81%E5%8B%95-%E9%9D%9C%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6"><span class="toc-text">day5 NgModule 參數應用、動&#x2F;靜態載入元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-Feature%E3%80%81Shared%E3%80%81Core-Module-%E3%80%81-Ng-6-Service-%E8%87%AA%E5%8B%95-providedIn-root-Module"><span class="toc-text">day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day7-Two-Way-Binding"><span class="toc-text">day7 Two Way Binding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day8-%E8%87%AA%E8%A8%82%E8%A1%A8%E5%96%AE%E6%8E%A7%E5%88%B6%E9%A0%85-Token%EF%BC%9ANG-VALUE-ACCESSOR-ControlValueAccessor"><span class="toc-text">day8 自訂表單控制項 &#x2F; Token：NG_VALUE_ACCESSOR &#x2F; ControlValueAccessor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day9-Directive-%E6%8C%87%E4%BB%A4-exportAs"><span class="toc-text">day9 Directive 指令 exportAs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day10-any-%E6%A8%A3%E6%9D%BF%E8%AA%9E%E6%B3%95"><span class="toc-text">day10 $any 樣板語法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day11-ngIf-else-%E6%90%AD%E9%85%8D%E6%A8%A3%E6%9D%BF%E5%8F%83%E8%80%83%E8%AE%8A%E6%95%B8"><span class="toc-text">day11 *ngIf else 搭配樣板參考變數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day12-ngTemplateOutlet"><span class="toc-text">day12 *ngTemplateOutlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day13-ng-container-%E4%B8%8D%E6%9C%83%E7%94%A2%E7%94%9F%E5%85%83%E7%B4%A0%E6%A8%99%E7%B1%A4"><span class="toc-text">day13 ng-container 不會產生元素標籤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day14-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E7%B0%A1%E6%98%93%E7%89%88-ngComponentOutlet-Entry-components"><span class="toc-text">day14 動態載入元件 (簡易版) *ngComponentOutlet &#x2F; Entry components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day15-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E8%A4%87%E9%9B%9C%E7%89%88-ViewContainerRef-createEmbeddedView-ComponentFactoryResolver-%E8%AB%8B%E5%8F%83%E8%80%83%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6%E6%87%89%E7%94%A8"><span class="toc-text">day15 動態載入元件 (複雜版) ViewContainerRef &#x2F; createEmbeddedView &#x2F; ComponentFactoryResolver 請參考無頭組件應用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day16-%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%8C%87%E4%BB%A4-Structural-data-%E2%80%9Ddata-xxx-value-xxx-%E2%80%9D-Attribute-data-%E2%80%9Ddata%E2%80%9D-let-xxx-Directive"><span class="toc-text">day16 客製化指令 Structural ( *data&#x3D;”data; xxx: { value: xxx }” ) &#x2F; Attribute ( [data]&#x3D;”data” let-xxx ) Directive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day17-HTTP-INTERCEPTORS-%E6%94%94%E6%88%AA-Http-Request-HttpHandler"><span class="toc-text">day17 HTTP_INTERCEPTORS 攔截 Http Request &#x2F; HttpHandler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day18-ErrorHandler-%E9%9B%86%E4%B8%AD%E8%99%95%E7%90%86%E9%8C%AF%E8%AA%A4"><span class="toc-text">day18 ErrorHandler 集中處理錯誤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day19-APP-INITIALIZER-%E5%9C%A8%E7%A8%8B%E5%BC%8F%E9%81%8B%E8%A1%8C%E6%97%A9%E6%9C%9F%E8%99%95%E7%90%86%E8%B3%87%E6%96%99"><span class="toc-text">day19 APP_INITIALIZER 在程式運行早期處理資料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day20-NgModule-providers-useClass-useExisting"><span class="toc-text">day20 @NgModule providers useClass useExisting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day21-NgModule-providers-useValue-useFactory"><span class="toc-text">day21 @NgModule providers useValue useFactory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day22-%E6%B3%A8%E5%85%A5-Token-%E5%AF%A6%E9%AB%94%E6%96%B9%E6%B3%95-%E5%BB%BA%E6%A7%8B%E5%BC%8F%E6%B3%A8%E5%85%A5-Injector-%E7%89%A9%E4%BB%B6-Component-%E3%80%81-Directive-providers"><span class="toc-text">day22 注入 Token 實體方法 ( 建構式注入 &#x2F; Injector 物件 &#x2F; @Component 、 @Directive providers )</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day23-InjectionToken-%E5%BC%B7%E5%88%B6%E7%94%A2%E7%94%9F-Token-Inject"><span class="toc-text">day23 InjectionToken 強制產生 Token &#x2F; @Inject()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day24-NgZone-%E5%BE%97%E7%9F%A5%E6%89%80%E6%9C%89%E9%9D%9E%E5%90%8C%E6%AD%A5%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%99%BC%E7%94%9F%EF%BC%8C%E7%A2%BA%E8%AA%8D%E4%BD%95%E6%99%82%E8%A6%81%E9%80%B2%E8%A1%8C%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%82-onUnstable-onStable-runOutsideAngular-run"><span class="toc-text">day24 NgZone 得知所有非同步事件的發生，確認何時要進行變更偵測的工具。 onUnstable &#x2F; onStable &#x2F; runOutsideAngular &#x2F; run</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day25-ChangeDetectorRef-%E6%AF%8F%E5%80%8B%E5%85%83%E4%BB%B6%E7%8D%A8%E7%AB%8B%E6%8E%A7%E5%88%B6%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E6%99%82%E6%A9%9F%E6%95%88%E8%83%BD%E8%AA%BF%E6%A0%A1%E3%80%82-detach-reattach-detectChanges"><span class="toc-text">day25 ChangeDetectorRef 每個元件獨立控制變更偵測時機效能調校。 detach &#x2F; reattach &#x2F; detectChanges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day26-%E5%85%83%E4%BB%B6%E7%9A%84%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%AD%96%E7%95%A5-%E9%97%9C%E9%96%89%E8%87%AA%E5%8B%95%E5%81%B5%E6%B8%AC%E3%80%81%E6%89%8B%E5%8B%95%E6%89%93%E9%96%8B-changeDetection-ChangeDetectorRef-markForCheck"><span class="toc-text">day26 元件的變更偵測策略 ( 關閉自動偵測、手動打開 ) changeDetection &#x2F; ChangeDetectorRef &#x2F; markForCheck</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day27-AsyncPipe-%E6%8A%80%E5%B7%A7-as-Rxjs-Operator-shareReplay"><span class="toc-text">day27 AsyncPipe 技巧 as &#x2F; Rxjs Operator shareReplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day28-AsyncPipe-%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7"><span class="toc-text">day28 AsyncPipe 進階技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day29-RxJS-operators-%E5%9F%BA%E7%A4%8E%E7%AF%87"><span class="toc-text">day29 RxJS operators 基礎篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day30-RxJS-operators-%E9%80%B2%E9%9A%8E%E6%87%89%E7%94%A8"><span class="toc-text">day30 RxJS operators 進階應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6-%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">無頭組件 使用情境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%9F%E6%88%90%E7%B5%84%E4%BB%B6"><span class="toc-text">動態生成組件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%9C%8D%E5%8B%99"><span class="toc-text">組件化服務</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%B8%B2%E6%9F%93"><span class="toc-text">組件化渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E6%8C%87%E4%BB%A4"><span class="toc-text">動態創建指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E5%BD%88%E5%87%BA%E6%A1%86"><span class="toc-text">動態創建彈出框</span></a></li></ol></li></ol>
-                </section>
-              </aside>
+      
+        <aside class="rightAside">
+          <section>
+            <h4>Table of contents</h4>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NG-%E5%A4%A7%E5%B8%AB%E4%B9%8B%E8%B7%AF-%E7%AD%86%E8%A8%98%E5%A4%A7%E7%B6%B1"><span class="toc-text">NG 大師之路 筆記大綱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-%E5%A4%A7%E7%B6%B1-%E5%B9%BE%E4%B9%8E%E4%BB%80%E9%BA%BC%E9%83%BD%E8%AC%9B"><span class="toc-text">day1 大綱 幾乎什麼都講</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2-JSON-Schema-Monorepo"><span class="toc-text">day2 JSON Schema, Monorepo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-Lifecycle%EF%BC%9Amain-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E6%A8%A1%E7%B5%84-app-module-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E5%85%83%E4%BB%B6-app-component-ts-%E6%A0%B9%E5%85%83%E4%BB%B6"><span class="toc-text">day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) &#x3D;&gt; app.module.ts ( 可以啟動多個根元件 ) &#x3D;&gt; app.component.ts 根元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-%E5%85%83%E4%BB%B6-Lifecycle-%E9%99%A4%E4%BA%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%A4%96%E5%B7%AE%E7%95%B0%E5%9C%A8-OnChange-%E8%88%87-ng-Content-%E7%9A%84%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%EF%BC%8C%E6%9C%83%E5%BD%B1%E9%9F%BF%E5%88%B0-ContentChild-ContentChildren-%E7%9A%84%E5%8F%96%E5%BE%97%E8%88%87%E5%90%A6"><span class="toc-text">day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-NgModule-%E5%8F%83%E6%95%B8%E6%87%89%E7%94%A8%E3%80%81%E5%8B%95-%E9%9D%9C%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6"><span class="toc-text">day5 NgModule 參數應用、動&#x2F;靜態載入元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-Feature%E3%80%81Shared%E3%80%81Core-Module-%E3%80%81-Ng-6-Service-%E8%87%AA%E5%8B%95-providedIn-root-Module"><span class="toc-text">day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day7-Two-Way-Binding"><span class="toc-text">day7 Two Way Binding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day8-%E8%87%AA%E8%A8%82%E8%A1%A8%E5%96%AE%E6%8E%A7%E5%88%B6%E9%A0%85-Token%EF%BC%9ANG-VALUE-ACCESSOR-ControlValueAccessor"><span class="toc-text">day8 自訂表單控制項 &#x2F; Token：NG_VALUE_ACCESSOR &#x2F; ControlValueAccessor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day9-Directive-%E6%8C%87%E4%BB%A4-exportAs"><span class="toc-text">day9 Directive 指令 exportAs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day10-any-%E6%A8%A3%E6%9D%BF%E8%AA%9E%E6%B3%95"><span class="toc-text">day10 $any 樣板語法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day11-ngIf-else-%E6%90%AD%E9%85%8D%E6%A8%A3%E6%9D%BF%E5%8F%83%E8%80%83%E8%AE%8A%E6%95%B8"><span class="toc-text">day11 *ngIf else 搭配樣板參考變數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day12-ngTemplateOutlet"><span class="toc-text">day12 *ngTemplateOutlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day13-ng-container-%E4%B8%8D%E6%9C%83%E7%94%A2%E7%94%9F%E5%85%83%E7%B4%A0%E6%A8%99%E7%B1%A4"><span class="toc-text">day13 ng-container 不會產生元素標籤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day14-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E7%B0%A1%E6%98%93%E7%89%88-ngComponentOutlet-Entry-components"><span class="toc-text">day14 動態載入元件 (簡易版) *ngComponentOutlet &#x2F; Entry components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day15-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E8%A4%87%E9%9B%9C%E7%89%88-ViewContainerRef-createEmbeddedView-ComponentFactoryResolver-%E8%AB%8B%E5%8F%83%E8%80%83%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6%E6%87%89%E7%94%A8"><span class="toc-text">day15 動態載入元件 (複雜版) ViewContainerRef &#x2F; createEmbeddedView &#x2F; ComponentFactoryResolver 請參考無頭組件應用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day16-%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%8C%87%E4%BB%A4-Structural-data-%E2%80%9Ddata-xxx-value-xxx-%E2%80%9D-Attribute-data-%E2%80%9Ddata%E2%80%9D-let-xxx-Directive"><span class="toc-text">day16 客製化指令 Structural ( *data&#x3D;”data; xxx: { value: xxx }” ) &#x2F; Attribute ( [data]&#x3D;”data” let-xxx ) Directive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day17-HTTP-INTERCEPTORS-%E6%94%94%E6%88%AA-Http-Request-HttpHandler"><span class="toc-text">day17 HTTP_INTERCEPTORS 攔截 Http Request &#x2F; HttpHandler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day18-ErrorHandler-%E9%9B%86%E4%B8%AD%E8%99%95%E7%90%86%E9%8C%AF%E8%AA%A4"><span class="toc-text">day18 ErrorHandler 集中處理錯誤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day19-APP-INITIALIZER-%E5%9C%A8%E7%A8%8B%E5%BC%8F%E9%81%8B%E8%A1%8C%E6%97%A9%E6%9C%9F%E8%99%95%E7%90%86%E8%B3%87%E6%96%99"><span class="toc-text">day19 APP_INITIALIZER 在程式運行早期處理資料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day20-NgModule-providers-useClass-useExisting"><span class="toc-text">day20 @NgModule providers useClass useExisting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day21-NgModule-providers-useValue-useFactory"><span class="toc-text">day21 @NgModule providers useValue useFactory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day22-%E6%B3%A8%E5%85%A5-Token-%E5%AF%A6%E9%AB%94%E6%96%B9%E6%B3%95-%E5%BB%BA%E6%A7%8B%E5%BC%8F%E6%B3%A8%E5%85%A5-Injector-%E7%89%A9%E4%BB%B6-Component-%E3%80%81-Directive-providers"><span class="toc-text">day22 注入 Token 實體方法 ( 建構式注入 &#x2F; Injector 物件 &#x2F; @Component 、 @Directive providers )</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day23-InjectionToken-%E5%BC%B7%E5%88%B6%E7%94%A2%E7%94%9F-Token-Inject"><span class="toc-text">day23 InjectionToken 強制產生 Token &#x2F; @Inject()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day24-NgZone-%E5%BE%97%E7%9F%A5%E6%89%80%E6%9C%89%E9%9D%9E%E5%90%8C%E6%AD%A5%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%99%BC%E7%94%9F%EF%BC%8C%E7%A2%BA%E8%AA%8D%E4%BD%95%E6%99%82%E8%A6%81%E9%80%B2%E8%A1%8C%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%82-onUnstable-onStable-runOutsideAngular-run"><span class="toc-text">day24 NgZone 得知所有非同步事件的發生，確認何時要進行變更偵測的工具。 onUnstable &#x2F; onStable &#x2F; runOutsideAngular &#x2F; run</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day25-ChangeDetectorRef-%E6%AF%8F%E5%80%8B%E5%85%83%E4%BB%B6%E7%8D%A8%E7%AB%8B%E6%8E%A7%E5%88%B6%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E6%99%82%E6%A9%9F%E6%95%88%E8%83%BD%E8%AA%BF%E6%A0%A1%E3%80%82-detach-reattach-detectChanges"><span class="toc-text">day25 ChangeDetectorRef 每個元件獨立控制變更偵測時機效能調校。 detach &#x2F; reattach &#x2F; detectChanges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day26-%E5%85%83%E4%BB%B6%E7%9A%84%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%AD%96%E7%95%A5-%E9%97%9C%E9%96%89%E8%87%AA%E5%8B%95%E5%81%B5%E6%B8%AC%E3%80%81%E6%89%8B%E5%8B%95%E6%89%93%E9%96%8B-changeDetection-ChangeDetectorRef-markForCheck"><span class="toc-text">day26 元件的變更偵測策略 ( 關閉自動偵測、手動打開 ) changeDetection &#x2F; ChangeDetectorRef &#x2F; markForCheck</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day27-AsyncPipe-%E6%8A%80%E5%B7%A7-as-Rxjs-Operator-shareReplay"><span class="toc-text">day27 AsyncPipe 技巧 as &#x2F; Rxjs Operator shareReplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day28-AsyncPipe-%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7"><span class="toc-text">day28 AsyncPipe 進階技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day29-RxJS-operators-%E5%9F%BA%E7%A4%8E%E7%AF%87"><span class="toc-text">day29 RxJS operators 基礎篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day30-RxJS-operators-%E9%80%B2%E9%9A%8E%E6%87%89%E7%94%A8"><span class="toc-text">day30 RxJS operators 進階應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6-%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">無頭組件 使用情境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%9F%E6%88%90%E7%B5%84%E4%BB%B6"><span class="toc-text">動態生成組件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%9C%8D%E5%8B%99"><span class="toc-text">組件化服務</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%B8%B2%E6%9F%93"><span class="toc-text">組件化渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E6%8C%87%E4%BB%A4"><span class="toc-text">動態創建指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E5%BD%88%E5%87%BA%E6%A1%86"><span class="toc-text">動態創建彈出框</span></a></li></ol></li></ol>
+          </section>
+        </aside>
 
-              <button class="mobileBtn btn"><i class="fa-solid fa-book-bookmark"></i></button>
+        <div class="mobileBtn btn">
+          <!-- <i class="fa-solid fa-book-bookmark"></i> -->
+          <div class="bookmarkIcon"></div>
+        </div>
 
-              <div class="modal" tabindex="-1" id="tocModal">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Table of Contents</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                        onclick="tocModalClose()"></button>
-                    </div>
-                    <div class="modal-body">
-                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NG-%E5%A4%A7%E5%B8%AB%E4%B9%8B%E8%B7%AF-%E7%AD%86%E8%A8%98%E5%A4%A7%E7%B6%B1"><span class="toc-text">NG 大師之路 筆記大綱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-%E5%A4%A7%E7%B6%B1-%E5%B9%BE%E4%B9%8E%E4%BB%80%E9%BA%BC%E9%83%BD%E8%AC%9B"><span class="toc-text">day1 大綱 幾乎什麼都講</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2-JSON-Schema-Monorepo"><span class="toc-text">day2 JSON Schema, Monorepo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-Lifecycle%EF%BC%9Amain-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E6%A8%A1%E7%B5%84-app-module-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E5%85%83%E4%BB%B6-app-component-ts-%E6%A0%B9%E5%85%83%E4%BB%B6"><span class="toc-text">day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) &#x3D;&gt; app.module.ts ( 可以啟動多個根元件 ) &#x3D;&gt; app.component.ts 根元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-%E5%85%83%E4%BB%B6-Lifecycle-%E9%99%A4%E4%BA%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%A4%96%E5%B7%AE%E7%95%B0%E5%9C%A8-OnChange-%E8%88%87-ng-Content-%E7%9A%84%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%EF%BC%8C%E6%9C%83%E5%BD%B1%E9%9F%BF%E5%88%B0-ContentChild-ContentChildren-%E7%9A%84%E5%8F%96%E5%BE%97%E8%88%87%E5%90%A6"><span class="toc-text">day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-NgModule-%E5%8F%83%E6%95%B8%E6%87%89%E7%94%A8%E3%80%81%E5%8B%95-%E9%9D%9C%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6"><span class="toc-text">day5 NgModule 參數應用、動&#x2F;靜態載入元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-Feature%E3%80%81Shared%E3%80%81Core-Module-%E3%80%81-Ng-6-Service-%E8%87%AA%E5%8B%95-providedIn-root-Module"><span class="toc-text">day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day7-Two-Way-Binding"><span class="toc-text">day7 Two Way Binding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day8-%E8%87%AA%E8%A8%82%E8%A1%A8%E5%96%AE%E6%8E%A7%E5%88%B6%E9%A0%85-Token%EF%BC%9ANG-VALUE-ACCESSOR-ControlValueAccessor"><span class="toc-text">day8 自訂表單控制項 &#x2F; Token：NG_VALUE_ACCESSOR &#x2F; ControlValueAccessor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day9-Directive-%E6%8C%87%E4%BB%A4-exportAs"><span class="toc-text">day9 Directive 指令 exportAs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day10-any-%E6%A8%A3%E6%9D%BF%E8%AA%9E%E6%B3%95"><span class="toc-text">day10 $any 樣板語法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day11-ngIf-else-%E6%90%AD%E9%85%8D%E6%A8%A3%E6%9D%BF%E5%8F%83%E8%80%83%E8%AE%8A%E6%95%B8"><span class="toc-text">day11 *ngIf else 搭配樣板參考變數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day12-ngTemplateOutlet"><span class="toc-text">day12 *ngTemplateOutlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day13-ng-container-%E4%B8%8D%E6%9C%83%E7%94%A2%E7%94%9F%E5%85%83%E7%B4%A0%E6%A8%99%E7%B1%A4"><span class="toc-text">day13 ng-container 不會產生元素標籤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day14-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E7%B0%A1%E6%98%93%E7%89%88-ngComponentOutlet-Entry-components"><span class="toc-text">day14 動態載入元件 (簡易版) *ngComponentOutlet &#x2F; Entry components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day15-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E8%A4%87%E9%9B%9C%E7%89%88-ViewContainerRef-createEmbeddedView-ComponentFactoryResolver-%E8%AB%8B%E5%8F%83%E8%80%83%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6%E6%87%89%E7%94%A8"><span class="toc-text">day15 動態載入元件 (複雜版) ViewContainerRef &#x2F; createEmbeddedView &#x2F; ComponentFactoryResolver 請參考無頭組件應用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day16-%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%8C%87%E4%BB%A4-Structural-data-%E2%80%9Ddata-xxx-value-xxx-%E2%80%9D-Attribute-data-%E2%80%9Ddata%E2%80%9D-let-xxx-Directive"><span class="toc-text">day16 客製化指令 Structural ( *data&#x3D;”data; xxx: { value: xxx }” ) &#x2F; Attribute ( [data]&#x3D;”data” let-xxx ) Directive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day17-HTTP-INTERCEPTORS-%E6%94%94%E6%88%AA-Http-Request-HttpHandler"><span class="toc-text">day17 HTTP_INTERCEPTORS 攔截 Http Request &#x2F; HttpHandler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day18-ErrorHandler-%E9%9B%86%E4%B8%AD%E8%99%95%E7%90%86%E9%8C%AF%E8%AA%A4"><span class="toc-text">day18 ErrorHandler 集中處理錯誤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day19-APP-INITIALIZER-%E5%9C%A8%E7%A8%8B%E5%BC%8F%E9%81%8B%E8%A1%8C%E6%97%A9%E6%9C%9F%E8%99%95%E7%90%86%E8%B3%87%E6%96%99"><span class="toc-text">day19 APP_INITIALIZER 在程式運行早期處理資料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day20-NgModule-providers-useClass-useExisting"><span class="toc-text">day20 @NgModule providers useClass useExisting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day21-NgModule-providers-useValue-useFactory"><span class="toc-text">day21 @NgModule providers useValue useFactory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day22-%E6%B3%A8%E5%85%A5-Token-%E5%AF%A6%E9%AB%94%E6%96%B9%E6%B3%95-%E5%BB%BA%E6%A7%8B%E5%BC%8F%E6%B3%A8%E5%85%A5-Injector-%E7%89%A9%E4%BB%B6-Component-%E3%80%81-Directive-providers"><span class="toc-text">day22 注入 Token 實體方法 ( 建構式注入 &#x2F; Injector 物件 &#x2F; @Component 、 @Directive providers )</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day23-InjectionToken-%E5%BC%B7%E5%88%B6%E7%94%A2%E7%94%9F-Token-Inject"><span class="toc-text">day23 InjectionToken 強制產生 Token &#x2F; @Inject()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day24-NgZone-%E5%BE%97%E7%9F%A5%E6%89%80%E6%9C%89%E9%9D%9E%E5%90%8C%E6%AD%A5%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%99%BC%E7%94%9F%EF%BC%8C%E7%A2%BA%E8%AA%8D%E4%BD%95%E6%99%82%E8%A6%81%E9%80%B2%E8%A1%8C%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%82-onUnstable-onStable-runOutsideAngular-run"><span class="toc-text">day24 NgZone 得知所有非同步事件的發生，確認何時要進行變更偵測的工具。 onUnstable &#x2F; onStable &#x2F; runOutsideAngular &#x2F; run</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day25-ChangeDetectorRef-%E6%AF%8F%E5%80%8B%E5%85%83%E4%BB%B6%E7%8D%A8%E7%AB%8B%E6%8E%A7%E5%88%B6%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E6%99%82%E6%A9%9F%E6%95%88%E8%83%BD%E8%AA%BF%E6%A0%A1%E3%80%82-detach-reattach-detectChanges"><span class="toc-text">day25 ChangeDetectorRef 每個元件獨立控制變更偵測時機效能調校。 detach &#x2F; reattach &#x2F; detectChanges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day26-%E5%85%83%E4%BB%B6%E7%9A%84%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%AD%96%E7%95%A5-%E9%97%9C%E9%96%89%E8%87%AA%E5%8B%95%E5%81%B5%E6%B8%AC%E3%80%81%E6%89%8B%E5%8B%95%E6%89%93%E9%96%8B-changeDetection-ChangeDetectorRef-markForCheck"><span class="toc-text">day26 元件的變更偵測策略 ( 關閉自動偵測、手動打開 ) changeDetection &#x2F; ChangeDetectorRef &#x2F; markForCheck</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day27-AsyncPipe-%E6%8A%80%E5%B7%A7-as-Rxjs-Operator-shareReplay"><span class="toc-text">day27 AsyncPipe 技巧 as &#x2F; Rxjs Operator shareReplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day28-AsyncPipe-%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7"><span class="toc-text">day28 AsyncPipe 進階技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day29-RxJS-operators-%E5%9F%BA%E7%A4%8E%E7%AF%87"><span class="toc-text">day29 RxJS operators 基礎篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day30-RxJS-operators-%E9%80%B2%E9%9A%8E%E6%87%89%E7%94%A8"><span class="toc-text">day30 RxJS operators 進階應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6-%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">無頭組件 使用情境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%9F%E6%88%90%E7%B5%84%E4%BB%B6"><span class="toc-text">動態生成組件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%9C%8D%E5%8B%99"><span class="toc-text">組件化服務</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%B8%B2%E6%9F%93"><span class="toc-text">組件化渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E6%8C%87%E4%BB%A4"><span class="toc-text">動態創建指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E5%BD%88%E5%87%BA%E6%A1%86"><span class="toc-text">動態創建彈出框</span></a></li></ol></li></ol>
-                    </div>
-                  </div>
-                </div>
+        <div class="modal" tabindex="-1" id="tocModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Table of Contents</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                  onclick="tocModalClose()"></button>
               </div>
+              <div class="modal-body">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#NG-%E5%A4%A7%E5%B8%AB%E4%B9%8B%E8%B7%AF-%E7%AD%86%E8%A8%98%E5%A4%A7%E7%B6%B1"><span class="toc-text">NG 大師之路 筆記大綱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#day1-%E5%A4%A7%E7%B6%B1-%E5%B9%BE%E4%B9%8E%E4%BB%80%E9%BA%BC%E9%83%BD%E8%AC%9B"><span class="toc-text">day1 大綱 幾乎什麼都講</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day2-JSON-Schema-Monorepo"><span class="toc-text">day2 JSON Schema, Monorepo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day3-Lifecycle%EF%BC%9Amain-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E6%A8%A1%E7%B5%84-app-module-ts-%E5%8F%AF%E4%BB%A5%E5%95%9F%E5%8B%95%E5%A4%9A%E5%80%8B%E6%A0%B9%E5%85%83%E4%BB%B6-app-component-ts-%E6%A0%B9%E5%85%83%E4%BB%B6"><span class="toc-text">day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) &#x3D;&gt; app.module.ts ( 可以啟動多個根元件 ) &#x3D;&gt; app.component.ts 根元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day4-%E5%85%83%E4%BB%B6-Lifecycle-%E9%99%A4%E4%BA%86%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%A4%96%E5%B7%AE%E7%95%B0%E5%9C%A8-OnChange-%E8%88%87-ng-Content-%E7%9A%84%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%EF%BC%8C%E6%9C%83%E5%BD%B1%E9%9F%BF%E5%88%B0-ContentChild-ContentChildren-%E7%9A%84%E5%8F%96%E5%BE%97%E8%88%87%E5%90%A6"><span class="toc-text">day4 元件 Lifecycle 除了基本的外差異在 OnChange 與 ng Content 的生命週期，會影響到 @ContentChild, @ContentChildren 的取得與否</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day5-NgModule-%E5%8F%83%E6%95%B8%E6%87%89%E7%94%A8%E3%80%81%E5%8B%95-%E9%9D%9C%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6"><span class="toc-text">day5 NgModule 參數應用、動&#x2F;靜態載入元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day6-Feature%E3%80%81Shared%E3%80%81Core-Module-%E3%80%81-Ng-6-Service-%E8%87%AA%E5%8B%95-providedIn-root-Module"><span class="toc-text">day6 Feature、Shared、Core Module 、 Ng 6 Service 自動 providedIn root Module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day7-Two-Way-Binding"><span class="toc-text">day7 Two Way Binding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day8-%E8%87%AA%E8%A8%82%E8%A1%A8%E5%96%AE%E6%8E%A7%E5%88%B6%E9%A0%85-Token%EF%BC%9ANG-VALUE-ACCESSOR-ControlValueAccessor"><span class="toc-text">day8 自訂表單控制項 &#x2F; Token：NG_VALUE_ACCESSOR &#x2F; ControlValueAccessor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day9-Directive-%E6%8C%87%E4%BB%A4-exportAs"><span class="toc-text">day9 Directive 指令 exportAs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day10-any-%E6%A8%A3%E6%9D%BF%E8%AA%9E%E6%B3%95"><span class="toc-text">day10 $any 樣板語法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day11-ngIf-else-%E6%90%AD%E9%85%8D%E6%A8%A3%E6%9D%BF%E5%8F%83%E8%80%83%E8%AE%8A%E6%95%B8"><span class="toc-text">day11 *ngIf else 搭配樣板參考變數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day12-ngTemplateOutlet"><span class="toc-text">day12 *ngTemplateOutlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day13-ng-container-%E4%B8%8D%E6%9C%83%E7%94%A2%E7%94%9F%E5%85%83%E7%B4%A0%E6%A8%99%E7%B1%A4"><span class="toc-text">day13 ng-container 不會產生元素標籤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day14-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E7%B0%A1%E6%98%93%E7%89%88-ngComponentOutlet-Entry-components"><span class="toc-text">day14 動態載入元件 (簡易版) *ngComponentOutlet &#x2F; Entry components</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day15-%E5%8B%95%E6%85%8B%E8%BC%89%E5%85%A5%E5%85%83%E4%BB%B6-%E8%A4%87%E9%9B%9C%E7%89%88-ViewContainerRef-createEmbeddedView-ComponentFactoryResolver-%E8%AB%8B%E5%8F%83%E8%80%83%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6%E6%87%89%E7%94%A8"><span class="toc-text">day15 動態載入元件 (複雜版) ViewContainerRef &#x2F; createEmbeddedView &#x2F; ComponentFactoryResolver 請參考無頭組件應用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day16-%E5%AE%A2%E8%A3%BD%E5%8C%96%E6%8C%87%E4%BB%A4-Structural-data-%E2%80%9Ddata-xxx-value-xxx-%E2%80%9D-Attribute-data-%E2%80%9Ddata%E2%80%9D-let-xxx-Directive"><span class="toc-text">day16 客製化指令 Structural ( *data&#x3D;”data; xxx: { value: xxx }” ) &#x2F; Attribute ( [data]&#x3D;”data” let-xxx ) Directive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day17-HTTP-INTERCEPTORS-%E6%94%94%E6%88%AA-Http-Request-HttpHandler"><span class="toc-text">day17 HTTP_INTERCEPTORS 攔截 Http Request &#x2F; HttpHandler</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day18-ErrorHandler-%E9%9B%86%E4%B8%AD%E8%99%95%E7%90%86%E9%8C%AF%E8%AA%A4"><span class="toc-text">day18 ErrorHandler 集中處理錯誤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day19-APP-INITIALIZER-%E5%9C%A8%E7%A8%8B%E5%BC%8F%E9%81%8B%E8%A1%8C%E6%97%A9%E6%9C%9F%E8%99%95%E7%90%86%E8%B3%87%E6%96%99"><span class="toc-text">day19 APP_INITIALIZER 在程式運行早期處理資料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day20-NgModule-providers-useClass-useExisting"><span class="toc-text">day20 @NgModule providers useClass useExisting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day21-NgModule-providers-useValue-useFactory"><span class="toc-text">day21 @NgModule providers useValue useFactory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day22-%E6%B3%A8%E5%85%A5-Token-%E5%AF%A6%E9%AB%94%E6%96%B9%E6%B3%95-%E5%BB%BA%E6%A7%8B%E5%BC%8F%E6%B3%A8%E5%85%A5-Injector-%E7%89%A9%E4%BB%B6-Component-%E3%80%81-Directive-providers"><span class="toc-text">day22 注入 Token 實體方法 ( 建構式注入 &#x2F; Injector 物件 &#x2F; @Component 、 @Directive providers )</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day23-InjectionToken-%E5%BC%B7%E5%88%B6%E7%94%A2%E7%94%9F-Token-Inject"><span class="toc-text">day23 InjectionToken 強制產生 Token &#x2F; @Inject()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day24-NgZone-%E5%BE%97%E7%9F%A5%E6%89%80%E6%9C%89%E9%9D%9E%E5%90%8C%E6%AD%A5%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%99%BC%E7%94%9F%EF%BC%8C%E7%A2%BA%E8%AA%8D%E4%BD%95%E6%99%82%E8%A6%81%E9%80%B2%E8%A1%8C%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%82-onUnstable-onStable-runOutsideAngular-run"><span class="toc-text">day24 NgZone 得知所有非同步事件的發生，確認何時要進行變更偵測的工具。 onUnstable &#x2F; onStable &#x2F; runOutsideAngular &#x2F; run</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day25-ChangeDetectorRef-%E6%AF%8F%E5%80%8B%E5%85%83%E4%BB%B6%E7%8D%A8%E7%AB%8B%E6%8E%A7%E5%88%B6%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E6%99%82%E6%A9%9F%E6%95%88%E8%83%BD%E8%AA%BF%E6%A0%A1%E3%80%82-detach-reattach-detectChanges"><span class="toc-text">day25 ChangeDetectorRef 每個元件獨立控制變更偵測時機效能調校。 detach &#x2F; reattach &#x2F; detectChanges</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day26-%E5%85%83%E4%BB%B6%E7%9A%84%E8%AE%8A%E6%9B%B4%E5%81%B5%E6%B8%AC%E7%AD%96%E7%95%A5-%E9%97%9C%E9%96%89%E8%87%AA%E5%8B%95%E5%81%B5%E6%B8%AC%E3%80%81%E6%89%8B%E5%8B%95%E6%89%93%E9%96%8B-changeDetection-ChangeDetectorRef-markForCheck"><span class="toc-text">day26 元件的變更偵測策略 ( 關閉自動偵測、手動打開 ) changeDetection &#x2F; ChangeDetectorRef &#x2F; markForCheck</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day27-AsyncPipe-%E6%8A%80%E5%B7%A7-as-Rxjs-Operator-shareReplay"><span class="toc-text">day27 AsyncPipe 技巧 as &#x2F; Rxjs Operator shareReplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day28-AsyncPipe-%E9%80%B2%E9%9A%8E%E6%8A%80%E5%B7%A7"><span class="toc-text">day28 AsyncPipe 進階技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day29-RxJS-operators-%E5%9F%BA%E7%A4%8E%E7%AF%87"><span class="toc-text">day29 RxJS operators 基礎篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#day30-RxJS-operators-%E9%80%B2%E9%9A%8E%E6%87%89%E7%94%A8"><span class="toc-text">day30 RxJS operators 進階應用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%84%A1%E9%A0%AD%E7%B5%84%E4%BB%B6-%E4%BD%BF%E7%94%A8%E6%83%85%E5%A2%83"><span class="toc-text">無頭組件 使用情境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E7%94%9F%E6%88%90%E7%B5%84%E4%BB%B6"><span class="toc-text">動態生成組件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%9C%8D%E5%8B%99"><span class="toc-text">組件化服務</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B5%84%E4%BB%B6%E5%8C%96%E6%B8%B2%E6%9F%93"><span class="toc-text">組件化渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E6%8C%87%E4%BB%A4"><span class="toc-text">動態創建指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8B%95%E6%85%8B%E5%89%B5%E5%BB%BA%E5%BD%88%E5%87%BA%E6%A1%86"><span class="toc-text">動態創建彈出框</span></a></li></ol></li></ol>
+              </div>
+            </div>
+          </div>
+        </div>
 
-              
+        
   </div>
   <footer class="cotainer-fluid">
     <p id="milestone" class="text-center m-0">
@@ -877,11 +906,11 @@ export class AppModule &#123; &#125;<span aria-hidden="true" class="line-numbers
     <ul>
       
       <li>
-        <a href="/categories/Dev-Tech/"> Dev Tech  </a>
+        <a href="/categories/AI-Tools/"> AI Tools  </a>
       </li>
       
       <li>
-        <a href="/categories/AI-Tools/"> AI Tools  </a>
+        <a href="/categories/Dev-Tech/"> Dev Tech  </a>
       </li>
       
       <li>
@@ -906,6 +935,14 @@ export class AppModule &#123; &#125;<span aria-hidden="true" class="line-numbers
     <ul>
       
       <li>
+        <a href="/tags/AI/"> AI </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Tools/"> Tools </a>
+      </li>
+      
+      <li>
         <a href="/tags/Visual-Studio/"> Visual Studio </a>
       </li>
       
@@ -915,14 +952,6 @@ export class AppModule &#123; &#125;<span aria-hidden="true" class="line-numbers
       
       <li>
         <a href="/tags/Computer-Science/"> Computer Science </a>
-      </li>
-      
-      <li>
-        <a href="/tags/AI/"> AI </a>
-      </li>
-      
-      <li>
-        <a href="/tags/Tools/"> Tools </a>
       </li>
       
       <li>
@@ -974,11 +1003,11 @@ export class AppModule &#123; &#125;<span aria-hidden="true" class="line-numbers
       </li>
       
       <li>
-        <a href="/tags/Log/"> Log </a>
+        <a href="/tags/computer-science/"> computer-science </a>
       </li>
       
       <li>
-        <a href="/tags/computer-science/"> computer-science </a>
+        <a href="/tags/Log/"> Log </a>
       </li>
       
       <li>
@@ -1010,11 +1039,11 @@ export class AppModule &#123; &#125;<span aria-hidden="true" class="line-numbers
       </li>
       
       <li>
-        <a href="/tags/Authorization/"> Authorization </a>
+        <a href="/tags/PDF/"> PDF </a>
       </li>
       
       <li>
-        <a href="/tags/PDF/"> PDF </a>
+        <a href="/tags/Authorization/"> Authorization </a>
       </li>
       
       <li>

@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="TW">
-
+  
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>您的網路共筆-UrWeb</title>
+  <!-- 您的網路共筆-UrWeb -->
+  <title>
+    
+      Viewing: 2024/1 |  
+    
+    您的網路共筆
+  </title>
   
-      
+  
           <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -38,7 +44,7 @@
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-<body>
+<body onload="responsiveIframe()">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4FDJRJ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -52,9 +58,14 @@
           </h1>
         </a>
       </div>
-      <div class="desktop-show">       <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
+      <div class="desktop-show"> <form action="//google.com/search" method="get" accept-charset="UTF-8" class="input-group"><input type="search" name="q" class="input-group-input" placeholder="Search"><button type="submit" class="input-group-submit">Search</button><input type="hidden" name="sitesearch" value="https://urwebapp.github.io"></form>
       </div>
-      <a href="#" id="barBtn"><i class="hamburger fa-solid fa-bars"></i></a>
+      <a href="#" id="barBtn">
+        <span>hamburger-icon</span>
+        <!-- <i class="hamburger fa-solid fa-bars"></i> -->
+        <!-- <span class="material-symbols-outlined">menu</span> -->
+        <img class="hamburger" src="./assets/img/download.png" data-original="/assets/img/burger-menu-svgrepo-com.svg" alt="hamburger-icon">
+      </a>
     </div>
   </header>
   <!-- <h1>
@@ -63,7 +74,7 @@
       tags
       <a href="/about/">About</a>
     </h1> -->
-  <div class="outter-wrap container-fluid">
+  <div class="outterWrap container-fluid">
     <aside class="leftAside">
       <nav>
         <ul>
@@ -73,21 +84,24 @@
               <a href="/about/">關於我們</a>
             </h4>
           </li> -->
-          <li style="margin-top: 50px;">
-            <h4>
-              <a href="https://forms.gle/Mzn7eLEtW3oiscMT6" target="_blank">Contact / Subscribe</a>
-            </h4>
-          </li>
+            <li style="margin-top: 50px;">
+              <h4>
+                <a href="https://forms.gle/Mzn7eLEtW3oiscMT6" target="_blank">Contact / Subscribe</a>
+              </h4>
+            </li>
             <li>
               <h4>
-                <a href="#" id="authorsBtn">Authors <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="authorsBtn">Authors
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                  <div class="uponIcon"></div>
+                </a>
               </h4>
               <div id="authors">
                 <ul class="author-list">
-                  <li> 
+                  <li>
                     <a href="/author/kai98k">kai98k</a>
                   </li>
-                  <li> 
+                  <li>
                     <a href="/author/johch3n611u">johch3n611u</a>
                   </li>
                 </ul>
@@ -95,7 +109,10 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="categoriesBtn">Categories <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="categoriesBtn">Categories 
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                  <div class="uponIcon"></div>
+                </a>
               </h4>
               <div id="categories">
                 <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI-Tools/">AI Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev-Tech/">Dev Tech</a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/f2e/">f2e</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/">轉職成長</a><span class="category-list-count">2</span></li></ul>
@@ -103,14 +120,23 @@
             </li>
             <li>
               <h4>
-                <a href="#" id="tagsBtn">Tags <i class="fa-solid fa-square-caret-up"></i></a>
+                <a href="#" id="tagsBtn">Tags 
+                  <div class="uponIcon"></div>
+                  <!-- <i class="fa-solid fa-square-caret-up"></i> -->
+                </a>
               </h4>
               <div id="tags"><a href="/tags/Net/" style="font-size: 20px;">.Net</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Angular/" style="font-size: 17.5px;">Angular</a> <a href="/tags/Architecture/" style="font-size: 10px;">Architecture</a> <a href="/tags/Authorization/" style="font-size: 10px;">Authorization</a> <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/Computer-Science/" style="font-size: 10px;">Computer Science</a> <a href="/tags/DDD/" style="font-size: 10px;">DDD</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/English/" style="font-size: 12.5px;">English</a> <a href="/tags/Exception/" style="font-size: 10px;">Exception</a> <a href="/tags/Filter/" style="font-size: 10px;">Filter</a> <a href="/tags/GTM/" style="font-size: 10px;">GTM</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/IIS/" style="font-size: 10px;">IIS</a> <a href="/tags/Internet/" style="font-size: 17.5px;">Internet</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Log/" style="font-size: 12.5px;">Log</a> <a href="/tags/Note/" style="font-size: 15px;">Note</a> <a href="/tags/OOD-OOP/" style="font-size: 10px;">OOD/OOP</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/RabbitMQ/" style="font-size: 10px;">RabbitMQ</a> <a href="/tags/React/" style="font-size: 15px;">React</a> <a href="/tags/Request/" style="font-size: 10px;">Request</a> <a href="/tags/Response/" style="font-size: 10px;">Response</a> <a href="/tags/Tools/" style="font-size: 10px;">Tools</a> <a href="/tags/Visual-Studio/" style="font-size: 10px;">Visual Studio</a> <a href="/tags/computer-science/" style="font-size: 10px;">computer-science</a> <a href="/tags/f2e/" style="font-size: 10px;">f2e</a></div>
+            </li>
+            <li style="margin-top: 50px;">
+              <h4>
+                <a href="https://urwebapp.github.io/assets/angular/ec/index.html" target="_blank">EC Demo</a>
+                <a href="https://urwebapp.github.io/assets/angular/mod/EnglishLearningHelper/index.html" target="_blank">EnglishLearningHelper</a>
+              </h4>
             </li>
         </ul>
       </nav>
     </aside>
-          <h2>Archive</h1>
+    <h2>Archive</h1>
 <!-- 主页 -->
 <main class="container main">
     
@@ -284,7 +310,7 @@ h...
     // 在 500ms 后，如果网络请求仍未完成，取消本次操作
     setTimeout(() => abort(), 500);
 </script> 
-            
+      
   </div>
   <footer class="cotainer-fluid">
     <p id="milestone" class="text-center m-0">
@@ -298,11 +324,11 @@ h...
     <ul>
       
       <li>
-        <a href="/categories/Dev-Tech/"> Dev Tech  </a>
+        <a href="/categories/AI-Tools/"> AI Tools  </a>
       </li>
       
       <li>
-        <a href="/categories/AI-Tools/"> AI Tools  </a>
+        <a href="/categories/Dev-Tech/"> Dev Tech  </a>
       </li>
       
       <li>
@@ -327,6 +353,14 @@ h...
     <ul>
       
       <li>
+        <a href="/tags/AI/"> AI </a>
+      </li>
+      
+      <li>
+        <a href="/tags/Tools/"> Tools </a>
+      </li>
+      
+      <li>
         <a href="/tags/Visual-Studio/"> Visual Studio </a>
       </li>
       
@@ -336,14 +370,6 @@ h...
       
       <li>
         <a href="/tags/Computer-Science/"> Computer Science </a>
-      </li>
-      
-      <li>
-        <a href="/tags/AI/"> AI </a>
-      </li>
-      
-      <li>
-        <a href="/tags/Tools/"> Tools </a>
       </li>
       
       <li>
@@ -395,11 +421,11 @@ h...
       </li>
       
       <li>
-        <a href="/tags/Log/"> Log </a>
+        <a href="/tags/computer-science/"> computer-science </a>
       </li>
       
       <li>
-        <a href="/tags/computer-science/"> computer-science </a>
+        <a href="/tags/Log/"> Log </a>
       </li>
       
       <li>
@@ -431,11 +457,11 @@ h...
       </li>
       
       <li>
-        <a href="/tags/Authorization/"> Authorization </a>
+        <a href="/tags/PDF/"> PDF </a>
       </li>
       
       <li>
-        <a href="/tags/PDF/"> PDF </a>
+        <a href="/tags/Authorization/"> Authorization </a>
       </li>
       
       <li>
