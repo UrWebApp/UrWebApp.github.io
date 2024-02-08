@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="TW">
   <%
-  function capWords(str) {
-      // we split string by words in an array
-      // and we iterate on each word to capitalize the first letter
-      // and we join each element with a space
-      return str.split(' ').map(function(str) {
-          return str[0].toUpperCase() + str.substr(1).toLowerCase()
-      }).join(' ');
-  }
-
-  var title = page.title;
-  if (is_archive()) {
-      title = __('Viewing');
-      if (is_month()) {
-          title += ': ' + page.year + '/' + page.month;
-      } else if (is_year()) {
-          title += ': ' + page.year;
-      }
-  } else if (is_category()) {
-      title = __('Viewing') + ': ' + page.category;
-  } else if (is_tag()) {
-      title = __('Viewing') + ': ' + page.tag;
-  }
-
-  function generateExcerpt(post) {
-    var maxExcerptWords=theme.max_excerpt_words;
-    if(!post.content){
-        return;
+    function capWords(str) {
+        // we split string by words in an array
+        // and we iterate on each word to capitalize the first letter
+        // and we join each element with a space
+        return str.split(' ').map(function(str) {
+            return str[0].toUpperCase() + str.substr(1).toLowerCase()
+        }).join(' ');
     }
-    let str = post.content.substring(0,maxExcerptWords+200);
-    let imgStartIndex = str.indexOf(`<img`, 0);
-    if(imgStartIndex != -1){
-        let regExp =  new RegExp(`<img.*?>`);
-        let matches = post.content.match(regExp);
-        if (matches){
-            let imgEndIndex = imgStartIndex + matches[0].length;
-            str = str.substring(0, imgStartIndex-1)
-            str = strip_html(str);
-            str += matches[0];
-            str += strip_html(post.content.substring(imgEndIndex,imgEndIndex+50));
-            return str+"...";
+
+    var title = page.title;
+    if (is_archive()) {
+        title = __('Viewing');
+        if (is_month()) {
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()) {
+            title += ': ' + page.year;
         }
-    }else{
-        str= str.substring(0, maxExcerptWords);
+    } else if (is_category()) {
+        title = __('Viewing') + ': ' + page.category;
+    } else if (is_tag()) {
+        title = __('Viewing') + ': ' + page.tag;
     }
-    str=strip_html(str);
-    str+=`...`;
-    return str;
-  }
-%>
+
+    function generateExcerpt(post) {
+      var maxExcerptWords=theme.max_excerpt_words;
+      if(!post.content){
+          return;
+      }
+      let str = post.content.substring(0,maxExcerptWords+200);
+      let imgStartIndex = str.indexOf(`<img`, 0);
+      if(imgStartIndex != -1){
+          let regExp =  new RegExp(`<img.*?>`);
+          let matches = post.content.match(regExp);
+          if (matches){
+              let imgEndIndex = imgStartIndex + matches[0].length;
+              str = str.substring(0, imgStartIndex-1)
+              str = strip_html(str);
+              str += matches[0];
+              str += strip_html(post.content.substring(imgEndIndex,imgEndIndex+50));
+              return str+"...";
+          }
+      }else{
+          str= str.substring(0, maxExcerptWords);
+      }
+      str=strip_html(str);
+      str+=`...`;
+      return str;
+    }
+  %>
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
