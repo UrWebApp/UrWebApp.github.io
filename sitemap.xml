@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
+    
+    <lastmod>2024-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
+    
+    <lastmod>2024-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
+    
+    <lastmod>2024-02-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
     
     <lastmod>2024-02-08</lastmod>
@@ -173,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/Repository%20not%20found/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/ReactHooks/</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -182,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/ReactHooks/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/Repository%20not%20found/</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -218,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/TalkAboutAuthorization/</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -227,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/TalkAboutAuthorization/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -254,24 +281,6 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
-    
-    <lastmod>2024-02-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
-    
-    <lastmod>2024-02-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowHttpRequest/</loc>
     
     <lastmod>2024-02-08</lastmod>
@@ -290,15 +299,6 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/</loc>
-    
-    <lastmod>2024-02-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowReact/</loc>
     
     <lastmod>2024-02-08</lastmod>
@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
+    <loc>https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/</loc>
     
     <lastmod>2024-02-08</lastmod>
     
@@ -517,14 +517,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/PDF/</loc>
+    <loc>https://urwebapp.github.io/tags/Authorization/</loc>
     <lastmod>2024-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Authorization/</loc>
+    <loc>https://urwebapp.github.io/tags/PDF/</loc>
     <lastmod>2024-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
