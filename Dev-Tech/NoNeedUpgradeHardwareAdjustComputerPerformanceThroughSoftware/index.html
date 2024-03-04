@@ -118,7 +118,7 @@
                 </a>
               </h4>
               <div id="categories">
-                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI-Tools/">AI Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev-Tech/">Dev Tech</a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/f2e/">f2e</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/">轉職成長</a><span class="category-list-count">2</span></li></ul>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI-Tools/">AI Tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev/">Dev</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Dev-Tech/">Dev Tech</a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Language/">Language</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/f2e/">f2e</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%89%E8%81%B7%E6%88%90%E9%95%B7/">轉職成長</a><span class="category-list-count">2</span></li></ul>
               </div>
             </li>
             <li>
@@ -180,7 +180,11 @@
 <h2 id="自製-bat-清除系統垃圾"><a href="#自製-bat-清除系統垃圾" class="headerlink" title="自製 bat 清除系統垃圾"></a>自製 bat 清除系統垃圾</h2><ol>
 <li>新增一個 txt 文字檔並將以下內容複製貼上到文字檔內</li>
 </ol>
-<pre class="line-numbers language-Batch" data-language="Batch"><code class="language-Batch">:: 關閉顯示指令
+<pre class="line-numbers language-Batch" data-language="Batch"><code class="language-Batch">
+:: \d 用於切換 drive 硬碟，當要 cd 的路徑不再同個硬碟時
+CD \d %PATH%
+
+:: 關閉顯示指令
 @echo off
 :: 顯示文字
 echo 中文亂碼，請改為 txt 檔案另存為 ANSI
@@ -217,7 +221,7 @@ net user aspnet &#x2F;Delete
 cleanmgr &#x2F;sagerun:99
 echo 清除系統垃圾檔案完成！
 :: 使顯示器停下，並顯示&quot;請按任意鍵繼續...&quot;
-pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol start="2">
 <li>另存為 ANSI 的文字檔案，在另存為 .bat 副檔名的 bat 檔案，這樣就能直接點選使用了</li>
@@ -321,6 +325,10 @@ pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
       
       <li>
         <a href="/categories/English/"> English  </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Dev/"> Dev  </a>
       </li>
       
       <li>
@@ -434,6 +442,22 @@ pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
       
       <li>
         <a href="/tags/npm/"> npm </a>
+      </li>
+      
+      <li>
+        <a href="/tags/node/"> node </a>
+      </li>
+      
+      <li>
+        <a href="/tags/pnpm/"> pnpm </a>
+      </li>
+      
+      <li>
+        <a href="/tags/nvm/"> nvm </a>
+      </li>
+      
+      <li>
+        <a href="/tags/nrm/"> nrm </a>
       </li>
       
       <li>
