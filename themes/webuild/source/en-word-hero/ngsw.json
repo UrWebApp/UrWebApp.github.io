@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1711382892018,
+  "timestamp": 1711386971294,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.b983348b7241d81c.js",
+        "/en-word-hero/main.5acc4f72531c6ca2.js",
         "/en-word-hero/polyfills.08169103fbab0204.js",
         "/en-word-hero/runtime.eebce79111dcc7ac.js",
         "/en-word-hero/styles.2173acda154d52a4.css",
-        "/en-word-hero/vendor.f5c79fda2e3c4b9c.js"
+        "/en-word-hero/vendor.2fc5b55b3b4c8c08.js"
       ],
       "patterns": []
     },
@@ -685,15 +685,15 @@
     "/en-word-hero/assets/衣服/short.png": "22a95b909552a26324c13d1f8ab986361f2369af",
     "/en-word-hero/assets/衣服/t-Shirts.png": "de328290dfbb66357a308c541d775d2d7fa81086",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "a1f417d071dc01739891fd14db9270e0b94b7e29",
+    "/en-word-hero/index.html": "89578b1383b7f0e413d597174d1028247fa79c79",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.b983348b7241d81c.js": "c46950882a0685fe3759ce62e7d7832f1db24002",
+    "/en-word-hero/main.5acc4f72531c6ca2.js": "30278a6395da4eefc5f5d1972434168e21b79706",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.08169103fbab0204.js": "913c3d42880ec90f593182fdbd747f03872ea7d9",
     "/en-word-hero/runtime.eebce79111dcc7ac.js": "5c5250c4450d37bb908e87c782a9f15350502d97",
     "/en-word-hero/styles.2173acda154d52a4.css": "0f8737146ff14f0fa4a1e45709e5e9ecf3b37f86",
-    "/en-word-hero/vendor.f5c79fda2e3c4b9c.js": "cf1e09d393f43aed24fb1a571056624b48bc95f1"
+    "/en-word-hero/vendor.2fc5b55b3b4c8c08.js": "508759a2c08908529cb6fd7a37a8478d0367fce5"
   },
   "navigationUrls": [
     {
