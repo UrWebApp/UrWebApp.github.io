@@ -2,6 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/author/kai98k.html</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/CouldNotLoadBecauseScriptExecutionDisabledOnSystem/</loc>
     
     <lastmod>2024-03-25</lastmod>
@@ -83,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/English/IeltsNotes/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowCallbackFnBindThis/</loc>
     
     <lastmod>2024-03-25</lastmod>
     
@@ -92,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowCallbackFnBindThis/</loc>
+    <loc>https://urwebapp.github.io/English/IeltsNotes/</loc>
     
     <lastmod>2024-03-25</lastmod>
     
@@ -209,42 +290,6 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowHttpRequest/</loc>
     
     <lastmod>2024-03-25</lastmod>
@@ -263,15 +308,6 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowReact/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/</loc>
     
     <lastmod>2024-03-25</lastmod>
@@ -281,52 +317,16 @@
   </url>
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowReact/</loc>
+    
+    <lastmod>2024-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/author/kai98k.html</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/</loc>
     
     <lastmod>2024-03-25</lastmod>
     
@@ -435,13 +435,6 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/English/</loc>
-    <lastmod>2024-03-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/tags/JavaScript/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -450,6 +443,13 @@
   
   <url>
     <loc>https://urwebapp.github.io/tags/Angular/</loc>
+    <lastmod>2024-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/English/</loc>
     <lastmod>2024-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
