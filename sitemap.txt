@@ -1,4 +1,3 @@
-https://urwebapp.github.io/author/kai98k.html
 https://urwebapp.github.io/AI-Tools/AiToolsPart1/
 https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/
 https://urwebapp.github.io/Dev-Tech/CouldNotLoadBecauseScriptExecutionDisabledOnSystem/
@@ -35,6 +34,7 @@ https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/
 https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/
 https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/
 https://urwebapp.github.io/author/johch3n611u.html
+https://urwebapp.github.io/author/kai98k.html
 https://urwebapp.github.io/
 https://urwebapp.github.io/tags/AI/
 https://urwebapp.github.io/tags/Tools/
