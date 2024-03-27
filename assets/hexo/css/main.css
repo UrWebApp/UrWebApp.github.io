@@ -867,7 +867,7 @@ nav >ul >li >h4 >a:hover {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: url("/assets/img/brand-icon.png") -37px 64px;
+  background: url("/assets/img/hexo/brand-icon.png") -37px 64px;
   background-size: 100px;
 }
 .withinStationIcon {
@@ -875,14 +875,14 @@ nav >ul >li >h4 >a:hover {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url("/assets/img/brand-icon.png") -7px 59px;
+  background: url("/assets/img/hexo/brand-icon.png") -7px 59px;
   background-size: 100px;
 }
 .bookmarkIcon {
   filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(41deg) brightness(103%) contrast(101%);
   width: 36px;
   height: 43px;
-  background: url("/assets/img/brand-icon.png") 1px 39px;
+  background: url("/assets/img/hexo/brand-icon.png") 1px 39px;
   background-size: 120px;
 }
 .lineIcon {
@@ -890,7 +890,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 43px;
   height: 43px;
-  background: url("/assets/img/brand-icon.png") 2px 2px;
+  background: url("/assets/img/hexo/brand-icon.png") 2px 2px;
   background-size: 120px;
 }
 .instagramIcon {
@@ -898,7 +898,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 43px;
   height: 43px;
-  background: url("/assets/img/brand-icon.png") 2px -32px;
+  background: url("/assets/img/hexo/brand-icon.png") 2px -32px;
   background-size: 120px;
 }
 .linkedinIcon {
@@ -906,7 +906,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 43px;
   height: 43px;
-  background: url("/assets/img/brand-icon.png") -39px 2px;
+  background: url("/assets/img/hexo/brand-icon.png") -39px 2px;
   background-size: 120px;
 }
 .githubIcon {
@@ -914,7 +914,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 43px;
   height: 43px;
-  background: url("/assets/img/brand-icon.png") -40px 114px;
+  background: url("/assets/img/hexo/brand-icon.png") -40px 114px;
   background-size: 120px;
 }
 .authorIcon {
@@ -922,7 +922,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 20px;
   height: 20px;
-  background: url("/assets/img/brand-icon.png") 19px 75px;
+  background: url("/assets/img/hexo/brand-icon.png") 19px 75px;
   background-size: 60px;
 }
 .uponIcon {
@@ -930,7 +930,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 20px;
   height: 20px;
-  background: url("/assets/img/brand-icon.png") 20px 58px;
+  background: url("/assets/img/hexo/brand-icon.png") 20px 58px;
   background-size: 60px;
 }
 .downIcon {
@@ -938,7 +938,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 20px;
   height: 20px;
-  background: url("/assets/img/brand-icon.png") 20px 113px;
+  background: url("/assets/img/hexo/brand-icon.png") 20px 113px;
   background-size: 60px;
 }
 .viewerIcon {
@@ -946,7 +946,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 43px;
   height: 43px;
-  background: url("/assets/img/brand-icon.png") 39px 108px;
+  background: url("/assets/img/hexo/brand-icon.png") 39px 108px;
   background-size: 80px;
 }
 .tagIcon {
@@ -954,7 +954,7 @@ nav >ul >li >h4 >a:hover {
   left: 0px;
   width: 20px;
   height: 20px;
-  background: url("/assets/img/brand-icon.png") -22px 20px;
+  background: url("/assets/img/hexo/brand-icon.png") -22px 20px;
   background-size: 60px;
 }
 .search-form {

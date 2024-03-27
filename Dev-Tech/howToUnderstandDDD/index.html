@@ -67,7 +67,7 @@
         <span>hamburger-icon</span>
         <!-- <i class="hamburger fa-solid fa-bars"></i> -->
         <!-- <span class="material-symbols-outlined">menu</span> -->
-        <img class="hamburger" src="./assets/img/download.png" data-original="/assets/img/burger-menu-svgrepo-com.svg" alt="hamburger-icon">
+        <img class="hamburger" src="./assets/img/hexo/download.png" data-original="/assets/img/hexo/burger-menu-svgrepo-com.svg" alt="hamburger-icon">
       </a>
     </div>
   </header>
@@ -199,9 +199,9 @@
         <p class="content">剛接觸到設計模式的時候，真的覺得很抽象，根本就是甚麼術式吧，趁著業務需要，再次以新手術師的角度，重新認識一遍領域驅動設計(Domain-Driven Design,DDD)，這個高級咒術。</p>
       </div>
       <h2 id="關於-Domain"><a href="#關於-Domain" class="headerlink" title="關於 Domain"></a>關於 Domain</h2><p>在開發前置作業中，開發者通常會有很大一部分的時間在理解業務 Know-how，也就是該領域的知識(Domain knowledge)，在了解之後，進而轉成有業務邏輯的程式碼。</p>
-<p>但是像我在剛接觸專案開發的時候，就會一股腦的把所業務邏輯寫在一起，好一點的狀況是還有分層的概念，壞一點就是直接都塞在 MVC 的 Model 中。<img src="./assets/img/download.png" data-original="https://i.imgur.com/ubO98GX.png" alt="What&#39;s in the model?"></p>
+<p>但是像我在剛接觸專案開發的時候，就會一股腦的把所業務邏輯寫在一起，好一點的狀況是還有分層的概念，壞一點就是直接都塞在 MVC 的 Model 中。<img src="./assets/img/hexo/download.png" data-original="https://i.imgur.com/ubO98GX.png" alt="What&#39;s in the model?"></p>
 <p>久而久之，系統的龐大會造成雜亂無章的結構，不僅會降低開發效率，光是找一個功能就不知道要找多久，改 A 時，結果 B 也壞掉了，也會在合作時產生問題，無法有效拆分或是定義範圍。</p>
-<p>而 DDD 的誕生，就是為了解決這種問題，讓產業領域的業務邏輯可以忠實的映射在程式碼之中，除此之外，還可以保護各自的業務邏輯(功能)不會輕易被改動，甚至擁有良好的擴充性。<img src="./assets/img/download.png" data-original="https://i.imgur.com/UAHwGZB.png" alt="Services"></p>
+<p>而 DDD 的誕生，就是為了解決這種問題，讓產業領域的業務邏輯可以忠實的映射在程式碼之中，除此之外，還可以保護各自的業務邏輯(功能)不會輕易被改動，甚至擁有良好的擴充性。<img src="./assets/img/hexo/download.png" data-original="https://i.imgur.com/UAHwGZB.png" alt="Services"></p>
 <h2 id="DDD-的集成"><a href="#DDD-的集成" class="headerlink" title="DDD 的集成"></a>DDD 的集成</h2><p>根據提出 DDD 概念的作者 Eric Evans 所述，DDD 專注於核心三點(以下使用晶晶體較好理解)，且分為 Strategic Design 戰略設計與 Tactical Design戰術設計 :</p>
 <ul>
 <li>複雜的開發設計需要基於 <strong>domain models</strong>(戰術設計)</li>
@@ -318,7 +318,7 @@ factory<span class="token punctuation">.</span><span class="token function">chan
 <p>假設今天需要開發一個系統，這個系統可能會功能像是訂貨下單，加上幾個輔助功能像是查詢、客服，再加上一個第三方功能像是金流串接，而系統就會依造這些功能來做開發。</p>
 </blockquote>
 <p>在團隊定義 Bounded Context 其實就在切割 Domain 成為一個一個微服務了，所以在界線的定義最好是要保持明確且不相互汙染，可以讓責任劃清界線。此時，領域專家的介入也非常重要，領域專家必須分析哪個 Bounded Context 才是真正的 Core Domain，如無此舉的話，不僅僅是浪費了開發程式的時間在無關緊要的功能上，甚至會導致商機的錯失。</p>
-<p>這邊利用國家的運作來比喻<br><img src="./assets/img/download.png" data-original="https://i.imgur.com/q8bU0aT.png" alt="泡泡圖"></p>
+<p>這邊利用國家的運作來比喻<br><img src="./assets/img/hexo/download.png" data-original="https://i.imgur.com/q8bU0aT.png" alt="泡泡圖"></p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本文並沒有分析 DDD 設計模式的優缺點，因為對於作者來說，任何事都沒有最佳解，只有取捨跟選擇而已，所以要憑自身的專案來決定使用 DDD 適不適合，DDD 旨在解決商業與系統的整合問題，當問題很簡單與足夠直覺時，可能會矯正過往。另外，當系統或產品的業務領域複雜不好分割，相對地在技術應用上也複雜時，也不太適用 DDD 來開發，不過這也不用過於灰心，畢竟都只是工具罷了，再換一種就好。</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/users/20111997/ironman/2730">Think in Domain-Driven Design 系列</a></li>
