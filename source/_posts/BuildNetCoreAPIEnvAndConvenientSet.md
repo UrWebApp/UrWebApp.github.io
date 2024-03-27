@@ -13,13 +13,13 @@ authorsWords: 以往每次要用都要查一次，系統性的紀錄在這方便
 
 ## Sql Express
 
-![sql-express](/assets/img/sql-express.png)
+![sql-express](/assets/img/hexo/sql-express.png)
 
 Sql Express 是免費的 Microsoft SQL Server 關聯式數據庫管理系統，適合獨立開發人員測試或小系統使用。
 
 網路上有看到有方法，拿到它獨立的安裝檔方便群體自動化安裝，目前是不知道什麼情境需要這種情境，暫且紀錄；
 
-![ef-dependency-mod](/assets/img/ef-dependency-mod.jpg)
+![ef-dependency-mod](/assets/img/hexo/ef-dependency-mod.jpg)
 
 `dotnet tool install --global dotnet-ef`
 
@@ -32,18 +32,18 @@ Sql Express 是免費的 Microsoft SQL Server 關聯式數據庫管理系統，�
 
 ## VS IDE 瞄和定義
 
-![vs-ide-definition](/assets/img/vs-ide-definition.png)
+![vs-ide-definition](/assets/img/hexo/vs-ide-definition.png)
 
 想要查看某個方法、變數或類型的詳細定義時，可以更深入地理解程式碼中使用的各種元素。
 
 ## VS IDE GitHub 的範例和文檔
 
-![vs-ide-github-sample](/assets/img/vs-ide-github-sample.png)
+![vs-ide-github-sample](/assets/img/hexo/vs-ide-github-sample.png)
 
 看起來蠻好用的，但實際目前的狀況發現，如果類型命名太相似會顯示錯誤的範例，所以還是要人工判斷。
 
 ## VS IDE 設定啟動專案...
 
-![vs-ide-muti-run-serve](/assets/img/vs-ide-muti-run-serve.jpg)
+![vs-ide-muti-run-serve](/assets/img/hexo/vs-ide-muti-run-serve.jpg)
 
 其實在職訓局時就有接觸到這個功能，但在當時並沒有一次性啟動多個專案的需求，結果被上包人員教學了，非常感激，不然就會停留在原始人時代多開 IDE 啟動專案...
