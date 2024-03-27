@@ -21,4 +21,4 @@ https://measureschool.com/data-layer-variable/
 
 Network Intiator
 
-![Network Intiator](/assets/img/hexo/Intiator.png)
+![Network Intiator](/assets/hexo/img/Intiator.png)

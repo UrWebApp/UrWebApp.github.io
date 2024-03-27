@@ -30,7 +30,7 @@ tags:
 ## Vue 二次封裝範例
 
 <video width="300" height="360" controls>
-  <source src="/assets/img/hexo/二次封裝.mp4" type="video/mp4">
+  <source src="/assets/hexo/img/二次封裝.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
