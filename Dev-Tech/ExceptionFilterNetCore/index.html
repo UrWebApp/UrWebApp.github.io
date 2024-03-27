@@ -67,7 +67,7 @@
         <span>hamburger-icon</span>
         <!-- <i class="hamburger fa-solid fa-bars"></i> -->
         <!-- <span class="material-symbols-outlined">menu</span> -->
-        <img class="hamburger" src="./assets/img/hexo/download.png" data-original="/assets/img/hexo/burger-menu-svgrepo-com.svg" alt="hamburger-icon">
+        <img class="hamburger" src="./assets/hexo/img/download.png" data-original="/assets/hexo/img/burger-menu-svgrepo-com.svg" alt="hamburger-icon">
       </a>
     </div>
   </header>
@@ -192,9 +192,9 @@
       </div>
       <p>在開發中除了利用 Log 套件幫助我們記下有問題或是 Error 的地方，還可以利用 .Net core 中的 Filter 來處理一些異常發生時，該做的事。</p>
 <h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>藉由微軟提供的視圖，可以看到 Filter 有點類似管道或是過濾器的概念，在 .Net core 中程式的生命週期會先進到中介層(Middleware)，再進到這次要談的 Filter。</p>
-<p><img src="./assets/img/hexo/download.png" data-original="https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/filters/_static/filter-pipeline-1.png?view=aspnetcore-7.0" alt=".net pipe"></p>
+<p><img src="./assets/hexo/img/download.png" data-original="https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/filters/_static/filter-pipeline-1.png?view=aspnetcore-7.0" alt=".net pipe"></p>
 <h2 id="Exception-Filter"><a href="#Exception-Filter" class="headerlink" title="Exception Filter"></a>Exception Filter</h2><p>Filter 有很多種，這次要使用到的是 Exception Filter，顧名思義，就是在異常發生時會進到的過濾器。</p>
-<p><img src="./assets/img/hexo/download.png" data-original="https://images2015.cnblogs.com/blog/162090/201707/162090-20170716130815660-1249491527.png" alt="filter"></p>
+<p><img src="./assets/hexo/img/download.png" data-original="https://images2015.cnblogs.com/blog/162090/201707/162090-20170716130815660-1249491527.png" alt="filter"></p>
 <h3 id="新增-ExceptionFilter-自訂名稱-class"><a href="#新增-ExceptionFilter-自訂名稱-class" class="headerlink" title="新增 ExceptionFilter(自訂名稱) class"></a>新增 ExceptionFilter(自訂名稱) class</h3><p>繼承 <code>IAsyncExceptionFilter</code> &#x2F; <code>IExceptionFilter</code>，利用 <code>OnExceptionAsync</code> 方法來自訂異常發生時該做什麼事，在範例中選擇寄信。</p>
 <pre class="line-numbers language-csharp" data-language="csharp"><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc</span><span class="token punctuation">;</span>
 <span class="token keyword">using</span> <span class="token namespace">Microsoft<span class="token punctuation">.</span>AspNetCore<span class="token punctuation">.</span>Mvc<span class="token punctuation">.</span>Filters</span><span class="token punctuation">;</span>
