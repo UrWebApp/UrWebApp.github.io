@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1711966701552,
+  "timestamp": 1712555431441,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.7ca275de237b050d.js",
+        "/en-word-hero/main.6a3486a0903e3060.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.08169103fbab0204.js",
         "/en-word-hero/runtime.eebce79111dcc7ac.js",
         "/en-word-hero/styles.2173acda154d52a4.css",
-        "/en-word-hero/vendor.dac22edefa4b8ac8.js"
+        "/en-word-hero/vendor.e9c68ec4824f07f3.js"
       ],
       "patterns": []
     },
@@ -372,7 +372,7 @@
     "/en-word-hero/assets/clothes/t-Shirts.png": "de328290dfbb66357a308c541d775d2d7fa81086",
     "/en-word-hero/assets/clothes/user.svg": "e5978da1583187cbc259a719cdb87ae9b5d463b1",
     "/en-word-hero/assets/enHelper/audio.svg": "69d67ef92d529d33119785e15da842b625bf077d",
-    "/en-word-hero/assets/enHelper/scoreData.json": "d9e9cec196927ff40caa2f60b377d5a7815febc2",
+    "/en-word-hero/assets/enHelper/scoreData.json": "f7b11d76c10e28363a7e959f3f4055080276aef6",
     "/en-word-hero/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
     "/en-word-hero/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
     "/en-word-hero/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
@@ -666,16 +666,16 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "0ab7b5bf4673aec75803cd8675a0ade863d781f7",
+    "/en-word-hero/index.html": "3eb8720435d214686e4a4db37516751f37998112",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.7ca275de237b050d.js": "2b3c3db036e577f27449e1dcb6392487ef7be1ca",
+    "/en-word-hero/main.6a3486a0903e3060.js": "2a93c86603fe001c9927bab2c562159833fe99e5",
     "/en-word-hero/manifest.webmanifest": "ebf8f1e6abacd7cf034d5d97d880a0bab2e4a884",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.08169103fbab0204.js": "913c3d42880ec90f593182fdbd747f03872ea7d9",
     "/en-word-hero/runtime.eebce79111dcc7ac.js": "5c5250c4450d37bb908e87c782a9f15350502d97",
     "/en-word-hero/styles.2173acda154d52a4.css": "0f8737146ff14f0fa4a1e45709e5e9ecf3b37f86",
-    "/en-word-hero/vendor.dac22edefa4b8ac8.js": "d14ee479ebcf54601288554dbb637bb2edb8468c"
+    "/en-word-hero/vendor.e9c68ec4824f07f3.js": "9e57839e2102579ddf84b6f1a145e0983ce0e37c"
   },
   "navigationUrls": [
     {
