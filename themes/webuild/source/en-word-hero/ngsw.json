@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1713583304690,
+  "timestamp": 1713881787341,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.52169c9078718e68.js",
+        "/en-word-hero/main.7897e32fb5a31116.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.08169103fbab0204.js",
         "/en-word-hero/runtime.eebce79111dcc7ac.js",
         "/en-word-hero/styles.9d4dbac35d2b60df.css",
-        "/en-word-hero/vendor.e9c68ec4824f07f3.js"
+        "/en-word-hero/vendor.33d2b2bea64d091d.js"
       ],
       "patterns": []
     },
@@ -50,6 +50,8 @@
         "/en-word-hero/assets/clothes/t-Shirts.png",
         "/en-word-hero/assets/clothes/user.svg",
         "/en-word-hero/assets/enHelper/audio.svg",
+        "/en-word-hero/assets/enHelper/edit.svg",
+        "/en-word-hero/assets/enHelper/ok.svg",
         "/en-word-hero/assets/enHelper/scoreData.json",
         "/en-word-hero/assets/icons/icon-128x128.png",
         "/en-word-hero/assets/icons/icon-144x144.png",
@@ -372,6 +374,8 @@
     "/en-word-hero/assets/clothes/t-Shirts.png": "de328290dfbb66357a308c541d775d2d7fa81086",
     "/en-word-hero/assets/clothes/user.svg": "e5978da1583187cbc259a719cdb87ae9b5d463b1",
     "/en-word-hero/assets/enHelper/audio.svg": "69d67ef92d529d33119785e15da842b625bf077d",
+    "/en-word-hero/assets/enHelper/edit.svg": "478f5e7bda92e121e5d1a0337d71b5d533318259",
+    "/en-word-hero/assets/enHelper/ok.svg": "3827790b044ce06fa2a3b1dad359ffdae8e5898b",
     "/en-word-hero/assets/enHelper/scoreData.json": "1e4c0f0b63039ffa43babba352699bc302c37d9b",
     "/en-word-hero/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
     "/en-word-hero/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
@@ -666,16 +670,16 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "38759069251612f018640d8ac9fa3de14c3c6052",
+    "/en-word-hero/index.html": "64d032894faa38965d5c5537e8dd265f5096297c",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.52169c9078718e68.js": "3ec1b1ee68328397fd5b25febc975ef381400d18",
+    "/en-word-hero/main.7897e32fb5a31116.js": "7f2d9172bc5bfbc28f89a86e47fbf7fabdf1cce6",
     "/en-word-hero/manifest.webmanifest": "ebf8f1e6abacd7cf034d5d97d880a0bab2e4a884",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.08169103fbab0204.js": "913c3d42880ec90f593182fdbd747f03872ea7d9",
     "/en-word-hero/runtime.eebce79111dcc7ac.js": "5c5250c4450d37bb908e87c782a9f15350502d97",
     "/en-word-hero/styles.9d4dbac35d2b60df.css": "f1cb6a9d15ae99fbbaf75a8317f770734f8825be",
-    "/en-word-hero/vendor.e9c68ec4824f07f3.js": "9e57839e2102579ddf84b6f1a145e0983ce0e37c"
+    "/en-word-hero/vendor.33d2b2bea64d091d.js": "af60814758432cbce158ed072974fc6d99a57a8a"
   },
   "navigationUrls": [
     {
