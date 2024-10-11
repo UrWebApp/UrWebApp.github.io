@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/DifferenceBetweenSSHnSSL/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/CreateFtpClitentWithFactory/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/CreateFtpClitentWithFactory/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/DifferenceBetweenSSHnSSL/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowCallbackFnBindThis/</loc>
+    <loc>https://urwebapp.github.io/English/IeltsNotes/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/English/IeltsNotes/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowCallbackFnBindThis/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/SolveNetConnectionProblem/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/SolveNodeCantFindProblem/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/SolveNodeCantFindProblem/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/SolveNetConnectionProblem/</loc>
     
     <lastmod>2024-10-11</lastmod>
     
@@ -388,14 +388,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Internet/</loc>
+    <loc>https://urwebapp.github.io/tags/Net/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Net/</loc>
+    <loc>https://urwebapp.github.io/tags/Internet/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -444,6 +444,13 @@
   </url>
   
   <url>
+    <loc>https://urwebapp.github.io/tags/English/</loc>
+    <lastmod>2024-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/tags/JavaScript/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -452,13 +459,6 @@
   
   <url>
     <loc>https://urwebapp.github.io/tags/Angular/</loc>
-    <lastmod>2024-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/tags/English/</loc>
     <lastmod>2024-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
