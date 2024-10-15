@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1729015001379,
+  "timestamp": 1729015604840,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.c8031868a23d85aa.js",
+        "/en-word-hero/main.30b11731404ee31d.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.08169103fbab0204.js",
         "/en-word-hero/runtime.eebce79111dcc7ac.js",
-        "/en-word-hero/styles.621838b89a4b5304.css",
+        "/en-word-hero/styles.a6c9b26ef80f9b0f.css",
         "/en-word-hero/vendor.6fb28787b6c99091.js"
       ],
       "patterns": []
@@ -670,15 +670,15 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "631d214593f55cb6ccf2e137901acb2ed09d885a",
+    "/en-word-hero/index.html": "8382d3461f8813f7bcfad9973318772b33023f59",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.c8031868a23d85aa.js": "78461d944bba9512093a6d4a1bbb0790270f97aa",
+    "/en-word-hero/main.30b11731404ee31d.js": "bb70637373f5ee4d858dd353a2626dcfe0a57a80",
     "/en-word-hero/manifest.webmanifest": "ebf8f1e6abacd7cf034d5d97d880a0bab2e4a884",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.08169103fbab0204.js": "913c3d42880ec90f593182fdbd747f03872ea7d9",
     "/en-word-hero/runtime.eebce79111dcc7ac.js": "5c5250c4450d37bb908e87c782a9f15350502d97",
-    "/en-word-hero/styles.621838b89a4b5304.css": "6b43427ae21728813c35c9822edc8278b8b0b485",
+    "/en-word-hero/styles.a6c9b26ef80f9b0f.css": "36689e417e8459b33fae160f1be3e6f91b67afb9",
     "/en-word-hero/vendor.6fb28787b6c99091.js": "018b372ac048ac1936b1ad689bfd6a915715254e"
   },
   "navigationUrls": [
