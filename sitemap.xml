@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
-    
-    <lastmod>2024-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
-    
-    <lastmod>2024-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/author/kai98k.html</loc>
-    
-    <lastmod>2024-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
     
     <lastmod>2024-10-17</lastmod>
@@ -155,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/</loc>
     
     <lastmod>2024-10-17</lastmod>
     
@@ -164,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/</loc>
     
     <lastmod>2024-10-17</lastmod>
     
@@ -290,6 +263,15 @@
   </url>
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
+    
+    <lastmod>2024-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowHttpRequest/</loc>
     
     <lastmod>2024-10-17</lastmod>
@@ -336,6 +318,24 @@
   
   <url>
     <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
+    
+    <lastmod>2024-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
+    
+    <lastmod>2024-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/author/kai98k.html</loc>
     
     <lastmod>2024-10-17</lastmod>
     
@@ -472,14 +472,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/computer-science/</loc>
+    <loc>https://urwebapp.github.io/tags/Log/</loc>
     <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Log/</loc>
+    <loc>https://urwebapp.github.io/tags/computer-science/</loc>
     <lastmod>2024-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
