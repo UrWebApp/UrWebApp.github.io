@@ -2,7 +2,7 @@
   "name": "Angular Progressive Web Application (PWA)",
   "short_name": "AG PWA",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "background_color": "#050000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
