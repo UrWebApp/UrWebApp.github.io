@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1733104041744,
+  "timestamp": 1733216568894,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -377,7 +377,7 @@
     "/en-word-hero/assets/enHelper/audio.svg": "69d67ef92d529d33119785e15da842b625bf077d",
     "/en-word-hero/assets/enHelper/edit.svg": "478f5e7bda92e121e5d1a0337d71b5d533318259",
     "/en-word-hero/assets/enHelper/ok.svg": "3827790b044ce06fa2a3b1dad359ffdae8e5898b",
-    "/en-word-hero/assets/enHelper/scoreData.json": "b116e7241e1b2303fb79f74709fb393d3ddbab7d",
+    "/en-word-hero/assets/enHelper/scoreData.json": "25d53f98d97063fb78b0cf1c464fec724d3144c4",
     "/en-word-hero/assets/icons/icon-128x128.png": "04543af17b9744172f5511ac79e3a1c8fad20923",
     "/en-word-hero/assets/icons/icon-144x144.png": "03b7ddb32af11436ae2320adc34ecddab2436994",
     "/en-word-hero/assets/icons/icon-152x152.png": "42b7766393e84682c7b20d69dbee91425afa6074",
