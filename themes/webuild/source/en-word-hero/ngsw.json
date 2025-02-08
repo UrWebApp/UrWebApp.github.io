@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1738821794901,
+  "timestamp": 1739034956647,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.3c0ddc23a2da84ac.js",
+        "/en-word-hero/main.8ea7e241198ac544.js",
         "/en-word-hero/manifest.webmanifest",
-        "/en-word-hero/polyfills.08169103fbab0204.js",
+        "/en-word-hero/polyfills.a704e622e9efb166.js",
         "/en-word-hero/runtime.eebce79111dcc7ac.js",
         "/en-word-hero/styles.b4607c1807baf6e1.css",
-        "/en-word-hero/vendor.2843925f7d13942e.js"
+        "/en-word-hero/vendor.5adf9110a74b53c5.js"
       ],
       "patterns": []
     },
@@ -672,16 +672,16 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "f6b5e378763d549c4ca978ab3d20204b89b02046",
+    "/en-word-hero/index.html": "679d8c0c5cc6911420e31fe9e26a115a72b4865e",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.3c0ddc23a2da84ac.js": "04cad7cf7d52f751c0d904a186690b6a9642f65a",
+    "/en-word-hero/main.8ea7e241198ac544.js": "b661a8ceba3ccc58ae2ce1ef68e9216f61b78ef0",
     "/en-word-hero/manifest.webmanifest": "e75ba6ac64acf22777dc109fd55799be2b1283cf",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
-    "/en-word-hero/polyfills.08169103fbab0204.js": "913c3d42880ec90f593182fdbd747f03872ea7d9",
+    "/en-word-hero/polyfills.a704e622e9efb166.js": "9cb8e80e5772945699283bc0e2f9efd6dbd53d2f",
     "/en-word-hero/runtime.eebce79111dcc7ac.js": "5c5250c4450d37bb908e87c782a9f15350502d97",
     "/en-word-hero/styles.b4607c1807baf6e1.css": "d6edeb94bc1304ddf595a9ed2f0ece10fc6a81c6",
-    "/en-word-hero/vendor.2843925f7d13942e.js": "cdfce7f1017d30e046ec9283c93cb661f83ea7ae"
+    "/en-word-hero/vendor.5adf9110a74b53c5.js": "48946e4afa5c3141692d7b3755bd8079c3ad5031"
   },
   "navigationUrls": [
     {
