@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1739123754281,
+  "timestamp": 1739179209068,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.74bfe5dcb28b1b9b.js",
+        "/en-word-hero/main.48a8f604a82a9982.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.a704e622e9efb166.js",
         "/en-word-hero/runtime.eebce79111dcc7ac.js",
@@ -672,10 +672,10 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "0dbeeb601e93fc18aefd2c202afaa8c8e609b865",
+    "/en-word-hero/index.html": "a4e57f16ff957dfb08836674c7afe3cf0cc93285",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.74bfe5dcb28b1b9b.js": "8fd2b2f919d71f4729cdcbddcee3e4f5200d7710",
+    "/en-word-hero/main.48a8f604a82a9982.js": "2d765af0d9b55712a7279602d0bb2ab1e78f9161",
     "/en-word-hero/manifest.webmanifest": "e75ba6ac64acf22777dc109fd55799be2b1283cf",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.a704e622e9efb166.js": "9cb8e80e5772945699283bc0e2f9efd6dbd53d2f",
