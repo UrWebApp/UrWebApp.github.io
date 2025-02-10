@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/TalkAboutAuthorization/</loc>
+    
+    <lastmod>2025-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/</loc>
+    
+    <lastmod>2025-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/</loc>
     
     <lastmod>2025-02-10</lastmod>
@@ -57,6 +75,15 @@
   
   <url>
     <loc>https://urwebapp.github.io/author/kai98k.html</loc>
+    
+    <lastmod>2025-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowQueue/</loc>
     
     <lastmod>2025-02-10</lastmod>
     
@@ -155,16 +182,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/TalkAboutAuthorization/</loc>
-    
-    <lastmod>2025-02-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/</loc>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowJsBasics/</loc>
     
     <lastmod>2025-02-10</lastmod>
     
@@ -201,6 +219,15 @@
   
   <url>
     <loc>https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/</loc>
+    
+    <lastmod>2025-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
     
     <lastmod>2025-02-10</lastmod>
     
@@ -308,34 +335,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowQueue/</loc>
-    
-    <lastmod>2025-02-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowHttpRequest/</loc>
-    
-    <lastmod>2025-02-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowJsBasics/</loc>
-    
-    <lastmod>2025-02-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
     
     <lastmod>2025-02-10</lastmod>
     
@@ -353,20 +353,6 @@
 
   
   <url>
-    <loc>https://urwebapp.github.io/tags/AI/</loc>
-    <lastmod>2025-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/tags/Tools/</loc>
-    <lastmod>2025-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/tags/Visual-Studio/</loc>
     <lastmod>2025-02-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -375,6 +361,20 @@
   
   <url>
     <loc>https://urwebapp.github.io/tags/C/</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/AI/</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/Tools/</loc>
     <lastmod>2025-02-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -628,14 +628,14 @@
 
   
   <url>
-    <loc>https://urwebapp.github.io/categories/AI-Tools/</loc>
+    <loc>https://urwebapp.github.io/categories/Dev-Tech/</loc>
     <lastmod>2025-02-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/categories/Dev-Tech/</loc>
+    <loc>https://urwebapp.github.io/categories/AI-Tools/</loc>
     <lastmod>2025-02-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
