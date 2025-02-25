@@ -1,5 +1,8 @@
+https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/
+https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/
 https://urwebapp.github.io/author/johch3n611u.html
 https://urwebapp.github.io/author/kai98k.html
+https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/
 https://urwebapp.github.io/English/PresentationNote/
 https://urwebapp.github.io/Dev-Tech/ReactClassAndFunctional/
 https://urwebapp.github.io/Dev-Tech/ReactHooks/
@@ -13,16 +16,13 @@ https://urwebapp.github.io/Dev-Tech/TheWayOfPrintInAspNet%20/
 https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/
 https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/
 https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/
-https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/
 https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/
-https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/
 https://urwebapp.github.io/Dev-Tech/HexoNestedAngular/
 https://urwebapp.github.io/f2e/HodgepodgeOfFrontEnd/
 https://urwebapp.github.io/English/IeltsNotes/
 https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowCallbackFnBindThis/
 https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowQueue/
 https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/
-https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/
 https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowHttpRequest/
 https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowJsBasics/
 https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowReact/
