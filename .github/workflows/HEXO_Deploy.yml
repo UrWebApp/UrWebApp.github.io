@@ -12,23 +12,28 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.HEXODEPLOY }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
+          
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14.17.5'
+          node-version: '16.x' # 更新到 Node.js 16.x 以上版本
+          cache: 'npm' # 啟用內建的 npm 快取
+
       - name: Cache NPM dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3 # 更新到 v3
         with:
           path: node_modules
-          key: ${{ runner.OS }}-npm-cache
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
           restore-keys: |
-            ${{ runner.OS }}-npm-cache
+            ${{ runner.os }}-npm-cache-
+
       - name: Install Dependencies
         run: npm install
+
       - name: Build
         run: npm run build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
