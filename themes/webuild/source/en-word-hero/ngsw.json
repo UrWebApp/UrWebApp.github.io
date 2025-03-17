@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1741334826628,
+  "timestamp": 1742189144108,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.8e73a405568c847d.js",
+        "/en-word-hero/main.5745fd5a0700bcb8.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.6707ca76a3002ca5.js",
         "/en-word-hero/runtime.6f434b41095cdb60.js",
@@ -52,6 +52,7 @@
         "/en-word-hero/assets/enHelper/IELTS文法.json",
         "/en-word-hero/assets/enHelper/audio.svg",
         "/en-word-hero/assets/enHelper/edit.svg",
+        "/en-word-hero/assets/enHelper/note.md",
         "/en-word-hero/assets/enHelper/ok.svg",
         "/en-word-hero/assets/enHelper/scoreData.json",
         "/en-word-hero/assets/icons/icon-128x128.png",
@@ -378,8 +379,9 @@
     "/en-word-hero/assets/enHelper/IELTS文法.json": "35ab442fe751eebdac16978c37e72d8c3ea0ceb7",
     "/en-word-hero/assets/enHelper/audio.svg": "69d67ef92d529d33119785e15da842b625bf077d",
     "/en-word-hero/assets/enHelper/edit.svg": "478f5e7bda92e121e5d1a0337d71b5d533318259",
+    "/en-word-hero/assets/enHelper/note.md": "262df3bf1a80293ddf7d4295310ab3be848fa243",
     "/en-word-hero/assets/enHelper/ok.svg": "3827790b044ce06fa2a3b1dad359ffdae8e5898b",
-    "/en-word-hero/assets/enHelper/scoreData.json": "6677beb868af7e2a689a378d6ae0cb9df380f98c",
+    "/en-word-hero/assets/enHelper/scoreData.json": "a6aace50acdf6ef151444385b234fece9489bf61",
     "/en-word-hero/assets/icons/icon-128x128.png": "04543af17b9744172f5511ac79e3a1c8fad20923",
     "/en-word-hero/assets/icons/icon-144x144.png": "03b7ddb32af11436ae2320adc34ecddab2436994",
     "/en-word-hero/assets/icons/icon-152x152.png": "42b7766393e84682c7b20d69dbee91425afa6074",
@@ -674,10 +676,10 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "77c2f41d78cc97a082c000ab40ee9faef76fef18",
+    "/en-word-hero/index.html": "dffd17064b7912a2159401311b2febb7c7f74862",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.8e73a405568c847d.js": "f338560c8383c5b62a49331d0c560bf40c49e605",
+    "/en-word-hero/main.5745fd5a0700bcb8.js": "1c1ae9a38d23592a556055cf657c77501fa43b76",
     "/en-word-hero/manifest.webmanifest": "e75ba6ac64acf22777dc109fd55799be2b1283cf",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.6707ca76a3002ca5.js": "d20a3234e6b7c5ea2edc3e39d3bcb819b2aeb0b7",
