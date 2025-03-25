@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1742888660184,
+  "timestamp": 1742916525970,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.112562fc53706854.js",
+        "/en-word-hero/main.b5a9a972f2aac1ba.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.6707ca76a3002ca5.js",
         "/en-word-hero/runtime.6f434b41095cdb60.js",
         "/en-word-hero/styles.b4607c1807baf6e1.css",
-        "/en-word-hero/vendor.5485ca0e352cf4a9.js"
+        "/en-word-hero/vendor.ce7a6fbc7501f181.js"
       ],
       "patterns": []
     },
@@ -49,11 +49,12 @@
         "/en-word-hero/assets/clothes/short.png",
         "/en-word-hero/assets/clothes/t-Shirts.png",
         "/en-word-hero/assets/clothes/user.svg",
-        "/en-word-hero/assets/enHelper/IELTS文法.json",
         "/en-word-hero/assets/enHelper/audio.svg",
         "/en-word-hero/assets/enHelper/edit.svg",
+        "/en-word-hero/assets/enHelper/grammar.json",
         "/en-word-hero/assets/enHelper/note.md",
         "/en-word-hero/assets/enHelper/ok.svg",
+        "/en-word-hero/assets/enHelper/types.json",
         "/en-word-hero/assets/enHelper/vocabulary.json",
         "/en-word-hero/assets/icons/icon-128x128.png",
         "/en-word-hero/assets/icons/icon-144x144.png",
@@ -376,12 +377,13 @@
     "/en-word-hero/assets/clothes/short.png": "22a95b909552a26324c13d1f8ab986361f2369af",
     "/en-word-hero/assets/clothes/t-Shirts.png": "de328290dfbb66357a308c541d775d2d7fa81086",
     "/en-word-hero/assets/clothes/user.svg": "e5978da1583187cbc259a719cdb87ae9b5d463b1",
-    "/en-word-hero/assets/enHelper/IELTS文法.json": "35ab442fe751eebdac16978c37e72d8c3ea0ceb7",
     "/en-word-hero/assets/enHelper/audio.svg": "69d67ef92d529d33119785e15da842b625bf077d",
     "/en-word-hero/assets/enHelper/edit.svg": "478f5e7bda92e121e5d1a0337d71b5d533318259",
+    "/en-word-hero/assets/enHelper/grammar.json": "35ab442fe751eebdac16978c37e72d8c3ea0ceb7",
     "/en-word-hero/assets/enHelper/note.md": "262df3bf1a80293ddf7d4295310ab3be848fa243",
     "/en-word-hero/assets/enHelper/ok.svg": "3827790b044ce06fa2a3b1dad359ffdae8e5898b",
-    "/en-word-hero/assets/enHelper/vocabulary.json": "d7d6757d11642dcaa8f8e4ab7ffe45357c7a9669",
+    "/en-word-hero/assets/enHelper/types.json": "62cd9cfa692bb7765c4b09db54038d2190b43ec6",
+    "/en-word-hero/assets/enHelper/vocabulary.json": "4a715653d9c1c43fe5e1fab9fafad1e14c178949",
     "/en-word-hero/assets/icons/icon-128x128.png": "04543af17b9744172f5511ac79e3a1c8fad20923",
     "/en-word-hero/assets/icons/icon-144x144.png": "03b7ddb32af11436ae2320adc34ecddab2436994",
     "/en-word-hero/assets/icons/icon-152x152.png": "42b7766393e84682c7b20d69dbee91425afa6074",
@@ -676,16 +678,16 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "a89f48a43c5cfe6f28b8d2823ad95e74884e5a8a",
+    "/en-word-hero/index.html": "e63fec5a28d2b1a6373664800d797487e3856b40",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.112562fc53706854.js": "298ba8bda8ed98597e884ca42ccbb477ae7fe012",
+    "/en-word-hero/main.b5a9a972f2aac1ba.js": "10bd822544b236a70fbb96eed428b32171e12286",
     "/en-word-hero/manifest.webmanifest": "e75ba6ac64acf22777dc109fd55799be2b1283cf",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.6707ca76a3002ca5.js": "d20a3234e6b7c5ea2edc3e39d3bcb819b2aeb0b7",
     "/en-word-hero/runtime.6f434b41095cdb60.js": "4777b62c582f21d65e17338c8f00d35052c69804",
     "/en-word-hero/styles.b4607c1807baf6e1.css": "d6edeb94bc1304ddf595a9ed2f0ece10fc6a81c6",
-    "/en-word-hero/vendor.5485ca0e352cf4a9.js": "1c00b8f04d60d0b10bab600ce62e66c284fa8633"
+    "/en-word-hero/vendor.ce7a6fbc7501f181.js": "f840cd2a2630a5a744e3a59bb9d70290ba289683"
   },
   "navigationUrls": [
     {
