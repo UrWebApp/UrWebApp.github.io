@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1743825070903,
+  "timestamp": 1743956334964,
   "index": "/en-word-hero/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/en-word-hero/favicon.ico",
         "/en-word-hero/index.html",
-        "/en-word-hero/main.503bb7c815427b36.js",
+        "/en-word-hero/main.117c881dbc98fb9a.js",
         "/en-word-hero/manifest.webmanifest",
         "/en-word-hero/polyfills.6707ca76a3002ca5.js",
         "/en-word-hero/runtime.6f434b41095cdb60.js",
@@ -382,7 +382,7 @@
     "/en-word-hero/assets/enHelper/grammar.json": "35ab442fe751eebdac16978c37e72d8c3ea0ceb7",
     "/en-word-hero/assets/enHelper/note.md": "262df3bf1a80293ddf7d4295310ab3be848fa243",
     "/en-word-hero/assets/enHelper/ok.svg": "3827790b044ce06fa2a3b1dad359ffdae8e5898b",
-    "/en-word-hero/assets/enHelper/types.json": "62cd9cfa692bb7765c4b09db54038d2190b43ec6",
+    "/en-word-hero/assets/enHelper/types.json": "e4ffd1bea5d83ddd87a8a6a28e5bbea6efb6cf82",
     "/en-word-hero/assets/enHelper/vocabulary.json": "391d90b9ff4183c28feeab143e4f32fab23decc5",
     "/en-word-hero/assets/icons/icon-128x128.png": "04543af17b9744172f5511ac79e3a1c8fad20923",
     "/en-word-hero/assets/icons/icon-144x144.png": "03b7ddb32af11436ae2320adc34ecddab2436994",
@@ -678,10 +678,10 @@
     "/en-word-hero/assets/palworld/passiveSkills.json": "6738fe8d0af0616d4176fd085f622b7ec5bfb6c6",
     "/en-word-hero/assets/palworld/specialCombiRank.csv": "9bdf9d18a39506774d6715f531f414dad0910e6b",
     "/en-word-hero/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/en-word-hero/index.html": "53f50d6caf0c6c2a34f7e47ff930157f4cba5299",
+    "/en-word-hero/index.html": "f29ae329725e3f439d230807519f56683af07284",
     "/en-word-hero/layers-2x.9859cd1231006a4a.png": "152a162333e46d24f9d89f566312fc0c64011dee",
     "/en-word-hero/layers.ef6db8722c2c3f9a.png": "c9e7528e491a39232ba24a2706c6c739d6fb0f06",
-    "/en-word-hero/main.503bb7c815427b36.js": "72a39e52a13df1ba1a2c3362cfb57450136d4dbc",
+    "/en-word-hero/main.117c881dbc98fb9a.js": "b253c9fc91ae13ed09717f879e1e810895a26c21",
     "/en-word-hero/manifest.webmanifest": "e75ba6ac64acf22777dc109fd55799be2b1283cf",
     "/en-word-hero/marker-icon.d577052aa271e13f.png": "60a90bcbb2b42b7ddb4556db94eb7c1084b0e5da",
     "/en-word-hero/polyfills.6707ca76a3002ca5.js": "d20a3234e6b7c5ea2edc3e39d3bcb819b2aeb0b7",
