@@ -15,3 +15,6 @@ tags:
    2. 三分之一 => one third, 三分之二 => two thirds
    3. 13.87 => thirteen point eight seven
    4. 7:24 => seven twenty fore, 7:45 => a quarter to eight
+   5. 姓名 (常見的要背), 難的可能會一字一字念
+   6. 航班
+   7. 銀行卡卡號 330384502045367
