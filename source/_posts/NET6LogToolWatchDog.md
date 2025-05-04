@@ -7,6 +7,7 @@ tags:
 - Log
 - .Net
 ---
+
 在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。如專案中的 Log 衍生需求不多，建議可使用這套 WatchDog 工具。
 ## 介紹
 WatchDog 利用 SignalR 與預設 LiteDb 來實現 Web UI 即時監控 Http/Error Log 等事件 ，可依需求替換不同的資料庫，像是MSSQL、MySQl、Postgres。
