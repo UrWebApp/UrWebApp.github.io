@@ -129,6 +129,13 @@ https://hefengxian.github.io/my-ielts/#/grammar
    6. 句子填空（Sentence Completion）
 5. 簡答題（Short-Answer Questions）
 
+- 真題 15 以後一定要做，以前看狀況
+- 盡量不要刷提，要精寫
+- 熟詞陌生意思 ex：address 演講 解決
+
+
+
+
 ## 寫
 
 ✍️ 提升寫作邏輯（特別是 Task 2）
