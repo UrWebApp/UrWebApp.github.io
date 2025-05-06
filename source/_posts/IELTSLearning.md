@@ -32,9 +32,9 @@ https://hefengxian.github.io/my-ielts/#/grammar
 - 轉折 but, however, although, though, yet, nevertheless, on the other hand, in contrast, instead, whereas, while ...
 - 舉例 for example, for instance, such as, to illustrate, namely, the other things to avoid, another issue is ...
 - 強調 especially, in particular, particularly, mainly, above, all, most importantly ...
-- 原因結果 because, since, due to, as a result, therefore, thus, consequently ...
+- 原因結果 so, because, since, due to, as a result, therefore, thus, consequently ...
 - 列舉順序 firstly / secondly / thirdly, to begin with, next, then, finally, last but not least, also, in addition, moreover, furthermore ...
-
+- 對等連接詞 and, nor, or
 
 
 <details>
@@ -121,6 +121,21 @@ https://hefengxian.github.io/my-ielts/#/grammar
    5. starting point 定位詞, stranight down 方位詞, main entrance 參照物
    6. pass a 經過附近, cross 穿越(標準最常使用), Verb (動作發生在橋上需搭配動詞) + over the bridge
 4. 填空題（Completion）
+   - 發音聽得清 > 邏輯轉折信號 > 同義字改寫
+   - 真題 15 以後一定要做，以前看狀況
+   - 盡量不要刷題，要精寫
+   - 熟詞陌生意思 ex：address 演講 解決
+   - 確認答案字數限制
+   - 畫關鍵字可以念一下，可以確認聽力會聽到什麼
+   - 條列題要注意對等連接詞 and
+   - 除了標題/小標題要看定位詞，題目空格前的詞一定要看才能預判斷答案詞性
+   - 注意聽力中的轉折 ex：Another thing、So, one thing、particularly
+   - 聽到關鍵詞/答案詞不要直接寫要懂意思再寫，會有陷阱 ex： borrow book 但實際上要你 collect book
+   - 介係詞後面只能接名詞或動名詞，因為要固定搭配，可能會直接出現在聽力中 ex：`in the` some place
+   - `doing` 正在做 I stopped smoking., `to do` 停止前述動作去做另一件事 I stopped to smoke.
+   - The 冠詞後面填名詞
+   - 題目其他重複的單字可以不用看，當不了定位詞
+   - 答案後一個詞也能判斷空格內詞性 ex：(移動 / 語文) book，如果與聽力一模一樣，則可以辨認下一題開始
    1. 表格填空（Form Completion）
    2. 筆記填空（Note Completion）
    3. 表格填空（Table Completion）
@@ -128,10 +143,6 @@ https://hefengxian.github.io/my-ielts/#/grammar
    5. 摘要填空（Summary Completion）
    6. 句子填空（Sentence Completion）
 5. 簡答題（Short-Answer Questions）
-
-- 真題 15 以後一定要做，以前看狀況
-- 盡量不要刷提，要精寫
-- 熟詞陌生意思 ex：address 演講 解決
 
 
 
