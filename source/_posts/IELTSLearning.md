@@ -31,10 +31,45 @@ https://hefengxian.github.io/my-ielts/#/grammar
 - 否定 not, never, no longer, hardly / barely / scarcely, seldom / rarely, little few, without, lack ...
 - 轉折 but, however, although, though, yet, nevertheless, on the other hand, in contrast, instead, whereas, while ...
 - 舉例 for example, for instance, such as, to illustrate, namely, the other things to avoid, another issue is ...
-- 強調 especially, in particular, particularly, mainly, above, all, most importantly ...
+- 強調 In fact, especially, in particular, particularly, mainly, above, all, most importantly ...
 - 原因結果 so, because, since, due to, as a result, therefore, thus, consequently ...
 - 列舉順序 firstly / secondly / thirdly, to begin with, next, then, finally, last but not least, also, in addition, moreover, furthermore ...
 - 對等連接詞 and, nor, or
+
+## 備考
+
+聽 
+=> 練耳力 (精聽真題第一遍聽全文找主旨，第二遍聽細節補漏關鍵字，對照原文查聽錯漏, 泛聽新聞演講素材培語感口音不用每句懂) 
+=> 抓關鍵詞 轉折詞 數字時間地點
+=> 寫速記 聽寫手速 1倍1.5=> 1.8 
+
+說
+=> 流利表達 > 完美語法 > 多用簡單句子避免複雜句卡殼
+=> 開口難 所有事物都自我對話
+=> 萬能回答模板 I'd like to elaborate on that..., That's basically what i think about it.
+=> 錄音找問題專項訓練
+
+讀
+=> 定位 關鍵詞(時間數字專有名詞etc...)標題文章快速定位, 長句跳讀抓主語謂語
+=> 詞彙累積
+=> 時間管理 真題每篇掐錶總結思路
+
+寫
+=> 思路清晰、語法正確、字數達標
+=> 小作文 萬能句 The bar chart illustrades... 轉折句式 However it is noticeable that...
+=> 大作文 萬能句 In recent years, there has been a growing debate about...
+=> 積累 高分詞彙 短語
+
+
+
+
+
+
+
+
+
+
+
 
 
 <details>
@@ -136,12 +171,25 @@ https://hefengxian.github.io/my-ielts/#/grammar
    - The 冠詞後面填名詞
    - 題目其他重複的單字可以不用看，當不了定位詞
    - 答案後一個詞也能判斷空格內詞性 ex：(移動 / 語文) book，如果與聽力一模一樣，則可以辨認下一題開始
+   - 數字 + . thousand .. million ... billion
    1. 表格填空（Form Completion）
    2. 筆記填空（Note Completion）
    3. 表格填空（Table Completion）
    4. 流程圖填空（Flow-Chart Completion）
    5. 摘要填空（Summary Completion）
    6. 句子填空（Sentence Completion）
+
+   |考點|具體總結|
+   |----|-------|
+   |詞音|音標|
+   |拼寫|podcast|
+   |句子|翻譯+連讀|
+   |邏輯|then 轉折詞|
+   |改寫|and = then, there's = has|
+   |格式|pro-cast|
+   |單複|words|
+
+
 5. 簡答題（Short-Answer Questions）
 
 ## 寫
@@ -156,6 +204,70 @@ https://hefengxian.github.io/my-ielts/#/grammar
 📌 反面例子：如果你寫 Task 2 當作「說明文」寫，變成只是敘述沒有觀點，就會被扣「Task Response 分數」。
 
 
+整體 60 分鐘
+
+G 類，大作文，議論文，250 詞，首尾 + 2-3 段內容，列大綱，
+
+段落中
+
+觀點少 POINT EXAMPLE EXPLAIN ，觀點+列舉+補充解釋
+
+觀點多 FIRST SECOND FINALLY 羅列並列觀點
+
+
+-- discussion 分別討論兩種相對的觀點給自己的
+
+首段: People have different views about + 題幹改寫. While there are some benefits + 觀點A(反方) ,I believe that + 觀點B(正方) + 自己觀點。
+
+第 2 段: On the one hand, 觀點A + 舉例 + 解釋說明。
+
+第 3 段: On the other hand, 觀點B + 舉例 + 解釋說明 + 自己觀點（I believe...）。
+
+結論: In conclusion, I can understand why people might want to + 觀點A（反方）， but it seems to me that + 觀點B（正方）+ 自己觀點。
+
+-- opinion 同意不同意/好事壞事/積極消極
+
+首段: It is sometimes argued that + 題幹中心思想。I completely agree that + 贊同的觀點/ In my opinion, it would be wrong to + 不贊同的觀點。
+
+第 2 段: In my opinion, + 贊同(不贊同)理由1 + 清楚 + 解釋說明
+
+第 3 段: Furthermore, + 贊同(不贊同)理由2 + 舉例 + 解釋說明
+
+結論：In conclusion, 題幹 + I believe 贊同(不贊同)的觀點, for the reasons of 理由1 + 理由2。
+
+-- two part question 相同的背景兩個獨立問題，或遞進關係自問自答
+
+// 兩個遞進問題
+
+首段: It is true that + 題幹改寫。 There are various reasons why + 問題1, but（誰？ 個人？政府？社會？ ）could certainly take steps/actions to address this issue.
+
+第2段: Firstly 原因1 + 舉例 + 說明。 Secondly 原因2 + 舉例 + 說明。 Finally 原因3 + 舉例 + 說明。 (根據列舉的原因數量決定編寫結構,原因可以舉1-3個,只有1個原因時必須同時有舉例和說明,多於1個原因時,可以只在1個原因中舉例)
+
+第3段：It is（誰）'s responsible to take actions to solve these issues. Start with + 措施1開始. Also + 措施2, at the same time + 措施3.
+
+結論: In conclusion, 個人/社會 will continue to face + 問題總結 problems, unless + 措施總結。
+
+// 兩個獨立問題
+
+首段： It is increasingly common for + 問題1. In my opinion, 問題 2 及自己的立場與觀點。
+
+第2段: Wanting to feel 問題1關鍵字 is perfectly normal. 舉例 + 解釋說明。
+
+第3段：Despite these perfectly natural feelings, I think it is positive to 問題2, 簡單 + 解釋說明。
+
+結語：In conclusion, I think it is important to remain 問題 1 總結. While 問題1的關鍵字 is unsettling, it is vital to keep focused on 問題2 總結.
+
+```
+G 類，小作文要求 150 個詞以上，會給背景與三個必須提到的要點
+
+以開頭分
+
+正式，不可縮寫 Dear Sir / Madam 結尾 Yours faithfully
+
+非正式書信，可以縮寫， Dear 結尾 Yours sincerely
+
+開頭一句話改寫題目引下文，第二到第四段分別是三個要點每段一到兩句話，結尾段一句話正常書信結尾
+```
 
 1. 開頭段（Introduction）
 引起注意（hook）
@@ -930,12 +1042,6 @@ Although 雖然...but 但是... , Because 因為...so 所以
 }
 ```
 
-
-
-
-
-
-
 ## 說
 
 ``` JSON
@@ -1328,9 +1434,13 @@ Although 雖然...but 但是... , Because 因為...so 所以
 }
 ```
 
-
-
 ## 閱讀
+
+	學術類（Academic）	一般訓練類（General Training）
+文章數量	3 篇較長的文章	3 部分，總共數篇短文
+難度	偏難（來自學術期刊、書籍）	偏易（日常生活文章，如廣告、信件、報章）
+主題	學術性強，論文、研究報告	實用性強，辦公室、社區、求職情境
+目的	測試理解複雜學術文獻	測試日常閱讀能力
 
 ``` JSON
 {
@@ -1566,6 +1676,10 @@ Although 雖然...but 但是... , Because 因為...so 所以
 ```
 
 ## 寫作
+
+任務	學術類（Academic）	一般訓練類（General Training）
+Task 1	說明圖表（表格、流程圖、數據）	書信寫作（例如抱怨信、申請信）
+Task 2	論說文，風格較正式、學術性強	論說文，但語氣可以稍口語，日常議題
 
 ```JSON
 {
