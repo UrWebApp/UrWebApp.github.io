@@ -2,124 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/author/kai98k.html</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/English/PresentationNote/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/ReactClassAndFunctional/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/ReactHooks/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/Repository%20not%20found/</loc>
     
     <lastmod>2025-06-17</lastmod>
     
@@ -182,7 +65,142 @@
   </url>
   
   <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WindowsTestNetTool/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://urwebapp.github.io/Dev-Tech/UseSerilogToSendMail/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/WrapperHighOrderComponent/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/abpFramewrokIntro/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/howToUnderstandDDD/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/author/johch3n611u.html</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowQueue/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowReact/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Language/MemoryWordByRuleOfSoundLawsInIndo/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/NET6LogToolWatchDog/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/PathAgMasterGuideLearningBasicsAdvanced/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/English/PresentationNote/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/ReactClassAndFunctional/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/ReactHooks/</loc>
+    
+    <lastmod>2025-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/Dev-Tech/Repository%20not%20found/</loc>
     
     <lastmod>2025-06-17</lastmod>
     
@@ -236,16 +254,7 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowQueue/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/Dev-Tech/LetYouRoughlyKnowReact/</loc>
+    <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
     
     <lastmod>2025-06-17</lastmod>
     
@@ -255,15 +264,6 @@
   
   <url>
     <loc>https://urwebapp.github.io/Dev-Tech/BuildNetCoreAPIEnvAndConvenientSet/</loc>
-    
-    <lastmod>2025-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/AI-Tools/AiToolsPart1/</loc>
     
     <lastmod>2025-06-17</lastmod>
     
@@ -362,20 +362,6 @@
 
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Visual-Studio/</loc>
-    <lastmod>2025-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://urwebapp.github.io/tags/C/</loc>
-    <lastmod>2025-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://urwebapp.github.io/tags/AI/</loc>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -384,6 +370,20 @@
   
   <url>
     <loc>https://urwebapp.github.io/tags/Tools/</loc>
+    <lastmod>2025-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/Visual-Studio/</loc>
+    <lastmod>2025-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://urwebapp.github.io/tags/C/</loc>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -530,14 +530,14 @@
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/Log/</loc>
+    <loc>https://urwebapp.github.io/tags/English/</loc>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/tags/English/</loc>
+    <loc>https://urwebapp.github.io/tags/Log/</loc>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -651,14 +651,14 @@
 
   
   <url>
-    <loc>https://urwebapp.github.io/categories/Dev-Tech/</loc>
+    <loc>https://urwebapp.github.io/categories/AI-Tools/</loc>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://urwebapp.github.io/categories/AI-Tools/</loc>
+    <loc>https://urwebapp.github.io/categories/Dev-Tech/</loc>
     <lastmod>2025-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
