@@ -1,0 +1,639 @@
+[
+  {
+    "route": "/development/abpFramewrokIntro",
+    "markdownData": {
+      "meta": {
+        "title": "abp Framework 框架的框架",
+        "date": "2023-02-09 22:11:07",
+        "category": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "Angular"
+        ]
+      },
+      "summary": "框架簡介 abp.io 是 ASP.NET Boilerplate Project的擴展版本，兩者為不同框架，但共通點都是套用 DDD 概念，這邊會將 abp.io 簡稱(abp vNext)，abp vNext 是一套基於 .Net Core 的開源微服務架構，UI 頁面可支援 MVC(Razor...",
+      "coverImage": "https://i.imgur.com/Zi3TfMc.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/AiToolsPart1",
+    "markdownData": {
+      "meta": {
+        "title": "AI Tools Part 1",
+        "date": "2024-01-15",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "AI",
+          "Tools"
+        ]
+      },
+      "summary": "ScreenShot To Code * ScreenShot 丟給 AI 產生 Layout * 需要自己架程式用自己電腦的算力 https://github.com/abi/screenshot-to-code Logodiffusion * 隨便畫 AI 產生更細緻的圖，甚至不用精修 * fr...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/CouldNotLoadBecauseScriptExecutionDisabledOnSystem",
+    "markdownData": {
+      "meta": {
+        "title": "因為這個系統上已停用指令碼執行，所以無法載入...",
+        "date": "2023-04-23",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Computer Science"
+        ],
+        "authorsWords": "打指令就對了"
+      },
+      "summary": "每次重灌電腦都會遇一次，快記在這方便自己查詢 1. 以系統管理員執行任何 CMD 2. 3. Yes",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/CreateFtpClitentWithFactory",
+    "markdownData": {
+      "meta": {
+        "title": "套用工廠方法設計 FtpClient",
+        "date": "2023-07-07",
+        "categories": "Development",
+        "author": "kai98k",
+        "authorsWords": "隨著網路協定越來越多元，如果每多一種安全協定，就要為此協定，特別寫一個類別，而越來越多的類別，如果沒有介面規範，就很容易你中有我，我中有你，且無法讓我用你，你可以用我(?，也就是高耦合、低內聚，這時候就可以使用工廠方法，來重複使用單一元件，及不會改A動B。",
+        "tags": [
+          ".Net"
+        ]
+      },
+      "summary": "工廠方法 工廠方法（Factory Method）是一種常見的設計模式，屬於物件導向設計模式的一種。它提供了一個創建物件的介面，但具體的物件的創建是由繼承類別來實現的。工廠方法模式允許一個類別將物件的創建延遲到子類別中進行。 工廠方法模式的主要目的是將物件的創建與使用解耦，這樣可以在不修改現有程式碼...",
+      "coverImage": "https://hackmd.io/_uploads/B1-Otf8Vh.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/DifferenceBetweenSSHnSSL",
+    "markdownData": {
+      "meta": {
+        "title": "SSH 比 SSL 更安全嗎?",
+        "date": "2023-05-07",
+        "categories": "Development",
+        "author": "kai98k",
+        "authorsWords": "在專案業務上會有許多場合需要使用 FTP，然後在最近被資安單位要求使用 SFTP，乍看之下我以為 SFTP 就是 FTPS，但實際查看才發現底層協議完全不一樣，SFTP 使用的是 SSH，而 FTPS 則是透過 SSL，那 SSL 跟 SSH 到底差在哪呢 ?",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "SSL 跟 SSH 差異 SSL和SSH都是安全加密通信協議，在 OSI 七層模型中，兩者都是建立在應用層，但它們的用途和應用場景不同，不過都是為了讓網路傳輸變得更安全。 SSL SSL（Secure Sockets Layer）是一種用於網路安全的加密協議，現在已經被其升級版TLS（Transpo...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/DontFearJustStart",
+    "markdownData": {
+      "meta": {
+        "title": "不用很厲害才開始，要開始才會很厲害，你也可以從 0 -> ∞",
+        "date": "2023-04-30 13:22:55",
+        "tags": [
+          "成長思維"
+        ],
+        "categories": "轉職成長",
+        "author": "kai98k",
+        "authorsWords": "當我們想要開始學習新事物或是追求自己的夢想時，常常會感到不知道從何下手，或是因為自己的能力不足而猶豫不決。但事實上，真正重要的是要敢於踏出第一步，即便自己目前的水平還不夠高。因為只有開始行動，才有機會逐步地磨練自己的能力，並且在學習和實踐的過程中不斷成長，在自己之前的經驗中，體悟出四個道理。"
+      },
+      "summary": "不要給自己貼標籤 1. 第一個故事: 在大學的某個暑假時，參加了資策會辦在台大的營隊，還記得剛到的時候，第一天聽完自己的組員介紹，個個都是頂大的，第二天差點就沒去了，還好最後有堅持下去，甚至也有勇敢的將自己的想法在專題討論的時候闡述出來，即使講的二二六六，但大家也很認真在聽，並立即給予反饋，所以不該...",
+      "coverImage": "https://i.imgur.com/toyKnTt.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/ExceptionFilterNetCore",
+    "markdownData": {
+      "meta": {
+        "title": "Net core 全域異常處理",
+        "date": "2023-02-28 13:22:55",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "Exception",
+          "Filter"
+        ]
+      },
+      "summary": "在開發中除了利用 Log 套件幫助我們記下有問題或是 Error 的地方，還可以利用 .Net core 中的 Filter 來處理一些異常發生時，該做的事。 Filter 藉由微軟提供的視圖，可以看到 Filter 有點類似管道或是過濾器的概念，在 .Net core 中程式的生命週期會先進到中介...",
+      "coverImage": "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/filters/_static/filter-pipeline-1.png?view=aspnetcore-7.0",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/F2eWork",
+    "markdownData": {
+      "meta": {
+        "title": "前端工作 Debug 名詞會總",
+        "date": "2024-01-10",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "GTM"
+        ]
+      },
+      "summary": "GtmDataLayer 【GTM 追蹤學】什麼是 dataLayer? 最詳細解說 https://www.maxlist.xyz/2023/06/01/gtm-datalayer/ Data Layer Variable in Google Tag Manager: How to Pull Im...",
+      "coverImage": "/assets/hexo/img/Intiator.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/FindProblemsByEventViewr",
+    "markdownData": {
+      "meta": {
+        "title": "查找 IIS 站台相關問題與重啟 Application Pool 機制",
+        "date": "2023-05-01",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "IIS"
+        ]
+      },
+      "summary": "許多人可能知道怎麼在 IIS 架設網站，卻不知道相關的伺服器 Log 要在哪尋找，答案就是事件檢視器(event viewer)。 Event Viewer 打開後，可以看到 Web Server 相關事件，以及站台關閉原因等等，有時候當站台剛部屬好時，Runtime 卻出了問題(套件可能需要 .n...",
+      "coverImage": "https://i.imgur.com/ghSzGGS.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/HexoNestedAngular",
+    "markdownData": {
+      "meta": {
+        "title": "在 Hexo 中整合 Angular",
+        "date": "2023-02-05 15:00",
+        "category": "Development",
+        "author": "johch3n611u",
+        "authorsWords": "實際上也是要等元件庫專案與此網站結合看看才知道...",
+        "tags": [
+          "Angular"
+        ]
+      },
+      "summary": "> 要將 Angular 嵌入到 Hexo 中，需要完成以下步驟： > > 1. 編譯 Angular 應用程序為靜態資源，包括 HTML、CSS 和 JavaScript 文件。 > 2. 將這些靜態資源放置在 Hexo 的 source 目錄中。 > 3. 在 Hexo 的 Markdown 文...",
+      "coverImage": "/assets/hexo/img/hexo/postman-code-snippet.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/HodgepodgeOfFrontEnd",
+    "markdownData": {
+      "meta": {
+        "title": "前端技術大雜燴",
+        "date": "2024-01-15",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "FrontEnd"
+        ]
+      },
+      "summary": "代碼寫的好或爛 複雜度 Keyword：Vscode CodeMetrics https://www.douyin.com/video/7322310977926565135 一個項目讓你徹底了解 CSS Keyword：GithubRep iCSS https://github.com/chokc...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/howToUnderstandDDD",
+    "markdownData": {
+      "meta": {
+        "title": "新手的領域展開-領域驅動設計",
+        "date": "2023-01-29 15:00",
+        "category": "Development",
+        "author": "kai98k",
+        "authorsWords": "剛接觸到設計模式的時候，真的覺得很抽象，根本就是甚麼術式吧，趁著業務需要，再次以新手術師的角度，重新認識一遍領域驅動設計(Domain-Driven Design,DDD)，這個高級咒術。",
+        "tags": [
+          "Architecture",
+          "C#",
+          "DDD",
+          "OOD/OOP"
+        ]
+      },
+      "summary": "關於 Domain 在開發前置作業中，開發者通常會有很大一部分的時間在理解業務 Know-how，也就是該領域的知識(Domain knowledge)，在了解之後，進而轉成有業務邏輯的程式碼。 但是像我在剛接觸專案開發的時候，就會一股腦的把所業務邏輯寫在一起，好一點的狀況是還有分層的概念，壞一點就...",
+      "coverImage": "https://i.imgur.com/ubO98GX.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/IeltsNotes",
+    "markdownData": {
+      "meta": {
+        "title": "雅思筆記",
+        "date": "2023-08-09",
+        "categories": "English",
+        "author": "johch3n611u",
+        "authorsWords": "慎小嶷、劉洪波、顧家北、黑眼睛、Simon、何琼、王陸、雅思哥",
+        "tags": [
+          "English"
+        ]
+      },
+      "summary": "平行閱讀法 雅思備考順序 1. 雅思官網了解相關訊息，報名流程、考生須知、報名時間、成績評分標準、考試內容 2. 評估自己的英文能力，定時做雅思真題 * 閱讀劍雅珍題 11-15 選一套題進行簡單測試，只做閱讀 3 篇閱讀， * 一共 40 題答對 32 以上代表基礎很強，32-26 一般，25 以...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/LetYouRoughlyKnowCallbackFnBindThis",
+    "markdownData": {
+      "meta": {
+        "title": "讓你大概搞懂 CallbackFn & Bind(this)",
+        "date": "2023-06-03",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "JavaScript",
+          "Angular"
+        ],
+        "authorsWords": "前端除了動畫以外真的還有好多可以深入的地方..."
+      },
+      "summary": "最近遇到一個外部引入的 script 需要整合進 Angular 中，CallbackFn 與 this 拆開來能理解，在 Angular 中元件中的 this 通常指向當前元件實例。 而進到 CallbackFn 後 this 亂了，曾經嘗試過箭頭函式也是失敗，最後用一個智障方法，先保存在 loc...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/LetYouRoughlyKnowHttpRequest",
+    "markdownData": {
+      "meta": {
+        "title": "讓你大概搞懂 Http Request",
+        "date": "2023-01-09",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Internet",
+          "Response",
+          "Request",
+          "Angular"
+        ],
+        "authorsWords": "每次忘每次記憶不如寫起來以後再看"
+      },
+      "summary": "> 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！ > > 直接使用擅長的或是最新的，因為都是在 Http 協議下的交換資料方式，差異不會大到哪 因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/LetYouRoughlyKnowJsBasics",
+    "markdownData": {
+      "meta": {
+        "title": "讓你大概搞懂 JS",
+        "date": "2023-03-22",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Javascript",
+          "ES6"
+        ]
+      },
+      "summary": "原先是在研究 React Class / Function 差異 [React] Functional-component vs Class-component 但看著看著發現對於 Js 底層了解太少，所以在此紀錄一下一些文章重點，方便以後查閱。 陳述式 Statement / 表達式 Expres...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/LetYouRoughlyKnowQueue",
+    "markdownData": {
+      "meta": {
+        "title": "讓你大概搞懂 Queue",
+        "date": "2023-06-07",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          ".Net",
+          "RabbitMQ"
+        ]
+      },
+      "summary": "Remote Procedure Call ( RPC ) Queue Remote Procedure Call Queue 是一種在分散式系統中用於處理遠程過程調用（RPC）的佇列。在分散式系統中，不同的應用程序可能運行在不同的主機或容器中，透過網路互相通信。當一個應用程序需要調用另一個應用程序...",
+      "coverImage": "https://github.com/UrWebApp/UrWebApp.github.io/blob/main/img/rabmq.png?raw=true",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/LetYouRoughlyKnowReact",
+    "markdownData": {
+      "meta": {
+        "title": "讓你大概搞懂 React",
+        "date": "2023-03-25",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "必看 Tools React、ReactDOM Library * React：用於創建用戶界面的函式庫，只有定義元件所必需的功能，通常與渲染器一起使用。 React is a JavaScript library . The react package contains . like react-...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/LetYouRoughlyUnderstandWhatHttpRequest",
+    "markdownData": {
+      "meta": {
+        "title": "讓你大概搞懂 Http Request",
+        "date": "2023-01-09",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Internet",
+          "Response",
+          "Request",
+          "Angular"
+        ]
+      },
+      "summary": "> 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！ > > 直接使用擅長的或是最新的，因為都是在 Http 協議下的交換資料方式，差異不會大到哪 因為專案上有 Angular Forms 與 HttpClient 的需求，以往不管是用 fetch 或是 JQ 都直接實作也沒搞清楚差異...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/MemoryWordByRuleOfSoundLawsInIndo",
+    "markdownData": {
+      "meta": {
+        "title": "詞源學如何幫你五天記住一萬個單字-筆記",
+        "date": "2023-06-20",
+        "categories": "Language",
+        "author": "johch3n611u",
+        "tags": [
+          "English"
+        ],
+        "authorsWords": "感覺還是 WordUp 搭配艾賓浩斯遺忘曲線，計畫性複習感覺會比較有用，印歐語語音規則加減記憶就好"
+      },
+      "summary": "5天就能記住1萬個單詞的方法，老師為什麽不教？用结果说话，因为结果不会骗人一套高效背单词的方法，单词记忆法。快速提高中考高考英语，四级六级考研雅思托福词汇量 印歐語語音規則 單字 = 字根 + 詞綴 (前中後間複綴) simultaneously 同時 sim 字根 + ul 形容詞 + tane ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/NET6LogToolWatchDog",
+    "markdownData": {
+      "meta": {
+        "title": ".NET 6 輕量視覺化 Log 工具 WatchDog",
+        "date": "2023-01-08",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Log",
+          ".Net"
+        ]
+      },
+      "summary": "在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。如專案中的 Log 衍生需求不多，建議可使用這套 WatchDog 工具。 介紹 WatchDog 利用 SignalR 與預設 LiteDb 來實現 Web UI 即時監控 Http/Erro...",
+      "coverImage": "https://i.imgur.com/QuZHHMa.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware",
+    "markdownData": {
+      "meta": {
+        "title": "免升級硬體，透過軟體調整電腦性能",
+        "date": "2023-01-14",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "computer-science"
+        ]
+      },
+      "summary": "> 此文章會不定時編修，如有錯誤在麻煩各位大神請不吝設指教，感謝！ 自製 bat 清除系統垃圾 Start chrome.exe http://xxx 1. 新增一個 txt 文字檔並將以下內容複製貼上到文字檔內 Win 開機啟動應用 2. 另存為 ANSI 的文字檔案，在另存為 .bat 副檔名的...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/PathAgMasterGuideLearningBasicsAdvanced",
+    "markdownData": {
+      "meta": {
+        "title": "Angular 大師之路：淺出深入的學習指南",
+        "date": "2023-06-28",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "authorsWords": "除了一些 NG 原生語法與應用，感覺複雜點還是在設計模式 design pattern、函數式編程 Fn Programing、反應式編程 Rxjs，這些應該在各大框架都是共通的可以多投資點心力在這",
+        "tags": [
+          "Angular"
+        ]
+      },
+      "summary": "Angular 大師之路 系列 NG 大師之路 筆記大綱 day1 大綱 幾乎什麼都講 day2 JSON Schema, Monorepo day3 Lifecycle：main.ts ( 可以啟動多個根模組 ) => app.module.ts ( 可以啟動多個根元件 ) => app.comp...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/PresentationNote",
+    "markdownData": {
+      "meta": {
+        "title": "Presentation 筆記",
+        "date": "2024-10-05",
+        "categories": "English",
+        "author": "johch3n611u",
+        "authorsWords": [],
+        "tags": [
+          "English"
+        ]
+      },
+      "summary": "1. 氣勢 自信 声音清楚，姿态稳重，眼神别乱瞟 2. 清單 Recap Peak-end rule 峰值( 印象深刻的高潮 ) + 印象深刻的結尾總結 3. 結論為先 金字塔原理 層層遞進 AIDA 模型 Attention 吸引觀眾記憶力 Interest 激發觀眾興趣 Desire 強調產品或...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/ReactClassAndFunctional",
+    "markdownData": {
+      "meta": {
+        "title": "React:Class-based & Functional Component",
+        "date": "2023-03-25",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "|Class-based|Functional Component| |-------------|-------------| |需繼承 React.Component具有生命週期，可以針對某些情境決定是否渲染需要在設置 State ( Stateful Component )每次都可以拿到最新的...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/ReactHooks",
+    "markdownData": {
+      "meta": {
+        "title": "React-Hooks",
+        "date": "2023-03-25",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "useState useState( 資料預設值 )：建立一個被監控的資料變數「變數（count）」和「改變該變數 React 會幫我們重新轉譯畫面的方法（setCount）」 * 每次 setSomething 時都是用新的資料覆蓋舊的，格式不一樣也會蓋，不能只寫出要修改或添加的物件屬性 * 透過...",
+      "coverImage": "./img/ReactHookLifecycle.jpeg",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/RepositoryNotFound",
+    "markdownData": {
+      "meta": {
+        "title": "解決 Git 錯誤:Repository not found",
+        "date": "2023-03-05",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Git"
+        ]
+      },
+      "summary": "當一台電腦中使用不同 github 帳號時，常常會發生衝突問題，就會造成明明就有此儲存庫，但一直報錯，且無法使用 此時在 windows OS，可以使用下列認證管理員(Credential Manager.)，來砍掉 access token 來修正錯誤，在其他 OS 可以使用 CMD 來砍。 認證...",
+      "coverImage": "https://i.imgur.com/6zCMAl0.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/ShiftJobMethod",
+    "markdownData": {
+      "meta": {
+        "title": "適用所有行業的轉職評估法",
+        "date": "2023-02-12 13:22:55",
+        "tags": [
+          "轉職",
+          "設計思考"
+        ],
+        "categories": "轉職成長",
+        "author": "kai98k"
+      },
+      "summary": "雖然最後自己轉換的職業為軟體工程師，但在自身的實踐後與研究，我相信這套方法其實是可以套用在大部分行業的，不限於工程師，於是想跟大家分享。 先問，為什麼 >“He who has a why to live can bear almost any how.” – Friedrich Nietzsche...",
+      "coverImage": "https://i.imgur.com/pTrXOrW.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/SolveNetConnectionProblem",
+    "markdownData": {
+      "meta": {
+        "title": "解決連不到指定IP與Port問題",
+        "date": "2023-04-09 15:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "當我們以為IIS一切都設定好了，在 Server 可以成功開啟站台，查看網頁的時候，用外部 IP 要連線查看時，才發現大夢初醒，一切都是空談，這時候就要做一些測試來找到問題，可以透過這些 測試連線工具 來幫忙。 當發現連線真的有問題的時候，就要透過下列檢查來解決問題。 防火牆規則 以 windows...",
+      "coverImage": "https://i.imgur.com/wu9lcih.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/SolveNodeCantFindProblem",
+    "markdownData": {
+      "meta": {
+        "title": "解決問題 - node 不是內部或外部命令",
+        "date": "2023-04-09",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "node.js",
+          "npm"
+        ]
+      },
+      "summary": "npm、webpack 等等都需要 node 來支援，如果 node 出問題了，那通常其他相關的指令也無法運作，如果有灌 node，但還出現這樣的問題，可能是環境變數出現了錯誤。 環境變數 如果是 Windows 環境，可以在開始搜尋列中查詢 打開後，點擊環境變數 如果你的 node 版本也是利用 ...",
+      "coverImage": "https://i.imgur.com/25vCJJm.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/SolvingVersionManagementChallengesWithPnpm",
+    "markdownData": {
+      "meta": {
+        "title": "減少依賴衝突、提高開發效率：使用 pnpm 解決版本管理挑戰",
+        "date": "2024-03-04",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "node",
+          "npm",
+          "pnpm",
+          "nvm",
+          "nrm"
+        ],
+        "authorsWords": "砍乾淨或重灌，直接依靠 pnpm 就對了"
+      },
+      "summary": "知識點 Node： 1. 基於 Chrome V8 JavaScript 引擎的運行時環境 2. 它允許您在伺服器端運行 JavaScript 代碼 3. 提供了許多內置的模組和功能，使開發人員能夠進行服務器端開發 Node_Module： 1. 用於存放專案所需套件的目錄 2. 當您使用 npm ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/TalkAboutAuthorization",
+    "markdownData": {
+      "meta": {
+        "title": "你是誰?淺談身分認證方式",
+        "date": "2023-04-30 23:23:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet",
+          "Authorization"
+        ]
+      },
+      "summary": "身分驗證與資安問題一直是目前仍然很火紅的問題，由於 Http 本身是屬於無狀態，所以說每次的 Request/Response 都是獨立的，所以就需要 session、cookie 和 token 來做狀態/資訊管理(stateful)，且可能還會有許多不同的應用，像是使用 Redis 等等。 Ba...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/TheWayOfPrintInAspNet",
+    "markdownData": {
+      "meta": {
+        "title": "幾種 .Net 列印的方式",
+        "date": "2023-02-05 15:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "PDF"
+        ]
+      },
+      "summary": "通常印表機可以傳送 ZPL 或是直接透過驅動程式來觸發列印程序，本文主要講的是後者的列印方式。 安裝驅動 我們要先讓電腦認識印表機及溝通的埠道，可至 BarTender 安裝相對應的驅動。 1. 下載完後選擇連接方式 2. 指定印表機型號 3. 假設印表機是透過網路方式連接，須至設定增加 IP 埠道...",
+      "coverImage": "https://i.imgur.com/IjBDcBJ.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/UseSerilogToSendMail",
+    "markdownData": {
+      "meta": {
+        "title": ".NET6 使用 Serilog，在 log 當下同時寄信",
+        "date": "2023-01-04",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Log",
+          ".Net"
+        ]
+      },
+      "summary": "在專案中，上機測試常常會碰到原本開發上沒遇過的問題，這時候就要環境中留存的 Log 來做 Debug 了。除此之外，當特定的事件發生時，除了要 Log 下來，還要寄信給相關人員時，就可以嘗試使用 Serilog。 如果沒有複雜的 Log 需求時，我推薦使用輕量/視覺化的 WatchDog 來做 lo...",
+      "coverImage": "https://i.imgur.com/su8O8Jy.png",
+      "body": ""
+    }
+  },
+  {
+    "route": "/development/WindowsTestNetTool",
+    "markdownData": {
+      "meta": {
+        "title": "Windows 測試連線工具",
+        "date": "2023-03-03 18:30:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "靠這幾個工具，非本科工程師也可以了解基礎 TCP/IP，更好的知道網路是哪裡出問題，再將問題回報給網管....或是自己處理(?) ping Ping 可以說是最基礎的指令，但如果要深層判斷網路及各種外來主機的狀態，也可以變得很複雜，先講最簡單的用法，詳細可參見IBM 說明文件。 1. 打開命令提示字...",
+      "coverImage": "https://i.imgur.com/KmlnDSO.png",
+      "body": ""
+    }
+  }
+]
