@@ -1,0 +1,132 @@
+{
+  "HOME": {
+    "TITLE": "ホーム",
+    "HERO_TEXT": "デジタルへの道",
+    "HERO": {
+      "BIZ_TITLE": "複雑なプロセスを解決し<br>コア業務に集中する",
+      "BIZ_DESC": "テンプレートに飽き飽きしていませんか？要件分析からシステム実装まで、DXを支援する完全なソリューションを提供します。",
+      "BIZ_BTN": "システムソリューションを探す",
+      "BIZ_TAG": "ビジネス向け",
+      "CAREER_TITLE": "ゼロから始める<br>テック業界への転身",
+      "CAREER_DESC": "回り道は不要。業界経験とパーソナライズされた学習計画で、非情報系出身者にも明確なキャリアパスを示します。",
+      "CAREER_BTN": "キャリアガイドを受け取る",
+      "CAREER_TAG": "キャリア向け"
+    },
+    "FEATURED": {
+      "TITLE": "プロジェクト厳選",
+      "SUBTITLE": "Featured Projects",
+      "MORE": "事例をもっと見る",
+      "PROJECT1": {
+        "TITLE": "AI 知能化サプライチェーンシステム",
+        "DESC": "製造業向けのAIバックエンド。出荷効率を30%向上させました。"
+      },
+      "PROJECT2": {
+        "TITLE": "DX ダッシュボード",
+        "DESC": "Excel業務を自動化し、運営データをリアルタイムで可視化。"
+      },
+      "PROJECT3": {
+        "TITLE": "文系からのエンジニア転職",
+        "DESC": "受講生ストーリー：ゼロベースから有名EC企業のフロントエンドエンジニアへ。"
+      },
+      "PROJECT4": {
+        "TITLE": "定量的取引とWEB3連携",
+        "DESC": "オンチェーン監視から取引所自動注文まで。高頻度取引とアービトラージ戦略のためのミリ秒単位の実行システム。"
+      }
+    }
+  },
+  "NAV": {
+    "HOME": "ホーム",
+    "BLOG": "記事一覧",
+    "ABOUT": "私たちについて",
+    "SERVICES": "システムサービス",
+    "PORTFOLIO": "ポートフォリオ",
+    "CONTACT": "お問い合わせ",
+    "BACK_TO_HOME": "ホームに戻る"
+  },
+  "BTN": {
+    "START_PROJECT": "プロジェクトを開始",
+    "READ_MORE": "もっと読む"
+  },
+  "SERVICE": {
+    "HEADER": {
+      "SUBTITLE": "Digital Solution Navigator",
+      "TITLE": "デジタルへの道は多数ありますが、<br><span class=\"text-text-muted\">現段階に最適なのはどれですか？</span>",
+      "DESC": "予算を投じる前に、市場の選択肢を理解していただきたいのです。最高のツールはなく、現状に最適な戦略があるだけです。"
+    },
+    "CARD": {
+      "LABEL": {
+        "SCENARIO": "適したシーン：",
+        "COST": "潜在的コスト：",
+        "ADVANTAGE": "独自の強み："
+      },
+      "DIY": {
+        "TITLE": "No-Code プラットフォーム",
+        "SCENARIO": "ビジネスアイデア検証 (MVP)、個人ポートフォリオ、標準的なEC。",
+        "COST": "機能がプラットフォームに依存し、データ移行が困難。自身がデザイナー兼PMになる必要があります。",
+        "ADVICE": "<strong>専門家のアドバイス：</strong>素晴らしい出発点です！予算が限られ時間があるならWixなどで試しましょう。ロジックが複雑になったら、システムアップグレードをご相談ください。"
+      },
+      "AI": {
+        "TITLE": "AI 支援生成",
+        "SCENARIO": "高速プロトタイピング、社内用使い捨てツール、単機能スクリプト。",
+        "COST": "生成コードは全体構造を欠きがち。システム肥大化時のデバッグが困難で、セキュリティ懸念もあります。",
+        "ADVICE": "<strong>専門家のアドバイス：</strong>AIは優れた加速装置です！私たちも使います。しかし、システム崩壊を防ぐにはシニアアーキテクトによるコードレビューが不可欠です。"
+      },
+      "ENT": {
+        "BADGE": "Enterprise Choice",
+        "TITLE": "プロフェッショナルアーキテクチャ",
+        "SCENARIO": "基幹業務システム、高トラフィックPF、長期メンテナンスが必要なデジタル資産。",
+        "ADV1": "データ権限とロジックを100%掌握",
+        "ADV2": "銀行レベルのセキュリティ (OWASP)"
+      }
+    },
+    "BTN": {
+      "TRY_THIS": "試してみたい",
+      "NEED_THIS": "これが必要です"
+    },
+    "PROCESS": {
+      "TITLE": "テンプレートで満たせず、AIで論理を解決できない時...",
+      "DESC": "私たちの出番です。単なるコードではなく、実戦で証明されたシステム工芸を提供します。<br>以下はTiger Digitalの標準プロセスです："
+    },
+    "STEP1": {
+      "TITLE": "ビジネスロジックと設計図",
+      "SUBTITLE": "Blueprint & Architecture",
+      "DESC": "多くの失敗は「考えずに作る」ことから。<strong>DDD (ドメイン駆動設計)</strong>を導入し、複雑な業務を明確なデータモデルとユーザージャーニーに分解します。"
+    },
+    "STEP2": {
+      "TITLE": "モダンコア開発",
+      "SUBTITLE": "Modern Engineering",
+      "DESC": "スパゲッティコードを拒絶。<strong>Angular + Go</strong> の静的型付け構造とAI Copilotを採用。スタートアップの速度で銀行級の安定性を実現します。"
+    },
+    "STEP3": {
+      "TITLE": "AI 自動化とワークフロー",
+      "SUBTITLE": "AI-Powered Workflow",
+      "DESC": "リリースは始まりに過ぎません。<strong>n8n</strong> や <strong>LLM</strong> を連携し、システムを「思考する」自動化ハブへと進化させます。"
+    },
+    "CTA": {
+      "TITLE": "<span class=\"text-nordic-accent\">ビジネスエンジン</span>をアップグレードしますか？",
+      "DESC": "古いプロセスに足を引っ張られないでください。1分で要望を入力し、無料のアーキテクチャ診断と見積もりを取得しましょう。",
+      "BTN": "プロジェクトを開始",
+      "NOTE": "* 現在のスケジュール：来週から相談可能"
+    }
+  },
+  "FOOTER": {
+    "SLOGAN": "Digital Simplicity. Business Agility.<br>企業のために強固なデジタルの堀を築き、<br>エンジニアのために明確なキャリアパスを示す。",
+    "START_CONVO": "対話を始める",
+    "COL_SERVICES": "サービス",
+    "COL_EXPLORE": "探す",
+    "COL_CONNECT": "繋がる",
+    "LINKS": {
+      "ARCH": "システムアーキテクチャ設計",
+      "TRANSFORM": "企業DX",
+      "WEB3": "Web3 ソリューション",
+      "CONSULT": "技術顧問・コンサル",
+      "TECH": "技術ノート (Tech)",
+      "CAREER": "キャリア転向 (Career)",
+      "LIFE": "ライフスタイル (Life)",
+      "ABOUT": "虎虎について"
+    },
+    "PRIVACY": "プライバシーポリシー",
+    "TERMS": "利用規約",
+    "SITEMAP": "サイトマップ"
+  }
+}

@@ -1,6 +1,1359 @@
 [
   {
-    "route": "/development/abpFramewrokIntro",
+    "lang": "en",
+    "route": "/en/development/abpFramewrokIntro",
+    "markdownData": {
+      "meta": {
+        "title": "abp Framework - The Framework of Frameworks",
+        "date": "2023-02-09 22:11:07",
+        "category": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "Angular"
+        ]
+      },
+      "summary": "Framework Introduction abp.io is an extended version of ASP.NET Boilerplate Project. The two are different frameworks, but common point is they both a...",
+      "coverImage": "https://i.imgur.com/Zi3TfMc.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/AiToolsPart1",
+    "markdownData": {
+      "meta": {
+        "title": "AI Tools Part 1",
+        "date": "2024-01-15",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "AI",
+          "Tools"
+        ]
+      },
+      "summary": "ScreenShot To Code - Throw ScreenShot to AI to generate Layout - Need to host the program yourself and use your computer's computing power https://git...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/CouldNotLoadBecauseScriptExecutionDisabledOnSystem",
+    "markdownData": {
+      "meta": {
+        "title": "Could not load because script execution is disabled on this system...",
+        "date": "2023-04-23",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Computer Science"
+        ],
+        "authorsWords": "Just type the command"
+      },
+      "summary": "Encounter this every time I reinstall the computer, quickly note it here for easy reference 1. Run any CMD as Administrator 2. 3. Yes",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/CreateFtpClitentWithFactory",
+    "markdownData": {
+      "meta": {
+        "title": "Apply Factory Method to Design FtpClient",
+        "date": "2023-07-07",
+        "categories": "Development",
+        "author": "kai98k",
+        "authorsWords": "With the increasing diversity of network protocols, if every time there is a new security protocol, you have to write a special class for this protocol, and more and more classes, if there is no interface specification, it is easy to have \"you in me, me in you\", and I can't use you, you can use me (?), that is, high coupling, low cohesion. At this time, you can use the factory method to reuse a single component, and will not change A and affect B.",
+        "tags": [
+          ".Net"
+        ]
+      },
+      "summary": "Factory Method Factory Method is a common design pattern, belonging to one of the object-oriented design patterns. It provides an interface for creati...",
+      "coverImage": "https://hackmd.io/_uploads/B1-Otf8Vh.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/DifferenceBetweenSSHnSSL",
+    "markdownData": {
+      "meta": {
+        "title": "Is SSH more secure than SSL?",
+        "date": "2023-05-07",
+        "categories": "Development",
+        "author": "kai98k",
+        "authorsWords": "In project business, there are many occasions where FTP is needed. Recently, a security unit required the use of SFTP. At first glance, I thought SFTP was FTPS, but after checking, I found that the underlying protocols are completely different. SFTP uses SSH, while FTPS uses SSL. So what is the difference between SSL and SSH?",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "Difference between SSL and SSH Both SSL and SSH are secure encryption communication protocols. In the OSI seven-layer model, both are established at t...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/DontFearJustStart",
+    "markdownData": {
+      "meta": {
+        "title": "You don't have to be great to start, but you have to start to be great. You can also go from 0 -> ∞",
+        "date": "2023-04-30 13:22:55",
+        "tags": [
+          "Growth Mindset"
+        ],
+        "categories": "Career Change & Growth",
+        "author": "kai98k",
+        "authorsWords": "When we want to start learning new things or pursue our dreams, we often feel like we don't know where to start, or hesitate because of our lack of ability. But in fact, the important thing is to dare to take the first step, even if your current level is not high enough. Because only by taking action can you have the opportunity to gradually hone your abilities and grow continuously in the process of learning and practice. I realized four truths from my previous experience."
+      },
+      "summary": "Don't label yourself 1. First Story: During a summer vacation in college, I participated in a camp organized by the Institute for Information Industry...",
+      "coverImage": "https://i.imgur.com/toyKnTt.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/ExceptionFilterNetCore",
+    "markdownData": {
+      "meta": {
+        "title": "Net core Global Exception Handling",
+        "date": "2023-02-28 13:22:55",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "Exception",
+          "Filter"
+        ]
+      },
+      "summary": "In development, besides using Log packages to help us note down problematic areas or Errors, we can also use Filters in .Net core to handle things tha...",
+      "coverImage": "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/filters/_static/filter-pipeline-1.png?view=aspnetcore-7.0",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/F2eWork",
+    "markdownData": {
+      "meta": {
+        "title": "Frontend Work Debug Terminology Summary",
+        "date": "2024-01-10",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "GTM"
+        ]
+      },
+      "summary": "GtmDataLayer 【GTM Tracking】What is dataLayer? The most detailed explanation https://www.maxlist.xyz/2023/06/01/gtm-datalayer/ Data Layer Variable in G...",
+      "coverImage": "/assets/hexo/img/Intiator.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/FindProblemsByEventViewr",
+    "markdownData": {
+      "meta": {
+        "title": "Locate IIS site related problems and restart Application Pool mechanism",
+        "date": "2023-05-01",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "IIS"
+        ]
+      },
+      "summary": "Many people may know how to set up a website in IIS, but do not know where to find the relevant server logs. The answer is Event Viewer. Event Viewer ...",
+      "coverImage": "https://i.imgur.com/ghSzGGS.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/HexoNestedAngular",
+    "markdownData": {
+      "meta": {
+        "title": "Integrating Angular into Hexo",
+        "date": "2023-02-05 15:00",
+        "category": "Development",
+        "author": "johch3n611u",
+        "authorsWords": "Actually, we have to wait for the component library project to be combined with this site to know...",
+        "tags": [
+          "Angular"
+        ]
+      },
+      "summary": "> To embed Angular into Hexo, you need to complete the following steps: > > 1. Compile the Angular application into static resources, including HTML, ...",
+      "coverImage": "/assets/hexo/img/hexo/postman-code-snippet.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/HodgepodgeOfFrontEnd",
+    "markdownData": {
+      "meta": {
+        "title": "Frontend Technology Hodgepodge",
+        "date": "2024-01-15",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "FrontEnd"
+        ]
+      },
+      "summary": "Code Quality and Complexity Keyword: Vscode CodeMetrics https://www.douyin.com/video/7322310977926565135 A Project to Let You Thoroughly Understand CS...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/howToUnderstandDDD",
+    "markdownData": {
+      "meta": {
+        "title": "Beginner's Domain Expansion - Domain-Driven Design",
+        "date": "2023-01-29 15:00",
+        "category": "Development",
+        "author": "kai98k",
+        "authorsWords": "When first encountering design patterns, I really felt it was very abstract, basically some kind of spell technique. Taking the opportunity of business needs, I re-acquainted myself with Domain-Driven Design (DDD), this high-level curse technique, from the perspective of a novice sorcerer again.",
+        "tags": [
+          "Architecture",
+          "C#",
+          "DDD",
+          "OOD/OOP"
+        ]
+      },
+      "summary": "About Domain In pre-development work, developers usually spend a large part of time understanding business Know-how, which is Domain knowledge, and af...",
+      "coverImage": "https://i.imgur.com/ubO98GX.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/IeltsNotes",
+    "markdownData": {
+      "meta": {
+        "title": "IELTS Notes",
+        "date": "2023-08-09",
+        "categories": "English",
+        "author": "johch3n611u",
+        "authorsWords": "Shen Xiaoyi, Liu Hongbo, Gu Jiabei, Black Eye, Simon, He Qiong, Wang Lu, IELTS Bro",
+        "tags": [
+          "English"
+        ]
+      },
+      "summary": "Parallel Reading Method IELTS Preparation Order 1. Understand relevant information on the IELTS official website: registration process, candidate inst...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/LetYouRoughlyKnowCallbackFnBindThis",
+    "markdownData": {
+      "meta": {
+        "title": "Let you roughly understand CallbackFn & Bind(this)",
+        "date": "2023-06-03",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "JavaScript",
+          "Angular"
+        ],
+        "authorsWords": "Apart from animation, there are really so many places in frontend that can be delved into..."
+      },
+      "summary": "Recently, I encountered an external script that needs to be integrated into Angular. CallbackFn and this can be understood separately; in Angular, in ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/LetYouRoughlyKnowHttpRequest",
+    "markdownData": {
+      "meta": {
+        "title": "Let you roughly understand Http Request",
+        "date": "2023-01-09",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Internet",
+          "Response",
+          "Request",
+          "Angular"
+        ],
+        "authorsWords": "Instead of forgetting every time, it's better to write it down for future reference"
+      },
+      "summary": "> This article will be edited from time to time. If there are any errors, please feel free to correct me. Thank you! > > Directly use what you are goo...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/LetYouRoughlyKnowJsBasics",
+    "markdownData": {
+      "meta": {
+        "title": "Let you roughly understand JS",
+        "date": "2023-03-22",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Javascript",
+          "ES6"
+        ]
+      },
+      "summary": "Originally, I was researching the difference between React Class / Function components [React] Functional-component vs Class-component, but as I read ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/LetYouRoughlyKnowQueue",
+    "markdownData": {
+      "meta": {
+        "title": "Let you roughly understand Queue",
+        "date": "2023-06-07",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          ".Net",
+          "RabbitMQ"
+        ]
+      },
+      "summary": "Remote Procedure Call ( RPC ) Queue Remote Procedure Call Queue is a queue used for handling Remote Procedure Calls (RPC) in distributed systems. In d...",
+      "coverImage": "https://github.com/UrWebApp/UrWebApp.github.io/blob/main/img/rabmq.png?raw=true",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/LetYouRoughlyKnowReact",
+    "markdownData": {
+      "meta": {
+        "title": "Let you roughly understand React",
+        "date": "2023-03-25",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "Must Watch Tools React, ReactDOM Library - React: A library for . It only contains the functionality necessary to define components and is typically u...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/LetYouRoughlyUnderstandWhatHttpRequest",
+    "markdownData": {
+      "meta": {
+        "title": "Let you roughly understand Http Request",
+        "date": "2023-01-09",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Internet",
+          "Response",
+          "Request",
+          "Angular"
+        ]
+      },
+      "summary": "> This article will be edited from time to time. If there are any errors, please feel free to correct me, thanks! > > Direct use of what you are good ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/MemoryWordByRuleOfSoundLawsInIndo",
+    "markdownData": {
+      "meta": {
+        "title": "Memory Word By Rule Of Sound Laws In Indo",
+        "date": "2021-03-08",
+        "category": "English",
+        "author": "johch3n611u",
+        "tags": [
+          "English",
+          "Note"
+        ]
+      },
+      "summary": "Sound Law Rules It may be a bit biased to say this is English, it should be said that it is Indo-European language, including Latin, German, Greek, et...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/NET6LogToolWatchDog",
+    "markdownData": {
+      "meta": {
+        "title": "Net6 Log Tool WatchDog",
+        "date": "2023-08-01",
+        "category": "Backend",
+        "author": "johch3n611u",
+        "tags": [
+          "C#",
+          "Net6",
+          "Note",
+          "Log"
+        ]
+      },
+      "summary": "WatchDog A super lightweight visual Log tool! I have been using Serilog with Seq for logging, but compared to Seq which requires additional installati...",
+      "coverImage": "https://i.imgur.com/8QZqZ0M.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware",
+    "markdownData": {
+      "meta": {
+        "title": "Note Of Using Oracle",
+        "date": "2021-03-09",
+        "category": "Environment",
+        "author": "johch3n611u",
+        "tags": [
+          "Windows",
+          "Note",
+          "Performance"
+        ]
+      },
+      "summary": "Adjust Computer Performance Through Software Recently, to meet the needs of working on open source projects, I bought a second-hand Asus laptop (X550J...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/PathAgMasterGuideLearningBasicsAdvanced",
+    "markdownData": {
+      "meta": {
+        "title": "Angular Master Path: A Guide from Basics to Advanced",
+        "date": "2023-06-28",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "authorsWords": "Besides some NG native syntax and applications, I feel the more complex parts are still design patterns, functional programming, and reactive programming (Rxjs). These should be common across major frameworks, so it's worth investing more effort into them.",
+        "tags": [
+          "Angular"
+        ]
+      },
+      "summary": "Angular Master Path Series NG Master Path Note Outline day1 Outline covering almost everything day2 JSON Schema, Monorepo day3 Lifecycle: main.ts ( Ca...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/PresentationNote",
+    "markdownData": {
+      "meta": {
+        "title": "Presentation Note",
+        "date": "2024-10-05",
+        "category": "English",
+        "author": "johch3n611u",
+        "authorsWords": [],
+        "tags": [
+          "English"
+        ]
+      },
+      "summary": "1. Momentum Confidence: Voice clear, Poise steady, Don't wander eyes 2. List Recap Peak-end rule: Peak (Memorable climax) + Memorable ending summary 3...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/ReactClassAndFunctional",
+    "markdownData": {
+      "meta": {
+        "title": "React: Class-based & Functional Component",
+        "date": "2023-03-25",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "| Class-based | Functional Component | | -------------------------------------------------------------------------------------------------------------...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/ReactHooks",
+    "markdownData": {
+      "meta": {
+        "title": "React-Hooks",
+        "date": "2023-03-25",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "useState 3. useState( Data Default Value ): Create a monitored data variable \"variable (count)\" and \"method that React uses to re-render the screen wh...",
+      "coverImage": "./img/ReactHookLifecycle.jpeg",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/RepositoryNotFound",
+    "markdownData": {
+      "meta": {
+        "title": "Solve Git Error: Repository not found",
+        "date": "2023-03-05",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Git"
+        ]
+      },
+      "summary": "When one computer uses different github accounts, conflict problems often occur, causing error \"repository not found\" even though the repository clear...",
+      "coverImage": "https://i.imgur.com/6zCMAl0.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/ShiftJobMethod",
+    "markdownData": {
+      "meta": {
+        "title": "Job Transition Evaluation Method Applicable to All Industries",
+        "date": "2023-02-12 13:22:55",
+        "tags": [
+          "Job Transition",
+          "Design Thinking"
+        ],
+        "categories": "Career Growth",
+        "author": "kai98k"
+      },
+      "summary": "Although the profession I finally switched to is a software engineer, after my own practice and research, I believe this set of methods can actually b...",
+      "coverImage": "https://i.imgur.com/pTrXOrW.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/SolveNetConnectionProblem",
+    "markdownData": {
+      "meta": {
+        "title": "Solve Problem of Unable to Connect to Specified IP and Port",
+        "date": "2023-04-09 15:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "When we thought IIS was all set, and the site could be successfully opened on the Server, and the web page could be viewed, but when connecting with e...",
+      "coverImage": "https://i.imgur.com/wu9lcih.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/SolveNodeCantFindProblem",
+    "markdownData": {
+      "meta": {
+        "title": "Solve Problem - node is not an internal or external command",
+        "date": "2023-04-09",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "node.js",
+          "npm"
+        ]
+      },
+      "summary": "npm, webpack etc. all need node support. If node has problems, usually other related commands also cannot work. If node is installed but this problem ...",
+      "coverImage": "https://i.imgur.com/25vCJJm.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/SolvingVersionManagementChallengesWithPnpm",
+    "markdownData": {
+      "meta": {
+        "title": "Reduce dependency conflicts, improve development efficiency: Solve version management challenges with pnpm",
+        "date": "2024-03-04",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "node",
+          "npm",
+          "pnpm",
+          "nvm",
+          "nrm"
+        ],
+        "authorsWords": "Clean up or reinstall, just rely on pnpm"
+      },
+      "summary": "Knowledge Points Node: 1. Runtime environment based on Chrome V8 JavaScript engine 2. It allows you to run JavaScript code on server side 3. Provides ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/TalkAboutAuthorization",
+    "markdownData": {
+      "meta": {
+        "title": "Who are you? A brief discussion on identity authentication methods",
+        "date": "2023-04-30 23:23:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet",
+          "Authorization"
+        ]
+      },
+      "summary": "Identity authentication and information security issues have always been hot topics. Since Http itself is Stateless, every Request/Response is indepen...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/TheWayOfPrintInAspNet",
+    "markdownData": {
+      "meta": {
+        "title": "Several ways to Print in .Net",
+        "date": "2023-02-05 15:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "PDF"
+        ]
+      },
+      "summary": "Usually printers can transmit ZPL or trigger print process directly via driver. This article mainly talks about the latter printing method. Install Dr...",
+      "coverImage": "https://i.imgur.com/IjBDcBJ.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/UseSerilogToSendMail",
+    "markdownData": {
+      "meta": {
+        "title": "Use Serilog in .NET 6 to send email at the same time as logging",
+        "date": "2023-01-04",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Log",
+          ".Net"
+        ]
+      },
+      "summary": "In projects, we often encounter problems during on-machine testing that were not encountered in original development. At this time, we need Log retain...",
+      "coverImage": "https://i.imgur.com/su8O8Jy.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/en/development/WindowsTestNetTool",
+    "markdownData": {
+      "meta": {
+        "title": "Windows Connection Test Tools",
+        "date": "2023-03-03 18:30:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "Relying on these tools, non-major engineers can also understand basic TCP/IP, better know where the network problem is, and then report the problem to...",
+      "coverImage": "https://i.imgur.com/KmlnDSO.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/abpFramewrokIntro",
+    "markdownData": {
+      "meta": {
+        "title": "abp Framework - フレームワークのフレームワーク",
+        "date": "2023-02-09 22:11:07",
+        "category": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "Angular"
+        ]
+      },
+      "summary": "フレームワークの紹介 abp.io は ASP.NET Boilerplate Project の拡張バージョンです。両者は異なるフレームワークですが、共通点はどちらも DDD の概念を適用していることです。ここでは abp.io を (abp vNext) と略します。abp vNext は .N...",
+      "coverImage": "https://i.imgur.com/Zi3TfMc.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/AiToolsPart1",
+    "markdownData": {
+      "meta": {
+        "title": "AIツール パート1",
+        "date": "2024-01-15",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "AI",
+          "Tools"
+        ]
+      },
+      "summary": "ScreenShot To Code - スクリーンショットを AI に渡してレイアウトを生成 - 自分のコンピュータの計算能力を使用してプログラムを自分でホストする必要がある https://github.com/abi/screenshot-to-code Logodiffusion - 適当に...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/CouldNotLoadBecauseScriptExecutionDisabledOnSystem",
+    "markdownData": {
+      "meta": {
+        "title": "このシステムではスクリプトの実行が無効になっているため、読み込めませんでした...",
+        "date": "2023-04-23",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Computer Science"
+        ],
+        "authorsWords": "コマンドを入力するだけ"
+      },
+      "summary": "パソコンを再インストールするたびに遭遇するので、検索しやすいようにここにメモしておきます 1. 管理者として CMD を実行 2. 3. Yes",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/CreateFtpClitentWithFactory",
+    "markdownData": {
+      "meta": {
+        "title": "ファクトリーメソッドを適用してFtpClientを設計する",
+        "date": "2023-07-07",
+        "categories": "Development",
+        "author": "kai98k",
+        "authorsWords": "ネットワークプロトコルの多様化に伴い、新しいセキュリティプロトコルが登場するたびに、このプロトコルのために特別なクラスを書かなければならなくなり、クラスがどんどん増えていきます。インターフェースの仕様がないと、「私の中にあなたがいる、あなたの中に私がいる」という状態になりやすく、私があなたを使えず、あなたが私を使える（？）、つまり高結合、低凝集になりがちです。この時、ファクトリーメソッドを使用することで、単一のコンポーネントを再利用でき、Aを変更してもBに影響を与えないようにすることができます。",
+        "tags": [
+          ".Net"
+        ]
+      },
+      "summary": "ファクトリーメソッド ファクトリーメソッド（Factory Method）は一般的なデザインパターンであり、オブジェクト指向デザインパターンの一種に属します。オブジェクトを作成するためのインターフェースを提供しますが、具体的なオブジェクトの作成はサブクラスによって実装されます。ファクトリーメソッドパ...",
+      "coverImage": "https://hackmd.io/_uploads/B1-Otf8Vh.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/DifferenceBetweenSSHnSSL",
+    "markdownData": {
+      "meta": {
+        "title": "SSHはSSLより安全ですか？",
+        "date": "2023-05-07",
+        "categories": "Development",
+        "author": "kai98k",
+        "authorsWords": "プロジェクト業務ではFTPを使用する場面が多くありますが、最近セキュリティ部門からSFTPの使用を要求されました。一見するとSFTPはFTPSと同じだと思っていましたが、実際に調べてみると基礎となるプロトコルが全く異なり、SFTPはSSHを使用しているのに対し、FTPSはSSLを使用していることがわかりました。では、SSLとSSHの違いは何でしょうか？",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "SSL と SSH の違い SSL と SSH はどちらも安全な暗号化通信プロトコルです。OSI 参照モデルでは、両方ともアプリケーション層で確立されますが、用途と適用シナリオが異なります。ただし、どちらもネットワーク伝送をより安全にすることを目的としています。 SSL SSL（Secure Soc...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/DontFearJustStart",
+    "markdownData": {
+      "meta": {
+        "title": "始めるのにすごくある必要はないが、すごくあるためには始めなければならない。あなたも 0 -> ∞ になれる",
+        "date": "2023-04-30 13:22:55",
+        "tags": [
+          "成長マインドセット"
+        ],
+        "categories": "転職・成長",
+        "author": "kai98k",
+        "authorsWords": "新しいことを学び始めたり、夢を追いかけたりしたいとき、どこから始めればよいかわからなかったり、自分の能力不足のために躊躇したりすることがよくあります。しかし実際には、現在のレベルが十分でなくても、最初の一歩を踏み出す勇気を持つことが重要です。なぜなら、行動を起こすことによってのみ、学習と実践の過程で徐々に能力を磨き、成長し続ける機会が得られるからです。以前の経験から4つの教訓を得ました。"
+      },
+      "summary": "自分にレッテルを貼らない 1. 最初の話： 大学の夏休みに、国立台湾大学で行われた情報産業研究所主催のキャンプに参加しました。最初に到着したとき、初日にチームメンバーの自己紹介を聞いたら、みんなトップ大学出身者ばかりでした。2 日目は行くのをやめそうになりました。幸いなことに、最後には粘り強く続け、...",
+      "coverImage": "https://i.imgur.com/toyKnTt.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/ExceptionFilterNetCore",
+    "markdownData": {
+      "meta": {
+        "title": "Net core グローバル例外処理",
+        "date": "2023-02-28 13:22:55",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "Exception",
+          "Filter"
+        ]
+      },
+      "summary": "開発において、Log パッケージを使用して問題やエラーがある場所を記録するだけでなく、.Net core の Filter を使用して、いくつかの例外が発生したときに行うべき処理を処理することもできます。 Filter Microsoft が提供するビューから、Filter はパイプやフィルターの概...",
+      "coverImage": "https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/filters/_static/filter-pipeline-1.png?view=aspnetcore-7.0",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/F2eWork",
+    "markdownData": {
+      "meta": {
+        "title": "フロントエンド業務デバッグ用語まとめ",
+        "date": "2024-01-10",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "GTM"
+        ]
+      },
+      "summary": "GtmDataLayer 【GTM 追跡学】dataLayer とは何か？最も詳細な解説 https://www.maxlist.xyz/2023/06/01/gtm-datalayer/ Data Layer Variable in Google Tag Manager: How to Pull ...",
+      "coverImage": "/assets/hexo/img/Intiator.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/FindProblemsByEventViewr",
+    "markdownData": {
+      "meta": {
+        "title": "IISサイト関連の問題特定とアプリケーションプール再起動メカニズム",
+        "date": "2023-05-01",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "IIS"
+        ]
+      },
+      "summary": "IIS で Web サイトを構築する方法を知っている人は多いかもしれませんが、関連するサーバーログをどこで見つけるかを知らない人がいます。答えはイベントビューアー（event viewer）です。 Event Viewer 開くと、Web Server 関連のイベントや、サイトの停止理由などを確認で...",
+      "coverImage": "https://i.imgur.com/ghSzGGS.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/HexoNestedAngular",
+    "markdownData": {
+      "meta": {
+        "title": "Hexo に Angular を統合する",
+        "date": "2023-02-05 15:00",
+        "category": "Development",
+        "author": "johch3n611u",
+        "authorsWords": "実際には、コンポーネントライブラリプロジェクトがこのサイトと結合されるのを待ってみないとわからないのですが...",
+        "tags": [
+          "Angular"
+        ]
+      },
+      "summary": "> Angular を Hexo に埋め込むには、次の手順を完了する必要があります。 > > 1. Angular アプリケーションを HTML、CSS、JavaScript ファイルを含む静的リソースとしてコンパイルします。 > 2. これらの静的リソースを Hexo の source ディレクト...",
+      "coverImage": "/assets/hexo/img/hexo/postman-code-snippet.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/HodgepodgeOfFrontEnd",
+    "markdownData": {
+      "meta": {
+        "title": "フロントエンド技術のごった煮",
+        "date": "2024-01-15",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "FrontEnd"
+        ]
+      },
+      "summary": "コードの良し悪しと複雑さ キーワード：Vscode CodeMetrics https://www.douyin.com/video/7322310977926565135 CSS を徹底的に理解させるプロジェクト キーワード：GithubRep iCSS https://github.com/ch...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/howToUnderstandDDD",
+    "markdownData": {
+      "meta": {
+        "title": "初心者の領域展開 - ドメイン駆動設計",
+        "date": "2023-01-29 15:00",
+        "category": "Development",
+        "author": "kai98k",
+        "authorsWords": "デザインパターンに初めて触れたとき、本当に抽象的すぎて、基本的には何かの術式だと思いました。ビジネスの必要性を機に、初心者の術師の視点で、ドメイン駆動設計 (DDD) というこの高度な呪術をもう一度認識し直しました。",
+        "tags": [
+          "Architecture",
+          "C#",
+          "DDD",
+          "OOD/OOP"
+        ]
+      },
+      "summary": "ドメイン（Domain）について 開発前の作業では、開発者は通常、ビジネスノウハウ、つまりその領域の知識（ドメイン知識）を理解するためにかなりの時間を費やし、理解した後にビジネスロジックを含むコードに変換します。 しかし、私がプロジェクト開発を始めたばかりの頃のように、何も考えずにすべてのビジネスロ...",
+      "coverImage": "https://i.imgur.com/ubO98GX.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/IeltsNotes",
+    "markdownData": {
+      "meta": {
+        "title": "IELTSノート",
+        "date": "2023-08-09",
+        "categories": "English",
+        "author": "johch3n611u",
+        "authorsWords": "慎小嶷、劉洪波、顧家北、黒目、Simon、何琼、王陸、雅思哥（IELTS Bro）",
+        "tags": [
+          "English"
+        ]
+      },
+      "summary": "パラレルリーディング法 IELTS 準備順序 1. IELTS 公式サイトで関連情報を確認：申し込み手順、受験者への通知、申し込み時期、採点基準、試験内容 2. 自分の英語力を評価し、IELTS の過去問を解く時間を計る - ケンブリッジ IELTS 真題 11-15 から 1 セット選んで簡単なテ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/LetYouRoughlyKnowCallbackFnBindThis",
+    "markdownData": {
+      "meta": {
+        "title": "CallbackFn & Bind(this) を大まかに理解させる",
+        "date": "2023-06-03",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "JavaScript",
+          "Angular"
+        ],
+        "authorsWords": "フロントエンドにはアニメーション以外にも深く掘り下げるべき場所が本当にたくさんあります..."
+      },
+      "summary": "最近、外部から導入した script を Angular に統合する必要がある場面に遭遇しました。CallbackFn と this は別々に理解していました。Angular のコンポーネント内の this は通常、現在のコンポーネントインスタンスを指します。 しかし、CallbackFn に入った...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/LetYouRoughlyKnowHttpRequest",
+    "markdownData": {
+      "meta": {
+        "title": "Http Request を大まかに理解させる",
+        "date": "2023-01-09",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Internet",
+          "Response",
+          "Request",
+          "Angular"
+        ],
+        "authorsWords": "毎回忘れるより、将来のために書き留めておく方が良い"
+      },
+      "summary": "> この記事は不定期に編集されます。間違いがあれば、遠慮なくご指摘ください。ありがとうございます！ > > 得意なものや最新のものを使ってください。なぜなら、これらはすべて HTTP プロトコルの下でのデータ交換方法であり、違いはそれほど大きくないからです。 プロジェクトで Angular Form...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/LetYouRoughlyKnowJsBasics",
+    "markdownData": {
+      "meta": {
+        "title": "JS を大まかに理解させる",
+        "date": "2023-03-22",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Javascript",
+          "ES6"
+        ]
+      },
+      "summary": "元々は React Class / Function コンポーネントの違い [React] Functional-component vs Class-component を研究していましたが、読んでいるうちに基礎となる JS についての知識が少なすぎることに気づいたため、後で参照できるように重要な...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/LetYouRoughlyKnowQueue",
+    "markdownData": {
+      "meta": {
+        "title": "Queue を大まかに理解させる",
+        "date": "2023-06-07",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          ".Net",
+          "RabbitMQ"
+        ]
+      },
+      "summary": "Remote Procedure Call ( RPC ) Queue Remote Procedure Call Queue は、分散システムでリモートプロシージャコール（RPC）を処理するために使用されるキューです。分散システムでは、異なるアプリケーションが異なるホストまたはコンテナで実行され、...",
+      "coverImage": "https://github.com/UrWebApp/UrWebApp.github.io/blob/main/img/rabmq.png?raw=true",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/LetYouRoughlyKnowReact",
+    "markdownData": {
+      "meta": {
+        "title": "React を大まかに理解させる",
+        "date": "2023-03-25",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "必見 Tools React、ReactDOM Library - React：ためのライブラリであり、コンポーネントを定義するために必要な機能のみが含まれており、通常はレンダラーと一緒に使用されます。 React is a JavaScript library . The react packag...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/LetYouRoughlyUnderstandWhatHttpRequest",
+    "markdownData": {
+      "meta": {
+        "title": "Http Request を大まかに理解させる",
+        "date": "2023-01-09",
+        "category": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Internet",
+          "Response",
+          "Request",
+          "Angular"
+        ]
+      },
+      "summary": "> この記事は随時編集されます。誤りがあれば、お気軽に訂正してください。ありがとうございます！ > > 得意なものや最新のものなどを直接使用してください。これらはすべて Http プロトコルの下でデータを交換する方法であり、違いはそれほど大きくありません。 プロジェクトで Angular Forms...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/MemoryWordByRuleOfSoundLawsInIndo",
+    "markdownData": {
+      "meta": {
+        "title": "印欧語の音の法則による単語記憶",
+        "date": "2021-03-08",
+        "category": "English",
+        "author": "johch3n611u",
+        "tags": [
+          "English",
+          "Note"
+        ]
+      },
+      "summary": "音の法則のルール これを英語だと言うのは少し偏りがあるかもしれません。ラテン語、ドイツ語、ギリシャ語などを含むインド・ヨーロッパ語族（印欧語）であり、すべて関連していると言うべきでしょう。拡張された単語は基本的に同じソースですが、地域や時間、その他の関係により音が異なります。 母音の法則 - (例え...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/NET6LogToolWatchDog",
+    "markdownData": {
+      "meta": {
+        "title": "Net6 ログツール WatchDog",
+        "date": "2023-08-01",
+        "category": "Backend",
+        "author": "johch3n611u",
+        "tags": [
+          "C#",
+          "Net6",
+          "Note",
+          "Log"
+        ]
+      },
+      "summary": "WatchDog 超軽量の可視化ログツールです！ これまでログ記録には Serilog と Seq を使用してきましたが、追加のインストールが必要な Seq（Windows に直接インストールするか Docker 経由かに関わらず）と比較して、WatchDog（外部メッセージキューもサポートしていま...",
+      "coverImage": "https://i.imgur.com/8QZqZ0M.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware",
+    "markdownData": {
+      "meta": {
+        "title": "Note Of Using Oracle",
+        "date": "2021-03-09",
+        "category": "Environment",
+        "author": "johch3n611u",
+        "tags": [
+          "Windows",
+          "Note",
+          "Performance"
+        ]
+      },
+      "summary": "ソフトウェアによるコンピュータのパフォーマンス調整 最近、オープンソースプロジェクトに取り組む必要があり、中古の Asus ノートパソコン (X550JX) を 367 ドル (定価 900 ドル) で購入しました。RAM は 4GB で従来の HDD を搭載していましたが、Chrome を開くのに...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/PathAgMasterGuideLearningBasicsAdvanced",
+    "markdownData": {
+      "meta": {
+        "title": "Angular マスターへの道：基礎から応用までの学習ガイド",
+        "date": "2023-06-28",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "authorsWords": "NG のネイティブな構文やアプリケーションに加えて、デザインパターン、関数型プログラミング、Rxjs リアクティブプログラミングなどは、主要なフレームワークで共通しているため、これらにもっと力を入れる価値があると感じています。",
+        "tags": [
+          "Angular"
+        ]
+      },
+      "summary": "Angular マスターへの道 シリーズ NG マスターへの道 ノート概要 day1 概要 ほぼすべてを網羅 day2 JSON Schema, Monorepo day3 ライフサイクル：main.ts ( 複数のルートモジュールを起動可能 ) => app.module.ts ( 複数のルートコ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/PresentationNote",
+    "markdownData": {
+      "meta": {
+        "title": "プレゼンテーションノート",
+        "date": "2024-10-05",
+        "category": "English",
+        "author": "johch3n611u",
+        "authorsWords": [],
+        "tags": [
+          "English"
+        ]
+      },
+      "summary": "1. 勢いと自信：声ははっきりと、態度は落ち着いて、視線をさまよわせない 2. リスト リキャップ ピークエンドの法則：ピーク（印象的なクライマックス）＋印象的な結末のまとめ 3. 結論を先に：ピラミッド原則、層ごとの進行 AIDA モデル Attention（注意）：聴衆の注意を引く Intere...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/ReactClassAndFunctional",
+    "markdownData": {
+      "meta": {
+        "title": "React: クラスベースと関数コンポーネント",
+        "date": "2023-03-25",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "| Class-based | Functional Component | | -------------------------------------------------------------------------------------------------------------...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/ReactHooks",
+    "markdownData": {
+      "meta": {
+        "title": "React-Hooks",
+        "date": "2023-03-25",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "Note",
+          "React"
+        ]
+      },
+      "summary": "useState useState( データのデフォルト値 )：監視されるデータ変数「変数（count）」と「その変数を変更すると React が画面を再レンダリングするメソッド（setCount）」を作成します - setSomething を行うたびに、新しいデータで古いデータを上書きします。形...",
+      "coverImage": "./img/ReactHookLifecycle.jpeg",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/RepositoryNotFound",
+    "markdownData": {
+      "meta": {
+        "title": "Git エラー解決：Repository not found",
+        "date": "2023-03-05",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Git"
+        ]
+      },
+      "summary": "1 台のコンピュータで異なる github アカウントを使用している場合、競合の問題が頻繁に発生し、リポジトリが明らかに存在していても「repository not found」というエラーが発生して使用できないことがあります。 このとき、Windows OS では、次の資格情報マネージャー (Cr...",
+      "coverImage": "https://i.imgur.com/6zCMAl0.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/ShiftJobMethod",
+    "markdownData": {
+      "meta": {
+        "title": "全業種に適用可能な転職評価法",
+        "date": "2023-02-12 13:22:55",
+        "tags": [
+          "転職",
+          "デザイン思考"
+        ],
+        "categories": "キャリア成長",
+        "author": "kai98k"
+      },
+      "summary": "最終的に自分が転職したのはソフトウェアエンジニアですが、自身の実践と研究を経て、この一連の方法は実はエンジニアに限らず、ほとんどの業界に適用できると信じているので、皆さんと共有したいと思います。 まず、なぜかを問う > “He who has a why to live can bear almos...",
+      "coverImage": "https://i.imgur.com/pTrXOrW.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/SolveNetConnectionProblem",
+    "markdownData": {
+      "meta": {
+        "title": "指定された IP とポートに接続できない問題の解決",
+        "date": "2023-04-09 15:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "IIS の設定がすべて完了し、サーバー上でサイトを正常に開くことができ、Web ページを確認できたと思っていたのに、外部 IP を使用して接続して確認しようとすると接続できず、すべてが夢で空論だったことに気づくことがあります。このとき、問題を見つけるためにいくつかのテストを行う必要があります。これら...",
+      "coverImage": "https://i.imgur.com/wu9lcih.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/SolveNodeCantFindProblem",
+    "markdownData": {
+      "meta": {
+        "title": "問題解決 - node は内部コマンドまたは外部コマンドではありません",
+        "date": "2023-04-09",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "node.js",
+          "npm"
+        ]
+      },
+      "summary": "npm、webpack などはすべて node のサポートが必要です。node に問題がある場合、通常、他の関連コマンドも機能しません。node がインストールされているのにこの問題が発生する場合は、環境変数にエラーがある可能性があります。 環境変数 Windows 環境の場合は、スタート検索バーで...",
+      "coverImage": "https://i.imgur.com/25vCJJm.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/SolvingVersionManagementChallengesWithPnpm",
+    "markdownData": {
+      "meta": {
+        "title": "依存関係の競合を減らし、開発効率を向上させる：pnpm でバージョン管理の課題を解決する",
+        "date": "2024-03-04",
+        "categories": "Development",
+        "author": "johch3n611u",
+        "tags": [
+          "node",
+          "npm",
+          "pnpm",
+          "nvm",
+          "nrm"
+        ],
+        "authorsWords": "きれいに削除するか再インストールして、pnpm に頼れば間違いありません"
+      },
+      "summary": "知識ポイント Node： 1. Chrome V8 JavaScript エンジンに基づくランタイム環境 2. サーバーサイドで JavaScript コードを実行できるようにします 3. 開発者がサーバーサイド開発を行えるようにする多くの組み込みモジュールと機能を提供します Node_Module...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/TalkAboutAuthorization",
+    "markdownData": {
+      "meta": {
+        "title": "あなたは誰？身元認証方法について簡単に話す",
+        "date": "2023-04-30 23:23:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet",
+          "Authorization"
+        ]
+      },
+      "summary": "身元確認とセキュリティの問題は、現在でも依然として非常にホットな問題です。Http 自体は ステートレス (Stateless) であるため、各 Request/Response は独立しています。そのため、状態/情報管理 (stateful) を行うには session、cookie、token ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/TheWayOfPrintInAspNet",
+    "markdownData": {
+      "meta": {
+        "title": ".Net で印刷するいくつかの方法",
+        "date": "2023-02-05 15:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          ".Net",
+          "PDF"
+        ]
+      },
+      "summary": "通常、プリンターは ZPL を送信するか、ドライバを介して直接印刷プロセスをトリガーできます。この記事では主に後者の印刷方法について説明します。 ドライバのインストール まずコンピュータにプリンターと通信ポートを認識させる必要があります。BarTender にアクセスして、対応するドライバをインスト...",
+      "coverImage": "https://i.imgur.com/IjBDcBJ.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/UseSerilogToSendMail",
+    "markdownData": {
+      "meta": {
+        "title": ".NET6 で Serilog を使用し、ログ記録時に同時にメールを送信する",
+        "date": "2023-01-04",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Log",
+          ".Net"
+        ]
+      },
+      "summary": "プロジェクトでは、実機テストの際、元の開発では遭遇しなかった問題によく遭遇します。このとき、デバッグを行うために環境に残されたログが必要になります。さらに、特定のイベントが発生したときに、ログを記録するだけでなく、関係者にメールを送信したい場合は、Serilog の使用を試みることができます。 複雑...",
+      "coverImage": "https://i.imgur.com/su8O8Jy.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
+    "route": "/jp/development/WindowsTestNetTool",
+    "markdownData": {
+      "meta": {
+        "title": "Windows 接続テストツール",
+        "date": "2023-03-03 18:30:00",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Internet"
+        ]
+      },
+      "summary": "これらのツールを活用すれば、専門外のエンジニアでも基礎的な TCP/IP を理解し、ネットワークのどこに問題があるかをよりよく把握し、ネットワーク管理者に問題を報告するか...あるいは自分で対処する(?)ことができます。 ping Ping は最も基本的なコマンドと言えますが、ネットワークやさまざま...",
+      "coverImage": "https://i.imgur.com/KmlnDSO.png",
+      "body": ""
+    }
+  },
+  {
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/abpFramewrokIntro",
     "markdownData": {
       "meta": {
         "title": "abp Framework 框架的框架",
@@ -18,7 +1371,8 @@
     }
   },
   {
-    "route": "/development/AiToolsPart1",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/AiToolsPart1",
     "markdownData": {
       "meta": {
         "title": "AI Tools Part 1",
@@ -36,7 +1390,8 @@
     }
   },
   {
-    "route": "/development/CouldNotLoadBecauseScriptExecutionDisabledOnSystem",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/CouldNotLoadBecauseScriptExecutionDisabledOnSystem",
     "markdownData": {
       "meta": {
         "title": "因為這個系統上已停用指令碼執行，所以無法載入...",
@@ -54,7 +1409,8 @@
     }
   },
   {
-    "route": "/development/CreateFtpClitentWithFactory",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/CreateFtpClitentWithFactory",
     "markdownData": {
       "meta": {
         "title": "套用工廠方法設計 FtpClient",
@@ -72,7 +1428,8 @@
     }
   },
   {
-    "route": "/development/DifferenceBetweenSSHnSSL",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/DifferenceBetweenSSHnSSL",
     "markdownData": {
       "meta": {
         "title": "SSH 比 SSL 更安全嗎?",
@@ -90,7 +1447,8 @@
     }
   },
   {
-    "route": "/development/DontFearJustStart",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/DontFearJustStart",
     "markdownData": {
       "meta": {
         "title": "不用很厲害才開始，要開始才會很厲害，你也可以從 0 -> ∞",
@@ -108,7 +1466,8 @@
     }
   },
   {
-    "route": "/development/ExceptionFilterNetCore",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/ExceptionFilterNetCore",
     "markdownData": {
       "meta": {
         "title": "Net core 全域異常處理",
@@ -127,7 +1486,8 @@
     }
   },
   {
-    "route": "/development/F2eWork",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/F2eWork",
     "markdownData": {
       "meta": {
         "title": "前端工作 Debug 名詞會總",
@@ -144,7 +1504,8 @@
     }
   },
   {
-    "route": "/development/FindProblemsByEventViewr",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/FindProblemsByEventViewr",
     "markdownData": {
       "meta": {
         "title": "查找 IIS 站台相關問題與重啟 Application Pool 機制",
@@ -161,7 +1522,8 @@
     }
   },
   {
-    "route": "/development/HexoNestedAngular",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/HexoNestedAngular",
     "markdownData": {
       "meta": {
         "title": "在 Hexo 中整合 Angular",
@@ -179,7 +1541,8 @@
     }
   },
   {
-    "route": "/development/HodgepodgeOfFrontEnd",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/HodgepodgeOfFrontEnd",
     "markdownData": {
       "meta": {
         "title": "前端技術大雜燴",
@@ -196,7 +1559,8 @@
     }
   },
   {
-    "route": "/development/howToUnderstandDDD",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/howToUnderstandDDD",
     "markdownData": {
       "meta": {
         "title": "新手的領域展開-領域驅動設計",
@@ -217,7 +1581,8 @@
     }
   },
   {
-    "route": "/development/IeltsNotes",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/IeltsNotes",
     "markdownData": {
       "meta": {
         "title": "雅思筆記",
@@ -235,7 +1600,8 @@
     }
   },
   {
-    "route": "/development/LetYouRoughlyKnowCallbackFnBindThis",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/LetYouRoughlyKnowCallbackFnBindThis",
     "markdownData": {
       "meta": {
         "title": "讓你大概搞懂 CallbackFn & Bind(this)",
@@ -254,7 +1620,8 @@
     }
   },
   {
-    "route": "/development/LetYouRoughlyKnowHttpRequest",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/LetYouRoughlyKnowHttpRequest",
     "markdownData": {
       "meta": {
         "title": "讓你大概搞懂 Http Request",
@@ -275,7 +1642,8 @@
     }
   },
   {
-    "route": "/development/LetYouRoughlyKnowJsBasics",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/LetYouRoughlyKnowJsBasics",
     "markdownData": {
       "meta": {
         "title": "讓你大概搞懂 JS",
@@ -293,7 +1661,8 @@
     }
   },
   {
-    "route": "/development/LetYouRoughlyKnowQueue",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/LetYouRoughlyKnowQueue",
     "markdownData": {
       "meta": {
         "title": "讓你大概搞懂 Queue",
@@ -311,7 +1680,8 @@
     }
   },
   {
-    "route": "/development/LetYouRoughlyKnowReact",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/LetYouRoughlyKnowReact",
     "markdownData": {
       "meta": {
         "title": "讓你大概搞懂 React",
@@ -329,7 +1699,8 @@
     }
   },
   {
-    "route": "/development/LetYouRoughlyUnderstandWhatHttpRequest",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/LetYouRoughlyUnderstandWhatHttpRequest",
     "markdownData": {
       "meta": {
         "title": "讓你大概搞懂 Http Request",
@@ -349,7 +1720,8 @@
     }
   },
   {
-    "route": "/development/MemoryWordByRuleOfSoundLawsInIndo",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/MemoryWordByRuleOfSoundLawsInIndo",
     "markdownData": {
       "meta": {
         "title": "詞源學如何幫你五天記住一萬個單字-筆記",
@@ -367,7 +1739,8 @@
     }
   },
   {
-    "route": "/development/NET6LogToolWatchDog",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/NET6LogToolWatchDog",
     "markdownData": {
       "meta": {
         "title": ".NET 6 輕量視覺化 Log 工具 WatchDog",
@@ -385,7 +1758,8 @@
     }
   },
   {
-    "route": "/development/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/NoNeedUpgradeHardwareAdjustComputerPerformanceThroughSoftware",
     "markdownData": {
       "meta": {
         "title": "免升級硬體，透過軟體調整電腦性能",
@@ -402,7 +1776,8 @@
     }
   },
   {
-    "route": "/development/PathAgMasterGuideLearningBasicsAdvanced",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/PathAgMasterGuideLearningBasicsAdvanced",
     "markdownData": {
       "meta": {
         "title": "Angular 大師之路：淺出深入的學習指南",
@@ -420,7 +1795,8 @@
     }
   },
   {
-    "route": "/development/PresentationNote",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/PresentationNote",
     "markdownData": {
       "meta": {
         "title": "Presentation 筆記",
@@ -438,7 +1814,8 @@
     }
   },
   {
-    "route": "/development/ReactClassAndFunctional",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/ReactClassAndFunctional",
     "markdownData": {
       "meta": {
         "title": "React:Class-based & Functional Component",
@@ -456,7 +1833,8 @@
     }
   },
   {
-    "route": "/development/ReactHooks",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/ReactHooks",
     "markdownData": {
       "meta": {
         "title": "React-Hooks",
@@ -474,7 +1852,8 @@
     }
   },
   {
-    "route": "/development/RepositoryNotFound",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/RepositoryNotFound",
     "markdownData": {
       "meta": {
         "title": "解決 Git 錯誤:Repository not found",
@@ -491,7 +1870,8 @@
     }
   },
   {
-    "route": "/development/ShiftJobMethod",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/ShiftJobMethod",
     "markdownData": {
       "meta": {
         "title": "適用所有行業的轉職評估法",
@@ -509,7 +1889,8 @@
     }
   },
   {
-    "route": "/development/SolveNetConnectionProblem",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/SolveNetConnectionProblem",
     "markdownData": {
       "meta": {
         "title": "解決連不到指定IP與Port問題",
@@ -526,7 +1907,8 @@
     }
   },
   {
-    "route": "/development/SolveNodeCantFindProblem",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/SolveNodeCantFindProblem",
     "markdownData": {
       "meta": {
         "title": "解決問題 - node 不是內部或外部命令",
@@ -544,7 +1926,8 @@
     }
   },
   {
-    "route": "/development/SolvingVersionManagementChallengesWithPnpm",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/SolvingVersionManagementChallengesWithPnpm",
     "markdownData": {
       "meta": {
         "title": "減少依賴衝突、提高開發效率：使用 pnpm 解決版本管理挑戰",
@@ -566,7 +1949,8 @@
     }
   },
   {
-    "route": "/development/TalkAboutAuthorization",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/TalkAboutAuthorization",
     "markdownData": {
       "meta": {
         "title": "你是誰?淺談身分認證方式",
@@ -584,7 +1968,8 @@
     }
   },
   {
-    "route": "/development/TheWayOfPrintInAspNet",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/TheWayOfPrintInAspNet",
     "markdownData": {
       "meta": {
         "title": "幾種 .Net 列印的方式",
@@ -602,7 +1987,8 @@
     }
   },
   {
-    "route": "/development/UseSerilogToSendMail",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/UseSerilogToSendMail",
     "markdownData": {
       "meta": {
         "title": ".NET6 使用 Serilog，在 log 當下同時寄信",
@@ -620,7 +2006,8 @@
     }
   },
   {
-    "route": "/development/WindowsTestNetTool",
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/WindowsTestNetTool",
     "markdownData": {
       "meta": {
         "title": "Windows 測試連線工具",

@@ -1,0 +1,132 @@
+{
+  "HOME": {
+    "TITLE": "Home",
+    "HERO_TEXT": "Path to Digital",
+    "HERO": {
+      "BIZ_TITLE": "Solve Complex Processes<br>Focus on Core Business",
+      "BIZ_DESC": "Tired of generic templates? We provide complete solutions from requirements analysis to system implementation, assisting your digital transformation.",
+      "BIZ_BTN": "Seek System Strategy",
+      "BIZ_TAG": "For Business",
+      "CAREER_TITLE": "Start from Scratch<br>Painlessly Switch to Tech",
+      "CAREER_DESC": "No wrong turns. Combining industry experience with personalized learning plans to guide non-CS majors on the clearest career path.",
+      "CAREER_BTN": "Get Career Guide",
+      "CAREER_TAG": "For Career"
+    },
+    "FEATURED": {
+      "TITLE": "Special Selection",
+      "SUBTITLE": "Featured Projects",
+      "MORE": "View More Cases",
+      "PROJECT1": {
+        "TITLE": "AI Intelligent Supply Chain System",
+        "DESC": "AI-powered backend for manufacturing, increasing shipping efficiency by 30%."
+      },
+      "PROJECT2": {
+        "TITLE": "Digital Transformation Dashboard",
+        "DESC": "Automating Excel workflows to visualize operational data in real-time."
+      },
+      "PROJECT3": {
+        "TITLE": "Liberal Arts to Tech Success",
+        "DESC": "Student Story: From zero base to landing a frontend engineer role at a top e-commerce firm."
+      },
+      "PROJECT4": {
+        "TITLE": "Quant Trading & WEB3 Integration",
+        "DESC": "From on-chain monitoring to automated exchange execution for high-frequency trading."
+      }
+    }
+  },
+  "NAV": {
+    "HOME": "Home",
+    "BLOG": "Blog",
+    "ABOUT": "About",
+    "SERVICES": "System Services",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact",
+    "BACK_TO_HOME": "Back to Home"
+  },
+  "BTN": {
+    "START_PROJECT": "Start Project",
+    "READ_MORE": "Read More"
+  },
+  "SERVICE": {
+    "HEADER": {
+      "SUBTITLE": "Digital Solution Navigator",
+      "TITLE": "There are many paths to digital,<br><span class=\"text-text-muted\">which one fits your current stage?</span>",
+      "DESC": "Before investing budget, we want you to understand the market options. There is no best tool, only the strategy that best fits your current needs."
+    },
+    "CARD": {
+      "LABEL": {
+        "SCENARIO": "Suitable for:",
+        "COST": "Potential Cost:",
+        "ADVANTAGE": "Unique Advantage:"
+      },
+      "DIY": {
+        "TITLE": "No-Code Platforms",
+        "SCENARIO": "Validating Business Ideas (MVP), Personal Portfolios, Standard E-commerce.",
+        "COST": "Functionality limited by platform, data hard to migrate. You act as Designer & PM.",
+        "ADVICE": "<strong>Expert Advice:</strong> A great start! If budget is tight and time allows, try Wix first. Come to us for a system upgrade when business logic gets complex."
+      },
+      "AI": {
+        "TITLE": "AI Assisted Generation",
+        "SCENARIO": "Rapid Prototyping, One-off Internal Tools, Single Function Scripts.",
+        "COST": "Generated code lacks architectural structure. Hard to debug as system grows, plus security concerns.",
+        "ADVICE": "<strong>Expert Advice:</strong> AI is a great accelerator! We use it too. But you need a senior architect to review AI code to ensure the system won't crash under load."
+      },
+      "ENT": {
+        "BADGE": "Enterprise Choice",
+        "TITLE": "Professional Architecture",
+        "SCENARIO": "Core Business Systems, High Concurrency Platforms, Long-term Digital Assets.",
+        "ADV1": "100% Data Ownership & Logic Control",
+        "ADV2": "Bank-grade Security (OWASP)"
+      }
+    },
+    "BTN": {
+      "TRY_THIS": "I want to try this",
+      "NEED_THIS": "This is what I need"
+    },
+    "PROCESS": {
+      "TITLE": "When templates fail and AI can't solve logic...",
+      "DESC": "This is where we step in. We don't just provide code, we provide a battle-tested system craftsmanship.<br>Here is the standard Tiger Digital process:"
+    },
+    "STEP1": {
+      "TITLE": "Business Logic & Blueprint Design",
+      "SUBTITLE": "Blueprint & Architecture",
+      "DESC": "Most projects fail from \"building without thinking\". We introduce <strong>DDD (Domain-Driven Design)</strong> to break complex business into clear data models and user journeys."
+    },
+    "STEP2": {
+      "TITLE": "Modern Core Development",
+      "SUBTITLE": "Modern Engineering",
+      "DESC": "Reject spaghetti code. Adopting <strong>Angular + Go</strong> strong typing architecture combined with AI Copilot. This means bank-grade stability with startup speed."
+    },
+    "STEP3": {
+      "TITLE": "AI Automation & Workflow",
+      "SUBTITLE": "AI-Powered Workflow",
+      "DESC": "Go-live is just the start. We integrate <strong>n8n</strong> and <strong>LLM</strong> to turn your system into a \"thinking\" automation hub."
+    },
+    "CTA": {
+      "TITLE": "Ready to upgrade your <span class=\"text-nordic-accent\">Business Engine</span>?",
+      "DESC": "Don't let old processes drag you down. Spend 1 minute to fill out requirements for a free architecture assessment.",
+      "BTN": "Start My Project",
+      "NOTE": "* Current Schedule: Consultations available starting next week"
+    }
+  },
+  "FOOTER": {
+    "SLOGAN": "Digital Simplicity. Business Agility.<br>Building strong digital moats for enterprises,<br>Guiding clear career paths for engineers.",
+    "START_CONVO": "Start a Conversation",
+    "COL_SERVICES": "Services",
+    "COL_EXPLORE": "Explore",
+    "COL_CONNECT": "Connect",
+    "LINKS": {
+      "ARCH": "System Architecture Design",
+      "TRANSFORM": "Digital Transformation",
+      "WEB3": "Web3 Solutions",
+      "CONSULT": "Technical Consulting",
+      "TECH": "Tech Notes",
+      "CAREER": "Career Transition",
+      "LIFE": "Lifestyle",
+      "ABOUT": "About Tiger"
+    },
+    "PRIVACY": "Privacy Policy",
+    "TERMS": "Terms of Service",
+    "SITEMAP": "Sitemap"
+  }
+}
