@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=/zh-tw/">
-  <script>window.location.href = "/zh-tw/" + window.location.search + window.location.hash;</script>
   <title>Redirecting...</title>
+  <script>
+    (function() {
+      var lang = navigator.language || navigator.userLanguage;
+      var target = '/en/'; // Default to English
+
+      if (lang.match(/^zh/i)) { // Matches zh-CN, zh-TW, zh-HK, etc.
+        target = '/zh-tw/';
+      } else if (lang.match(/^ja/i)) {
+        target = '/jp/';
+      }
+      
+      // Preserve query params and hash
+      window.location.href = target + window.location.search + window.location.hash;
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/en/">
+  </noscript>
 </head>
 <body>
-  <p>If you are not redirected automatically, follow this <a href="/zh-tw/">link to the site</a>.</p>
+  <p>Redirecting based on your browser language...</p>
+  <ul>
+    <li><a href="/en/">English</a></li>
+    <li><a href="/zh-tw/">繁體中文</a></li>
+    <li><a href="/jp/">日本語</a></li>
+  </ul>
 </body>
 </html>
