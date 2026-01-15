@@ -1,11 +1,11 @@
 ---
-title: Angular Master Path: A Guide from Basics to Advanced
+title: "Angular Master Path: A Guide from Basics to Advanced"
 date: 2023-06-28
 categories: Development
 author: johch3n611u
 authorsWords: Besides some NG native syntax and applications, I feel the more complex parts are still design patterns, functional programming, and reactive programming (Rxjs). These should be common across major frameworks, so it's worth investing more effort into them.
 tags:
-- Angular
+  - Angular
 ---
 
 [Angular Master Path Series](https://ithelp.ithome.com.tw/users/20020617/ironman/1630)

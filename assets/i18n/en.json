@@ -18,19 +18,26 @@
       "MORE": "View More Cases",
       "PROJECT1": {
         "TITLE": "AI Intelligent Supply Chain System",
-        "DESC": "AI-powered backend for manufacturing, increasing shipping efficiency by 30%."
+        "DESC": "AI-powered backend for manufacturing, increasing shipping efficiency by 30%.",
+        "TAG1": "AI",
+        "TAG2": "ERP"
       },
       "PROJECT2": {
         "TITLE": "Digital Transformation Dashboard",
-        "DESC": "Automating Excel workflows to visualize operational data in real-time."
+        "DESC": "Automating Excel workflows to visualize operational data in real-time.",
+        "TAG1": "Data Visualization",
+        "TAG2": "Digital Transformation"
       },
       "PROJECT3": {
         "TITLE": "Liberal Arts to Tech Success",
-        "DESC": "Student Story: From zero base to landing a frontend engineer role at a top e-commerce firm."
+        "DESC": "Student Story: From zero base to landing a frontend engineer role at a top e-commerce firm.",
+        "TAG1": "Non-CS Transition"
       },
       "PROJECT4": {
         "TITLE": "Quant Trading & WEB3 Integration",
-        "DESC": "From on-chain monitoring to automated exchange execution for high-frequency trading."
+        "DESC": "From on-chain monitoring to automated exchange execution for high-frequency trading.",
+        "TAG1": "API Integration",
+        "TAG2": "High-Freq Trading"
       }
     }
   },
@@ -107,6 +114,33 @@
       "DESC": "Don't let old processes drag you down. Spend 1 minute to fill out requirements for a free architecture assessment.",
       "BTN": "Start My Project",
       "NOTE": "* Current Schedule: Consultations available starting next week"
+    },
+    "HERO_CARD": {
+      "TITLE_PREFIX": "Tiger Works",
+      "TITLE_SUFFIX": "DIGITAL",
+      "SLOGAN": "Digital Simplicity. Business Agility.",
+      "MORE_ARTICLES": "Read More Articles",
+      "CARD1": {
+        "TITLE": "Digital Transformation",
+        "EN_TITLE": "Digital Transformation",
+        "DESC": "Say goodbye to Excel chaos. Tailor-made internal systems to automate tedious processes.",
+        "TAG1": "Custom Systems",
+        "TAG2": "Process Optimization"
+      },
+      "CARD2": {
+        "TITLE": "Web Application Development",
+        "EN_TITLE": "Custom Web Development",
+        "DESC": "Building high-security, high-concurrency enterprise applications. Ensuring stability and scalability.",
+        "TAG1": "Full Stack",
+        "TAG2": "SEO Tuning"
+      },
+      "CARD3": {
+        "TITLE": "Tech Consulting & Mentoring",
+        "EN_TITLE": "Consulting & Mentoring",
+        "DESC": "Passing down battle-tested experience from non-CS to senior. Grounded career advice and technical guidance.",
+        "TAG1": "Career Coaching",
+        "TAG2": "Architecture Design"
+      }
     }
   },
   "FOOTER": {

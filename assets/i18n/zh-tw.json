@@ -18,19 +18,26 @@
       "MORE": "查看更多案例",
       "PROJECT1": {
         "TITLE": "AI 智能化供應鏈管理系統",
-        "DESC": "為製造業打造的 AI 智能化後台，提升 30% 出貨效率。"
+        "DESC": "為製造業打造的 AI 智能化後台，提升 30% 出貨效率。",
+        "TAG1": "AI",
+        "TAG2": "ERP"
       },
       "PROJECT2": {
         "TITLE": "傳產數位轉型儀表板",
-        "DESC": "將 Excel 流程自動化，即時視覺化營運數據。"
+        "DESC": "將 Excel 流程自動化，即時視覺化營運數據。",
+        "TAG1": "資料視覺化",
+        "TAG2": "數位轉型"
       },
       "PROJECT3": {
         "TITLE": "文組轉職成功案例",
-        "DESC": "學員小陳：從零基礎到錄取知名電商前端工程師。"
+        "DESC": "學員小陳：從零基礎到錄取知名電商前端工程師。",
+        "TAG1": "非本科系轉職"
       },
       "PROJECT4": {
         "TITLE": "量化交易與WEB3串接",
-        "DESC": "從鏈上數據監控到交易所自動下單。為高頻交易與套利策略打造毫秒級的執行系統。"
+        "DESC": "從鏈上數據監控到交易所自動下單。為高頻交易與套利策略打造毫秒級的執行系統。",
+        "TAG1": "API串接",
+        "TAG2": "高併發程式交易"
       }
     }
   },
@@ -107,6 +114,33 @@
       "DESC": "別讓老舊的流程拖垮您的成長。花 1 分鐘填寫需求，獲得免費的架構評估與報價。",
       "BTN": "啟動我的專案",
       "NOTE": "* 目前排程：最快可於下週開始諮詢"
+    },
+    "HERO_CARD": {
+      "TITLE_PREFIX": "虎虎做事",
+      "TITLE_SUFFIX": "DIGITAL",
+      "SLOGAN": "Digital Simplicity. Business Agility.",
+      "MORE_ARTICLES": "了解更多文章",
+      "CARD1": {
+        "TITLE": "企業數位轉型",
+        "EN_TITLE": "Digital Transformation",
+        "DESC": "告別 Excel 的混亂。為您量身打造企業內部系統，將繁瑣流程自動化。",
+        "TAG1": "客製化系統",
+        "TAG2": "流程優化"
+      },
+      "CARD2": {
+        "TITLE": "Web 應用開發",
+        "EN_TITLE": "Custom Web Development",
+        "DESC": "構建高安全性、高併發的企業級應用。確保系統穩定與未來的擴充性。",
+        "TAG1": "全端開發",
+        "TAG2": "SEO 調優"
+      },
+      "CARD3": {
+        "TITLE": "技術顧問與教學",
+        "EN_TITLE": "Consulting & Mentoring",
+        "DESC": "從非本科到資深的實戰經驗傳承。提供最接地氣的轉職諮詢與技術指導。",
+        "TAG1": "職涯輔導",
+        "TAG2": "架構設計"
+      }
     }
   },
   "FOOTER": {
