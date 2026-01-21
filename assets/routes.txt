@@ -14,6 +14,7 @@
 /en/development/HodgepodgeOfFrontEnd
 /en/development/howToUnderstandDDD
 /en/development/IeltsNotes
+/en/development/K3s_Istio
 /en/development/LetYouRoughlyKnowCallbackFnBindThis
 /en/development/LetYouRoughlyKnowHttpRequest
 /en/development/LetYouRoughlyKnowJsBasics
@@ -52,6 +53,7 @@
 /jp/development/HodgepodgeOfFrontEnd
 /jp/development/howToUnderstandDDD
 /jp/development/IeltsNotes
+/jp/development/K3s_Istio
 /jp/development/LetYouRoughlyKnowCallbackFnBindThis
 /jp/development/LetYouRoughlyKnowHttpRequest
 /jp/development/LetYouRoughlyKnowJsBasics
@@ -90,6 +92,7 @@
 /zh-tw/development/HodgepodgeOfFrontEnd
 /zh-tw/development/howToUnderstandDDD
 /zh-tw/development/IeltsNotes
+/zh-tw/development/K3s_Istio
 /zh-tw/development/LetYouRoughlyKnowCallbackFnBindThis
 /zh-tw/development/LetYouRoughlyKnowHttpRequest
 /zh-tw/development/LetYouRoughlyKnowJsBasics

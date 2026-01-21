@@ -162,5 +162,109 @@
     "PRIVACY": "隱私權政策",
     "TERMS": "服務條款",
     "SITEMAP": "網站地圖"
+  },
+  "RESUME": {
+    "HERO": {
+      "NAME": "劉育愷 (Kai)",
+      "ROLE": "Integration Reliability Engineer",
+      "TAGLINE": "致力於穩定關鍵任務系統與跨越技術鴻溝的整合專家。",
+      "SUB_TAGLINE": "分散式系統 | API 互通性 | 卓越營運",
+      "CONTACT": "聯絡我",
+      "DOWNLOAD": "下載履歷"
+    },
+    "SUMMARY": {
+      "TITLE": "專業摘要",
+      "TEXT": "結果導向的整合可靠性工程師，擁有 3 年以上為全球供應鏈與製造業架構關鍵系統的經驗。專精於 API 互通性、事件驅動架構，以及確保高量交易環境下的資料完整性。擅長銜接技術工程與外部合作夥伴（如 DHL, FedEx, DCSA 承運商），並交付具備自動重試機制與優雅降級的韌性整合方案。"
+    },
+    "EXPERIENCE": {
+      "TITLE": "工作經歷",
+      "FOXCONN": {
+        "ROLE": "軟體工程師 (Team Lead)",
+        "COMPANY": "鴻海科技集團 (Foxconn)",
+        "LOCATION": "印度 班加羅爾",
+        "DATE": "2025年9月 – 至今",
+        "POINTS": [
+          "系統可觀測性與可靠性：維護 Spring Cloud 微服務監控儀表板，達成 98% 系統可用性，並計畫導入自動癒合機制以達成 99.9% 目標。",
+          "從零建立在地工程團隊（3-5人），在嚴格的資安規範下建立與中國總部的遠端開發流程。",
+          "架構多語言微服務平台 (K3s + Istio)，結合 Prometheus + Kibana 實現自動故障偵測。",
+          "事件驅動架構：實作 RabbitMQ 作為訊息代理，確保跨服務資料流的可靠性與自動重試。",
+          "主導系統國際化：利用內部 AI Agent 整合散落的文件，成功將 3 套系統導入印度。",
+          "建立 GitLab CI/CD 流程，將容器化部署時間從數天縮短至數小時。"
+        ]
+      },
+      "EVERGREEN": {
+        "ROLE": "軟體工程師",
+        "COMPANY": "長榮海運 (Evergreen Marine Corp.)",
+        "LOCATION": "台灣 桃園",
+        "DATE": "2025年3月 – 2025年9月",
+        "POINTS": [
+          "API 標準化與合規：開發完全符合 DCSA 標準的提單 (B/L) API，確保零資料錯誤。",
+          "參與 DCSA 標準會議：與全球前 9 大海運商共同制定 API 規範。",
+          "開發開發者門戶 (Developer Portal)：讓企業客戶 (IKEA, Volvo) 能自助串接航運 API。",
+          "建構貨櫃驗證 API：整合自動量測系統，消除人工查核，將驗證時間從數小時縮短至數秒。",
+          "利用 Kafka 處理事件驅動訊息，並使用 Oracle 確保資料流的可靠性。"
+        ]
+      },
+      "ADVANTECH": {
+        "ROLE": "全端工程師",
+        "COMPANY": "研華科技 (Advantech Corp.)",
+        "LOCATION": "台灣 台北",
+        "DATE": "2023年11月 – 2025年3月",
+        "POINTS": [
+          "整合物流合作夥伴 (DHL/FedEx) API，設計具備重試機制與逾時處理的容錯系統。",
+          "事件驅動訂單處理：實作 RabbitMQ 架構，自動路由訂單事件至對應服務。",
+          "系統可觀測性：部署 Heartbeat + Prometheus + Kibana 進行主動偵測。",
+          "將手動流程自動化，縮短 30% 處理時間。",
+          "統一多物流商整合介面，大幅降低後續整合成本。",
+          "資料模型遷移 (MS SQL to MongoDB)，提升 API 回應速度達 40%。",
+          "導入 .NET Core 微服務與 Jenkins CI/CD，大幅縮短部署週期。"
+        ]
+      }
+    },
+    "SKILLS": {
+      "TITLE": "技術技能",
+      "INTEGRATION": {
+        "TITLE": "整合與訊息傳遞",
+        "LIST": ["RESTful API Design", "RabbitMQ", "Kafka", "Event-Driven Architecture", "Webhooks", "Third-Party Integration"]
+      },
+      "RELIABILITY": {
+        "TITLE": "可靠性工程",
+        "LIST": ["Prometheus", "Kibana", "Heartbeat", "Log Analysis", "Container Monitoring", "Retry Mechanisms", "Circuit Breaker"]
+      },
+      "BACKEND": {
+        "TITLE": "後端與資料",
+        "LIST": ["Go", "Python (FastAPI)", "Java (Spring Boot)", "C# (.NET Core)", "SQL (Oracle/PostgreSQL)", "MongoDB", "Redis"]
+      },
+      "INFRA": {
+        "TITLE": "基礎設施",
+        "LIST": ["K3s/Kubernetes", "Istio", "Docker", "Linux", "GitLab CI/CD", "Jenkins"]
+      },
+      "FRONTEND": {
+        "TITLE": "前端開發",
+        "LIST": ["Angular 2+", "Vue.js", "TypeScript", "HTML/CSS/SCSS"]
+      },
+       "CLOUD": {
+        "TITLE": "雲端與證照",
+        "LIST": ["AWS (Certified AI Practitioner)", "Azure (Certified Fundamentals)"]
+      }
+    },
+    "ACHIEVEMENTS": {
+        "TITLE": "關鍵成就",
+        "LIST": [
+            { "TITLE": "可靠性工程", "DESC": "透過容器監控達成 98% 系統可用性。" },
+            { "TITLE": "夥伴整合", "DESC": "建立具備重試邏輯與容錯能力的物流整合。" },
+            { "TITLE": "產業標準", "DESC": "貢獻 DCSA API 規範，獲全球 75% 海運商採用。" },
+            { "TITLE": "跨國協作", "DESC": "主導跨越台灣、印度、中國的系統國際化，零重大事故。" }
+        ]
+    },
+    "EDUCATION": {
+        "TITLE": "學歷",
+        "UNI": "國立嘉義大學",
+        "DEGREE": "外國語言學系 學士",
+        "PERIOD": "2017年9月 – 2021年6月"
+    },
+    "LABELS": {
+        "PRESENT": "至今"
+    }
   }
 }

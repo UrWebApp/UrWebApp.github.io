@@ -249,6 +249,27 @@
   },
   {
     "lang": "en",
+    "route": "/en/development/K3s_Istio",
+    "markdownData": {
+      "meta": {
+        "title": "Complete Guide to Building Polyglot Microservices with K3s + Istio",
+        "date": "2026-01-21",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Polyglot",
+          "Microservices",
+          "K3s",
+          "Istio"
+        ]
+      },
+      "summary": "Introduction In the process of modernizing enterprise systems, we often face a challenge: how to gradually introduce new technologies while preserving...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "en",
     "route": "/en/development/LetYouRoughlyKnowCallbackFnBindThis",
     "markdownData": {
       "meta": {
@@ -925,6 +946,27 @@
   },
   {
     "lang": "jp",
+    "route": "/jp/development/K3s_Istio",
+    "markdownData": {
+      "meta": {
+        "title": "K3s + Istio で構築する Polyglot Microservices 完全ガイド",
+        "date": "2026-01-21",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Polyglot",
+          "Microservices",
+          "K3s",
+          "Istio"
+        ]
+      },
+      "summary": "はじめに 企業システムのモダナイゼーションプロセスにおいて、私たちはしばしば課題に直面します。「既存のシステムを維持しながら、どのように段階的に新技術を導入するか？」という点です。この記事では、K3s と Istio Service Mesh を組み合わせて、多言語（Polyglot）対応のマイクロ...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "jp",
     "route": "/jp/development/LetYouRoughlyKnowCallbackFnBindThis",
     "markdownData": {
       "meta": {
@@ -1595,6 +1637,27 @@
         ]
       },
       "summary": "平行閱讀法 雅思備考順序 1. 雅思官網了解相關訊息，報名流程、考生須知、報名時間、成績評分標準、考試內容 2. 評估自己的英文能力，定時做雅思真題 * 閱讀劍雅珍題 11-15 選一套題進行簡單測試，只做閱讀 3 篇閱讀， * 一共 40 題答對 32 以上代表基礎很強，32-26 一般，25 以...",
+      "coverImage": null,
+      "body": ""
+    }
+  },
+  {
+    "lang": "zh-tw",
+    "route": "/zh-tw/development/K3s_Istio",
+    "markdownData": {
+      "meta": {
+        "title": "K3s + Istio 建構 Polyglot Microservices 完整指南",
+        "date": "2026-01-21",
+        "categories": "Development",
+        "author": "kai98k",
+        "tags": [
+          "Polyglot",
+          "Microservices",
+          "K3s",
+          "Istio"
+        ]
+      },
+      "summary": "前言 在企業系統現代化的過程中，我們經常面臨一個挑戰：如何在保留既有系統的同時，逐步引入新技術？本文將分享我如何使用 K3s 搭配 Istio Service Mesh，建構一套支援多語言的微服務架構，實現與既有 Spring Cloud 系統的平滑整合。 --- 什麼是 Polyglot Micr...",
       "coverImage": null,
       "body": ""
     }

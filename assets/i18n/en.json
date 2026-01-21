@@ -162,5 +162,109 @@
     "PRIVACY": "Privacy Policy",
     "TERMS": "Terms of Service",
     "SITEMAP": "Sitemap"
+  },
+  "RESUME": {
+    "HERO": {
+      "NAME": "LIU KAI",
+      "ROLE": "Integration Reliability Engineer",
+      "TAGLINE": "Stabilizing Mission-Critical Systems & Bridging Technical Gaps.",
+      "SUB_TAGLINE": "Distributed Systems | API Interoperability | Operational Excellence",
+      "CONTACT": "Contact Me",
+      "DOWNLOAD": "Download Resume"
+    },
+    "SUMMARY": {
+      "TITLE": "Why Me ?",
+      "TEXT": "I treat API payloads with the same rigor and immutability required for financial ledgers. Coming from a mission-critical logistics background (Foxconn, Evergreen), I understand that a lost data packet means lost cargo—a mindset perfectly aligned with Stripe’s zero-tolerance for payment failures. I don’t just integrate partners; I architect fault-tolerant adapters that survive external outages. Combining deep root-cause analysis (SQL/Logs) with a Users First approach, I am ready to translate my experience in stabilizing global supply chains to ensuring the reliability of Stripe’s money movement infrastructure."
+    },
+    "EXPERIENCE": {
+      "TITLE": "Work Experience",
+      "FOXCONN": {
+        "ROLE": "Software Engineer (Team Lead)",
+        "COMPANY": "Hon Hai Technology Group (Foxconn)",
+        "LOCATION": "Bengaluru, India",
+        "DATE": "Sep 2025 – Present",
+        "POINTS": [
+          "System Observability & Reliability: Maintain Spring Cloud microservices dashboard monitoring container health, uptime, and centralized logging — achieving 98% system availability with plans to implement auto-recovery for 99.9% target.",
+          "Built local engineering team from scratch (3-5 members) under strict Apple ISM security policies; established remote development workflow to China HQ.",
+          "Architected polyglot microservices platform (K3s + Istio) enabling automatic failure detection and self-healing deployments.",
+          "Event-Driven Architecture: Implemented RabbitMQ as message broker with automatic message retry on consumer/publisher failures — ensuring reliable data flow.",
+          "Led system internationalization from China to India: leveraged internal AI Agent to consolidate scattered docs into systematic knowledge base, successfully onboarded 3 systems to date.",
+          "Established GitLab CI/CD pipelines for containerized deployments — reducing deployment time from days to hours."
+        ]
+      },
+      "EVERGREEN": {
+        "ROLE": "Software Engineer",
+        "COMPANY": "Evergreen Marine Corp.",
+        "LOCATION": "Taoyuan, Taiwan",
+        "DATE": "Mar 2025 – Sep 2025",
+        "POINTS": [
+          "API Standardization & Compliance: Developed Bill of Lading (B/L) APIs in strict compliance with DCSA standards (Digital Container Shipping Association).",
+          "Participated in weekly DCSA standards meetings with the world's 9 largest ocean carriers (75% of global container trade).",
+          "Developed Evergreen Developer Portal for simple self-service integration for enterprise customers (IKEA, Volvo).",
+          "Built container verification API integrating automated measurement systems, eliminating manual checking (hours to seconds).",
+          "Utilized Kafka for event-driven message processing and Oracle for reliable data flow."
+        ]
+      },
+      "ADVANTECH": {
+        "ROLE": "Full-Stack Engineer",
+        "COMPANY": "Advantech Corp.",
+        "LOCATION": "Taipei, Taiwan",
+        "DATE": "Nov 2023 – Mar 2025",
+        "POINTS": [
+          "Fault-Tolerant Partner Integration: Integrated third-party logistics APIs (DHL, FedEx) with retry mechanisms and timeout handling.",
+          "Event-Driven Order Processing: Implemented RabbitMQ-based architecture where order events automatically route to ShippingOrder service.",
+          "System Observability: Deployed container monitoring with Heartbeat + Prometheus + Kibana.",
+          "Transformed manual workflow into automated solution: reduced processing time by 30%.",
+          "Unified multi-carrier integration using adapter/factory design patterns into single interface.",
+          "Architected data model migration from relational (MS SQL) to document-based (MongoDB): improved API response time by 40%.",
+          "Reduced deployment cycle from weeks to days by implementing .NET Core microservices and Jenkins CI/CD."
+        ]
+      }
+    },
+    "SKILLS": {
+      "TITLE": "Technical Skills",
+      "INTEGRATION": {
+        "TITLE": "Integration & Messaging",
+        "LIST": ["RESTful API Design", "RabbitMQ", "Kafka", "Event-Driven Architecture", "Webhooks", "Third-Party Integration"]
+      },
+      "RELIABILITY": {
+        "TITLE": "Reliability & Observability",
+        "LIST": ["Prometheus", "Kibana", "Heartbeat", "Log Analysis", "Container Monitoring", "Retry Mechanisms", "Circuit Breaker"]
+      },
+      "BACKEND": {
+        "TITLE": "Backend & Data",
+        "LIST": ["Go", "Python (FastAPI)", "Java (Spring Boot)", "C# (.NET Core)", "SQL (Oracle/PostgreSQL)", "MongoDB", "Redis"]
+      },
+      "INFRA": {
+        "TITLE": "Infrastructure",
+        "LIST": ["K3s/Kubernetes", "Istio", "Docker", "Linux", "GitLab CI/CD", "Jenkins"]
+      },
+      "FRONTEND": {
+        "TITLE": "Frontend",
+        "LIST": ["Angular 2+", "Vue.js", "TypeScript", "HTML/CSS/SCSS"]
+      },
+       "CLOUD": {
+        "TITLE": "Cloud & Certs",
+        "LIST": ["AWS (Certified AI Practitioner)", "Azure (Certified Fundamentals)"]
+      }
+    },
+    "ACHIEVEMENTS": {
+        "TITLE": "Key Achievements",
+        "LIST": [
+            { "TITLE": "Reliability Engineering", "DESC": "Achieved 98% system availability with container monitoring and alerting." },
+            { "TITLE": "Partner Integration", "DESC": "Built fault-tolerant integrations with 3+ logistics partners featuring retry logic." },
+            { "TITLE": "Industry Standards", "DESC": "Contributed to DCSA API specifications adopted by 9 major ocean carriers." },
+            { "TITLE": "Cross-border Coordination", "DESC": "Led system internationalization across 3 countries with zero critical incidents." }
+        ]
+    },
+    "EDUCATION": {
+        "TITLE": "Education",
+        "UNI": "National Chiayi University",
+        "DEGREE": "B.A. in Foreign Languages",
+        "PERIOD": "Sep 2017 – Jun 2021"
+    },
+    "LABELS": {
+        "PRESENT": "Present"
+    }
   }
 }
