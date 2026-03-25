@@ -165,31 +165,31 @@
   },
   "RESUME": {
     "HERO": {
-      "NAME": "劉育愷 (Kai)",
-      "ROLE": "Integration Reliability Engineer",
-      "TAGLINE": "致力於穩定關鍵任務系統與跨越技術鴻溝的整合專家。",
-      "SUB_TAGLINE": "分散式系統 | API 互通性 | 卓越營運",
+      "NAME": "劉育愷 (LIU YU KAI)",
+      "ROLE": "Software Engineer Lead",
+      "TAGLINE": "平台與可靠性 | 跨區域協作",
+      "SUB_TAGLINE": "平台與可靠性 | 跨區域協作",
       "CONTACT": "聯絡我",
       "DOWNLOAD": "下載履歷"
     },
     "SUMMARY": {
-      "TITLE": "專業摘要",
-      "TEXT": "結果導向的整合可靠性工程師，擁有 3 年以上為全球供應鏈與製造業架構關鍵系統的經驗。專精於 API 互通性、事件驅動架構，以及確保高量交易環境下的資料完整性。擅長銜接技術工程與外部合作夥伴（如 DHL, FedEx, DCSA 承運商），並交付具備自動重試機制與優雅降級的韌性整合方案。"
+      "TITLE": "個人簡介",
+      "TEXT": "擁有 3 年以上全端開發、容器化基礎設施及系統整合經驗的軟體工程師。目前擔任鴻海印度 Software Engineer Lead，建立並帶領 8 人工程團隊，在嚴格的客戶資安政策下建構平台基礎設施。具備在 Kubernetes (K3s) 上部署 AI Agent、設計多語言微服務架構，以及為受限網路環境建構 CI/CD 流程的實戰經驗。熟悉 Python (FastAPI)、Prompt Engineering 以及 MCP/Agent 架構設計用於 AI 服務整合。"
     },
     "EXPERIENCE": {
       "TITLE": "工作經歷",
       "FOXCONN": {
-        "ROLE": "軟體工程師 (Team Lead)",
+        "ROLE": "Software Engineer Lead",
         "COMPANY": "鴻海科技集團 (Foxconn)",
         "LOCATION": "印度 班加羅爾",
         "DATE": "2025年9月 – 至今",
+        "DESC": "從零建立在地工程團隊（6人），為一級消費電子產品線建構平台基礎設施。擔任印度營運與中國開發團隊之間的技術橋樑。",
         "POINTS": [
-          "系統可觀測性與可靠性：維護 Spring Cloud 微服務監控儀表板，達成 98% 系統可用性，並計畫導入自動癒合機制以達成 99.9% 目標。",
-          "從零建立在地工程團隊（3-5人），在嚴格的資安規範下建立與中國總部的遠端開發流程。",
-          "架構多語言微服務平台 (K3s + Istio)，結合 Prometheus + Kibana 實現自動故障偵測。",
-          "事件驅動架構：實作 RabbitMQ 作為訊息代理，確保跨服務資料流的可靠性與自動重試。",
-          "主導系統國際化：利用內部 AI Agent 整合散落的文件，成功將 3 套系統導入印度。",
-          "建立 GitLab CI/CD 流程，將容器化部署時間從數天縮短至數小時。"
+          "平台交付：以 Traefik 反向代理、Docker Compose 編排及 GitLab CI/CD 搭配 Nexus 私有倉庫，建構受限網路環境的容器化部署平台。部署時間從數天縮短至數小時。",
+          "可觀測性工具：以 Go 開發自訂資料庫監控 Agent，匯出指標至 Prometheus，透過 Pushgateway 推送備份狀態，並以 Grafana 儀表板即時視覺化資料庫健康狀態。",
+          "GitOps MVP：以 ArgoCD、K3s、ConfigMap 驅動配置及前端部署，建構端到端 GitOps 流程，驗證從 Git commit 到運行服務的完整宣告式部署工作流。",
+          "系統遷移與知識傳承：從中國接手 3 套生產系統。以碎片化文件建構 AI 驅動知識庫。建立 SOP 並委派日常運維，降低單點依賴。",
+          "架構設計：評估並選定後端平台技術棧（三種方案比較，因團隊準備度採用 Docker Compose）及前端框架（三輪評估後選定 React）。產出每個決策的書面取捨分析，包含未來 K8s 遷移路線圖（Kong、Kuma 及 MCP-based AI 整合層）。"
         ]
       },
       "EVERGREEN": {
@@ -198,70 +198,81 @@
         "LOCATION": "台灣 桃園",
         "DATE": "2025年3月 – 2025年9月",
         "POINTS": [
-          "API 標準化與合規：開發完全符合 DCSA 標準的提單 (B/L) API，確保零資料錯誤。",
-          "參與 DCSA 標準會議：與全球前 9 大海運商共同制定 API 規範。",
-          "開發開發者門戶 (Developer Portal)：讓企業客戶 (IKEA, Volvo) 能自助串接航運 API。",
-          "建構貨櫃驗證 API：整合自動量測系統，消除人工查核，將驗證時間從數小時縮短至數秒。",
-          "利用 Kafka 處理事件驅動訊息，並使用 Oracle 確保資料流的可靠性。"
+          "參與每週 DCSA 標準會議，與全球前 9 大海運商（佔全球 75% 貨櫃貿易量）共同制定 API 規範。貢獻多承運商整合洞見。",
+          "為企業客戶（IKEA、Volvo）開發開發者門戶 (Developer Portal)，實現航運 API 自助整合。"
         ]
       },
       "ADVANTECH": {
-        "ROLE": "全端工程師",
+        "ROLE": "軟體工程師",
         "COMPANY": "研華科技 (Advantech Corp.)",
-        "LOCATION": "台灣 台北",
+        "LOCATION": "台灣 桃園",
         "DATE": "2023年11月 – 2025年3月",
+        "DESC": "以初階工程師加入。主導單體轉微服務遷移，並建構多物流商整合平台。",
         "POINTS": [
-          "整合物流合作夥伴 (DHL/FedEx) API，設計具備重試機制與逾時處理的容錯系統。",
-          "事件驅動訂單處理：實作 RabbitMQ 架構，自動路由訂單事件至對應服務。",
-          "系統可觀測性：部署 Heartbeat + Prometheus + Kibana 進行主動偵測。",
-          "將手動流程自動化，縮短 30% 處理時間。",
-          "統一多物流商整合介面，大幅降低後續整合成本。",
-          "資料模型遷移 (MS SQL to MongoDB)，提升 API 回應速度達 40%。",
-          "導入 .NET Core 微服務與 Jenkins CI/CD，大幅縮短部署週期。"
+          "單體 → 微服務：將 VB.NET 拆解為 .NET Core 微服務（ABP.IO DDD）。部署週期：數週 → 數天。",
+          "多物流商整合：以工廠/策略模式與重試機制，將 DHL、FedEx、台灣本地物流商統一為單一介面。人工建立標籤減少 30%。",
+          "聊天機器人整合：將物流商 API 與聊天機器人介面整合，實現自動化運輸查詢與訂單追蹤的對話式互動。",
+          "倉庫自動化：PDA 用 PWA — 條碼掃描、自動標籤列印、電子簽名、儀表板。",
+          "資料遷移：MS SQL → MongoDB，階層式文件結構與區域分片。API 回應速度提升 40%。"
         ]
       }
     },
     "SKILLS": {
       "TITLE": "技術技能",
       "INTEGRATION": {
-        "TITLE": "整合與訊息傳遞",
-        "LIST": ["RESTful API Design", "RabbitMQ", "Kafka", "Event-Driven Architecture", "Webhooks", "Third-Party Integration"]
+        "TITLE": "AI 與 Agent 基礎設施",
+        "LIST": ["AI Agent 部署 (K3s)", "Prompt Engineering", "Agent Skill", "Agent 架構設計", "OpenClaw"]
       },
       "RELIABILITY": {
-        "TITLE": "可靠性工程",
-        "LIST": ["Prometheus", "Kibana", "Heartbeat", "Log Analysis", "Container Monitoring", "Retry Mechanisms", "Circuit Breaker"]
+        "TITLE": "Kubernetes 與雲端",
+        "LIST": ["K3s", "Docker", "Traefik", "Kong", "Kuma", "Helm", "Tailscale", "Azure", "AWS", "Cloudflare", "Sidecar", "Linux"]
       },
       "BACKEND": {
         "TITLE": "後端與資料",
-        "LIST": ["Go", "Python (FastAPI)", "Java (Spring Boot)", "C# (.NET Core)", "SQL (Oracle/PostgreSQL)", "MongoDB", "Redis"]
+        "LIST": ["Java (Spring Boot)", "C# (.NET Core)", "Go", "RabbitMQ", "PostgreSQL", "Oracle", "MongoDB", "MS SQL", "Redis", "Firebase"]
       },
       "INFRA": {
-        "TITLE": "基礎設施",
-        "LIST": ["K3s/Kubernetes", "Istio", "Docker", "Linux", "GitLab CI/CD", "Jenkins"]
+        "TITLE": "CI/CD 與 GitOps",
+        "LIST": ["GitLab CI/CD", "Jenkins", "Helm", "Nexus (離線倉庫)", "ArgoCD", "Vault", "Git"]
       },
       "FRONTEND": {
-        "TITLE": "前端開發",
-        "LIST": ["Angular 2+", "Vue.js", "TypeScript", "HTML/CSS/SCSS"]
+        "TITLE": "可觀測性",
+        "LIST": ["Prometheus", "Grafana", "Kibana", "Heartbeat", "Elasticsearch"]
       },
-       "CLOUD": {
-        "TITLE": "雲端與證照",
-        "LIST": ["AWS (Certified AI Practitioner)", "Azure (Certified Fundamentals)"]
+      "CLOUD": {
+        "TITLE": "前端",
+        "LIST": ["Angular", "Vue", "React"]
+      }
+    },
+    "PROJECT": {
+      "TITLE": "專案",
+      "AI_AGENT": {
+        "TITLE": "AI Agent on Kubernetes | 個人實驗專案",
+        "POINTS": [
+          "在 K3s 叢集上部署 OpenClaw（computer-use AI agent）— 處理容器化、Kubernetes 部署配置及 AI 工作負載的執行環境問題排除。",
+          "建構 Agent Skill Registry 用於管理與註冊 AI agent 能力，已用 OpenClaw 部署測試。原始碼公開於 GitHub。"
+        ]
       }
     },
     "ACHIEVEMENTS": {
-        "TITLE": "關鍵成就",
+        "TITLE": "證照",
         "LIST": [
-            { "TITLE": "可靠性工程", "DESC": "透過容器監控達成 98% 系統可用性。" },
-            { "TITLE": "夥伴整合", "DESC": "建立具備重試邏輯與容錯能力的物流整合。" },
-            { "TITLE": "產業標準", "DESC": "貢獻 DCSA API 規範，獲全球 75% 海運商採用。" },
-            { "TITLE": "跨國協作", "DESC": "主導跨越台灣、印度、中國的系統國際化，零重大事故。" }
+            { "TITLE": "AWS Certified AI Practitioner", "DESC": "" },
+            { "TITLE": "Microsoft Azure Fundamentals", "DESC": "" }
         ]
     },
     "EDUCATION": {
         "TITLE": "學歷",
         "UNI": "國立嘉義大學",
         "DEGREE": "外國語言學系 學士",
-        "PERIOD": "2017年9月 – 2021年6月"
+        "PERIOD": "2017 – 2021"
+    },
+    "LANGUAGES": {
+        "TITLE": "語言",
+        "LIST": [
+            { "LANG": "中文", "LEVEL": "母語" },
+            { "LANG": "英文", "LEVEL": "專業工作能力" }
+        ]
     },
     "LABELS": {
         "PRESENT": "至今"

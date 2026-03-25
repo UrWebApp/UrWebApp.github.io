@@ -165,31 +165,31 @@
   },
   "RESUME": {
     "HERO": {
-      "NAME": "LIU KAI",
-      "ROLE": "Integration Reliability Engineer",
-      "TAGLINE": "Stabilizing Mission-Critical Systems & Bridging Technical Gaps.",
-      "SUB_TAGLINE": "Distributed Systems | API Interoperability | Operational Excellence",
+      "NAME": "LIU YU KAI",
+      "ROLE": "Software Engineer Lead",
+      "TAGLINE": "Platform & Reliability | Cross-Regional",
+      "SUB_TAGLINE": "Platform & Reliability | Cross-Regional",
       "CONTACT": "Contact Me",
       "DOWNLOAD": "Download Resume"
     },
     "SUMMARY": {
-      "TITLE": "Why Me ?",
-      "TEXT": "I treat API payloads with the same rigor and immutability required for financial ledgers. Coming from a mission-critical logistics background (Foxconn, Evergreen), I understand that a lost data packet means lost cargo—a mindset perfectly aligned with Stripe’s zero-tolerance for payment failures. I don’t just integrate partners; I architect fault-tolerant adapters that survive external outages. Combining deep root-cause analysis (SQL/Logs) with a Users First approach, I am ready to translate my experience in stabilizing global supply chains to ensuring the reliability of Stripe’s money movement infrastructure."
+      "TITLE": "Personal Profile",
+      "TEXT": "Software Engineer with 3+ years of experience across full-stack development, containerized infrastructure, and system integration. Currently serving as Software Engineer Lead at Foxconn India, built and led an 8-person engineering team and building platform infrastructure under strict client security policies. Hands-on experience deploying AI Agents on Kubernetes (K3s), designing polyglot microservices architecture, and building CI/CD pipelines for restricted network environments. Familiar with Python (FastAPI), Prompt Engineering, and MCP/Agent architecture design for AI service integration."
     },
     "EXPERIENCE": {
       "TITLE": "Work Experience",
       "FOXCONN": {
-        "ROLE": "Software Engineer (Team Lead)",
-        "COMPANY": "Hon Hai Technology Group (Foxconn)",
+        "ROLE": "Software Engineer Lead",
+        "COMPANY": "Hon Hai Corp. (Foxconn)",
         "LOCATION": "Bengaluru, India",
         "DATE": "Sep 2025 – Present",
+        "DESC": "Built and led a local engineering team (6 members) to establish platform infrastructure from scratch for tier-1 consumer electronics product line. Serving as technical bridge between India operations and China development team.",
         "POINTS": [
-          "System Observability & Reliability: Maintain Spring Cloud microservices dashboard monitoring container health, uptime, and centralized logging — achieving 98% system availability with plans to implement auto-recovery for 99.9% target.",
-          "Built local engineering team from scratch (3-5 members) under strict Apple ISM security policies; established remote development workflow to China HQ.",
-          "Architected polyglot microservices platform (K3s + Istio) enabling automatic failure detection and self-healing deployments.",
-          "Event-Driven Architecture: Implemented RabbitMQ as message broker with automatic message retry on consumer/publisher failures — ensuring reliable data flow.",
-          "Led system internationalization from China to India: leveraged internal AI Agent to consolidate scattered docs into systematic knowledge base, successfully onboarded 3 systems to date.",
-          "Established GitLab CI/CD pipelines for containerized deployments — reducing deployment time from days to hours."
+          "Platform Delivery: Built containerized deployment platform with Traefik reverse proxy, Docker Compose orchestration, and GitLab CI/CD pipeline with Nexus private registry for restricted network environment. Reduced deployment time from days to hours.",
+          "Observability Tooling: Developed custom database monitoring agent in Go — exports metrics to Prometheus, pushes backup status via Prometheus Pushgateway, and visualizes all data through Grafana dashboards for real-time database health monitoring.",
+          "GitOps MVP: Built end-to-end GitOps pipeline with ArgoCD, K3s, ConfigMap-driven configuration, and frontend deployment — validating the full declarative deployment workflow from Git commit to running service.",
+          "System Migration & Knowledge Transfer: Onboarded 3 production systems from China. Built AI-powered knowledge base from fragmented docs. Established SOPs and delegated daily operations to reduce single-person dependency.",
+          "Architecture Design: Evaluated and selected technology stack across backend platform (three approaches compared, Docker Compose adopted for team readiness) and frontend framework (React selected after three-round evaluation). Produced documented trade-off analysis for each decision including future K8s migration roadmap with Kong, Kuma, and MCP-based AI integration layer."
         ]
       },
       "EVERGREEN": {
@@ -198,70 +198,81 @@
         "LOCATION": "Taoyuan, Taiwan",
         "DATE": "Mar 2025 – Sep 2025",
         "POINTS": [
-          "API Standardization & Compliance: Developed Bill of Lading (B/L) APIs in strict compliance with DCSA standards (Digital Container Shipping Association).",
-          "Participated in weekly DCSA standards meetings with the world's 9 largest ocean carriers (75% of global container trade).",
-          "Developed Evergreen Developer Portal for simple self-service integration for enterprise customers (IKEA, Volvo).",
-          "Built container verification API integrating automated measurement systems, eliminating manual checking (hours to seconds).",
-          "Utilized Kafka for event-driven message processing and Oracle for reliable data flow."
+          "Participated in weekly DCSA standards meetings with the world’s 9 largest ocean carriers (75% of global container trade). Contributed multi-carrier integration insights to API specification.",
+          "Developed Developer Portal for enterprise customers (IKEA, Volvo) to self-service integrate shipping APIs."
         ]
       },
       "ADVANTECH": {
-        "ROLE": "Full-Stack Engineer",
+        "ROLE": "Software Engineer",
         "COMPANY": "Advantech Corp.",
-        "LOCATION": "Taipei, Taiwan",
+        "LOCATION": "Taoyuan, Taiwan",
         "DATE": "Nov 2023 – Mar 2025",
+        "DESC": "Joined as junior. Led monolith-to-microservices migration and built multi-carrier logistics platform.",
         "POINTS": [
-          "Fault-Tolerant Partner Integration: Integrated third-party logistics APIs (DHL, FedEx) with retry mechanisms and timeout handling.",
-          "Event-Driven Order Processing: Implemented RabbitMQ-based architecture where order events automatically route to ShippingOrder service.",
-          "System Observability: Deployed container monitoring with Heartbeat + Prometheus + Kibana.",
-          "Transformed manual workflow into automated solution: reduced processing time by 30%.",
-          "Unified multi-carrier integration using adapter/factory design patterns into single interface.",
-          "Architected data model migration from relational (MS SQL) to document-based (MongoDB): improved API response time by 40%.",
-          "Reduced deployment cycle from weeks to days by implementing .NET Core microservices and Jenkins CI/CD."
+          "Monolith → Microservices: Decomposed VB.NET into .NET Core microservices (ABP.IO DDD). Deployment cycle: weeks → days.",
+          "Multi-Carrier Integration: Unified DHL, FedEx, Taiwan carriers into single interface (factory/strategy patterns, retry mechanisms). Manual label creation reduced 30%.",
+          "Chatbot Integration: Integrated logistics carrier APIs with chatbot interface, enabling automated shipping inquiries and order tracking through conversational interaction.",
+          "Warehouse Automation: PWA for PDA — barcode scanning, auto label printing, e-signatures, dashboards.",
+          "Data Migration: MS SQL → MongoDB with hierarchical docs and region-based sharding. API response +40%."
         ]
       }
     },
     "SKILLS": {
       "TITLE": "Technical Skills",
       "INTEGRATION": {
-        "TITLE": "Integration & Messaging",
-        "LIST": ["RESTful API Design", "RabbitMQ", "Kafka", "Event-Driven Architecture", "Webhooks", "Third-Party Integration"]
+        "TITLE": "AI & Agent Infra",
+        "LIST": ["AI Agent deployment (K3s)", "Prompt Engineering", "Agent Skill", "Agent architecture design", "OpenClaw"]
       },
       "RELIABILITY": {
-        "TITLE": "Reliability & Observability",
-        "LIST": ["Prometheus", "Kibana", "Heartbeat", "Log Analysis", "Container Monitoring", "Retry Mechanisms", "Circuit Breaker"]
+        "TITLE": "Kubernetes & Cloud",
+        "LIST": ["K3s", "Docker", "Traefik", "Kong", "Kuma", "Helm", "Tailscale", "Azure", "AWS", "Cloudflare", "Sidecar", "Linux"]
       },
       "BACKEND": {
         "TITLE": "Backend & Data",
-        "LIST": ["Go", "Python (FastAPI)", "Java (Spring Boot)", "C# (.NET Core)", "SQL (Oracle/PostgreSQL)", "MongoDB", "Redis"]
+        "LIST": ["Java (Spring Boot)", "C# (.NET Core)", "Go", "RabbitMQ", "PostgreSQL", "Oracle", "MongoDB", "MS SQL", "Redis", "Firebase"]
       },
       "INFRA": {
-        "TITLE": "Infrastructure",
-        "LIST": ["K3s/Kubernetes", "Istio", "Docker", "Linux", "GitLab CI/CD", "Jenkins"]
+        "TITLE": "CI/CD & GitOps",
+        "LIST": ["GitLab CI/CD", "Jenkins", "Helm", "Nexus (offline repo)", "ArgoCD", "Vault", "Git"]
       },
       "FRONTEND": {
-        "TITLE": "Frontend",
-        "LIST": ["Angular 2+", "Vue.js", "TypeScript", "HTML/CSS/SCSS"]
+        "TITLE": "Observability",
+        "LIST": ["Prometheus", "Grafana", "Kibana", "Heartbeat", "Elasticsearch"]
       },
-       "CLOUD": {
-        "TITLE": "Cloud & Certs",
-        "LIST": ["AWS (Certified AI Practitioner)", "Azure (Certified Fundamentals)"]
+      "CLOUD": {
+        "TITLE": "Front-End",
+        "LIST": ["Angular", "Vue", "React"]
+      }
+    },
+    "PROJECT": {
+      "TITLE": "Project",
+      "AI_AGENT": {
+        "TITLE": "AI Agent on Kubernetes | Personal Lab Project",
+        "POINTS": [
+          "Deployed OpenClaw (computer-use AI agent) on K3s cluster — handled containerization, Kubernetes deployment configuration, and runtime troubleshooting for AI workload.",
+          "Built Agent Skill Registry for managing and registering AI agent capabilities, tested with OpenClaw deployment. Source code available on GitHub."
+        ]
       }
     },
     "ACHIEVEMENTS": {
-        "TITLE": "Key Achievements",
+        "TITLE": "Certifications",
         "LIST": [
-            { "TITLE": "Reliability Engineering", "DESC": "Achieved 98% system availability with container monitoring and alerting." },
-            { "TITLE": "Partner Integration", "DESC": "Built fault-tolerant integrations with 3+ logistics partners featuring retry logic." },
-            { "TITLE": "Industry Standards", "DESC": "Contributed to DCSA API specifications adopted by 9 major ocean carriers." },
-            { "TITLE": "Cross-border Coordination", "DESC": "Led system internationalization across 3 countries with zero critical incidents." }
+            { "TITLE": "AWS Certified AI Practitioner", "DESC": "" },
+            { "TITLE": "Microsoft Azure Fundamentals", "DESC": "" }
         ]
     },
     "EDUCATION": {
         "TITLE": "Education",
         "UNI": "National Chiayi University",
-        "DEGREE": "B.A. in Foreign Languages",
-        "PERIOD": "Sep 2017 – Jun 2021"
+        "DEGREE": "B.A. Foreign Languages",
+        "PERIOD": "2017 – 2021"
+    },
+    "LANGUAGES": {
+        "TITLE": "Language",
+        "LIST": [
+            { "LANG": "Mandarin", "LEVEL": "Native" },
+            { "LANG": "English", "LEVEL": "Professional" }
+        ]
     },
     "LABELS": {
         "PRESENT": "Present"
