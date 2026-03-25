@@ -166,30 +166,30 @@
   "RESUME": {
     "HERO": {
       "NAME": "リュウ・ユーカイ (LIU YU KAI)",
-      "ROLE": "インテグレーション・リライアビリティ・エンジニア",
-      "TAGLINE": "ミッションクリティカルなシステムを安定させ、技術的なギャップを埋める。",
-      "SUB_TAGLINE": "分散システム | API相互運用性 | オペレーショナル・エクセレンス",
+      "ROLE": "Software Engineer Lead",
+      "TAGLINE": "プラットフォーム＆信頼性 | クロスリージョナル",
+      "SUB_TAGLINE": "プラットフォーム＆信頼性 | クロスリージョナル",
       "CONTACT": "お問い合わせ",
       "DOWNLOAD": "履歴書をダウンロード"
     },
     "SUMMARY": {
-      "TITLE": "プロフェッショナルサマリー",
-      "TEXT": "グローバルなサプライチェーンおよび製造部門において、ミッションクリティカルなエンタープライズシステムのアーキテクチャ設計と安定化に3年以上の経験を持つ、結果重視のインテグレーション・リライアビリティ・エンジニア。APIの相互運用性、イベント駆動アーキテクチャ、および大量のトランザクション環境におけるデータ整合性の確保において実証済みの専門知識を持つ。技術エンジニアリングと外部パートナーとの間のギャップを埋め、回復力のある統合を実現するスキルに長けている。根本原因分析、システム可観測性（Observability）、および手動ワークフローの自動化に精通している。"
+      "TITLE": "プロフィール",
+      "TEXT": "フルスタック開発、コンテナ化インフラ、システム統合において3年以上の経験を持つソフトウェアエンジニア。現在、Foxconnインドにて Software Engineer Lead として、8名のエンジニアリングチームを構築・リードし、厳格なクライアントセキュリティポリシーの下でプラットフォームインフラを構築。Kubernetes (K3s) 上への AI Agent デプロイ、ポリグロットマイクロサービスアーキテクチャの設計、制限されたネットワーク環境での CI/CD パイプライン構築の実務経験あり。Python (FastAPI)、Prompt Engineering、MCP/Agent アーキテクチャ設計による AI サービス統合に精通。"
     },
     "EXPERIENCE": {
       "TITLE": "職務経歴",
       "FOXCONN": {
-        "ROLE": "ソフトウェアエンジニア (チームリード)",
+        "ROLE": "Software Engineer Lead",
         "COMPANY": "鴻海精密工業 (Foxconn)",
         "LOCATION": "インド、バンガロール",
         "DATE": "2025年9月 – 現在",
+        "DESC": "ティア1コンシューマーエレクトロニクス製品ラインのプラットフォームインフラをゼロから構築するため、現地エンジニアリングチーム（6名）を構築・リード。インド事業と中国開発チームの技術ブリッジとして従事。",
         "POINTS": [
-          "システムの可観測性と信頼性: Spring Cloudマイクロサービスダッシュボードを維持し、コンテナの健全性、稼働時間、および集中ログを監視 —— 99.9%の目標に向けて自動復旧を実装する計画と共に、98%のシステム可用性を達成。",
-          "厳格なApple ISMセキュリティポリシーの下、ゼロから現地のエンジニアリングチーム（3〜5名）を構築。中国本社へのリモート開発ワークフローを確立。",
-          "自動障害検出と自己修復デプロイメントを可能にする多言語マイクロサービスプラットフォーム（K3s + Istio）を設計。",
-          "イベント駆動アーキテクチャ: RabbitMQをメッセージブローカーとして実装し、コンシューマー/パブリッシャーの障害時にメッセージを自動再試行 —— 信頼性の高いデータフローを確保。",
-          "中国からインドへのシステムの国際化を主導: 社内AIエージェントを活用して散在するドキュメントを体系的なナレッジベースに統合し、これまでに3つのシステムのオンボーディングに成功。",
-          "コンテナ化されたデプロイのためのGitLab CI/CDパイプラインを確立 —— デプロイ時間を数日から数時間に短縮。"
+          "プラットフォームデリバリー: Traefikリバースプロキシ、Docker Composeオーケストレーション、Nexusプライベートレジストリ付きGitLab CI/CDパイプラインによる制限ネットワーク環境のコンテナ化デプロイプラットフォームを構築。デプロイ時間を数日から数時間に短縮。",
+          "可観測性ツール: Goでカスタムデータベース監視エージェントを開発 — Prometheusへのメトリクスエクスポート、Prometheus Pushgatewayによるバックアップステータスの送信、Grafanaダッシュボードによるリアルタイムデータベースヘルスモニタリングの可視化。",
+          "GitOps MVP: ArgoCD、K3s、ConfigMap駆動の設定、フロントエンドデプロイによるエンドツーエンドのGitOpsパイプラインを構築 — Gitコミットからサービス起動までの完全な宣言的デプロイワークフローを検証。",
+          "システム移行とナレッジトランスファー: 中国から3つの本番システムをオンボーディング。断片化されたドキュメントからAI駆動のナレッジベースを構築。SOPを確立し、日常運用を委譲して属人化を解消。",
+          "アーキテクチャ設計: バックエンドプラットフォーム（3つのアプローチを比較、チームの準備度に基づきDocker Composeを採用）とフロントエンドフレームワーク（3ラウンドの評価後Reactを選定）の技術スタックを評価・選定。Kong、Kuma、MCP ベースのAI統合レイヤーを含む将来のK8s移行ロードマップを含む、各決定のトレードオフ分析文書を作成。"
         ]
       },
       "EVERGREEN": {
@@ -198,70 +198,81 @@
         "LOCATION": "台湾、桃園",
         "DATE": "2025年3月 – 2025年9月",
         "POINTS": [
-          "API標準化とコンプライアンス: DCSA標準（Digital Container Shipping Association）に厳密に準拠した船荷証券（B/L）APIを開発。",
-          "世界の9大海運会社（世界のコンテナ貿易の75%を占める）とのDCSA標準会議に毎週参加。",
-          "エンタープライズ顧客（IKEA、Volvoなど）向けのシンプルなセルフサービス統合のためのEvergreen開発者ポータルを開発。",
-          "自動計測システムを統合したコンテナ検証APIを構築し、手動チェックを排除（数時間から数秒へ）。",
-          "イベント駆動のメッセージ処理にKafkaを利用し、信頼性の高いデータフローにOracleを利用。"
+          "世界の9大海運会社（世界のコンテナ貿易の75%を占める）とのDCSA標準会議に毎週参加。マルチキャリア統合のインサイトをAPI仕様に貢献。",
+          "エンタープライズ顧客（IKEA、Volvo）向けの開発者ポータルを開発し、出荷APIのセルフサービス統合を実現。"
         ]
       },
       "ADVANTECH": {
-        "ROLE": "フルスタックエンジニア",
+        "ROLE": "ソフトウェアエンジニア",
         "COMPANY": "アドバンテック (Advantech Corp.)",
-        "LOCATION": "台湾、台北",
+        "LOCATION": "台湾、桃園",
         "DATE": "2023年11月 – 2025年3月",
+        "DESC": "ジュニアとして入社。モノリスからマイクロサービスへの移行を主導し、マルチキャリア物流プラットフォームを構築。",
         "POINTS": [
-          "フォールトトレラントなパートナー統合: 再試行メカニズムとタイムアウト処理を備えたサードパーティロジスティクスAPI（DHL、FedEx）を統合。",
-          "イベント駆動の注文処理: 注文イベントが自動的にShippingOrderサービスにルーティングされるRabbitMQベースのアーキテクチャを実装。",
-          "システムの可観測性: Heartbeat + Prometheus + Kibanaを使用したコンテナ監視を展開。",
-          "手動ワークフローを自動化ソリューションに変革: 処理時間を30%削減。",
-          "アダプター/ファクトリーデザインパターンを使用して、マルチキャリア統合を単一のインターフェースに統一。",
-          "データモデルをリレーショナル（MS SQL）からドキュメントベース（MongoDB）への移行を設計: API応答時間を40%改善。",
-          ".NET CoreマイクロサービスとJenkins CI/CDを実装することで、デプロイサイクルを数週間から数日に短縮。"
+          "モノリス → マイクロサービス: VB.NETを.NET Coreマイクロサービス（ABP.IO DDD）に分解。デプロイサイクル: 数週間 → 数日。",
+          "マルチキャリア統合: DHL、FedEx、台湾キャリアをファクトリー/ストラテジーパターンとリトライメカニズムで単一インターフェースに統合。手動ラベル作成を30%削減。",
+          "チャットボット統合: 物流キャリアAPIをチャットボットインターフェースと統合し、会話型インタラクションによる自動出荷照会と注文追跡を実現。",
+          "倉庫自動化: PDA向けPWA — バーコードスキャン、自動ラベル印刷、電子署名、ダッシュボード。",
+          "データ移行: MS SQL → MongoDB、階層的ドキュメントとリージョンベースのシャーディング。API応答 +40%。"
         ]
       }
     },
     "SKILLS": {
       "TITLE": "技術スキル",
       "INTEGRATION": {
-        "TITLE": "統合とメッセージング",
-        "LIST": ["RESTful API設計", "RabbitMQ", "Kafka", "イベント駆動アーキテクチャ", "Webhook", "サードパーティ統合"]
+        "TITLE": "AI & Agent インフラ",
+        "LIST": ["AI Agent デプロイ (K3s)", "Prompt Engineering", "Agent Skill", "Agent アーキテクチャ設計", "OpenClaw"]
       },
       "RELIABILITY": {
-        "TITLE": "信頼性と可観測性",
-        "LIST": ["Prometheus", "Kibana", "Heartbeat", "ログ分析", "コンテナ監視", "再試行メカニズム", "サーキットブレーカー"]
+        "TITLE": "Kubernetes & クラウド",
+        "LIST": ["K3s", "Docker", "Traefik", "Kong", "Kuma", "Helm", "Tailscale", "Azure", "AWS", "Cloudflare", "Sidecar", "Linux"]
       },
       "BACKEND": {
-        "TITLE": "バックエンドとデータ",
-        "LIST": ["Go", "Python (FastAPI)", "Java (Spring Boot)", "C# (.NET Core)", "SQL (Oracle/PostgreSQL)", "MongoDB", "Redis"]
+        "TITLE": "バックエンド & データ",
+        "LIST": ["Java (Spring Boot)", "C# (.NET Core)", "Go", "RabbitMQ", "PostgreSQL", "Oracle", "MongoDB", "MS SQL", "Redis", "Firebase"]
       },
       "INFRA": {
-        "TITLE": "インフラストラクチャ",
-        "LIST": ["K3s/Kubernetes", "Istio", "Docker", "Linux", "GitLab CI/CD", "Jenkins"]
+        "TITLE": "CI/CD & GitOps",
+        "LIST": ["GitLab CI/CD", "Jenkins", "Helm", "Nexus (オフラインレポ)", "ArgoCD", "Vault", "Git"]
       },
       "FRONTEND": {
-        "TITLE": "フロントエンド",
-        "LIST": ["Angular 2+", "Vue.js", "TypeScript", "HTML/CSS/SCSS"]
+        "TITLE": "可観測性",
+        "LIST": ["Prometheus", "Grafana", "Kibana", "Heartbeat", "Elasticsearch"]
       },
       "CLOUD": {
-        "TITLE": "クラウドと資格",
-        "LIST": ["AWS (Certified AI Practitioner)", "Azure (Certified Fundamentals)"]
+        "TITLE": "フロントエンド",
+        "LIST": ["Angular", "Vue", "React"]
+      }
+    },
+    "PROJECT": {
+      "TITLE": "プロジェクト",
+      "AI_AGENT": {
+        "TITLE": "AI Agent on Kubernetes | 個人ラボプロジェクト",
+        "POINTS": [
+          "K3sクラスター上にOpenClaw（computer-use AIエージェント）をデプロイ — コンテナ化、Kubernetesデプロイ設定、AIワークロードのランタイムトラブルシューティングを担当。",
+          "AIエージェントの機能を管理・登録するためのAgent Skill Registryを構築し、OpenClawデプロイでテスト。ソースコードはGitHubで公開。"
+        ]
       }
     },
     "ACHIEVEMENTS": {
-      "TITLE": "主な実績",
+      "TITLE": "資格",
       "LIST": [
-        "信頼性工学: コンテナ監視とアラートにより98%のシステム可用性を達成。",
-        "パートナー統合: 再試行ロジックを備えた3つ以上の物流パートナーとのフォールトトレラントな統合を構築。",
-        "業界標準: 9つの主要な海運会社に採用されたDCSA API仕様に貢献。",
-        "国境を越えた調整: 3か国にわたるシステムの国際化を主導し、重大なインシデントはゼロ。"
+        { "TITLE": "AWS Certified AI Practitioner", "DESC": "" },
+        { "TITLE": "Microsoft Azure Fundamentals", "DESC": "" }
       ]
     },
     "EDUCATION": {
       "TITLE": "学歴",
       "UNI": "国立嘉義大学",
       "DEGREE": "外国語学部 学士",
-      "PERIOD": "2017年9月 – 2021年6月"
+      "PERIOD": "2017 – 2021"
+    },
+    "LANGUAGES": {
+      "TITLE": "言語",
+      "LIST": [
+        { "LANG": "中国語", "LEVEL": "ネイティブ" },
+        { "LANG": "英語", "LEVEL": "ビジネスレベル" }
+      ]
     },
     "LABELS": {
       "PRESENT": "現在"
